@@ -1,0 +1,64 @@
+
+				<!--breadcrumb-->
+				<div class="col-md-12 bread">
+					<ul class="breadcrumb">
+						<li>
+							 <a href="__MODULE__/index/index.html">首页</a>
+						</li>
+						<li>
+							 <a href="__MODULE__/shop/list.html">商品管理</a>
+						</li>
+						<li>
+							 <a href="#">添加商品</a>
+						</li>
+					</ul>
+				</div>
+				<!--userList-->
+				<div class="col-md-12 userList">
+					<div class="col-md-12">
+						<h4>添加商品</h4>
+					</div>
+					<!--shop-->
+					<div class="col-md-12">
+						<form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+							<div class="form-group">
+								<label for="inputRadio" class="col-md-3 control-label" style="width: 120px;">选择商品类型：</label>
+								<div class="col-md-3">
+									<label for="" class="shopRadio"><input type="radio" id="inputUserName" value="shicai" name="shop" />食材</label>
+									<label for="" class="shopRadio"><input type="radio"  id="inputUserName" value="yongju" name="shop" />用具</label>
+								</div>
+							</div>
+							<div class="form-group">
+								 <label for="inputGoodsName" class="col-md-2 control-label">商品名：</label>
+								<div class="col-md-3">
+									<input type="text" class="form-control" id="inputGoodsName" />
+								</div>
+							</div>
+							<div class="form-group">
+								 <label for="inputGoodsInfo" class="col-sm-2 control-label">详细信息：</label>
+								<div class="col-sm-3">
+									<textarea class="form-control" id="inputGoodsInfo" rows="3"></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								 <label for="inputGoodsPrice" class="col-sm-2 control-label">价格(元)：</label>
+								<div class="col-sm-3">
+									<input type="text" class="form-control" id="inputGoodsPrice" />
+								</div>
+							</div>
+							<div class="form-group">
+								 <label for="inputGoodsImg" class="col-sm-2 control-label">商品图片：</label>
+								<div class="col-sm-3">
+									<input type="file" id="inputGoodsImg" class="form-control">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-sm-3">
+									 <button type="submit" class="btn">添加</button>
+								</div>
+							</div>
+						</form>
+						
+					</div>
+				</div>
+			

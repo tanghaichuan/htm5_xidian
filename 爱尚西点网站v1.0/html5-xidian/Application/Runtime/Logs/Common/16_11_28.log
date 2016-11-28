@@ -1,0 +1,284 @@
+[ 2016-11-28T15:51:55+08:00 ] 127.0.0.1 /html5-xidian/home.php/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000540s ]
+ERR: 无法加载模块:Index
+
+[ 2016-11-28T15:51:59+08:00 ] 127.0.0.1 /html5-xidian/home.php/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000497s ]
+ERR: 无法加载模块:Index
+
+[ 2016-11-28T15:52:27+08:00 ] 127.0.0.1 /html5-xidian/home.php/cart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000573s ]
+ERR: 无法加载模块:Cart
+
+[ 2016-11-28T15:59:21+08:00 ] 127.0.0.1 /html5-xidian/home.php/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000515s ]
+ERR: 无法加载模块:Index
+
+[ 2016-11-28T16:06:06+08:00 ] 127.0.0.1 /html5-xidian/js/bootstrap.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000788s ]
+ERR: 无法加载模块:Js
+
+[ 2016-11-28T16:06:06+08:00 ] 127.0.0.1 /html5-xidian/css/bootstrap.min.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000722s ]
+ERR: 无法加载模块:Css
+
+[ 2016-11-28T16:06:06+08:00 ] 127.0.0.1 /html5-xidian/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001014s ]
+ERR: 无法加载模块:Js
+
+[ 2016-11-28T16:06:06+08:00 ] 127.0.0.1 /html5-xidian/js/homeEdit.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000734s ]
+ERR: 无法加载模块:Js
+
+[ 2016-11-28T16:06:06+08:00 ] 127.0.0.1 /html5-xidian/images/logo1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000739s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:06:06+08:00 ] 127.0.0.1 /html5-xidian/images/logo2.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000741s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:06:06+08:00 ] 127.0.0.1 /html5-xidian/images/home_banner1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000705s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:06:06+08:00 ] 127.0.0.1 /html5-xidian/images/home_banner2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000811s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:06:06+08:00 ] 127.0.0.1 /html5-xidian/images/bg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000781s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:06:06+08:00 ] 127.0.0.1 /html5-xidian/images/home_pic1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000835s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:06:06+08:00 ] 127.0.0.1 /html5-xidian/images/home_banner3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000790s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:06:06+08:00 ] 127.0.0.1 /html5-xidian/images/wbg2.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001020s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:06:06+08:00 ] 127.0.0.1 /html5-xidian/images/wbg1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000781s ]
+ERR: 无法加载模块:Images
+
+s
+
+[ 2016-11-28T16:06:06+08:00 ] 127.0.0.1 /html5-xidian/images/qrc.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001385s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:06:06+08:00 ] 127.0.0.1 /html5-xidian/images/home_pic2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000976s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:06:39+08:00 ] 127.0.0.1 /html5-xidian/js/bootstrap.min.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001299s ]
+ERR: 无法加载模块:Js
+
+[ 2016-11-28T16:06:39+08:00 ] 127.0.0.1 /html5-xidian/css/bootstrap.min.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000973s ]
+ERR: 无法加载模块:Css
+
+[ 2016-11-28T16:06:39+08:00 ] 127.0.0.1 /html5-xidian/js/jquery.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001152s ]
+ERR: 无法加载模块:Js
+
+[ 2016-11-28T16:06:39+08:00 ] 127.0.0.1 /html5-xidian/js/homeEdit.js
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000725s ]
+ERR: 无法加载模块:Js
+
+[ 2016-11-28T16:06:39+08:00 ] 127.0.0.1 /html5-xidian/images/logo1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000791s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:06:39+08:00 ] 127.0.0.1 /html5-xidian/images/logo2.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000718s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:06:39+08:00 ] 127.0.0.1 /html5-xidian/images/home_banner1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000923s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:06:39+08:00 ] 127.0.0.1 /html5-xidian/images/home_banner2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002139s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:06:39+08:00 ] 127.0.0.1 /html5-xidian/images/home_banner3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000978s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:06:39+08:00 ] 127.0.0.1 /html5-xidian/images/home_pic1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000049s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000920s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:06:39+08:00 ] 127.0.0.1 /html5-xidian/images/wbg2.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000950s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:06:39+08:00 ] 127.0.0.1 /html5-xidian/images/wbg1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001231s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:06:39+08:00 ] 127.0.0.1 /html5-xidian/images/bg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002225s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:06:39+08:00 ] 127.0.0.1 /html5-xidian/images/home_pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000939s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:06:39+08:00 ] 127.0.0.1 /html5-xidian/images/home_pic2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001231s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:09:18+08:00 ] 127.0.0.1 /html5-xidian/images/logo1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001568s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:09:18+08:00 ] 127.0.0.1 /html5-xidian/images/home_banner1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001091s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:09:18+08:00 ] 127.0.0.1 /html5-xidian/images/home_pic1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000792s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:09:18+08:00 ] 127.0.0.1 /html5-xidian/images/home_banner3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000871s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:09:18+08:00 ] 127.0.0.1 /html5-xidian/images/wbg1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000737s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:09:18+08:00 ] 127.0.0.1 /html5-xidian/images/wbg2.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000796s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:09:18+08:00 ] 127.0.0.1 /html5-xidian/images/home_pic3.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000824s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:09:18+08:00 ] 127.0.0.1 /html5-xidian/images/qrc.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000959s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:09:18+08:00 ] 127.0.0.1 /html5-xidian/images/home_pic2.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000830s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:09:18+08:00 ] 127.0.0.1 /html5-xidian/images/logo1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000825s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:09:18+08:00 ] 127.0.0.1 /html5-xidian/images/home_banner1.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000759s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:09:18+08:00 ] 127.0.0.1 /html5-xidian/images/bg.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000629s ]
+ERR: 无法加载模块:Images
+
+[ 2016-11-28T16:12:30+08:00 ] 127.0.0.1 /html5-xidian/home.php/food
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000670s ]
+ERR: 无法加载模块:Food
+

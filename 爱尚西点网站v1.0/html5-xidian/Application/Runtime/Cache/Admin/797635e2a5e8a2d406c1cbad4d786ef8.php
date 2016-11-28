@@ -3,7 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>首页</title>
-	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/bootstrap.css">
+	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/bootstrap-theme.css">
 	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/adminStyle.css">
 	<script src="/html5-xidian/Public/admin/js/jquery.js"></script>
 	<script src="/html5-xidian/Public/admin/js/bootstrap.js"></script>
@@ -45,16 +46,16 @@
 						</div>
 						<div id="panel-element-78753" class="panel-collapse collapse in" >
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/admin/list.html">管理员管理</a>
+								<a href="/html5-xidian/index.php/Admin/adminUsers/list.html">管理员管理</a>
 							</div>
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/admin/editInfo.html">修改个人信息</a>
+								<a href="/html5-xidian/index.php/Admin/adminUsers/editInfo.html">修改个人信息</a>
 							</div>
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/admin/editPwd.html">修改密码</a>
+								<a href="/html5-xidian/index.php/Admin/adminUsers/editPwd.html">修改密码</a>
 							</div>
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/admin/add.html">添加管理员</a>
+								<a href="/html5-xidian/index.php/Admin/adminUsers/add.html">添加管理员</a>
 							</div>
 						</div>
 					</div>

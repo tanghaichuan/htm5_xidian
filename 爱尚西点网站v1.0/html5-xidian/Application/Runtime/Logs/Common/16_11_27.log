@@ -1,0 +1,12 @@
+[ 2016-11-27T11:11:39+08:00 ] 127.0.0.1 /html5-xidian/adminusers/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000556s ]
+ERR: 无法加载模块:Adminusers
+
+[ 2016-11-27T11:11:47+08:00 ] 127.0.0.1 /html5-xidian/adminUsers/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000428s ]
+ERR: 无法加载模块:AdminUsers
+

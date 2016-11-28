@@ -10,6 +10,7 @@ $(function(){
 	$("#inputTelphone").change(test_Telphone);
 	$("#registerBtn").click(testDisable);
 	$(":file").change(submit_upload_picture);
+
 	$("#del").click(function(){
 		return confirm("是否删除？");
 	});
@@ -18,6 +19,8 @@ $(function(){
 	var password=false;
 	var rePassword=false;
 	var telphone=false;
+	var realname=false;
+
 	function testUsername(){
 		$("#res").html("");
 		var str=$(this).val().trim("");
@@ -127,7 +130,16 @@ $(function(){
 		}
 	}
 	function testDisable(){
-		if(username&&password&&rePassword&&telphone){
+		if($(".realname").val()==""){
+			$(".realname").css("border-bottom","solid 1px #ed1c24");
+			realname=false;
+		}
+		else{
+			$(".realname").css("border-bottom","solid 1px #20bdf0");
+			realname=true;
+		}
+
+		if(username&&password&&rePassword&&telphone&&realname){
 			$(".register").submit();
 		}
 		else{

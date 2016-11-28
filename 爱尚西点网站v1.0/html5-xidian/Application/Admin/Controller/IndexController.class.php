@@ -15,6 +15,8 @@ class IndexController extends Controller {
 
 
     public function index(){
-       $this->display();
+    	$username=session("username");
+        $this->assign("username",$username);
+        $this->display();
     }
 }

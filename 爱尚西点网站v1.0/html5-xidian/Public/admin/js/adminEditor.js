@@ -7,23 +7,30 @@ $(function(){
 	$("#rePassword").change(testRe_Password);
 	$("#inputRePwd").change(testRe_Password);
 	$(".telphone").change(testTelphone);
-	$("#inputTelphone").change(test_Telphone);
 	$("#registerBtn").click(testDisable);
+	$("#inputNewPwd").change(testEditPwd);
 	$(":file").change(submit_upload_picture);
 
-	/*$("#del").bind('click',function(){
-		//return confirm("是否删除？");
-		alert(1);
-	});*/
-	function delConfirm(){
-		//return confirm("是否删除？");
-		alert(1);
-	}
+	
+	
 	var username=false;
 	var password=false;
 	var rePassword=false;
 	var telphone=false;
 	var realname=false;
+
+	function testEditPwd(){
+		var str=$(this).val().trim("");
+		var user_pwd_patten=/^[0-9A-Za-z]{6,10}$/;
+		if(str.match(user_pwd_patten)){
+			$(this).css("border","solid 1px #20bdf0");
+			$("button:submit").attr("disabled",null);
+		}
+		else{
+			$(this).css("border","solid 1px #ed1c24");
+			$("button:submit").attr("disabled",true);
+		}
+	}
 
 	function testUsername(){
 		$("#res").html("");

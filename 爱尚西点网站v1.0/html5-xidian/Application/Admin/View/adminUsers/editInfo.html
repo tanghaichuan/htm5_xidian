@@ -24,19 +24,20 @@
 							<div class="form-group">
 								 <label for="inputUserName" class="col-md-2 control-label">用户名：</label>
 								<div class="col-md-3">
-									<input type="text" class="form-control" id="inputUserName" />
+									<input type="text" class="form-control" id="inputUserName" name="username" value="{$data.username}" disabled />
 								</div>
 							</div>
 							<div class="form-group">
 								 <label for="inputRealName" class="col-sm-2 control-label">真实姓名：</label>
 								<div class="col-sm-3">
-									<input type="text" class="form-control" id="inputRealName" />
+									<input type="text" class="form-control" id="inputRealName" name="realname" value="{$data.realname}" />
 								</div>
 							</div>
 							<div class="form-group">
 								 <label for="inputRealName" class="col-sm-2 control-label">手机号：</label>
 								<div class="col-sm-3">
-									<input type="text" class="form-control" id="inputTelphone" />
+									<input type="text" class="form-control" id="inputTelphone" 
+									name="telphone" value="{$data.telphone}" />
 								</div>
 							</div>
 							
@@ -49,4 +50,34 @@
 						
 					</div>
 				</div>
-			
+			<script>
+				$(function(){
+					var telphone=false;
+					$("#inputTelphone").change(testTelphone);
+					$("button:submit").click(testDisable);
+
+					function testTelphone(){
+						var str=$(this).val().trim("");
+						var tel_patten=/^1(3|4|5|7|8)\d{9}$/;
+						if(str.match(tel_patten)){
+							$(this).css("border","solid 1px #20bdf0");
+							telphone=true;
+						}
+						else{
+							$(this).css("border","solid 1px #ed1c24");
+							telphone=false;
+						}
+
+					}
+					function testDisable(){
+						if(telphone){
+							$("form").submit();
+						}
+						else{
+							return false;
+						}
+					}
+					
+				});
+				
+			</script>

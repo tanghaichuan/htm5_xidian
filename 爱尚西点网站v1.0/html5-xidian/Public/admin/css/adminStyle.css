@@ -1,4 +1,7 @@
 @charset "utf-8";
+img{
+	max-width: 100%;
+}
 h4{
 	font-size: 16px;
 	font-family: "微软雅黑";
@@ -16,7 +19,7 @@ h4{
 	margin: 0px;
 }
 .logo{
-	width: 199px;
+	width: 135px;
 	height: 50px;
 	float: left;
 }
@@ -24,13 +27,12 @@ h4{
 	width: 100%;
 	height: 50px;
 	padding-top: 15px;
-	padding-left: 1060px;
 }
 .top-right ul{
-	float: left;
+	float: right;
 }
 .top-right li{
-	margin: 0 20px 0 20px;
+	margin-right: 20px;
 	list-style: none;
 	float: left;
 }
@@ -48,12 +50,12 @@ h4{
 }
 .login-shouye{
 	width: 200px;
-	height:74px;
+	height:75px;
 	position: absolute;
 	background-color: #43c2cb;
 	padding-left: 60px;
 	padding-top: 25px;
-	top: 1px;
+
 }
 .shouye{
 	width: 200px;

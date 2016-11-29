@@ -31,7 +31,18 @@ class AdminUsersController extends Controller {
     }
 
     public function add(){
-    	$this->display();
+        if(IS_POST){
+            $model=D("AdminUsers");
+            if($model->create()&&$model->add()){
+                $this->success("添加成功！", U('Admin/adminUsers/index'));
+            }
+            else{
+                $this->error("添加失败！");
+            }
+        }
+        else{
+            $this->display();
+        }
     }
 
     public function editInfo(){

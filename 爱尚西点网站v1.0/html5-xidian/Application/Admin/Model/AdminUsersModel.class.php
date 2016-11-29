@@ -5,7 +5,8 @@ use Think\Model;
 class AdminUsersModel extends Model {
 	protected $_validate = array(
 			array("username", "require", "用户名不能为空！"),
-			array("password", "require", "用户名不能为空！")
+			array("password", "require", "用户名不能为空！"),
+			array("username", "", "用户名已存在！", 0, "unique"),
 		);
 
 	protected $_auto = array(

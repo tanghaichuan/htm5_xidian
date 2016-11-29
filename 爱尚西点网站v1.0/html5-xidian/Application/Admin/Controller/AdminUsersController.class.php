@@ -32,9 +32,9 @@ class AdminUsersController extends Controller {
 
     public function add(){
         if(IS_POST){
-            $model=D("AdminUsers");
+            $model=D("adminUsers");
             if($model->create()&&$model->add()){
-                $this->success("添加成功！", U('Admin/adminUsers/index'));
+                $this->success("添加成功！", U('Admin/adminUsers/index'),0);
             }
             else{
                 $this->error("添加失败！");
@@ -55,7 +55,7 @@ class AdminUsersController extends Controller {
                 "telphone"=>I("post.telphone")
             );
             if($model->create()&&$model->save($data)){
-                $this->success("修改成功！",U("adminUsers/index"));
+                $this->success("修改成功！",U("adminUsers/index"),0);
             }
             else{
                 $this->error("修改失败！");
@@ -104,10 +104,18 @@ class AdminUsersController extends Controller {
     public function del(){
         $id = isset($_GET['id']) ? intval($_GET['id']) : '';
         if(M("admin_users")->delete($id)){
-            $this->success("删除成功！");
+            $this->success("删除成功",0);
         }
         else{ 
             $this->error("删除失败！");
+        }
+    }
+
+    public function username_unique(){
+        $adminModel=M("admin_users");
+        $condition['username']=I("post.str");
+        if($adminModel->where($condition)->find()){
+            echo "error";
         }
     }
 }

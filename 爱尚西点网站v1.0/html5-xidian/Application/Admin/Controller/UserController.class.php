@@ -13,7 +13,7 @@ class UserController extends Controller {
 		}
 	}
     public function index(){
-       $this->display("list");
+       $this->display();
     }
 
     public function edit(){

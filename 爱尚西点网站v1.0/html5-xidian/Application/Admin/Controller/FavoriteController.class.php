@@ -14,6 +14,6 @@ class FavoriteController extends Controller {
 	}
 
     public function index(){
-       $this->display("list");
+       $this->display();
     }
 }

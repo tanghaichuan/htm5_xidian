@@ -11,10 +11,14 @@ $(function(){
 	$("#registerBtn").click(testDisable);
 	$(":file").change(submit_upload_picture);
 
-	$("#del").click(function(){
-		return confirm("是否删除？");
-	});
-
+	/*$("#del").bind('click',function(){
+		//return confirm("是否删除？");
+		alert(1);
+	});*/
+	function delConfirm(){
+		//return confirm("是否删除？");
+		alert(1);
+	}
 	var username=false;
 	var password=false;
 	var rePassword=false;

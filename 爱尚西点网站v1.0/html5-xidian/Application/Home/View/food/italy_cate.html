@@ -47,89 +47,87 @@
         </ul>
         <ul class="nav navbar-nav navbar-right" >
           <li>
-            <a href="#" style="padding: 15px 10px 15px 0px;">注册</a>
+            <a href="__MODULE__/login/login.html" style="padding: 15px 10px 15px 0px;">注册</a>
           </li>
           <li>
-            <a href="#" style="padding: 15px 50px 15px 0px;">登录</a>
+            <a href="__MODULE__/login/register.html" style="padding: 15px 50px 15px 0px;">登录</a>
           </li>
         </ul>
       </div>
     </nav>
   </div>
-  <!--背景-->
-  <div style="background-image: url(__PUBLIC__/home/images/bg.png); ">
-<div class="content"> 
-<!-- 导航条 -->
- <nav class="navbar navbar-default navbar-static-top" role="navigation" style="background-image: url(__PUBLIC__/home/images/bg.png);border-bottom: 1px solid #C0C0C0;">
-     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> 
 
-        <div id="navbar">
+  <!--背景-->
+  <div style="background-image: url(__PUBLIC__/home/images/bg.png);">
+    <!--内容-->
+    <div class="content">
+    <!--导航栏-->
+      <nav class="navbar navbar-default navbar-static-top" role="navigation" style="background-image: url(__PUBLIC__/home/images/bg.png);border-bottom: 1px solid #C0C0C0;">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right" style="font-weight: bold;color: black;">
-            <li>
-               <a href="#">首页</a>
+            <li class="dropdown">
+               <a href="__MODULE__/index/index.html">首页</a>
             </li>
            <li class="dropdown">
-               <a href="#" class="dropdown-toggle">美食鉴赏</a>
-             <ul class="dropdown-menu" style="text-align: right;min-width: 100px;">
+               <a href="__MODULE__/food/french_cate.html" class="dropdown-toggle">美食鉴赏</a>
+              <ul class="dropdown-menu" style="text-align: right;min-width: 100px;">
                 <li>
-                   <a href="French.html">法式菜肴</a>
+                   <a href="__MODULE__/food/french_cate.html">法式菜肴</a>
                 </li>
                 <li>
-                   <a href="UK.html">英式菜肴</a>
+                   <a href="__MODULE__/food/uk_cate.html">英式菜肴</a>
                 </li>
                 <li>
-                   <a href="US.html">美式菜肴</a>
+                   <a href="__MODULE__/food/us_cate.html">美式菜肴</a>
                 </li>
                
                 <li>
-                   <a href="Italy.html">意式菜肴</a>
+                   <a href="__MODULE__/food/italy_cate.html">意式菜肴</a>
                 </li>
                  <li>
-                   <a href="Russian.html">俄式菜肴</a>
+                   <a href="__MODULE__/food/russian_cate.html">俄式菜肴</a>
                 </li>
               </ul>
             </li>
             <li class="dropdown">
-               <a href="#" class="dropdown-toggle">美食DIY</a>
-             <ul class="dropdown-menu" style="text-align: right;min-width: 100px;">
+               <a href="__MODULE__/public/public.html" class="dropdown-toggle">美食DIY</a>
+              <ul class="dropdown-menu" style="text-align: right;min-width: 100px;">
          
                 <li>
-                   <a href="#">发布美食</a>
+                   <a href="__MODULE__/public/public.html">发布美食</a>
                 </li>
 
               </ul>
             </li>
            <li class="dropdown">
-               <a href="#" class="dropdown-toggle">食材商城</a>
-             <ul class="dropdown-menu" style="text-align: right;min-width: 100px;">
+               <a href="__MODULE__/shop/list.html" class="dropdown-toggle">食材商城</a>
+              <ul class="dropdown-menu" style="text-align: right;min-width: 100px;">
                 <li>
-                   <a href="#">用具</a>
+                   <a href="__MODULE__/shop/list.html">用具</a>
                 </li>
                 <li>
-                   <a href="#">食材</a>
+                   <a href="__MODULE__/shop/list.html">食材</a>
                 </li>
             
               </ul>
             </li>
           <li class="dropdown">
-               <a href="#" class="dropdown-toggle">个人中心</a>
-             <ul class="dropdown-menu" style="text-align: right;min-width: 100px;">
-            
+               <a href="__MODULE__/users/index.html" class="dropdown-toggle">个人中心</a>
+              <ul class="dropdown-menu" style="text-align: right;min-width: 100px;">
                 <li>
-                   <a href="#">修改信息</a>
+                   <a href="__MODULE__/users/reset_information.html">修改信息</a>
                 </li>
               
                 <li>
-                   <a href="#">收藏夹</a>
+                   <a href="__MODULE__/users/reset_password.html">修改密码</a>
                 </li>
                  <li>
-                   <a href="#">购物车</a>
+                   <a href="__MODULE__/cart/cart.html">我的购物车</a>
                 </li>
               </ul>
             </li>
             <li class="dropdown">
                <a href="#" class="dropdown-toggle">关于我们</a>
-           
             </li>
             <li>
               <form class="navbar-form navbar-left" role="search">
@@ -140,7 +138,6 @@
               </form>
             </li>
           </ul>
-        </div>
         </div>
       </nav>
 </div>
@@ -158,10 +155,10 @@
 				<div class="col-md-12">
 					<ul class="breadcrumb">
 						<li>
-							<a href="#"><font face="微软雅黑" size="5px">首页</font></a> <span class="divider">/</span>
+							<a href="__MODULE__/index/index.html"><font face="微软雅黑" size="5px">首页</font></a> <span class="divider">/</span>
 						</li>
 						<li>
-							<a href="#"><font face="微软雅黑" size="5px">美食鉴赏</font></a> <span class="divider">/</span>
+							<a href="__MODULE__/food/french_cate.html"><font face="微软雅黑" size="5px">美食鉴赏</font></a> <span class="divider">/</span>
 						</li>
 						<li class="active"><font face="微软雅黑" size="5px">
 							意式餐点</font>
@@ -193,7 +190,7 @@
 						<div class="col-md-4">
 							<div class="row">
 								<div class="col-md-8">
-									<a href="content.html"><img alt="意式餐点" src="__PUBLIC__/home/images/food-I-1.png" /></a>
+									<a href="__MODULE__/food/content.html"><img alt="意式餐点" src="__PUBLIC__/home/images/food-I-1.png" /></a>
 								</div>
 								<div class="col-md-1">
 								</div>
@@ -206,7 +203,7 @@
 						<div class="col-md-4">
 							<div class="row">
 								<div class="col-md-8">
-									<a href="content.html"><img alt="意式餐点" src="__PUBLIC__/home/images/food-I-2.png" /></a>
+									<a href="__MODULE__/food/content.html"><img alt="意式餐点" src="__PUBLIC__/home/images/food-I-2.png" /></a>
 								</div>
 								<div class="col-md-1">
 								</div>
@@ -219,7 +216,7 @@
 						<div class="col-md-4">
 							<div class="row">
 								<div class="col-md-8">
-									<a href="content.html"><img alt="意式餐点" src="__PUBLIC__/home/images/food-I-3.png" /></a>
+									<a href="__MODULE__/food/content.html"><img alt="意式餐点" src="__PUBLIC__/home/images/food-I-3.png" /></a>
 								</div>
 								<div class="col-md-1">
 								</div>
@@ -236,7 +233,7 @@
 						<div class="col-md-4">
 							<div class="row">
 								<div class="col-md-8">
-									<a href="content.html"><img alt="意式餐点" src="__PUBLIC__/home/images/food-I-4.png" /></a>
+									<a href="__MODULE__/food/content.html"><img alt="意式餐点" src="__PUBLIC__/home/images/food-I-4.png" /></a>
 								</div>
 								<div class="col-md-1">
 								</div>
@@ -249,7 +246,7 @@
 						<div class="col-md-4">
 							<div class="row">
 								<div class="col-md-8">
-									<a href="content.html"><img alt="意式餐点" src="__PUBLIC__/home/images/food-I-5.png" /></a>
+									<a href="__MODULE__/food/content.html"><img alt="意式餐点" src="__PUBLIC__/home/images/food-I-5.png" /></a>
 								</div>
 								<div class="col-md-1">
 								</div>
@@ -262,7 +259,7 @@
 						<div class="col-md-4">
 							<div class="row">
 								<div class="col-md-8">
-									<a href="content.html"><img alt="意式餐点" src="__PUBLIC__/home/images/food-I-6.png" /></a>
+									<a href="__MODULE__/food/content.html"><img alt="意式餐点" src="__PUBLIC__/home/images/food-I-6.png" /></a>
 								</div>
 								<div class="col-md-1">
 								</div>
@@ -279,7 +276,7 @@
 						<div class="col-md-4">
 							<div class="row">
 								<div class="col-md-8">
-									<a href="content.html"><img alt="意式餐点" src="__PUBLIC__/home/images/food-I-7.png" /></a>
+									<a href="__MODULE__/food/content.html"><img alt="意式餐点" src="__PUBLIC__/home/images/food-I-7.png" /></a>
 								</div>
 								<div class="col-md-1">
 								</div>
@@ -292,7 +289,7 @@
 						<div class="col-md-4">
 							<div class="row">
 								<div class="col-md-8">
-									<a href="content.html"><img alt="意式餐点" src="__PUBLIC__/home/images/food-I-8.png" /></a>
+									<a href="__MODULE__/food/content.html"><img alt="意式餐点" src="__PUBLIC__/home/images/food-I-8.png" /></a>
 								</div>
 								<div class="col-md-1">
 								</div>
@@ -305,7 +302,7 @@
 						<div class="col-md-4">
 							<div class="row">
 								<div class="col-md-8">
-									<a href="content.html"><img alt="意式餐点" src="__PUBLIC__/home/images/food-I-9.png" /></a>
+									<a href="__MODULE__/food/content.html"><img alt="意式餐点" src="__PUBLIC__/home/images/food-I-9.png" /></a>
 								</div>
 								<div class="col-md-1">
 								</div>

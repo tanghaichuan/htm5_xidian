@@ -13,6 +13,20 @@ class TagController extends Controller {
 		}
 	}
     public function index(){
-       $this->display();
+    	$model=M('tags');
+    	$list=$model->select();
+    	$this->assign("list",$list);
+        $this->display();
     }
+
+    public function add(){
+    	$model=M("tags");
+    	if($model->create() && $model->add()){
+    		$this->success("添加成功!",U("tag/index"));
+    	}
+    	else{
+    		$this->error("添加失败");
+    	}
+    }
+
 }

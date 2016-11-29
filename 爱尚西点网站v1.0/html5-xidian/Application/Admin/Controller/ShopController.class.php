@@ -14,8 +14,18 @@ class ShopController extends Controller {
 	}
     public function index(){
     	$model=M('mall');
-    	$list=$model->select();
-    	$this->assign("list",$list);
+        import('Org.Util.Page');
+        $count = $model->count();
+        //实例化分页类，传入总记录数和每一页显示的记录数8
+        $page = new \Think\Page($count,2);
+        $nowPage = isset($_GET['p'])?intval($_GET['p']):1;
+        $page -> setConfig('first','第一页');
+        $page -> setConfig('prev','<<');
+        $page -> setConfig('next','>>');
+        $list = $model -> order('id desc') -> page($nowPage.',2') -> select();
+        $show = $page -> show();
+        $this -> assign('page',$show);
+        $this -> assign('list',$list); 
         $this->display();
     }
 
@@ -92,5 +102,15 @@ class ShopController extends Controller {
 					$this->error('数据修改失败');
 				}
 		    }
+    }
+
+    public function del(){
+    	$id = isset($_GET['id']) ? intval($_GET['id']) : '';
+        if(M("mall")->delete($id)){
+            $this->success("删除成功！");
+        }
+        else{ 
+            $this->error("删除失败！");
+        }
     }
 }

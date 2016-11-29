@@ -20,15 +20,36 @@
  		}
  		.font{
  			writing-mode:tb-rl;
+ 			font-size:1.5em;
+ 			font-family:仿宋;
+ 		}
+ 		.font-a{
+ 			font-size:2.7em;
+ 			font-family:仿宋;
+ 		}
+ 		.font-b{
+ 			font-size:1.2em;
+ 			font-family:仿宋;
  		}
  		.col-md-12 img{
- 			width:1360px;
+ 			width:100%;
  			height: 300px;
  		}
  		.col-md-8 img{
- 			width:280px;
+ 			width:100%;
  			height: 196px;
  		}
+ 		.nav navbar-nav navbar-right{
+ 			padding: 15px 10px 15px 0px;
+ 		}
+ 		.dropdown-menu{
+ 			text-align: right;min-width: 100px;
+ 		}
+ 		.breadcrumb a{
+ 			font-size:1.1em;
+ 			font-family:微软雅黑;
+ 		}
+
  	</style>
 </head>
 <body>
@@ -47,10 +68,10 @@
         </ul>
         <ul class="nav navbar-nav navbar-right" >
           <li>
-            <a href="__MODULE__/login/login.html" style="padding: 15px 10px 15px 0px;">注册</a>
+            <a href="__MODULE__/login/login.html" >注册</a>
           </li>
           <li>
-            <a href="__MODULE__/login/register.html" style="padding: 15px 50px 15px 0px;">登录</a>
+            <a href="__MODULE__/login/register.html" >登录</a>
           </li>
         </ul>
       </div>
@@ -70,7 +91,7 @@
             </li>
            <li class="dropdown">
                <a href="__MODULE__/food/french_cate.html" class="dropdown-toggle">美食鉴赏</a>
-              <ul class="dropdown-menu" style="text-align: right;min-width: 100px;">
+              <ul class="dropdown-menu">
                 <li>
                    <a href="__MODULE__/food/french_cate.html">法式菜肴</a>
                 </li>
@@ -91,7 +112,7 @@
             </li>
             <li class="dropdown">
                <a href="__MODULE__/public/public.html" class="dropdown-toggle">美食DIY</a>
-              <ul class="dropdown-menu" style="text-align: right;min-width: 100px;">
+              <ul class="dropdown-menu">
          
                 <li>
                    <a href="__MODULE__/public/public.html">发布美食</a>
@@ -101,7 +122,7 @@
             </li>
            <li class="dropdown">
                <a href="__MODULE__/shop/list.html" class="dropdown-toggle">食材商城</a>
-              <ul class="dropdown-menu" style="text-align: right;min-width: 100px;">
+              <ul class="dropdown-menu">
                 <li>
                    <a href="__MODULE__/shop/list.html">用具</a>
                 </li>
@@ -113,7 +134,7 @@
             </li>
           <li class="dropdown">
                <a href="__MODULE__/users/index.html" class="dropdown-toggle">个人中心</a>
-              <ul class="dropdown-menu" style="text-align: right;min-width: 100px;">
+              <ul class="dropdown-menu" >
                 <li>
                    <a href="__MODULE__/users/reset_information.html">修改信息</a>
                 </li>
@@ -155,24 +176,24 @@
 				<div class="col-md-12">
 					<ul class="breadcrumb">
 						<li>
-							<a href="__MODULE__/index/index.html"><font face="微软雅黑" size="5px">首页</font></a> <span class="divider">/</span>
+							<a href="__MODULE__/index/index.html">首页</a> 
 						</li>
 						<li>
-							<a href="__MODULE__/food/french_cate.html"><font face="微软雅黑" size="5px">美食鉴赏</font></a> <span class="divider">/</span>
+							<a href="__MODULE__/food/french_cate.html">美食鉴赏</a>
 						</li>
-						<li class="active"><font face="微软雅黑" size="5px">
-							俄式餐点</font>
+						<li class="active">
+							俄式餐点
 						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
-	<br />
+
 	<div class="row">
 		<div class="col-md-1">
 			<!-- 文字实现竖排 -->
-			<div class="font"><font face="仿宋" size="12px">俄式餐点</font></div>
+			<div class="font-a">俄式餐点</div>
 		</div>
 		<div class="col-md-11">
 			<div class="row">
@@ -180,7 +201,7 @@
 				</div>
 				<div class="col-md-11">
 					<p>
-						<font face="仿宋" size="5px">俄罗斯人比较讲究饮食，菜肴的品种丰富多彩，"俄式大餐"在世界很有名气，珍贵的鱼子酱，正宗的罗宋汤，还有传统小煎饼，都是非常有民族特色的。</font>
+						<div class="font-b">俄罗斯人比较讲究饮食，菜肴的品种丰富多彩，"俄式大餐"在世界很有名气，珍贵的鱼子酱，正宗的罗宋汤，还有传统小煎饼，都是非常有民族特色的。</div>
 					</p>
 				</div>
 				<br /><br /><br /><br />
@@ -192,10 +213,9 @@
 								<div class="col-md-8">
 									<a href="__MODULE__/food/content.html"><img alt="俄式餐点" src="__PUBLIC__/home/images/food-R-1.png" /></a>
 								</div>
-								<div class="col-md-1">
-								</div>
-								<div class="col-md-3">
-									<div class="font"><font face="仿宋" size="6px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;布林饼</font></div>
+							
+								<div class="col-md-4">
+									<div class="font">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;布林饼</div>
 								</div>
 								
 							</div>
@@ -205,10 +225,9 @@
 								<div class="col-md-8">
 									<a href="__MODULE__/food/content.html"><img alt="俄式餐点" src="__PUBLIC__/home/images/food-R-2.png" /></a>
 								</div>
-								<div class="col-md-1">
-								</div>
-								<div class="col-md-3">
-									<div class="font"><font face="仿宋" size="6px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;俄罗斯烤肉串</font></div>
+							
+								<div class="col-md-4">
+									<div class="font">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;俄罗斯烤肉串</div>
 								</div>
 								
 							</div>
@@ -218,16 +237,15 @@
 								<div class="col-md-8">
 									<a href="__MODULE__/food/content.html"><img alt="俄式餐点" src="__PUBLIC__/home/images/food-R-3.png" /></a>
 								</div>
-								<div class="col-md-1">
-								</div>
-								<div class="col-md-3">
-									<div class="font"><font face="仿宋" size="6px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;罗宋汤</font></div>
+								
+								<div class="col-md-4">
+									<div class="font">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;罗宋汤</div>
 								</div>
 								
 							</div>
 						</div>
 					</div>
-					<br /><br /><br /><br />
+					<br /><br /><br />
 					<!-- 第二行图片 -->
 								<div class="row">
 						<div class="col-md-4">
@@ -235,10 +253,9 @@
 								<div class="col-md-8">
 									<a href="__MODULE__/food/content.html"><img alt="俄式餐点" src="__PUBLIC__/home/images/food-R-4.png" /></a>
 								</div>
-								<div class="col-md-1">
-								</div>
-								<div class="col-md-3">
-									<div class="font"><font face="仿宋" size="6px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;列巴</font></div>
+							
+								<div class="col-md-4">
+									<div class="font">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;列巴</div>
 								</div>
 								
 							</div>
@@ -248,10 +265,9 @@
 								<div class="col-md-8">
 									<a href="__MODULE__/food/content.html"><img alt="俄式餐点" src="__PUBLIC__/home/images/food-R-5.png" /></a>
 								</div>
-								<div class="col-md-1">
-								</div>
-								<div class="col-md-3">
-									<div class="font"><font face="仿宋" size="6px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;俄式饺子</font></div>
+								
+								<div class="col-md-4">
+									<div class="font">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;俄式饺子</div>
 								</div>
 								
 							</div>
@@ -261,16 +277,15 @@
 								<div class="col-md-8">
 									<a href="__MODULE__/food/content.html"><img alt="俄式餐点" src="__PUBLIC__/home/images/food-R-6.png" /></a>
 								</div>
-								<div class="col-md-1">
-								</div>
-								<div class="col-md-3">
-									<div class="font"><font face="仿宋" size="6px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;俄式酸黄瓜</font></div>
+								
+								<div class="col-md-4">
+									<div class="font">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;俄式酸黄瓜</div>
 								</div>
 								
 							</div>
 						</div>
 					</div>
-					<br /><br /><br /><br /><br /><br />
+					<br /><br /><br /><br />
 					<!-- 第三行图片 -->
 								<div class="row">
 						<div class="col-md-4">
@@ -278,10 +293,9 @@
 								<div class="col-md-8">
 									<a href="__MODULE__/food/content.html"><img alt="俄式餐点" src="__PUBLIC__/home/images/food-R-7.png" /></a>
 								</div>
-								<div class="col-md-1">
-								</div>
-								<div class="col-md-3">
-									<div class="font"><font face="仿宋" size="6px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;欧拉季益</font></div>
+								
+								<div class="col-md-4">
+									<div class="font">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;欧拉季益</div>
 								</div>
 								
 							</div>
@@ -291,10 +305,9 @@
 								<div class="col-md-8">
 									<a href="__MODULE__/food/content.html"><img alt="俄式餐点" src="__PUBLIC__/home/images/food-R-8.png" /></a>
 								</div>
-								<div class="col-md-1">
-								</div>
-								<div class="col-md-3">
-									<div class="font"><font face="仿宋" size="6px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;奶酪沙律</font></div>
+								
+								<div class="col-md-4">
+									<div class="font">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;奶酪沙律</div>
 								</div>
 								
 							</div>
@@ -304,10 +317,9 @@
 								<div class="col-md-8">
 									<a href="__MODULE__/food/content.html"><img alt="俄式餐点" src="__PUBLIC__/home/images/food-R-9.png" /></a>
 								</div>
-								<div class="col-md-1">
-								</div>
-								<div class="col-md-3">
-									<div class="font"><font face="仿宋" size="6px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;俄式馅饼</font></div>
+								
+								<div class="col-md-4">
+									<div class="font">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;俄式馅饼</div>
 								</div>
 								
 							</div>

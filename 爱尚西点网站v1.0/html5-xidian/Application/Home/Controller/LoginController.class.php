@@ -6,9 +6,9 @@ class LoginController extends Controller {
        $this->display("login");
     }
     public function login(){
-    	$Model=M("admin_users");
+    	$Model=M("public_users");
         $user=$Model->where(array('username'=>I('username')))->find(); 
-        if(!$user || $user['password']!= I('password','','md5')){ 
+        if($user['password']!= I('password','','md5')){ 
                 $this->error("账号或者密码错误！");
         }
         else{
@@ -24,5 +24,14 @@ class LoginController extends Controller {
     }
     public function register(){
     	$this->display();
+    }
+    public function register_add(){
+        $adminModel=D("PublicUsers");
+        if ($adminModel->create() && $adminModel->add()) {
+            $this->success("注册成功！", U('Home/login/index'));
+        }
+        else {
+            $this->error($adminModel->getError());
+        }
     }
 }

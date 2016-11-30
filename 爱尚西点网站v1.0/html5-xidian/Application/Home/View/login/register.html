@@ -4,11 +4,11 @@
     <title>注册页</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">	
     <meta charset="utf-8">
-    <link rel="stylesheet" href="__PUBLISH__/home/css/bootstrap.min.css">
-    <script src="__PUBLISH__/home/js/jquery.js"></script>    
-    <script src="__PUBLISH__/home/js/bootstrap.min.js"></script>
-    <script src="__PUBLISH__/home/js/homeEdit.js"></script>
-    <script src="__PUBLISH__/home/js/register_form.js"></script>
+    <link rel="stylesheet" href="__PUBLIC__/home/css/bootstrap.min.css">
+    <script src="__PUBLIC__/home/js/jquery.js"></script>    
+    <script src="__PUBLIC__/home/js/bootstrap.min.js"></script>
+    <script src="__PUBLIC__/home/js/homeEdit.js"></script>
+    <script src="__PUBLIC__/home/js/register_form.js"></script>
     <style type="text/css">
       *{
         font-family: "微软雅黑";
@@ -20,13 +20,13 @@
     <div class="header" style="height: 50px;">
       <nav class="navbar navbar-default navbar-static-top" role="navigation" style="background-color: white;">
         <div class="navbar-header">
-           <a href="#"><img src="__PUBLISH__/home/images/logo1.png"></a>
+           <a href="#"><img src="__PUBLIC__/home/images/logo1.png"></a>
         </div>
         
         <div class="collapse navbar-collapse" >
           <ul class="nav navbar-nav navbar-left" style="position: absolute;left: 40px;top: -10px;">
             <li>
-               <a href="#"><img src="__PUBLISH__/home/images/logo2.png"></a>
+               <a href="#"><img src="__PUBLIC__/home/images/logo2.png"></a>
             </li>
           </ul>
         </div>
@@ -34,13 +34,13 @@
     </div>
 
     <!--背景-->
-  <div style="background-image: url(__PUBLISH__/home/images/bg.png);height: 615px;">
+  <div style="background-image: url(__PUBLIC__/home/images/bg.png);height: 615px;">
     <!--内容-->
     <div class="content" style="padding: 110px 10px;">
       <!--配图-->
       <div class="row clearfix">
         <div class="col-md-7 column" style="padding: 50px 0px 0px 80px;">
-          <img src="__PUBLISH__/home/images/sinin.png">
+          <img src="__PUBLIC__/home/images/sinin.png">
         </div>
         <!--表单-->
         <div class="col-md-4 column">
@@ -54,24 +54,28 @@
                  <label class="col-sm-3 control-label">用户名:</label>
                 <div class="col-sm-9">
                   <input type="text" class="form-control" id="username" placeholder="请输入用户名" value="" name="username" />
+                  <div id="usernameput"></div>
                 </div>
               </div>
               <div class="form-group">
                  <label class="col-sm-3 control-label">昵称:</label>
                 <div class="col-sm-9">
                   <input type="text" class="form-control" id="nickname" placeholder="请输入昵称" value="" name="realname" />
+                  <div id="nicknameput"></div>
                 </div>
               </div>
               <div class="form-group">
                  <label class="col-sm-3 control-label">手机号:</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" id="password" placeholder="请输入手机号" value="" name="telphone" />
+                  <input type="text" class="form-control" id="telphone" placeholder="请输入手机号" value="" name="telphone" />
+                  <div id="telphoneput"></div>
                 </div>
               </div>
               <div class="form-group">
                  <label class="col-sm-3 control-label">密码:</label>
                 <div class="col-sm-9">
                   <input type="password" class="form-control" id="password" placeholder="请输入密码" value="" name="password" />
+                  <div id="passwordput"></div>
                 </div>
               </div>
               <div class="form-group">
@@ -79,6 +83,7 @@
                 <div class="col-sm-9">
                   <input type="password" class="form-control" id="repassword" placeholder="确认密码" value="" />
                 </div>
+                <div id="repasswordput"></div>
               </div>
               <div class="form-group">
                 <div class="col-sm-offset-3 col-sm-9">

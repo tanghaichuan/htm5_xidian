@@ -1,8 +1,8 @@
 <?php
-namespace Admin\Model;
+namespace Home\Model;
 use Think\Model;
 
-class AdminUsersModel extends Model {
+class PublicUsersModel extends Model {
 	protected $_validate = array(
 			array("username", "require", "用户名不能为空！"),
 			array("password", "require", "用户名不能为空！"),

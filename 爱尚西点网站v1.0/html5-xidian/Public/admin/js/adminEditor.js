@@ -1,5 +1,6 @@
 $(function(){
 	$(".username").change(testUsername);
+	$("#inputUserName").change(testUsername);
 	$("#inputUserName").change(test_Username);
 	$(".password").change(testPassword);
 	$("#inputPwd").change(test_Password);
@@ -109,10 +110,12 @@ $(function(){
 		if(str.match(user_pwd_patten)&&str==password){
 			$(this).css("border-bottom","solid 1px #20bdf0");
 			rePassword=true;
+			$("button:submit").attr("disabled",null);
 		}
 		else{
 			$(this).css("border-bottom","solid 1px #ed1c24");
 			rePassword=false;
+			$("button:submit").attr("disabled",true);
 		}
 	}
 	function testRe_Password(){
@@ -121,10 +124,12 @@ $(function(){
 		if(str==password){
 			$(this).css("border","solid 1px #20bdf0");
 			rePassword=true;
+			$("button:submit").attr("disabled",null);
 		}
 		else{
 			$(this).css("border","solid 1px #ed1c24");
 			rePassword=false;
+			$("button:submit").attr("disabled",true);
 		}
 	}
 	function testTelphone(){

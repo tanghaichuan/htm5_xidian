@@ -6,17 +6,33 @@ class FoodController extends Controller {
        $this->display("french_cate");
     }
     public function us_cate(){
-
+      $model=M("foods");
+      $food=$model->where(array('classify'=>"美式菜肴"))->select();
+      //var_dump($food);
+      $this->assign("food",$food);
       $this->display();
+
     }
     public function uk_cate(){
-       $this->display();
+      $model=M("foods");
+      $food=$model->where(array('classify'=>"英式菜肴"))->select();
+      //var_dump($food);
+      $this->assign("food",$food);
+      $this->display();
     }
     public function russian_cate(){
-       $this->display();
+      $model=M("foods");
+      $food=$model->where(array('classify'=>"俄式菜肴"))->select();
+      //var_dump($food);
+      $this->assign("food",$food);
+      $this->display();
     }
     public function italy_cate(){
-       $this->display();
+      $model=M("foods");
+      $food=$model->where(array('classify'=>"意式菜肴"))->select();
+      //var_dump($food);
+      $this->assign("food",$food);
+      $this->display();
     }
     public function french_cate(){
       $model=M("foods");

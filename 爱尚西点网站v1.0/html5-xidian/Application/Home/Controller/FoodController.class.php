@@ -42,6 +42,10 @@ class FoodController extends Controller {
       $this->display();
     }
     public function content(){
-       $this->display();
+      $model=M("foods");
+      $id = isset($_GET['id']) ? intval($_GET['id']) : '';
+      $content=$model->find($id);
+      $this->assign("content",$content);
+      $this->display();
     }
 }

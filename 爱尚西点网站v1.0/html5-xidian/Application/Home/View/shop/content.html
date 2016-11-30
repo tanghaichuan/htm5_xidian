@@ -94,10 +94,10 @@
                <a href="__MODULE__/shop/list.html" class="dropdown-toggle">食材商城</a>
               <ul class="dropdown-menu" style="text-align: right;min-width: 100px;">
                 <li>
-                   <a href="__MODULE__/shop/list.html">用具</a>
+                   <a href="__MODULE__/shop/index.html">用具</a>
                 </li>
                 <li>
-                   <a href="__MODULE__/shop/list.html">食材</a>
+                   <a href="__MODULE__/shop/index.html">食材</a>
                 </li>
             
               </ul>
@@ -152,17 +152,17 @@
     		<div class="col-md-12 column">
       			<div class="row clearfix">
         			<div class="col-md-6 column">
-          				<img alt="140x140" src="__PUBLIC__/home/images/Shopping_content.jpg" style="padding-left:50px"/>
+          				<img alt="140x140" src="__PUBLIC__/{$content.img}" style="padding-left:50px"/>
         			</div>
         			<div class="col-md-6 column">
-           				<font style="font-size:20px;font-weight:bold;">百钻 法国黄油200g无盐发酵黄油 烘焙原料</font>
+           				<font style="font-size:20px;font-weight:bold;">{$content.name}</font>
           				<div class="form-group" style="padding-top:20px">
                             <label >相关信息：</label>
-                                <span>法国进口，巴士灭菌，未添加食用盐 【温馨提示：周末节假日期间暂停发货，敬请谅解哦！若有其他疑问可致电服务热线400-8858-560】</span>
+                                <span>{$content.content}</span>
                         </div>
           				<div class="form-group" style="padding-top:20px;">
                             <label>价格：</label>
-                            <span>￥16.80</span> 
+                            <span>￥{$content.price}</span> 
                         </div>   
                         <div class="form-group" style="padding-top:20px">
                             <label>数量：</label>

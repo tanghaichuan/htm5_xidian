@@ -158,50 +158,85 @@
 							 <a href="/html5-xidian/index.php/Admin/index/index.html">首页</a>
 						</li>
 						<li>
-							 <a href="/html5-xidian/index.php/Admin/user/index.html">用户管理</a>
+							 <a href="/html5-xidian/index.php/Admin/tag/index.html">标签管理</a>
 						</li>
 						<li>
-							 <a href="#">修改用户信息</a>
+							 <a href="#">标签列表</a>
 						</li>
 					</ul>
 				</div>
-				<!--userList-->
+				<!--List-->
 				<div class="col-md-12 userList">
 					<div class="col-md-12">
-						<h4>修改用户信息</h4>
+						<h4>标签管理</h4>
 					</div>
-					<!--editInfo-->
+					<!--tag-->
 					<div class="col-md-12">
-						<form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
-							<div class="form-group">
-								 <label for="inputUserName" class="col-md-2 control-label">用户名：</label>
-								<div class="col-md-3">
-									<input type="text" class="form-control" id="inputUserName"  placeholder="<?php echo ($data["username"]); ?>" disabled />
+						<div class="col-md-12">
+							<form class="form-horizontal" action="add" method="post" style="margin: 10px 0 0 0;" enctype="multipart/form-data">
+								<div class="form-group">
+									<label for="inputTag" class="col-md-4 control-label" style="width: 110px;">请输入标签：</label>
+									<div class="col-md-3">
+										<input type="text" class="form-control" id="inputTag" name="tagname" />
+									</div>
+									<div class="col-md-3">
+										<button type="submit" class="btn">添加</button>
+									</div>
 								</div>
+							</form>
+						</div>
+						<div class="col-md-12">
+							<h4>标签列表</h4>
+						</div>
+						<div class="col-md-5 col-md-offset-3 tag">
+							<table class="table table-striped table-hover">
+								<thead>
+									<tr>
+										<th>标签</th>
+										<th>操作</th>
+									</tr>
+								</thead>
+								<tbody>
+									<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><tr>
+											<td><?php echo ($n["tagname"]); ?></td>
+											<td><a href="del/id/<?php echo ($n["id"]); ?>" onClick="delConfirm()">删除</a></td>
+										</tr><?php endforeach; endif; else: echo "" ;endif; ?>
+								</tbody>
+							</table>
+						</div>
+						<!--pagination-->
+						<div class="col-md-4 col-md-offset-5">
+								<ul class="pagination">
+									<li>
+										<a href="#"><<</a>
+									</li>
+									<li>
+										<a href="#">1</a>
+									</li>
+									<li>
+										<a href="#">2</a>
+									</li>
+									<li>
+										<a href="#">3</a>
+									</li>
+									<li>
+										<a href="#">4</a>
+									</li>
+									<li>
+										<a href="#">5</a>
+									</li>
+									<li>
+										<a href="#">>></a>
+									</li>
+								</ul>
 							</div>
-							<div class="form-group">
-								 <label for="inputRealName" class="col-sm-2 control-label">真实姓名：</label>
-								<div class="col-sm-3">
-									<input type="text" class="form-control" id="inputRealName" name="realname" value="<?php echo ($data["realname"]); ?>" />
-								</div>
-							</div>
-							<div class="form-group">
-								 <label for="inputRealName" class="col-sm-2 control-label">手机号：</label>
-								<div class="col-sm-3">
-									<input type="text" class="form-control" id="inputTelphone" name="telphone" value="<?php echo ($data["telphone"]); ?>" />
-								</div>
-							</div>
-							
-							<div class="form-group">
-								<div class="col-sm-3">
-									 <button type="submit" class="btn">修改</button>
-								</div>
-							</div>
-						</form>
-						
-					</div>
+					</div>					
 				</div>
-			
+			<script>
+				function delConfirm(){
+					return confirm("确定删除?");
+				}
+			</script>
 			</div>
 		</div>
 	</div>

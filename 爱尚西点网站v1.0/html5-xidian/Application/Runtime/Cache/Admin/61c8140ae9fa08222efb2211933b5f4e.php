@@ -158,48 +158,111 @@
 							 <a href="/html5-xidian/index.php/Admin/index/index.html">首页</a>
 						</li>
 						<li>
-							 <a href="/html5-xidian/index.php/Admin/user/index.html">用户管理</a>
-						</li>
-						<li>
-							 <a href="#">修改用户信息</a>
+							 <a href="#">购物车管理</a>
 						</li>
 					</ul>
 				</div>
-				<!--userList-->
+				<!--List-->
 				<div class="col-md-12 userList">
-					<div class="col-md-12">
-						<h4>修改用户信息</h4>
+					<div class="col-md-5">
+						<h4>购物车管理</h4>
 					</div>
-					<!--editInfo-->
-					<div class="col-md-12">
-						<form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
-							<div class="form-group">
-								 <label for="inputUserName" class="col-md-2 control-label">用户名：</label>
-								<div class="col-md-3">
-									<input type="text" class="form-control" id="inputUserName"  placeholder="<?php echo ($data["username"]); ?>" disabled />
-								</div>
-							</div>
-							<div class="form-group">
-								 <label for="inputRealName" class="col-sm-2 control-label">真实姓名：</label>
-								<div class="col-sm-3">
-									<input type="text" class="form-control" id="inputRealName" name="realname" value="<?php echo ($data["realname"]); ?>" />
-								</div>
-							</div>
-							<div class="form-group">
-								 <label for="inputRealName" class="col-sm-2 control-label">手机号：</label>
-								<div class="col-sm-3">
-									<input type="text" class="form-control" id="inputTelphone" name="telphone" value="<?php echo ($data["telphone"]); ?>" />
-								</div>
-							</div>
-							
-							<div class="form-group">
-								<div class="col-sm-3">
-									 <button type="submit" class="btn">修改</button>
-								</div>
-							</div>
-						</form>
-						
+					<div class="col-md-7">
+						<h4>当前用户：<span class="choose">张三</span></h4>
 					</div>
+					<!--favorite-->
+					<div class="col-md-12">
+						<div class="col-md-4">
+							<table class="table table-striped table-hover" id="table">
+								<thead>
+									<tr>
+										<th>用户名</th>
+										<th>手机号</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href="">张三</a></td>
+										<td>15232112345</td>
+									</tr>
+									<tr>
+										<td><a href="">李四</a></td>
+										<td>15232112345</td>
+									</tr>
+									<tr>
+										<td><a href="">王五</a></td>
+										<td>15232112345</td>
+									</tr>
+									<tr>
+										<td><a href="">张三</a></td>
+										<td>15232112345</td>
+									</tr>
+									<tr>
+										<td><a href="">张三</a></td>
+										<td>15232112345</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="col-md-8">
+							<table class="table table-striped table-hover">
+								<thead>
+									<th>商品名称</th>
+									<th>图片</th>
+									<th>操作</th>
+								</thead>
+								<tbody>
+									<tr>
+										<td>法式面包</td>
+										<td><img src="/html5-xidian/Public/admin/images/shopList.png" alt="" width="50" height="30px"></td>
+										<td><a href="">删除</a></td>
+									</tr>
+									<tr>
+										<td>法式面包</td>
+										<td><img src="/html5-xidian/Public/admin/images/shopList.png" alt="" width="50" height="30px"></td>
+										<td><a href="">删除</a></td>
+									</tr>
+									<tr>
+										<td>法式面包</td>
+										<td><img src="/html5-xidian/Public/admin/images/shopList.png" alt="" width="50" height="30px"></td>
+										<td><a href="">删除</a></td>
+									</tr>
+									<tr>
+										<td>法式面包</td>
+										<td><img src="/html5-xidian/Public/admin/images/shopList.png" alt="" width="50" height="30px"></td>
+										<td><a href="">删除</a></td>
+									</tr>
+									
+								</tbody>
+							</table>
+							<!--pagination-->
+							<div class="col-md-5 col-md-offset-7 page">
+								<ul class="pagination">
+									<li>
+										 <a href="#"><<</a>
+									</li>
+									<li>
+										 <a href="#">1</a>
+									</li>
+									<li>
+										 <a href="#">2</a>
+									</li>
+									<li>
+										 <a href="#">3</a>
+									</li>
+									<li>
+										 <a href="#">4</a>
+									</li>
+									<li>
+										 <a href="#">5</a>
+									</li>
+									<li>
+										 <a href="#">>></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>					
 				</div>
 			
 			</div>

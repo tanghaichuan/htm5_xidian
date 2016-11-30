@@ -46,7 +46,7 @@
 						</div>
 						<div id="panel-element-78753" class="panel-collapse collapse in" >
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/adminUsers/list.html">管理员管理</a>
+								<a href="/html5-xidian/index.php/Admin/adminUsers/index.html">管理员管理</a>
 							</div>
 							<div class="panel-body">
 								<a href="/html5-xidian/index.php/Admin/adminUsers/editInfo.html">修改个人信息</a>
@@ -65,7 +65,7 @@
 						</div>
 						<div id="panel-element-816153" class="panel-collapse collapse">
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/user/list.html">用户管理</a>
+								<a href="/html5-xidian/index.php/Admin/user/index.html">用户管理</a>
 							</div>
 							<div class="panel-body">
 								<a href="/html5-xidian/index.php/Admin/user/edit.html">修改用户信息</a>
@@ -78,7 +78,7 @@
 						</div>
 						<div id="panel-element-816154" class="panel-collapse collapse">
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/shop/list.html">商城管理</a>
+								<a href="/html5-xidian/index.php/Admin/shop/index.html">商城管理</a>
 							</div>
 							<div class="panel-body">
 								<a href="/html5-xidian/index.php/Admin/shop/add.html">添加商品</a>
@@ -94,7 +94,7 @@
 						</div>
 						<div id="panel-element-816155" class="panel-collapse collapse">
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/food/list.html">美食管理</a>
+								<a href="/html5-xidian/index.php/Admin/food/index.html">美食管理</a>
 							</div>
 							<div class="panel-body">
 								<a href="/html5-xidian/index.php/Admin/food/add.html">添加美食</a>
@@ -113,7 +113,7 @@
 						</div>
 						<div id="panel-element-816156" class="panel-collapse collapse">
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/tag/list.html">标签管理</a>
+								<a href="/html5-xidian/index.php/Admin/tag/index.html">标签管理</a>
 							</div>
 						</div>
 					</div>
@@ -123,7 +123,7 @@
 						</div>
 						<div id="panel-element-816157" class="panel-collapse collapse">
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/favorite/list.html">收藏夹管理</a>
+								<a href="/html5-xidian/index.php/Admin/favorite/index.html">收藏夹管理</a>
 							</div>
 						</div>
 					</div>
@@ -133,7 +133,7 @@
 						</div>
 						<div id="panel-element-816158" class="panel-collapse collapse">
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/cart/list.html">购物车管理</a>
+								<a href="/html5-xidian/index.php/Admin/cart/index.html">购物车管理</a>
 							</div>
 						</div>
 					</div>
@@ -143,7 +143,7 @@
 						</div>
 						<div id="panel-element-816159" class="panel-collapse collapse">
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/public/public.html">美食推送</a>
+								<a href="/html5-xidian/index.php/Admin/public/index.html">美食推送</a>
 							</div>
 						</div>
 					</div>
@@ -167,7 +167,7 @@
 						<div class="col-md-9">
 							<h4>管理员管理</h4>
 							<p> 统一管理管理员账户，用于添加后台管理员及修改，删除管理员信息。</p>
-							<a href="/html5-xidian/index.php/Admin/adminUsers/list.html"><button>点击进入</button></a>
+							<a href="/html5-xidian/index.php/Admin/adminUsers/index.html"><button>点击进入</button></a>
 						</div>
 					</div>
 					<div class="col-md-6 view">
@@ -177,7 +177,7 @@
 						<div class="col-md-9">
 							<h4>用户管理</h4>
 							<p>  同一管理管理员账户，可以添加删除或者修改用户信息。</p>
-							<a href="/html5-xidian/index.php/Admin/user/list.html"><button>点击进入</button></a>
+							<a href="/html5-xidian/index.php/Admin/user/index.html"><button>点击进入</button></a>
 						</div>
 					</div>
 					<div class="col-md-6 view">
@@ -187,7 +187,7 @@
 						<div class="col-md-9">
 							<h4>美食管理</h4>
 							<p> 统一管理美食信息，可以添加美食图片，食材，步骤，并进行修改删除</p>
-							<a href="/html5-xidian/index.php/Admin/food/list.html"><button>点击进入</button></a>
+							<a href="/html5-xidian/index.php/Admin/food/index.html"><button>点击进入</button></a>
 						</div>
 					</div>
 					<div class="col-md-6 view">
@@ -197,7 +197,7 @@
 						<div class="col-md-9">
 							<h4>商城管理</h4>
 							<p>  统一管理商城信息，可以对商城的食材和用具相关信息进行修改、删除，并上传美食信息。</p>
-							<a href="/html5-xidian/index.php/Admin/shop/list.html"><button>点击进入</button></a>
+							<a href="/html5-xidian/index.php/Admin/shop/index.html"><button>点击进入</button></a>
 						</div>
 					</div>
 					<div class="col-md-6 view">
@@ -207,7 +207,7 @@
 						<div class="col-md-9">
 							<h4>标签管理</h4>
 							<p> 可以根据美食信息添加可供用户选择的标签，并且可以修改删除标签。</p>
-							<a href="/html5-xidian/index.php/Admin/tag/list.html"><button>点击进入</button></a>
+							<a href="/html5-xidian/index.php/Admin/tag/index.html"><button>点击进入</button></a>
 						</div>
 					</div>
 					<div class="col-md-6 view">
@@ -217,7 +217,7 @@
 						<div class="col-md-9">
 							<h4>收藏夹管理</h4>
 							<p>  统一管理用户在收藏夹中添加的美食信息，可以进行修改或者删除操作。</p>
-							<a href="/html5-xidian/index.php/Admin/favorite/list.html"><button>点击进入</button></a>
+							<a href="/html5-xidian/index.php/Admin/favorite/index.html"><button>点击进入</button></a>
 						</div>
 					</div>
 					<div class="col-md-6 view">
@@ -227,7 +227,7 @@
 						<div class="col-md-9">
 							<h4>购物车管理</h4>
 							<p>  统一用户在购物车中添加的美食信息，可以进行修改或者删除操作。</p>
-							<a href="/html5-xidian/index.php/Admin/cart/list.html"><button>点击进入</button></a>
+							<a href="/html5-xidian/index.php/Admin/cart/index.html"><button>点击进入</button></a>
 						</div>
 					</div>
 					<div class="col-md-6 view">
@@ -237,7 +237,7 @@
 						<div class="col-md-9">
 							<h4>美食推送</h4>
 							<p>  添加用于在网站首页显示的美食信息，可以上传图片等信息。</p>
-							<a href="/html5-xidian/index.php/Admin/public/public.html"><button>点击进入</button></a>
+							<a href="/html5-xidian/index.php/Admin/public/index.html"><button>点击进入</button></a>
 						</div>
 					</div>
 				</div>

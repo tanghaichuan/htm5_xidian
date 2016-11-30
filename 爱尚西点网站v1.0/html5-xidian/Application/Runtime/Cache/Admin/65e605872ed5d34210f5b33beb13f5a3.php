@@ -158,50 +158,57 @@
 							 <a href="/html5-xidian/index.php/Admin/index/index.html">首页</a>
 						</li>
 						<li>
-							 <a href="/html5-xidian/index.php/Admin/user/index.html">用户管理</a>
+							 <a href="/html5-xidian/index.php/Admin/user/list.html">
 						</li>
 						<li>
-							 <a href="#">修改用户信息</a>
+							 <a href="#">用户列表</a>
 						</li>
 					</ul>
 				</div>
 				<!--userList-->
 				<div class="col-md-12 userList">
 					<div class="col-md-12">
-						<h4>修改用户信息</h4>
+						<h4>用户列表</h4>
 					</div>
-					<!--editInfo-->
+					<!--userList-->
 					<div class="col-md-12">
-						<form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
-							<div class="form-group">
-								 <label for="inputUserName" class="col-md-2 control-label">用户名：</label>
-								<div class="col-md-3">
-									<input type="text" class="form-control" id="inputUserName"  placeholder="<?php echo ($data["username"]); ?>" disabled />
-								</div>
-							</div>
-							<div class="form-group">
-								 <label for="inputRealName" class="col-sm-2 control-label">真实姓名：</label>
-								<div class="col-sm-3">
-									<input type="text" class="form-control" id="inputRealName" name="realname" value="<?php echo ($data["realname"]); ?>" />
-								</div>
-							</div>
-							<div class="form-group">
-								 <label for="inputRealName" class="col-sm-2 control-label">手机号：</label>
-								<div class="col-sm-3">
-									<input type="text" class="form-control" id="inputTelphone" name="telphone" value="<?php echo ($data["telphone"]); ?>" />
-								</div>
-							</div>
-							
-							<div class="form-group">
-								<div class="col-sm-3">
-									 <button type="submit" class="btn">修改</button>
-								</div>
-							</div>
-						</form>
-						
+						<table class="table table-striped table-hover">
+							<thead>
+								<tr>
+									<th>用户名</th>
+									<th>真实姓名</th>
+									<th>手机号</th>
+									<th>注册时间</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><tr>
+										<td><?php echo ($n["username"]); ?></td>
+										<td><?php echo ($n["realname"]); ?></td>
+										<td><?php echo ($n["telphone"]); ?></td>
+										<td><?php echo ($n["reg_login_time"]); ?></td>
+										<td>
+											<a href="editInfo/id/<?php echo ($n["id"]); ?>" >修改</a>
+											<a href="del/id/<?php echo ($n["id"]); ?>" onClick="delConfirm()">删除</a>
+										</td>
+									</tr><?php endforeach; endif; else: echo "" ;endif; ?>
+								
+							</tbody>
+						</table>
+						<!--pagination-->
+						<div class="col-md-4 col-md-offset-8 page">
+							<ul class="pagination">
+								<li><?php echo ($page); ?></li>
+							</ul>
+						</div>
 					</div>
 				</div>
-			
+			<script>
+				function delConfirm(){
+					return confirm("确定删除?");
+				}
+			</script>
 			</div>
 		</div>
 	</div>

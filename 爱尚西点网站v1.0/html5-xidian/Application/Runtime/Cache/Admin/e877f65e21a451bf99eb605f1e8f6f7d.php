@@ -3,7 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>首页</title>
-	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/bootstrap.css">
+	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/bootstrap-theme.css">
 	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/adminStyle.css">
 	<script src="/html5-xidian/Public/admin/js/jquery.js"></script>
 	<script src="/html5-xidian/Public/admin/js/bootstrap.js"></script>
@@ -18,7 +19,7 @@
 			</div>
 			<div class="top-right">
 				<ul>
-					<li><a href="/html5-xidian/index.php/Admin/login/login.html">登录</a></li>
+					<li><a href="/html5-xidian/index.php/Admin/login/index.html">欢迎：<?php echo ($username); ?></a></li>
 					<li><a href="/html5-xidian/index.php/Admin/login/register.html">注册</a></li>
 					<li><a href="#">退出</a></li>
 				</ul>
@@ -45,16 +46,16 @@
 						</div>
 						<div id="panel-element-78753" class="panel-collapse collapse in" >
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/admin/list.html">管理员管理</a>
+								<a href="/html5-xidian/index.php/Admin/adminUsers/index.html">管理员管理</a>
 							</div>
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/admin/editInfo.html">修改个人信息</a>
+								<a href="/html5-xidian/index.php/Admin/adminUsers/editInfo.html">修改个人信息</a>
 							</div>
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/admin/editPwd.html">修改密码</a>
+								<a href="/html5-xidian/index.php/Admin/adminUsers/editPwd.html">修改密码</a>
 							</div>
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/admin/add.html">添加管理员</a>
+								<a href="/html5-xidian/index.php/Admin/adminUsers/add.html">添加管理员</a>
 							</div>
 						</div>
 					</div>
@@ -64,7 +65,7 @@
 						</div>
 						<div id="panel-element-816153" class="panel-collapse collapse">
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/user/list.html">用户管理</a>
+								<a href="/html5-xidian/index.php/Admin/user/index.html">用户管理</a>
 							</div>
 							<div class="panel-body">
 								<a href="/html5-xidian/index.php/Admin/user/edit.html">修改用户信息</a>
@@ -77,7 +78,7 @@
 						</div>
 						<div id="panel-element-816154" class="panel-collapse collapse">
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/shop/list.html">商城管理</a>
+								<a href="/html5-xidian/index.php/Admin/shop/index.html">商城管理</a>
 							</div>
 							<div class="panel-body">
 								<a href="/html5-xidian/index.php/Admin/shop/add.html">添加商品</a>
@@ -93,7 +94,7 @@
 						</div>
 						<div id="panel-element-816155" class="panel-collapse collapse">
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/food/list.html">美食管理</a>
+								<a href="/html5-xidian/index.php/Admin/food/index.html">美食管理</a>
 							</div>
 							<div class="panel-body">
 								<a href="/html5-xidian/index.php/Admin/food/add.html">添加美食</a>
@@ -112,7 +113,7 @@
 						</div>
 						<div id="panel-element-816156" class="panel-collapse collapse">
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/tag/list.html">标签管理</a>
+								<a href="/html5-xidian/index.php/Admin/tag/index.html">标签管理</a>
 							</div>
 						</div>
 					</div>
@@ -122,7 +123,7 @@
 						</div>
 						<div id="panel-element-816157" class="panel-collapse collapse">
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/favorite/list.html">收藏夹管理</a>
+								<a href="/html5-xidian/index.php/Admin/favorite/index.html">收藏夹管理</a>
 							</div>
 						</div>
 					</div>
@@ -132,7 +133,7 @@
 						</div>
 						<div id="panel-element-816158" class="panel-collapse collapse">
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/cart/list.html">购物车管理</a>
+								<a href="/html5-xidian/index.php/Admin/cart/index.html">购物车管理</a>
 							</div>
 						</div>
 					</div>
@@ -142,7 +143,7 @@
 						</div>
 						<div id="panel-element-816159" class="panel-collapse collapse">
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/public/public.html">美食推送</a>
+								<a href="/html5-xidian/index.php/Admin/public/index.html">美食推送</a>
 							</div>
 						</div>
 					</div>
@@ -157,7 +158,7 @@
 							 <a href="/html5-xidian/index.php/Admin/index/index.html">首页</a>
 						</li>
 						<li>
-							 <a href="/html5-xidian/index.php/Admin/food/list.html">美食管理</a>
+							 <a href="/html5-xidian/index.php/Admin/food/index.html">美食管理</a>
 						</li>
 						<li>
 							 <a href="#">修改美食信息</a>
@@ -171,54 +172,53 @@
 					</div>
 					<!--shop-->
 					<div class="col-md-12">
-						<form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+						<form class="form-horizontal" role="form" action="/html5-xidian/index.php/Admin/Food/edit/id/<?php echo ($data["id"]); ?>" method="post" enctype="multipart/form-data">
 							<div class="form-group">
 								<label for="inputFoodClassify" class="col-md-3 control-label" style="width: 120px;">选择商品类型：</label>
 								<div class="col-md-5">
-									<label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="fashi" name="food" />法式菜肴</label>
-									<label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="yishi" name="food" />意式菜肴</label>
-									<label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="meishi" name="food" />美式菜肴</label>
-									<label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="yingshi" name="food" />英式菜肴</label>
-									<label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="eshi" name="food" />俄式菜肴</label>
+									<label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="法式菜肴" name="classify" />法式菜肴</label>
+									<label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="意式菜肴" name="classify" />意式菜肴</label>
+									<label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="美式菜肴" name="classify" />美式菜肴</label>
+									<label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="英式菜肴" name="classify" />英式菜肴</label>
+									<label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="俄式菜肴" name="classify" />俄式菜肴</label>
 								</div>
 							</div>
 							<div class="form-group">
 								 <label for="inputFoodTag" class="col-md-2 control-label">标签：</label>
 								<div class="col-md-3">
-									<select class="form-control" id="inputFoodTag">
-									  <option>英式</option>
-									  <option>甜品</option>
-									  <option>面包</option>
+									<select class="form-control" id="inputFoodTag" name="tagname">
+									  <?php if(is_array($tagList)): $i = 0; $__LIST__ = $tagList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><option><?php echo ($n["tagname"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
 									</select>
 								</div>
 							</div>
 							<div class="form-group">
 								 <label for="inputFoodName" class="col-sm-2 control-label">名称：</label>
 								<div class="col-sm-3">
-									<input type="text" class="form-control" id="inputFoodName" />
+									<input type="text" class="form-control" id="inputFoodName" name="name" value="<?php echo ($data["name"]); ?>" />
 								</div>
 							</div>
 							<div class="form-group">
 								 <label for="inputFoodMeta" class="col-sm-2 control-label">材料：</label>
 								<div class="col-sm-3">
-									<textarea class="form-control" id="inputFoodMeta" rows="3"></textarea>
+									<textarea class="form-control" id="inputFoodMeta" rows="3" name="ingredients"><?php echo ($data["ingredients"]); ?></textarea>
 								</div>
 							</div>
 							<div class="form-group">
 								 <label for="inputFoodStep" class="col-sm-2 control-label">步骤：</label>
 								<div class="col-sm-3">
-									<textarea class="form-control" id="inputFoodStep" rows="3"></textarea>
+									<textarea class="form-control" id="inputFoodStep" rows="3" name="practice"><?php echo ($data["practice"]); ?></textarea>
 								</div>
 							</div>
+							<img src="/html5-xidian/Public/<?php echo ($data["img"]); ?>" alt="" width="70" height="38px">
 							<div class="form-group">
 								 <label for="inputFoodImg" class="col-sm-2 control-label">美食图片：</label>
 								<div class="col-sm-3">
-									<input type="file" id="inputFoodImg" class="form-control">
+									<input type="file" id="inputFoodImg" class="form-control" name="img">
 								</div>
 							</div>
 							<div class="form-group">
 								<div class="col-sm-3">
-									 <button type="submit" class="btn">修改</button>
+									 <button type="submit" id="submit" class="btn">修改</button>
 								</div>
 							</div>
 						</form>

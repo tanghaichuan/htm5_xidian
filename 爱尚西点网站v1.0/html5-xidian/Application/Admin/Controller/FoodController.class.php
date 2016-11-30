@@ -38,7 +38,6 @@ class FoodController extends Controller {
 
     public function store(){
         $model=D("foods");
-            
         $upload = new \Think\Upload();// 实例化上传类
         $upload->maxSize=3145728 ;// 设置附件上传大小
         $upload->exts=array('jpg', 'png', 'jpeg');// 设置附件上传类型

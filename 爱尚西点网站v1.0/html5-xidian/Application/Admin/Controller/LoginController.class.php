@@ -33,11 +33,11 @@ class LoginController extends Controller {
     public function register_add(){
     	$adminModel=D("AdminUsers");
     	if ($adminModel->create() && $adminModel->add()) {
-    			$this->success("注册成功！", U('Admin/login/index'));
-    		}
-    		else {
-    			$this->error($adminModel->getError());
-    		}
+    		$this->success("注册成功！", U('Admin/login/index'));
+    	}
+    	else {
+    		$this->error($adminModel->getError());
+    	}
     }
 
     public function username_unique(){

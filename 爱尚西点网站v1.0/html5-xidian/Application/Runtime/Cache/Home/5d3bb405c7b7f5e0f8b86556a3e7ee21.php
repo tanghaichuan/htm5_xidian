@@ -34,7 +34,7 @@
         </ul>
         <ul class="nav navbar-nav navbar-right" >
           <li>
-            <a href="/html5-xidian/home.php/Home/login/register.html" style="padding: 15px 10px 15px 0px;">注册</a>
+            <a href="/html5-xidian/home.php/Home/login/register.html" style="padding: 15px 10px 15px 0px;" id="isLogin">注册</a>
           </li>
           <li>
             <a href="/html5-xidian/home.php/Home/login/login.html" style="padding: 15px 50px 15px 0px;">登录</a>
@@ -77,7 +77,7 @@
               </ul>
             </li>
             <li class="dropdown">
-               <a href="/html5-xidian/home.php/Home/public/public.html" class="dropdown-toggle">美食DIY</a>
+               <a href="/html5-xidian/home.php/Home/publish/index.html" class="dropdown-toggle">美食DIY</a>
               <ul class="dropdown-menu" style="text-align: right;min-width: 100px;">
          
                 <li>
@@ -87,7 +87,7 @@
               </ul>
             </li>
            <li class="dropdown">
-               <a href="/html5-xidian/home.php/Home/shop/list.html" class="dropdown-toggle">食材商城</a>
+               <a href="/html5-xidian/home.php/Home/shop/index.html" class="dropdown-toggle">食材商城</a>
               <ul class="dropdown-menu" style="text-align: right;min-width: 100px;">
                 <li>
                    <a href="/html5-xidian/home.php/Home/shop/list.html">用具</a>
@@ -109,7 +109,7 @@
                    <a href="/html5-xidian/home.php/Home/users/reset_password.html">修改密码</a>
                 </li>
                  <li>
-                   <a href="/html5-xidian/home.php/Home/cart/cart.html">我的购物车</a>
+                   <a href="/html5-xidian/home.php/Home/cart/index.html">我的购物车</a>
                 </li>
               </ul>
             </li>
@@ -132,7 +132,7 @@
         <div class="span4">
             <ul class="breadcrumb">
                 <li>
-                    <a href="#">首页</a> <span class="divider"></span>
+                    <a href="/html5-xidian/home.php/Home/index/index">首页</a> <span class="divider"></span>
                 </li>
                 <li class="active">
                     美食DIY
@@ -146,54 +146,53 @@
         <h4>添加美食</h4>
                     
         <!--shop-->
-        <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+        <form class="form-horizontal" role="form" action="<?php echo U('Home/publish/publish');?>" method="post" enctype="multipart/form-data">
         	<div class="form-group">
                 <label for="inputFoodClassify" class="col-md-3 control-label" style="width: 120px;">选择商品类型：</label>
                     <div class="col-md-8">
-                        <label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="fashi" name="food" />法式菜肴</label>
-                        <label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="yishi" name="food" />意式菜肴</label>
-                        <label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="meishi" name="food" />美式菜肴</label>
-                        <label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="yingshi" name="food" />英式菜肴</label>
-                        <label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="eshi" name="food" />俄式菜肴</label>
+                        <label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="法式菜肴" name="classify" />法式菜肴</label>
+                        <label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="意式菜肴" name="classify" />意式菜肴</label>
+                        <label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="美式菜肴" name="classify" />美式菜肴</label>
+                        <label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="英式菜肴" name="classify" />英式菜肴</label>
+                        <label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="俄式菜肴" name="classify" />俄式菜肴</label>
                     </div>
             </div>
             <div class="form-group">
                 <label for="inputFoodTag" class="col-md-3 control-label">标签：</label>
                     <div class="col-md-3">
-                        <select class="form-control" id="inputFoodTag">
-                            <option>英式</option>
-                            <option>甜品</option>
-                            <option>面包</option>
+                        <select class="form-control" id="inputFoodTag" name="tagname">
+                            <?php if(is_array($tagList)): $i = 0; $__LIST__ = $tagList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><option><?php echo ($n["tagname"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                            
                         </select>
                     </div>
             </div>
             <div class="form-group">
                 <label for="inputFoodName" class="col-sm-2 control-label">名称：</label>
                 <div class="col-sm-3">
-                    <input type="text" class="form-control" id="inputFoodName" />
+                    <input type="text" class="form-control" id="inputFoodName" name="name" />
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputFoodMeta" class="col-sm-2 control-label">材料：</label>
                     <div class="col-sm-3">
-                        <textarea class="form-control" id="inputFoodMeta" rows="3"></textarea>
+                        <textarea class="form-control" id="inputFoodMeta" rows="3" name="ingredients"></textarea>
                     </div>
             </div>
             <div class="form-group">
                 <label for="inputFoodStep" class="col-sm-2 control-label">步骤：</label>
                 <div class="col-sm-3">
-                    <textarea class="form-control" id="inputFoodStep" rows="3"></textarea>
+                    <textarea class="form-control" id="inputFoodStep" rows="3" name="practice"></textarea>
                 </div>
             </div>
             <div class="form-group">
                 <label for="inputFoodImg" class="col-sm-2 control-label">美食图片：</label>
                 <div class="col-sm-4">
-                    <input type="file" id="inputFoodImg" class="form-control">
+                    <input type="file" id="inputFoodImg" class="form-control" name="img">
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-sm-3">
-                    <a href="/html5-xidian/home.php/Home/users/index.html"><input type="button" class="btn" value="发布"></input></a>
+                   <input type="submit" class="btn" value="发布"></input>
                 </div>
             </div>
         </form>                     

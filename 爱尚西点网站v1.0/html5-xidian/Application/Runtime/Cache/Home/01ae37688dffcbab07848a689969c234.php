@@ -30,10 +30,10 @@
         </ul>
         <ul class="nav navbar-nav navbar-right" >
           <li>
-            <a href="login.html" style="padding: 15px 10px 15px 0px;">注册</a>
+            <a href="/html5-xidian/home.php/Home/login/register.html" style="padding: 15px 10px 15px 0px;">注册</a>
           </li>
           <li>
-            <a href="register.html" style="padding: 15px 50px 15px 0px;">登录</a>
+            <a href="/html5-xidian/home.php/Home/login/login.html" style="padding: 15px 50px 15px 0px;">登录</a>
           </li>
         </ul>
       </div>
@@ -49,63 +49,63 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right" style="font-weight: bold;color: black;">
             <li class="dropdown">
-               <a href="#">首页</a>
+               <a href="/html5-xidian/home.php/Home/index/index.html">首页</a>
             </li>
            <li class="dropdown">
-               <a href="#" class="dropdown-toggle">美食鉴赏</a>
+               <a href="/html5-xidian/home.php/Home/food/french_cate.html" class="dropdown-toggle">美食鉴赏</a>
               <ul class="dropdown-menu" style="text-align: right;min-width: 100px;">
                 <li>
-                   <a href="#">法式菜肴</a>
+                   <a href="/html5-xidian/home.php/Home/food/french_cate.html">法式菜肴</a>
                 </li>
                 <li>
-                   <a href="#">英式菜肴</a>
+                   <a href="/html5-xidian/home.php/Home/food/uk_cate.html">英式菜肴</a>
                 </li>
                 <li>
-                   <a href="#">美式菜肴</a>
+                   <a href="/html5-xidian/home.php/Home/food/us_cate.html">美式菜肴</a>
                 </li>
                
                 <li>
-                   <a href="#">意式菜肴</a>
+                   <a href="/html5-xidian/home.php/Home/food/italy_cate.html">意式菜肴</a>
                 </li>
                  <li>
-                   <a href="#">俄式菜肴</a>
+                   <a href="/html5-xidian/home.php/Home/food/russian_cate.html">俄式菜肴</a>
                 </li>
               </ul>
             </li>
             <li class="dropdown">
-               <a href="#" class="dropdown-toggle">美食DIY</a>
+               <a href="/html5-xidian/home.php/Home/public/public.html" class="dropdown-toggle">美食DIY</a>
               <ul class="dropdown-menu" style="text-align: right;min-width: 100px;">
          
                 <li>
-                   <a href="#">发布美食</a>
+                   <a href="/html5-xidian/home.php/Home/public/public.html">发布美食</a>
                 </li>
 
               </ul>
             </li>
            <li class="dropdown">
-               <a href="#" class="dropdown-toggle">食材商城</a>
+               <a href="/html5-xidian/home.php/Home/shop/list.html" class="dropdown-toggle">食材商城</a>
               <ul class="dropdown-menu" style="text-align: right;min-width: 100px;">
                 <li>
-                   <a href="#">用具</a>
+                   <a href="/html5-xidian/home.php/Home/shop/list.html">用具</a>
                 </li>
                 <li>
-                   <a href="#">食材</a>
+                   <a href="/html5-xidian/home.php/Home/shop/list.html">食材</a>
                 </li>
             
               </ul>
             </li>
           <li class="dropdown">
-               <a href="#" class="dropdown-toggle">个人中心</a>
+               <a href="/html5-xidian/home.php/Home/users/index.html" class="dropdown-toggle">个人中心</a>
               <ul class="dropdown-menu" style="text-align: right;min-width: 100px;">
                 <li>
-                   <a href="#">修改信息</a>
+                   <a href="/html5-xidian/home.php/Home/users/reset_information.html">修改信息</a>
                 </li>
               
                 <li>
-                   <a href="#">修改密码</a>
+                   <a href="/html5-xidian/home.php/Home/users/reset_password.html">修改密码</a>
                 </li>
                  <li>
-                   <a href="#">我的购物车</a>
+                   <a href="/html5-xidian/home.php/Home/cart/cart.html">我的购物车</a>
                 </li>
               </ul>
             </li>
@@ -137,9 +137,9 @@
         <div class="col-md-3 column">
            <ul style="list-style-type: none;text-align: center;font-size: 17px;">
              <li style="padding: 10px;background-color: #C0C0C0;">个人中心</li>
-             <li style="padding: 10px;background-color: white;"><a href="#">我的首页</a></li>
-             <li style="padding: 10px;background-color: white;"><a href="#">修改信息</a></li>
-             <li style="padding: 10px;background-color: white;"><a href="#">修改密码</a></li>
+             <li style="padding: 10px;background-color: white;"><a href="/html5-xidian/home.php/Home/users/index.html">我的首页</a></li>
+             <li style="padding: 10px;background-color: white;"><a href="/html5-xidian/home.php/Home/users/reset_information.html">修改信息</a></li>
+             <li style="padding: 10px;background-color: white;"><a href="/html5-xidian/home.php/Home/users/reset_password.html">修改密码</a></li>
            </ul>
         </div>
         <div class="col-md-9 column">

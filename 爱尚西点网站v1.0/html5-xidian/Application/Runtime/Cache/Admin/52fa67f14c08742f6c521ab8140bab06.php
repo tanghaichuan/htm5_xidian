@@ -158,50 +158,61 @@
 							 <a href="/html5-xidian/index.php/Admin/index/index.html">首页</a>
 						</li>
 						<li>
-							 <a href="/html5-xidian/index.php/Admin/user/index.html">用户管理</a>
+							 <a href="/html5-xidian/index.php/Admin/shop/list.html">商品管理</a>
 						</li>
 						<li>
-							 <a href="#">修改用户信息</a>
+							 <a href="#">商城列表</a>
 						</li>
 					</ul>
 				</div>
 				<!--userList-->
 				<div class="col-md-12 userList">
 					<div class="col-md-12">
-						<h4>修改用户信息</h4>
+						<h4>商城列表</h4>
 					</div>
-					<!--editInfo-->
+					<!--shop-->
 					<div class="col-md-12">
-						<form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
-							<div class="form-group">
-								 <label for="inputUserName" class="col-md-2 control-label">用户名：</label>
-								<div class="col-md-3">
-									<input type="text" class="form-control" id="inputUserName"  placeholder="<?php echo ($data["username"]); ?>" disabled />
-								</div>
-							</div>
-							<div class="form-group">
-								 <label for="inputRealName" class="col-sm-2 control-label">真实姓名：</label>
-								<div class="col-sm-3">
-									<input type="text" class="form-control" id="inputRealName" name="realname" value="<?php echo ($data["realname"]); ?>" />
-								</div>
-							</div>
-							<div class="form-group">
-								 <label for="inputRealName" class="col-sm-2 control-label">手机号：</label>
-								<div class="col-sm-3">
-									<input type="text" class="form-control" id="inputTelphone" name="telphone" value="<?php echo ($data["telphone"]); ?>" />
-								</div>
-							</div>
-							
-							<div class="form-group">
-								<div class="col-sm-3">
-									 <button type="submit" class="btn">修改</button>
-								</div>
-							</div>
-						</form>
-						
+						<table class="table table-striped table-hover">
+							<thead>
+								<tr>
+									<th>库存</th>
+									<th>名称</th>
+									<th>图片</th>
+									<th>价格(元)</th>
+									<th>分类</th>
+									<th>发布时间</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><tr>
+										<td><?php echo ($n["num"]); ?></td>
+										<td><?php echo ($n["name"]); ?></td>
+										<td><img src="/html5-xidian/Public/<?php echo ($n["img"]); ?>" alt="" width="70" height="38px"></td>
+										<td><?php echo ($n["price"]); ?></td>
+										<td><?php echo ($n["classify"]); ?></td>
+										<td><?php echo ($n["public_time"]); ?></td>
+										<td>
+											<a href="edit/id/<?php echo ($n["id"]); ?>">修改</a>
+											<a href="del/id/<?php echo ($n["id"]); ?>" onClick="delConfirm()">删除</a>
+										</td>
+									</tr><?php endforeach; endif; else: echo "" ;endif; ?>
+								
+							</tbody>
+						</table>
+						<!--pagination-->
+						<div class="col-md-4 col-md-offset-8 page">
+							<ul class="pagination">
+								<?php echo ($page); ?>
+							</ul>
+						</div>
 					</div>
 				</div>
-			
+			<script>
+				function delConfirm(){
+					return confirm("确定删除?");
+				}
+			</script>
 			</div>
 		</div>
 	</div>

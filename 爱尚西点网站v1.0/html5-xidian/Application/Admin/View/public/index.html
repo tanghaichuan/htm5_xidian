@@ -16,7 +16,7 @@
 						<h4>美食推送</h4>
 					</div>
 					<div class="col-md-2">
-						<h4>当前分类：<span class="choose"></span></h4>
+						<h4>当前分类：<span class="choose">{$food}</span></h4>
 					</div>
 					<div class="col-md-1">
 						<h4>推送页:</h4>
@@ -36,19 +36,19 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td><a href="?food=fashi">法式菜肴</a></td>
+										<td><a href="classify/food/法式菜肴">法式菜肴</a></td>
 									</tr>
 									<tr>
-										<td><a href="?food=yishi">意式菜肴</a></td>
+										<td><a href="classify/food/意式菜肴">意式菜肴</a></td>
 									</tr>
 									<tr>
-										<td><a href="?food=meishi">美式菜肴</a></td>
+										<td><a href="classify/food/美式菜肴">美式菜肴</a></td>
 									</tr>
 									<tr>
-										<td><a href="?food=eshi">俄式菜肴</a></td>
+										<td><a href="classify/food/俄式菜肴">俄式菜肴</a></td>
 									</tr>
 									<tr>
-										<td><a href="?food=yingshi">英式菜肴</a></td>
+										<td><a href="classify/food/英式菜肴">英式菜肴</a></td>
 									</tr>
 								</tbody>
 							</table>
@@ -61,52 +61,19 @@
 									<th>操作</th>
 								</thead>
 								<tbody>
-									<tr>
-										<td>法式面包</td>
-										<td><img src="__PUBLIC__/admin/images/shopList.png" alt="" width="50" height="30px"></td>
-										<td><a href="">推送</a></td>
-									</tr>
-									<tr>
-										<td>法式面包</td>
-										<td><img src="__PUBLIC__/admin/images/shopList.png" alt="" width="50" height="30px"></td>
-										<td><a href="">推送</a></td>
-									</tr>
-									<tr>
-										<td>法式面包</td>
-										<td><img src="__PUBLIC__/admin/images/shopList.png" alt="" width="50" height="30px"></td>
-										<td><a href="">推送</a></td>
-									</tr>
-									<tr>
-										<td>法式面包</td>
-										<td><img src="__PUBLIC__/admin/images/shopList.png" alt="" width="50" height="30px"></td>
-										<td><a href="">推送</a></td>
-									</tr>
+									<volist name="foodList" id="n">
+										<tr>
+											<td>{$n.name}</td>
+											<td><img src="__PUBLIC__/{$n.img}" alt="" width="50" height="30px"></td>
+											<td><a href="">推送</a></td>
+										</tr>
+									</volist>
 								</tbody>
 							</table>
 							<!--pagination-->
 							<div class="col-md-5 col-md-offset-7 page">
 								<ul class="pagination">
-									<li>
-										 <a href="#"><<</a>
-									</li>
-									<li>
-										 <a href="#">1</a>
-									</li>
-									<li>
-										 <a href="#">2</a>
-									</li>
-									<li>
-										 <a href="#">3</a>
-									</li>
-									<li>
-										 <a href="#">4</a>
-									</li>
-									<li>
-										 <a href="#">5</a>
-									</li>
-									<li>
-										 <a href="#">>></a>
-									</li>
+									<li>{$page}</li>
 								</ul>
 							</div>
 						</div>

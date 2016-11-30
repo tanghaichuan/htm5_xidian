@@ -47,25 +47,31 @@
             <div style="background-color: white;border-radius: 5px;">
               <div style="padding: 15px 20px;">
                 <label style="font-size: 16px;">新用户注册</label>
-                <label style="text-align: right;position: absolute;right: 40px;">已有账号，<a href="#">直接登录></a></label>
+                <label style="text-align: right;position: absolute;right: 40px;">已有账号，<a href="/html5-xidian/home.php/Home/login/login.html">直接登录></a></label>
               </div>
-              <form class="form-horizontal" role="form" enctype="multipart/form-data" style="padding: 0px 50px 0px 20px;">
+              <form class="form-horizontal" role="form" enctype="multipart/form-data" style="padding: 0px 50px 0px 20px;" method="post" action="register_add">
               <div class="form-group">
                  <label class="col-sm-3 control-label">用户名:</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" id="username" placeholder="请输入用户名" value="" />
+                  <input type="text" class="form-control" id="username" placeholder="请输入用户名" value="" name="username" />
                 </div>
               </div>
               <div class="form-group">
                  <label class="col-sm-3 control-label">昵称:</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" id="nickname" placeholder="请输入昵称" value="" />
+                  <input type="text" class="form-control" id="nickname" placeholder="请输入昵称" value="" name="realname" />
+                </div>
+              </div>
+              <div class="form-group">
+                 <label class="col-sm-3 control-label">手机号:</label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="password" placeholder="请输入手机号" value="" name="telphone" />
                 </div>
               </div>
               <div class="form-group">
                  <label class="col-sm-3 control-label">密码:</label>
                 <div class="col-sm-9">
-                  <input type="password" class="form-control" id="password" placeholder="请输入密码" value="" />
+                  <input type="password" class="form-control" id="password" placeholder="请输入密码" value="" name="password" />
                 </div>
               </div>
               <div class="form-group">

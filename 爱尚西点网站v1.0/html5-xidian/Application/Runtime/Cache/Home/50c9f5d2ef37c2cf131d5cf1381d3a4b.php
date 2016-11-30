@@ -47,19 +47,19 @@
             <div style="background-color: white;border-radius: 5px;">
               <div style="padding: 15px 20px;">
                 <label style="font-size: 16px;">登录</label>
-                <label style="text-align: right;position: absolute;right: 40px;"><a href="#">去注册></a></label>
+                <label style="text-align: right;position: absolute;right: 40px;"><a href="/html5-xidian/home.php/Home/login/register.html">去注册></a></label>
               </div>
-              <form class="form-horizontal" role="form" enctype="multipart/form-data" style="padding: 0px 50px 0px 20px;">
+              <form class="form-horizontal" role="form" enctype="multipart/form-data" style="padding: 0px 50px 0px 20px;" method="post" action="<?php echo U('Home/login/login');?>">
               <div class="form-group">
                  <label class="col-sm-3 control-label">用户名:</label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" placeholder="请输入用户名" value="" />
+                  <input type="text" class="form-control" placeholder="请输入用户名" value="" name="username" />
                 </div>
               </div>
               <div class="form-group">
                  <label class="col-sm-3 control-label">密码:</label>
                 <div class="col-sm-9">
-                  <input type="password" class="form-control" placeholder="请输入密码" />
+                  <input type="password" class="form-control" placeholder="请输入密码" name="password" />
                 </div>
               </div>
               <div class="form-group">

@@ -158,48 +158,76 @@
 							 <a href="/html5-xidian/index.php/Admin/index/index.html">首页</a>
 						</li>
 						<li>
-							 <a href="/html5-xidian/index.php/Admin/user/index.html">用户管理</a>
-						</li>
-						<li>
-							 <a href="#">修改用户信息</a>
+							 <a href="#">美食发布</a>
 						</li>
 					</ul>
 				</div>
-				<!--userList-->
+				<!--List-->
 				<div class="col-md-12 userList">
-					<div class="col-md-12">
-						<h4>修改用户信息</h4>
+					<div class="col-md-5">
+						<h4>美食推送</h4>
 					</div>
-					<!--editInfo-->
-					<div class="col-md-12">
-						<form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
-							<div class="form-group">
-								 <label for="inputUserName" class="col-md-2 control-label">用户名：</label>
-								<div class="col-md-3">
-									<input type="text" class="form-control" id="inputUserName"  placeholder="<?php echo ($data["username"]); ?>" disabled />
-								</div>
-							</div>
-							<div class="form-group">
-								 <label for="inputRealName" class="col-sm-2 control-label">真实姓名：</label>
-								<div class="col-sm-3">
-									<input type="text" class="form-control" id="inputRealName" name="realname" value="<?php echo ($data["realname"]); ?>" />
-								</div>
-							</div>
-							<div class="form-group">
-								 <label for="inputRealName" class="col-sm-2 control-label">手机号：</label>
-								<div class="col-sm-3">
-									<input type="text" class="form-control" id="inputTelphone" name="telphone" value="<?php echo ($data["telphone"]); ?>" />
-								</div>
-							</div>
-							
-							<div class="form-group">
-								<div class="col-sm-3">
-									 <button type="submit" class="btn">修改</button>
-								</div>
-							</div>
-						</form>
-						
+					<div class="col-md-2">
+						<h4>当前分类：<span class="choose"><?php echo ($food); ?></span></h4>
 					</div>
+					<div class="col-md-1">
+						<h4>推送页:</h4>
+					</div>
+					<div class="col-md-4" style="padding: 5px 0 0 0;">
+						<label for="" class="shopRadio"><input type="radio" id="publicPage" value="home" name="public" style="position: relative;top: 3px;" />首页</label>
+						<label for="" class="shopRadio"><input type="radio" id="publicPage" value="content" name="public" style="position: relative;top: 3px;"/>美食内容页</label>
+					</div>
+					<!--favorite-->
+					<div class="col-md-12">
+						<div class="col-md-4">
+							<table class="table table-striped table-hover" id="table">
+								<thead>
+									<tr>
+										<th>分类</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><a href="classify/food/法式菜肴">法式菜肴</a></td>
+									</tr>
+									<tr>
+										<td><a href="classify/food/意式菜肴">意式菜肴</a></td>
+									</tr>
+									<tr>
+										<td><a href="classify/food/美式菜肴">美式菜肴</a></td>
+									</tr>
+									<tr>
+										<td><a href="classify/food/俄式菜肴">俄式菜肴</a></td>
+									</tr>
+									<tr>
+										<td><a href="classify/food/英式菜肴">英式菜肴</a></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="col-md-8">
+							<table class="table table-striped table-hover">
+								<thead>
+									<th>美食名称</th>
+									<th>图片</th>
+									<th>操作</th>
+								</thead>
+								<tbody>
+									<?php if(is_array($foodList)): $i = 0; $__LIST__ = $foodList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><tr>
+											<td><?php echo ($n["name"]); ?></td>
+											<td><img src="/html5-xidian/Public/<?php echo ($n["img"]); ?>" alt="" width="50" height="30px"></td>
+											<td><a href="">推送</a></td>
+										</tr><?php endforeach; endif; else: echo "" ;endif; ?>
+								</tbody>
+							</table>
+							<!--pagination-->
+							<div class="col-md-5 col-md-offset-7 page">
+								<ul class="pagination">
+									<li><?php echo ($page); ?></li>
+								</ul>
+							</div>
+						</div>
+					</div>					
 				</div>
 			
 			</div>

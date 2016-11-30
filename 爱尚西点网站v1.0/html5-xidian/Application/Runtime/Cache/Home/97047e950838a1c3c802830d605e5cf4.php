@@ -34,7 +34,7 @@
         </ul>
         <ul class="nav navbar-nav navbar-right" >
           <li>
-            <a href="/html5-xidian/home.php/Home/login/register.html" style="padding: 15px 10px 15px 0px;">注册</a>
+            <a href="/html5-xidian/home.php/Home/login/register.html" style="padding: 15px 10px 15px 0px;" id="isLogin">注册</a>
           </li>
           <li>
             <a href="/html5-xidian/home.php/Home/login/login.html" style="padding: 15px 50px 15px 0px;">登录</a>

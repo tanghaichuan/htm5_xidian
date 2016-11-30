@@ -19,7 +19,7 @@
 			</div>
 			<div class="top-right">
 				<ul>
-					<li><a href="/html5-xidian/index.php/Admin/login/index.html">登录</a></li>
+					<li><a href="/html5-xidian/index.php/Admin/login/index.html">欢迎：<?php echo ($username); ?></a></li>
 					<li><a href="/html5-xidian/index.php/Admin/login/register.html">注册</a></li>
 					<li><a href="#">退出</a></li>
 				</ul>
@@ -46,7 +46,7 @@
 						</div>
 						<div id="panel-element-78753" class="panel-collapse collapse in" >
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/adminUsers/list.html">管理员管理</a>
+								<a href="/html5-xidian/index.php/Admin/adminUsers/index.html">管理员管理</a>
 							</div>
 							<div class="panel-body">
 								<a href="/html5-xidian/index.php/Admin/adminUsers/editInfo.html">修改个人信息</a>
@@ -65,7 +65,7 @@
 						</div>
 						<div id="panel-element-816153" class="panel-collapse collapse">
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/user/list.html">用户管理</a>
+								<a href="/html5-xidian/index.php/Admin/user/index.html">用户管理</a>
 							</div>
 							<div class="panel-body">
 								<a href="/html5-xidian/index.php/Admin/user/edit.html">修改用户信息</a>
@@ -78,7 +78,7 @@
 						</div>
 						<div id="panel-element-816154" class="panel-collapse collapse">
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/shop/list.html">商城管理</a>
+								<a href="/html5-xidian/index.php/Admin/shop/index.html">商城管理</a>
 							</div>
 							<div class="panel-body">
 								<a href="/html5-xidian/index.php/Admin/shop/add.html">添加商品</a>
@@ -94,7 +94,7 @@
 						</div>
 						<div id="panel-element-816155" class="panel-collapse collapse">
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/food/list.html">美食管理</a>
+								<a href="/html5-xidian/index.php/Admin/food/index.html">美食管理</a>
 							</div>
 							<div class="panel-body">
 								<a href="/html5-xidian/index.php/Admin/food/add.html">添加美食</a>
@@ -113,7 +113,7 @@
 						</div>
 						<div id="panel-element-816156" class="panel-collapse collapse">
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/tag/list.html">标签管理</a>
+								<a href="/html5-xidian/index.php/Admin/tag/index.html">标签管理</a>
 							</div>
 						</div>
 					</div>
@@ -123,7 +123,7 @@
 						</div>
 						<div id="panel-element-816157" class="panel-collapse collapse">
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/favorite/list.html">收藏夹管理</a>
+								<a href="/html5-xidian/index.php/Admin/favorite/index.html">收藏夹管理</a>
 							</div>
 						</div>
 					</div>
@@ -133,7 +133,7 @@
 						</div>
 						<div id="panel-element-816158" class="panel-collapse collapse">
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/cart/list.html">购物车管理</a>
+								<a href="/html5-xidian/index.php/Admin/cart/index.html">购物车管理</a>
 							</div>
 						</div>
 					</div>
@@ -143,7 +143,7 @@
 						</div>
 						<div id="panel-element-816159" class="panel-collapse collapse">
 							<div class="panel-body">
-								<a href="/html5-xidian/index.php/Admin/public/public.html">美食推送</a>
+								<a href="/html5-xidian/index.php/Admin/public/index.html">美食推送</a>
 							</div>
 						</div>
 					</div>
@@ -158,7 +158,7 @@
 							 <a href="/html5-xidian/index.php/Admin/index/index.html">首页</a>
 						</li>
 						<li>
-							 <a href="/html5-xidian/index.php/Admin/admin/list.html">管理员管理</a>
+							 <a href="/html5-xidian/index.php/Admin/admin/index.html">管理员管理</a>
 						</li>
 						<li>
 							 <a href="#">添加管理员</a>
@@ -176,19 +176,19 @@
 							<div class="form-group">
 								 <label for="inputUserName" class="col-md-2 control-label">用户名：</label>
 								<div class="col-md-3">
-									<input type="text" class="form-control" id="inputUserName" placeholder="6-10位数字或者字母" />
+									<input type="text" class="form-control" id="inputUserName" placeholder="6-10位数字或者字母" name="username" />
 								</div>
 							</div>
 							<div class="form-group">
 								 <label for="inputRealName" class="col-sm-2 control-label">真实姓名：</label>
 								<div class="col-sm-3">
-									<input type="text" class="form-control" id="inputRealName" />
+									<input type="text" class="form-control" id="inputRealName" name="realname" />
 								</div>
 							</div>
 							<div class="form-group">
 								 <label for="inputRealName" class="col-sm-2 control-label">手机号码：</label>
 								<div class="col-sm-3">
-									<input type="text" class="form-control" id="inputTelphone" />
+									<input type="text" class="form-control" id="inputTelphone" name="telphone" />
 								</div>
 							</div>
 							<div class="form-group">
@@ -200,7 +200,7 @@
 							<div class="form-group">
 								 <label for="inputRealName" class="col-sm-2 control-label">确认密码：</label>
 								<div class="col-sm-3">
-									<input type="password" class="form-control" id="inputRePwd" />
+									<input type="password" class="form-control" id="inputRePwd" name="password" />
 								</div>
 							</div>
 							<div class="form-group">

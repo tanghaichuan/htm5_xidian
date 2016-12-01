@@ -44,6 +44,8 @@ class FoodController extends Controller {
     public function french_cate(){
       $model=M("foods");
       $food=$model->where(array('classify'=>"法式菜肴"))->select();
+
+      //$count=$model
       //var_dump($food);
       $this->assign("food",$food);
       $this->display();

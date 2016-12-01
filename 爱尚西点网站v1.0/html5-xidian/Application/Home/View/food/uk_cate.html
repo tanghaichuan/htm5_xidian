@@ -18,9 +18,9 @@
  			font: normal 140% Helvetica, Arial, sans-serif;
       font-family: 微软雅黑;
  		}
- 		ul li{
- 			list-style: none;
- 		}
+ 		.dropdown-menu li a{
+        padding: 3px 13px;
+    }
  		.font{
  			writing-mode:tb-rl;
  			font-size:1.5em;
@@ -53,12 +53,6 @@
  		.breadcrumb a{
  			font-size:1.1em;
  			font-family:微软雅黑;
- 		}
- 		.nav navbar-nav navbar-right{
- 			padding: 15px 10px 15px 0px;
- 		}
- 		.dropdown-menu{
- 			text-align: right;min-width: 100px;
  		}
 
  	</style>
@@ -111,7 +105,7 @@
             </li>
            <li class="dropdown">
                <a href="__MODULE__/food/french_cate.html" class="dropdown-toggle">美食鉴赏</a>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
                 <li>
                    <a href="__MODULE__/food/french_cate.html">法式菜肴</a>
                 </li>
@@ -132,7 +126,7 @@
             </li>
             <li class="dropdown">
                <a href="__MODULE__/publish/index.html" class="dropdown-toggle">美食DIY</a>
-              <ul class="dropdown-menu" >
+              <ul class="dropdown-menu" style="text-align: center;min-width: 82.68px;">
          
                 <li>
                    <a href="__MODULE__/publish/index.html">发布美食</a>
@@ -142,7 +136,7 @@
             </li>
            <li class="dropdown">
                <a href="__MODULE__/shop/index.html" class="dropdown-toggle">食材商城</a>
-              <ul class="dropdown-menu" >
+              <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
                 <li>
                    <a href="__MODULE__/shop/index.html">用具</a>
                 </li>
@@ -154,7 +148,7 @@
             </li>
           <li class="dropdown">
                <a href="__MODULE__/users/index.html" class="dropdown-toggle">个人中心</a>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
                 <li>
                    <a href="__MODULE__/users/reset_information.html">修改信息</a>
                 </li>
@@ -163,7 +157,7 @@
                    <a href="__MODULE__/users/reset_password.html">修改密码</a>
                 </li>
                  <li>
-                   <a href="__MODULE__/cart/index.html">我的购物车</a>
+                   <a href="__MODULE__/cart/index.html">购物车</a>
                 </li>
               </ul>
             </li>

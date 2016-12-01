@@ -40,7 +40,7 @@ class PublishController extends Controller {
             //var_dump(I("post.tagname"));  
             //添加
             if($model->create()&&$model->add($data)&&$relation->add($rela)){
-                $this->success('添加成功', U("food/index"));
+                $this->success('添加成功', U("food/french_cate"));
             }else{
                  $this->error('添加失败');
             }

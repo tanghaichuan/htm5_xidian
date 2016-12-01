@@ -19,8 +19,7 @@ class PublicController extends Controller {
     public function classify(){
     	$model=M("foods");
     	$food=I("get.food");
-    	$this->assign("data",$data);
-
+    	$this->assign("food",$food);
         import('Org.Util.Page');
         $count = $model->count();
         //实例化分页类，传入总记录数和每一页显示的记录数8

@@ -13,8 +13,7 @@
     <script src="__PUBLIC__/home/js/register_form.js"></script>
  	<style type="text/css">
  		body{
- 			overflow-x: hidden;
-      font: normal 100% Helvetica, Arial, sans-serif;
+      		font: normal 140% Helvetica, Arial, sans-serif;
  		}
  		ul li{
  			list-style: none;
@@ -22,44 +21,36 @@
  		.font{
  			writing-mode:tb-rl;
  		}
-    .font-a{
-      font-size:2em;
-      font-family:仿宋;
-      font-weight:bold;
-      text-align:center;
-    }
-    .dropdown-menu{
-      text-align: right;min-width: 100px;
-    }
-    .font-b{
-      font-size:1.5em;
-      font-family:仿宋;
-     
-      text-align:left;
-    }
-    .font-c{
-      font-size:1.2em;
-      font-family:仿宋;
-     
-      text-align:left;
-    }
- 		/*.col-md-12 img{
- 			width:1360px;
- 			height: 480px;
- 		}*/
+	    .font-a{
+	      font-size:2em;
+	      font-family:仿宋;
+	      font-weight:bold;
+	      text-align:center;
+	    }
+	    .dropdown-menu{
+	      text-align: right;min-width: 100px;
+	    }
+	    .font-b{
+	      font-size:1.5em;
+	      font-family:仿宋;
+	     
+	      text-align:left;
+	    }
+	    .font-c{
+	      font-size:1.2em;
+	      font-family:仿宋;
+	     
+	      text-align:left;
+	    }
  		.col-md-4 img{
  			width:325px;
  			height: 396px;
  		}
- 		
  		.title-a {
  			font-size:1.2em;
       font-family:仿宋;
  			font-weight:bold;
  		}
-    .nav navbar-nav navbar-right{
-      padding: 15px 10px 15px 0px;
-    }
  		.content-a{
  			height:40px;
  			background-color:black;
@@ -90,17 +81,17 @@
         <ul class="nav navbar-nav navbar-right" >
           <notempty name="username">
               <li>
-                <a href="__MODULE__/login/index.html" style="padding: 15px 10px 15px 0px;" id="isLogin">欢迎：{$username}</a>
+                <a href="__MODULE__/login/index.html" style="padding: 15px 50px 15px 0px;" id="isLogin">欢迎：{$username}</a>
               </li>
               <li>
-                <a href="__MODULE__/login/register.html" style="padding: 15px 50px 15px 0px;">注册</a>
+                <a href="__MODULE__/login/register.html" style="padding: 15px 10px 15px 0px;">注册</a>
               </li>
             <else/> 
                 <li>
-                  <a href="__MODULE__/login/index.html" style="padding: 15px 10px 15px 0px;" id="isLogin">登录</a>
+                  <a href="__MODULE__/login/index.html" style="padding: 15px 50px 15px 0px;" id="isLogin">登录</a>
                 </li>
                 <li>
-                  <a href="__MODULE__/login/register.html" style="padding: 15px 50px 15px 0px;">注册</a>
+                  <a href="__MODULE__/login/register.html" style="padding: 15px 10px 15px 0px;">注册</a>
                 </li> 
           </notempty>
         </ul>

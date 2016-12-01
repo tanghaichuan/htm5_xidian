@@ -21,14 +21,14 @@
 					<!--tag-->
 					<div class="col-md-12">
 						<div class="col-md-12">
-							<form class="form-horizontal" action="add" method="post" style="margin: 10px 0 0 0;" enctype="multipart/form-data">
+							<form class="form-horizontal"  style="margin: 10px 0 0 0;" enctype="multipart/form-data">
 								<div class="form-group">
 									<label for="inputTag" class="col-md-4 control-label" style="width: 110px;">请输入标签：</label>
 									<div class="col-md-3">
 										<input type="text" class="form-control" id="inputTag" name="tagname" />
 									</div>
 									<div class="col-md-3">
-										<button type="submit" class="btn">添加</button>
+										<button type="button" class="btn" id="addTags">添加</button>
 									</div>
 								</div>
 							</form>
@@ -44,7 +44,7 @@
 										<th>操作</th>
 									</tr>
 								</thead>
-								<tbody>
+								<tbody class="tags">
 									<volist name="list" id="n">
 										<tr>
 											<td>{$n.tagname}</td>
@@ -57,27 +57,7 @@
 						<!--pagination-->
 						<div class="col-md-4 col-md-offset-5">
 								<ul class="pagination">
-									<li>
-										<a href="#"><<</a>
-									</li>
-									<li>
-										<a href="#">1</a>
-									</li>
-									<li>
-										<a href="#">2</a>
-									</li>
-									<li>
-										<a href="#">3</a>
-									</li>
-									<li>
-										<a href="#">4</a>
-									</li>
-									<li>
-										<a href="#">5</a>
-									</li>
-									<li>
-										<a href="#">>></a>
-									</li>
+									{$page}
 								</ul>
 							</div>
 					</div>					

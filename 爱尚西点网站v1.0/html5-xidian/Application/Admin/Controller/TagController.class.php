@@ -48,10 +48,12 @@ class TagController extends Controller {
     public function del(){
         $id = isset($_GET['id']) ? intval($_GET['id']) : '';
         if(M("tags")->delete($id)){
-            $this->success("删除成功",U('tag/index'));
+            $this->redirect('tag/index',0);
+            //$this->success("删除成功",U('tag/index'));
         }
         else{ 
             $this->error("删除失败！");
+
         }
     }
 

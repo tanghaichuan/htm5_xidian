@@ -104,7 +104,8 @@ class AdminUsersController extends Controller {
     public function del(){
         $id = isset($_GET['id']) ? intval($_GET['id']) : '';
         if(M("admin_users")->delete($id)){
-            $this->success("删除成功",0);
+            $this->redirect('adminUsers/index',0);
+            //$this->success("删除成功",0);
         }
         else{ 
             $this->error("删除失败！");

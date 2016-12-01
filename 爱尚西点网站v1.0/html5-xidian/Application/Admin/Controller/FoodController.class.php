@@ -113,7 +113,8 @@ class FoodController extends Controller {
     public function del(){
         $id = isset($_GET['id']) ? intval($_GET['id']) : '';
         if(M("foods")->delete($id)){
-            $this->success("删除成功！");
+            $this->redirect('food/index',0);
+            //$this->success("删除成功！");
         }
         else{ 
             $this->error("删除失败！");

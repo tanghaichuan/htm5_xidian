@@ -6,7 +6,7 @@ class IndexController extends Controller {
         parent::__construct();
         if(isLogin()){
             $userModel=M('public_users');
-            $this->assign('username',$_COOKIE['username']);
+            $this->assign('username',session("username"));
         }
     }
 

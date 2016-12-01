@@ -2,20 +2,15 @@
 namespace Home\Controller;
 use Think\Controller;
 class UsersController extends Controller {
+    public function __construct(){
+        parent::__construct();
+        if(isLogin()){
+            $userModel=M('public_users');
+            $this->assign('username',session("username"));
+        }
+    }
     public function index(){
        $usersModel = M("public_users");
-        /*import('Org.Util.Page');
-        $count = $usersModel->count();
-        //实例化分页类，传入总记录数和每一页显示的记录数8
-        $page = new \Think\Page($count,2);
-        $nowPage = isset($_GET['p'])?intval($_GET['p']):1;
-        $page -> setConfig('first','第一页');
-        $page -> setConfig('prev','<<');
-        $page -> setConfig('next','>>');
-        $list = $usersModel -> order('id desc') -> page($nowPage.',2') -> select();
-        $show = $page -> show();
-        $this -> assign('page',$show);
-        $this -> assign('list',$list); */
         $this->display();
     }
     public function reset_information(){
@@ -28,12 +23,12 @@ class UsersController extends Controller {
                 "telphone"=>I("post.telphone")
             );
             var_dump($data);
-            /*if($model->create()&&$model->save($data)){
+            if($model->create()&&$model->save($data)){
                 $this->success("修改成功！",U("users/index"),0);
             }
             else{
                 $this->error("修改失败！");
-            }*/
+            }
         }
         else{
             $id = isset($_GET['id']) ? intval($_GET['id']) : session('uid');

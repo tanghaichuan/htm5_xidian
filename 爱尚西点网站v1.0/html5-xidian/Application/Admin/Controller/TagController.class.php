@@ -14,19 +14,35 @@ class TagController extends Controller {
 	}
     public function index(){
     	$model=M('tags');
+
     	$list=$model->select();
-    	$this->assign("list",$list);
+
+        import('Org.Util.Page');
+        $count = $model->count();
+        //实例化分页类，传入总记录数和每一页显示的记录数8
+        $page = new \Think\Page($count,8);
+        $nowPage = isset($_GET['p'])?intval($_GET['p']):1;
+        $page -> setConfig('first','第一页');
+        $page -> setConfig('prev','<<');
+        $page -> setConfig('next','>>');
+        $list = $model -> order('id desc') -> page($nowPage.',8') -> select();
+        $show = $page -> show();
+        $this -> assign('page',$show);
+        $this -> assign('list',$list); 
         $this->display();
     }
 
     public function add(){
     	$model=M("tags");
-    	if($model->create() && $model->add()){
-    		$this->success("添加成功!",U("tag/index"));
-    	}
-    	else{
-    		$this->error("添加失败");
-    	}
+        $data['tagname']=I("post.tagname");
+        $unique=$model->where(array('tagname'=>I("post.tagname")))->find();
+        
+    	if( !$unique && $model->add($data)){
+            echo "success";
+        }
+        else{
+            echo "error";
+        }
     }
 
     public function del(){

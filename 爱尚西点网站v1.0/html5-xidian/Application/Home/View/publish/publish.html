@@ -6,33 +6,32 @@
   <meta charset="utf-8">
   <title>美食DIY</title>    
   <link href="__PUBLIC__/home/css/DIY.css" charset="UTF-8" rel="stylesheet" type="text/css" media="screen">
-   <link rel="stylesheet" href="__PUBLIC__/home/css/bootstrap.min.css">
+  <link rel="stylesheet" href="__PUBLIC__/home/css/bootstrap.min.css">
     <script src="__PUBLIC__/home/js/jquery.js"></script>    
     <script src="__PUBLIC__/home/js/bootstrap.min.js"></script>
     <script src="__PUBLIC__/home/js/homeEdit.js"></script>
     <style type="text/css">
       *{
-        font-family: "微软雅黑";
+    	  font-family: "微软雅黑";
       }
-      body{
-        background-image: url(__PUBLIC__/home/images/bg.png);
-      }
-      .dropdown-menu li a{
-        padding: 3px 13px;
-      }
+  	  body{
+  		  background-image: url(__PUBLIC__/home/images/bg.png);
+  	  }
+  	  .dropdown-menu li a{
+  		  padding: 3px 13px;
+  	  }
     </style>
 </head>
 <body>
   <div class="header" style="height: 50px;">
     <nav class="navbar navbar-default navbar-static-top" role="navigation" style="background-color: white;">
-      <div class="navbar-header">
-         <a href="#"><img src="__PUBLIC__/home/images/logo1.png"></a>
-      </div>
-      
+	  <div class="navbar-header">
+	    <a href="#"><img src="__PUBLIC__/home/images/logo1.png"></a>
+	  </div>
       <div class="collapse navbar-collapse" >
         <ul class="nav navbar-nav navbar-left" style="position: absolute;left: 40px;top: -10px;">
           <li>
-             <a href="#"><img src="__PUBLIC__/home/images/logo2.png"></a>
+       		<a href="#"><img src="__PUBLIC__/home/images/logo2.png"></a>
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right" >
@@ -44,12 +43,12 @@
                 <a href="__MODULE__/login/register.html" style="padding: 15px 50px 15px 0px;">注册</a>
               </li>
             <else/> 
-                <li>
-                  <a href="__MODULE__/login/index.html" style="padding: 15px 10px 15px 0px;" id="isLogin">登录</a>
-                </li>
-                <li>
-                  <a href="__MODULE__/login/register.html" style="padding: 15px 50px 15px 0px;">注册</a>
-                </li> 
+	        	<li>
+	        		<a href="__MODULE__/login/index.html" style="padding: 15px 10px 15px 0px;" id="isLogin">登录</a>
+	            </li>
+	            <li>
+	              <a href="__MODULE__/login/register.html" style="padding: 15px 50px 15px 0px;">注册</a>
+	            </li> 
           </notempty>
         </ul>
       </div>
@@ -68,7 +67,7 @@
                <a href="__MODULE__/index/index.html">首页</a>
             </li>
            <li class="dropdown">
-               <a href="__MODULE__/food/french_cate.html" class="dropdown-toggle">美食鉴赏</a>
+              <a href="__MODULE__/food/french_cate.html" class="dropdown-toggle">美食鉴赏</a>
               <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
                 <li>
                    <a href="__MODULE__/food/french_cate.html">法式菜肴</a>
@@ -120,7 +119,7 @@
                 <li>
                    <a href="__MODULE__/users/reset_password.html">修改密码</a>
                 </li>
-                 <li>
+                <li>
                    <a href="__MODULE__/cart/cart.html">我的购物车</a>
                 </li>
               </ul>
@@ -151,7 +150,7 @@
                 </li>
             </ul>
         </div>
-</div>
+	</div>
 </div>
 <div class="row clearfix">
     <div class="col-md-12" style="background-image: url(__PUBLIC__/home/images/DIY.png);padding-left:500px;">
@@ -187,9 +186,9 @@
             </div>
             <div class="form-group">
                 <label for="inputFoodMeta" class="col-sm-2 control-label">材料：</label>
-                    <div class="col-sm-3">
-                        <textarea class="form-control" id="inputFoodMeta" rows="3"></textarea>
-                    </div>
+                <div class="col-sm-3">
+                    <textarea class="form-control" id="inputFoodMeta" rows="3"></textarea>
+                </div>
             </div>
             <div class="form-group">
                 <label for="inputFoodStep" class="col-sm-2 control-label">步骤：</label>

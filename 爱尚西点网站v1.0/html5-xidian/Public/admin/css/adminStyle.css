@@ -10,8 +10,9 @@
 		width: 79%;
 	}
 	
-
 }
+
+
 @media screen and (max-width: 990px) {
 	body{
 		overflow-x: hidden;
@@ -378,7 +379,7 @@ form input[type=radio]{
 #res{
 	position: absolute;
 	top: 245px;
-	left: 800px;
+	left: 61%;
 	font-family: "微软雅黑";
 	font-size: 14px;
 	color: #ed1c24;

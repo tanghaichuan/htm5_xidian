@@ -1,6 +1,6 @@
 body{
 	overflow-x: hidden;
-	font: normal 140% Helvetica, Arial, sans-serif;
+	font-family: "仿宋" Helvetica, Arial, sans-serif;
  }
 .dropdown-menu li a{
     padding: 3px 13px;
@@ -13,11 +13,12 @@ body{
 .font-a{
  	font-size:3.2em;
  	font-family:仿宋;
- 	font: normal 120% ;
+ 	font: normal 120%;
 }
 .font-b{
  	font-size:1.2em;
- 	font-family:仿宋;
+ 	font-family:"仿宋";
+ 	color: #333;
 }
 .font-c{
  	font-size:1em;
@@ -58,8 +59,10 @@ body{
 	font-family: arial;
 }
 .food-info>p{
+	display: inline-block;
 	position: relative;
-	margin: 10px 0 0 5px;
+	line-height: 30px;
+	margin: 0 0 0 5px;
 
 }
 .user-info {

@@ -1,4 +1,12 @@
-
+*{
+  	font-family: "微软雅黑";
+}
+body{
+	background-image: url(../images/bg.png);
+}
+.dropdown-menu li a{
+	padding: 3px 13px;
+}
 .userList h4{
 	font-family: "微软雅黑";
 }

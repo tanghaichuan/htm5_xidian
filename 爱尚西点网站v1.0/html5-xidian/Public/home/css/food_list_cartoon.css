@@ -1,0 +1,11 @@
+
+/*.foodlist{ box-radius: 1px; animation:1s ease 0s alternate none  box-shadow-3;}
+@keyframes box-shadow-3{
+    from{ box-shadow:inset 0 0 75px 75px #ceebf7, 0 0 0 #ceebf7;}
+    to{ box-shadow:inset 0 0 35px 35px transparent, 0 0 75px 50px transparent;}
+}*/
+.foodlist{animation:1s ease 0s alternate none  transform-2;}
+@keyframes transform-2{
+    from{ transform:scale(0.7);}
+    to{ transform:scale(1.02);}
+}

@@ -327,7 +327,9 @@ th,td{
 	color: #20bdf0;
 }
 .table>tbody>tr>td{
-    border-top: 0px;
+    padding: 0px;
+    text-align: center;
+    line-height:39px;
 }
 
 form{

@@ -13,45 +13,7 @@
   <script src="__PUBLIC__/home/js/amazeui.min.js"></script>
   <script src="__PUBLIC__/home/js/homeEdit.js"></script>
   <script src="__PUBLIC__/home/js/register_form.js"></script>
-<style type="text/css">
- 		body{
- 			overflow-x: hidden;
- 			font: normal 140% Helvetica, Arial, sans-serif;
-      font-family: 微软雅黑;
- 		}
- 		.font{
- 			writing-mode:tb-rl;
- 			font-size:1.5em;
- 			font-family:仿宋;
- 		}
- 		.font-a{
- 			font-size:3.2em;
- 			font-family:仿宋;
- 			font: normal 120% ;
- 		}
- 		.font-b{
- 			font-size:1.2em;
- 			font-family:仿宋;
- 		}
- 		.font-c{
- 			font-size:1em;
- 			font-family:仿宋;
- 			color:#688d72;
- 			font-weight:bolder;
- 		}
- 		.col-md-12 img{
- 			width:100%;
- 			height: 300px;
- 		}
- 		.col-md-8 img{
- 			width:100%;
- 			height: 196px;
- 		}
- 		.breadcrumb a{
- 			font-size:1.1em;
- 			font-family:微软雅黑;
- 		}
- 	</style>
+  <link rel="stylesheet" href="__PUBLIC__/home/css/food.css"/>
 </head>
 <body>
 <!--页头-->
@@ -196,38 +158,37 @@
     	</div>
 
     	<div class="row">
-    		<div class="col-md-1">
+    		<div class="col-md-1 col-sm-1 col-xs-1">
     			<!-- 文字实现竖排 -->
     			<div class="font-a">意式餐点</div>
     		</div>
-    		<div class="col-md-11">
+    		<div class="col-md-11 col-sm-11 col-xs-11">
     			<div class="row">
-    				<div class="col-md-1">
-    				</div>
-    				<div class="col-md-11">
+    				
     					<p>
     						<div class="font-b">意大利民族是一个美食家的民族，他们在饮食方面有着悠久的历史，他们总是喜欢精心制作。意大利美食典雅高贵，且浓重朴实，讲究原汁原味。</div>
     					</p>
-    				</div>
-    				<br /><br /><br /><br />
+    				<br /><br />
     			</div><!-- 下方为图片列表内容   -->
-    				<!-- 第一行图片 -->
+    		
     					<div class="row">
     						
     						<volist name="food" id="n">
-    							<div class="col-md-4">
+    							<div class="col-md-3 col-sm-4 col-xs-4">
     								<div class="row">
-    									<div class="col-md-8">
-    										<a href="__MODULE__/food/content/id/{$n.id}"><img alt="意式餐点" src="__PUBLIC__/{$n.img}" /></a>
+    									<div class="col-md-8 col-sm-7 col-xs-6">
+    										<a href="__MODULE__/food/content/id/{$n.id}"><img alt="意式餐点" src="__PUBLIC__/{$n.img}" id="img-a" /></a>
     										<br/><br/>
     										<div class="font-c">
-    										<div class="col-md-6">收藏</div>
-    										<div class="col-md-6">赞({$n.food_praise_count})</div>
+    										 <div class="row">
+                        <div class="col-md-6 col-sm-6 col-xs-6">收藏</div>
+                        <div class="col-md-6 col-sm-6 col-xs-6">赞({$n.food_praise_count})</div>
+                        </div>
     										</div>
     									</div>
     									
-    									<div class="col-md-4">
-    										<div class="font">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$n.name}</div>
+    									<div class="col-md-4 col-sm-5 col-xs-6">
+<div class="font">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p>{$n.name}</p></div>
     									</div>
     									
     								</div>
@@ -236,7 +197,7 @@
 
     					</div>
     					<br /><br />
-    					<!-- 第三行图片 -->
+    					
     								
     		</div>
     	</div>				
@@ -246,27 +207,7 @@
     		</div>
     		<div class="col-md-4">
     			<ul class="pagination">
-    				<li>
-    					<a href="#">上一页</a>
-    				</li>
-    				<li>
-    					<a href="#">1</a>
-    				</li>
-    				<li>
-    					<a href="#">2</a>
-    				</li>
-    				<li>
-    					<a href="#">3</a>
-    				</li>
-    				<li>
-    					<a href="#">4</a>
-    				</li>
-    				<li>
-    					<a href="#">5</a>
-    				</li>
-    				<li>
-    					<a href="#">下一页</a>
-    				</li>
+    			
     			</ul>
     		</div>
     	</div>

@@ -391,5 +391,30 @@ form input[type=radio]{
 	font-size: 14px;
 	color: #ed1c24;
 }
+.searchForm{
+	margin: 0px;
+}
+.searchSpan{
+	width: 26px;
+	height: 26px;
+	position: relative;
+	top: -4px;
+	background-color: #F0F0F0;
+}
+.searchSpan:hover{
+	background-color: #808080;
+}
 
-
+.glyphicon-search:before {
+    content: "\e003";
+	position: relative;
+	top: 5px;
+	left: 5px;
+}
+.foodSearch{
+	margin-top:7px; 
+	height: 26px;
+	border-radius: 0.25rem;
+	border-width: 1px;
+	padding: 0px;
+}

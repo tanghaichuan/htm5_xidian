@@ -1,5 +1,8 @@
 $(function(){
 	$("#addTags").click(addTags);
+	$('.searchSpan').click(function(){
+		$('.searchForm').submit();
+	});
 
 	function addTags(){
 		if(!$("#inputTag").val()){
@@ -22,5 +25,5 @@ $(function(){
 			
 		}
 	}
-	//$(".tags tr:first")
+
 });

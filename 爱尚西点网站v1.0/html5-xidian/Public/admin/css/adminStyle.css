@@ -257,6 +257,11 @@ h4{
 	top: 10px;
 	background-color: #f0f0f0;
 }
+.middle{
+		position: absolute;
+		top: 120px;
+		left: 200px;
+	}
 
 .viewList{
 	padding-left: 10%;
@@ -298,10 +303,12 @@ h4{
 	font-family: "微软雅黑";
 }
 .view button{
+	padding: 0px;
+	margin: auto;
 	position: relative;
 	top: 8px;
-	left: 100px;
-	width: 80px;
+	left: 68%;
+	width: 28%;
 	height: 25px;
 	border: 0px;
 	border-radius: 0.25rem;

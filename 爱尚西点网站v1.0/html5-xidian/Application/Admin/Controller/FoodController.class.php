@@ -17,12 +17,12 @@ class FoodController extends Controller {
         import('Org.Util.Page');
         $count = $model->count();
         //实例化分页类，传入总记录数和每一页显示的记录数8
-        $page = new \Think\Page($count,2);
+        $page = new \Think\Page($count,8);
         $nowPage = isset($_GET['p'])?intval($_GET['p']):1;
         $page -> setConfig('first','第一页');
         $page -> setConfig('prev','<<');
         $page -> setConfig('next','>>');
-        $foodList = $model -> order('id desc') -> page($nowPage.',2') -> select();
+        $foodList = $model -> order('id desc') -> page($nowPage.',8') -> select();
         $show = $page -> show();
         $this -> assign('page',$show);
         $this -> assign('foodList',$foodList); 

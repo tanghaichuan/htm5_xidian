@@ -37,7 +37,7 @@
 										<td>{$n.classify}</td>
 										<td>{$n.name}</td>
 										<td><img src="__PUBLIC__/{$n.img}" alt="" width="70" height="38px"></td>
-										<td>{$n.ingredients}</td>
+										<td title="{$n.ingredients}">{$n.ingredients|mb_substr=0,10,utf8}...</td>
 										<td>{$n.food_public_time}</td>
 										<td>
 											<a href="edit/id/{$n.id}">修改</a>

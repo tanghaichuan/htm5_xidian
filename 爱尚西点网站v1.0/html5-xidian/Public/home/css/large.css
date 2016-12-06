@@ -9,7 +9,6 @@ body{
 .dropdown-menu li a{
 	padding: 3px 13px;
 }
-
 .wbg1{
 	position: relative;
 	left: -15px;
@@ -65,4 +64,28 @@ body{
 #footer_contact{
 	padding: 30px 25px;
 	line-height: 260%;
+}
+
+#avater{
+	position: absolute;
+	top: 370px;
+	left: 100px;
+}
+#collect_list{
+	position: relative;
+	left: 80px;
+}
+.collect_information{
+	padding: 3px 6px;
+}
+#publish_list{
+	position: relative;
+	left: 80px;
+}
+.collect_information{
+	padding: 3px 6px;
+}
+#cart_list{
+	position: relative;
+	left: 80px;
 }

@@ -71,3 +71,33 @@ img{
 	padding: 0px 25px;
 	line-height: 260%;
 }
+
+#avater{
+	position: absolute;top: 288px;left: 100px;
+	width: 155px;
+	height: 120px;
+}
+#avater img{
+	width: 52%;
+}
+#collect_list{
+	position: relative;
+	left: 56px;
+}
+.collect_information{
+	padding: 3px 6px;
+}
+#publish_list{
+	position: relative;
+	left: 56px;
+}
+.collect_information{
+	padding: 3px 6px;
+}
+#cart_list{
+	position: relative;
+	left: 46px;
+}
+#cart_list img{
+	width: 27%;
+}

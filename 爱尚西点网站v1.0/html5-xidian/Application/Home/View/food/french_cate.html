@@ -6,6 +6,8 @@
  	<meta charset="utf-8">
  	<link rel="stylesheet" href="__PUBLIC__/home/css/bootstrap.min.css">
   <link rel="stylesheet" href="__PUBLIC__/home/css/amazeui.css"/>
+  <link rel="stylesheet" media="screen and (max-width:1024px)" href="__PUBLIC__/home/css/medium.css" type="text/css" />
+  <link rel="stylesheet" media="screen and (min-width:1025px)" href="__PUBLIC__/home/css/large.css" type="text/css" />
   <script src="__PUBLIC__/home/js/jquery.js"></script>    
   <script src="__PUBLIC__/home/js/bootstrap.min.js"></script>
   <script src="__PUBLIC__/home/js/amazeui.min.js"></script>
@@ -17,9 +19,6 @@
  			font: normal 140% Helvetica, Arial, sans-serif;
       font-family: 微软雅黑;
  		}
-    .dropdown-menu li a{
-        padding: 3px 13px;
-    }
  		.font{
  			writing-mode:tb-rl;
  			font-size:1.5em;
@@ -53,7 +52,6 @@
  			font-size:1.1em;
  			font-family:微软雅黑;
  		}
-
  	</style>
 </head>
 <body>
@@ -276,22 +274,16 @@
     	<br/>
     	<div class="row">
     		<div class="footer">
-          <div class="row clearfix" style="padding: 30px 150px 10px 150px;">
-            <div class="col-md-3 column" style="padding: 0px 40px 0px 30px;border-right: 1px solid #C0C0C0;">
+          <div class="row clearfix" id="footer_padding">
+            <div class="col-md-3 column" id="qrc">
               <a href="#"><img src="__PUBLIC__/home/images/qrc.jpg"></a>
             </div>
-            <div class="col-md-5 column" style="padding: 0px 50px 0px 60px;line-height: 260%;">
-            <p></p>
-              <p>爱尚美食，西餐美食菜谱分享网站。850000道菜谱，625000条美食日记，7500000位美食达人，每天都有新分享，拥有最实用的美食、菜谱、食谱的做法，同是还有聚餐百万美食爱好者的美食家社区，欢迎加入！</p>
+            <div class="col-md-5 column" id="footer_introduce">
+              <p>爱尚美食，西餐美食菜谱分享网站。每天都有新分享，拥有最实用的美食、菜谱、食谱的做法，同是还有聚餐百万美食爱好者的美食家社区，欢迎加入！</p>
             </div>
-            <div class="col-md-4 column" style="padding: 10px 30px;">
-            <p></p>
-              <p style="line-height: 260%;">联系方式：15800000000</br>邮箱：aishangxidian@163.com</br>地址：河北省石家庄市裕华区南二环东路20号</br></p>
+            <div class="col-md-4 column" id="footer_contact">
+              <p>联系方式：15800000000</br>邮箱：aishangxidian@163.com</br>地址：河北省石家庄市裕华区南二环东路20号</br></p>
             </div>
-          </div>
-
-          <div style="border-top: 1px solid #C0C0C0;border-bottom: 1px solid #C0C0C0;text-align: center;">
-            <a>Home</a> | <a>About</a> | <a>Service</a> | <a>Products</a> | <a>Contact</a>
           </div>
         </div>
       </div>

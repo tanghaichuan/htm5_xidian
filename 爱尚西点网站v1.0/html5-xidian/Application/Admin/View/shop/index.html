@@ -36,7 +36,7 @@
 								<volist name="list" id="n">
 									<tr>
 										<td>{$n.num}</td>
-										<td>{$n.name}</td>
+										<td title="{$n.name}">{$n.name|mb_substr=0,10,utf8}...</td>
 										<td><img src="__PUBLIC__/{$n.img}" alt="" width="70" height="38px"></td>
 										<td>{$n.price}</td>
 										<td>{$n.classify}</td>

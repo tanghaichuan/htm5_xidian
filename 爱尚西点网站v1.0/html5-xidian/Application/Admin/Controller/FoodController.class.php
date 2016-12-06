@@ -120,4 +120,13 @@ class FoodController extends Controller {
             $this->error("删除失败！");
         }
     }
+
+    public function searchFood(){
+        $model=M("foods");
+        $name=I("post.name");
+        $where['name']=array('like','%'.$name.'%');
+        $foodList=$model->where($where)->select();
+        $this -> assign('foodList',$foodList); 
+        $this->display('index');
+    }
 }

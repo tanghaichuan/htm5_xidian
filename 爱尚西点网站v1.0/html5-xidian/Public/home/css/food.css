@@ -1,7 +1,6 @@
 body{
 	overflow-x: hidden;
- 	font: normal 140% Helvetica, Arial, sans-serif;
-    font-family: 微软雅黑;
+	font: normal 140% Helvetica, Arial, sans-serif;
  }
 .dropdown-menu li a{
     padding: 3px 13px;
@@ -26,14 +25,7 @@ body{
  	color:#688d72;
  	font-weight:bolder;
 }
-.col-md-12 img{
- 	width:100%;
- 	height: 300px;
-}
-#img-a{
- 	width:148px;
- 	height: 130px;
-}
+
 .breadcrumb a{
  	font-size:1.1em;
  	font-family:微软雅黑;
@@ -42,4 +34,57 @@ body{
     display:inline-block;
     height:142px;
     text-align:left;
+}
+.actions{
+	position: relative;
+	z-index: 100;
+}
+.left,.right{
+	padding: 0px 0 0 10px;
+}
+.thumbnail{
+	padding: 0;
+	height: 340px;
+}
+.thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    position: relative;
+    top: -20px;
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: 230px;
+}
+.thumbnail p{
+	font-family: arial;
+}
+.food-info>p{
+	position: relative;
+	margin: 10px 0 0 5px;
+	top: -20px;
+}
+.user-info {
+	line-height: 80px;
+	position: relative;
+	height: 80px;
+	top: -20px;
+	background-color: #FAFAFA;
+}
+.user-info p{
+	position: relative;
+	top: -10px;
+	display: inline-block;
+}
+.user-info img{
+	width: 28%;
+}
+.user-info span{
+	position: relative;
+	top: -60px;
+	left: 23%;
+	height: 30px;
+	width: 80%;
+	font-size: 12px;
+}
+hr{
+	margin: 0px;
 }

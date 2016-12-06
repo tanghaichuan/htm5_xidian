@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="__PUBLIC__/home/css/amazeui.css"/>
   <link rel="stylesheet" media="screen and (max-width:1024px)" href="__PUBLIC__/home/css/medium.css" type="text/css" />
   <link rel="stylesheet" media="screen and (min-width:1025px)" href="__PUBLIC__/home/css/large.css" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/heartStyle.css">
   <script src="__PUBLIC__/home/js/jquery.js"></script>    
   <script src="__PUBLIC__/home/js/bootstrap.min.js"></script>
   <script src="__PUBLIC__/home/js/amazeui.min.js"></script>
@@ -160,46 +161,49 @@
         </div>
       </div>
 
-    	     <div class="row">
-        <div class="col-md-1 col-sm-1 col-xs-1">
-          <!-- 文字实现竖排 -->
-          <div class="font-a">法式餐点</div>
-        </div>
+    	    <div class="row">
+            <div class="col-md-1 col-sm-1 col-xs-1">
+            <!-- 文字实现竖排 -->
+              <div class="font-a">法式餐点</div>
+            </div>
         <div class="col-md-11 col-sm-11 col-xs-11">
-          <div class="row">
-          
+          <div class="row" style="height: 70px;">
               <p>
                 <div class="font-b">法国菜以其口感之细腻、酱料之美味、餐桌布置之华美，使饮食成为了一种艺术。并且因为各地所产原料和当地人口味不同，发展出多种多样的独特烹调方法，从而产生了变换无穷的美味。</div>
               </p>
-        
             <br /><br />
-          </div><!-- 下方为图片列表内容   -->
+          </div>
+          <!-- 下方为图片列表内容   -->
     
-              <div class="row">
-                
-                <volist name="food" id="n">
-                  <div class="col-md-3 col-sm-4 col-xs-4">
-                    <div class="row">
-                      <div class="col-md-8 col-sm-7 col-xs-6" >
-                        <a href="__MODULE__/food/content/id/{$n.id}"><img alt="法式餐点" src="__PUBLIC__/{$n.img}" id="img-a"/></a>
-
-                        <br/><br/>
-                        <div class="font-c">
-                        <div class="row">
-                        <div class="col-md-6 col-sm-6 col-xs-6">收藏</div>
-                        <div class="col-md-6 col-sm-6 col-xs-6">赞({$n.food_praise_count})</div>
-                        </div>
-                        </div>
-                      </div>
-                      
-                      <div class="col-md-4 col-sm-5 col-xs-6">
-                        <div class="font">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p>{$n.name}</p></div>
-                      </div>
+            <div class="row">
+              <volist name="food" id="n">
+                <div class="col-md-3 col-sm-4 col-xs-5">
+                  <div class="actions">
+                    <div class="col-md-3 col-sm-4 col-xs-5 left">
+                      <a href="">收藏</a>
+                    </div>
+                    <div class="col-md-offset-6 col-sm-offset-5 col-xs-offset-4 col-md-3 col-sm-4 col-xs-5 right">
+                      <a href="">点赞</a>
                     </div>
                   </div>
-                </volist>
-                
-              </div>
+                  <div class="thumbnail">
+                    <a href="__MODULE__/food/content/id/{$n.id}">
+                      <img alt="意式餐点" src="__PUBLIC__/{$n.img}" class="food-thumb"  />
+                    </a>
+                    <span class="food-info">
+                      <p>{$n.name}</p>
+                    </span>
+                    
+                    <div class="user-info">
+                      <img src="__PUBLIC__/home/images/avater.jpeg" alt="" class="col-sm img-circle">
+                      <p>by&nbsp zhangsan</p>
+                      <span class="col-sm-6">发布于&nbsp&nbsp{$n.food_public_time}</span>
+                    </div>
+                  </div>
+                </div>
+              </volist> 
+            </div> 
+
         </div>
       </div>				
     	<br/><br/>
@@ -231,5 +235,6 @@
     </div>
   </div>
 
+<script src="__PUBLIC__/home/js/heart.js"></script>
 </body>
 </html>

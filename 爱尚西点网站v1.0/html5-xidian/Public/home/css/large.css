@@ -89,3 +89,18 @@ body{
 	position: relative;
 	left: 80px;
 }
+
+#cart_logo{
+	border-radius: 5px;
+}
+#table_fir{
+	width: 600px;
+}
+.table p{
+	padding-top: 24px;
+}
+#sum_pos{
+	position: absolute;
+	left: 115px;
+	top: -10px;
+}

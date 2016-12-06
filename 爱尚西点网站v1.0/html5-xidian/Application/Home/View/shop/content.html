@@ -5,22 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <meta charset="utf-8">
     <link rel="stylesheet" href="__PUBLIC__/home/css/bootstrap.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/home/css/Shopping_content.css">
     <link rel="stylesheet" media="screen and (max-width:1024px)" href="__PUBLIC__/home/css/medium.css" type="text/css" />
     <link rel="stylesheet" media="screen and (min-width:1025px)" href="__PUBLIC__/home/css/large.css" type="text/css" />
     <script src="__PUBLIC__/home/js/jquery.js"></script>    
     <script src="__PUBLIC__/home/js/bootstrap.min.js"></script>
     <script src="__PUBLIC__/home/js/homeEdit.js"></script>
-    <style type="text/css">
-      .one{
-        height:50px;
-        width:1170px;
-        background-image:url(__PUBLIC__/home/images/Shopping_content_bg2.png);
-        margin-top:30px;
-      }
-      body{
-      	background-image:url(__PUBLIC__/home/images/bg.png);
-      }
-    </style>
   </head>
   <body>
   <div class="header" style="height: 50px;">
@@ -179,30 +169,29 @@
                             <input id="add" name="" type="button" value="+" />  
   
                             <script>
-								$(document).ready(function(){
-								//获得文本框对象
-   									var t = $("#text_box");
-									//初始化数量为1,并失效减
-									$('#min').attr('disabled',true);
-    								//数量增加操作
-   			 							$("#add").click(function(){    
-        									t.val(parseInt(t.val())+1)
-        									if (parseInt(t.val())!=1){
-            									$('#min').attr('disabled',false);
-        									}
+								               $(document).ready(function(){
+								               //获得文本框对象
+   									              var t = $("#text_box");
+									                //初始化数量为1,并失效减
+									                $('#min').attr('disabled',true);
+    								              //数量增加操作
+   			 							            $("#add").click(function(){    
+        									           t.val(parseInt(t.val())+1)
+        									           if (parseInt(t.val())!=1){
+            									          $('#min').attr('disabled',false);
+        									           }
+    								              }) 
+    								              //数量减少操作
+    								              $("#min").click(function(){
+        								             t.val(parseInt(t.val())-1);
+        								             if (parseInt(t.val())==1){
+            								            $('#min').attr('disabled',true);
+        								             }
       
-    								}) 
-    								//数量减少操作
-    								$("#min").click(function(){
-        								t.val(parseInt(t.val())-1);
-        								if (parseInt(t.val())==1){
-            								$('#min').attr('disabled',true);
-        								}
-      
-   	 								})
+   	 								              })
    
-								});
-							</script>  
+								               });
+							              </script>  
                             </div>                                
           					<div class="row clearfix">
             					<div class="col-md-6 column">

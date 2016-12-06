@@ -43,12 +43,12 @@ body{
 	padding: 0px 0 0 10px;
 }
 .thumbnail{
+	margin-top: 10px;
 	padding: 0;
 	height: 340px;
 }
 .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
     position: relative;
-    top: -20px;
     display: block;
     max-width: 100%;
     width: 100%;
@@ -60,13 +60,12 @@ body{
 .food-info>p{
 	position: relative;
 	margin: 10px 0 0 5px;
-	top: -20px;
+
 }
 .user-info {
 	line-height: 80px;
 	position: relative;
 	height: 80px;
-	top: -20px;
 	background-color: #FAFAFA;
 }
 .user-info p{

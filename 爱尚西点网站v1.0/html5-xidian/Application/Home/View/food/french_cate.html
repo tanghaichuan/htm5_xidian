@@ -178,14 +178,6 @@
             <div class="row">
               <volist name="food" id="n">
                 <div class="col-md-3 col-sm-4 col-xs-5">
-                  <div class="actions">
-                    <div class="col-md-3 col-sm-4 col-xs-5 left">
-                      <a href="">收藏</a>
-                    </div>
-                    <div class="col-md-offset-6 col-sm-offset-5 col-xs-offset-4 col-md-3 col-sm-4 col-xs-5 right">
-                      <a href="">点赞</a>
-                    </div>
-                  </div>
                   <div class="thumbnail">
                     <a href="__MODULE__/food/content/id/{$n.id}">
                       <img alt="意式餐点" src="__PUBLIC__/{$n.img}" class="food-thumb"  />
@@ -193,7 +185,7 @@
                     <span class="food-info">
                       <p>{$n.name}</p>
                     </span>
-                    
+
                     <div class="user-info">
                       <img src="__PUBLIC__/home/images/avater.jpeg" alt="" class="col-sm img-circle">
                       <p>by&nbsp zhangsan</p>

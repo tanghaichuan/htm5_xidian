@@ -101,3 +101,19 @@ img{
 #cart_list img{
 	width: 27%;
 }
+
+#cart_logo{
+	border-radius: 5px;
+	width: 7%;
+}
+#table_fir{
+	width: 460px;
+}
+.table p{
+	padding-top: 24px;
+}
+#sum_pos{
+	position: absolute;
+	left: 15px;
+	top: -10px;
+}

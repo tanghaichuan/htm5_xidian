@@ -27,7 +27,6 @@ class UserController extends Controller {
         $this -> assign('page',$show);
         $this -> assign('list',$list); 
         $this->display();
-        $this->display();
     }
 
     public function editInfo(){

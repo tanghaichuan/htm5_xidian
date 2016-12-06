@@ -14,6 +14,12 @@ class CartController extends Controller {
 	}
 	
     public function index(){
-       $this->display();
+    	$id = isset($_GET['id']) ? intval($_GET['id']) : '';
+    	$model=M("public_users");
+    	$userList=$model->select();
+    	$choose=$model->find($id);
+    	$this->assign("choose",$choose);
+    	$this->assign("userList",$userList);
+        $this->display();
     }
 }

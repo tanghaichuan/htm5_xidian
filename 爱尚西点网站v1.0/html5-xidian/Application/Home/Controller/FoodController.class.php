@@ -57,4 +57,38 @@ class FoodController extends Controller {
       $this->assign("content",$content);
       $this->display();
     }
+
+    public function favorite(){
+      $data['food_id']=I("post.id");
+      $data['user_name']=I("post.username");
+      $model=M("favorite");
+      if($model->where($data)->find()){
+        if($model->where($data)->delete()){
+          echo "quitSuccess";
+        }
+        else{
+          echo "quitError";
+        }
+      }
+      else{
+        if($model->add($data)){
+          echo "success";
+        }
+        else{
+          echo "error";
+        }
+      } 
+    }
+
+    public function getFav(){
+      $model=M("favorite");
+      $data['food_id']=I("post.id");
+      $data['user_name']=I("post.username");
+      if($model->where($data)->find()){
+        echo "like";
+      }
+      else{
+        echo "unlike";
+      }
+    }
 }

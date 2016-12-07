@@ -117,3 +117,13 @@ img{
 	left: 15px;
 	top: -10px;
 }
+
+#shopping_list{
+	padding: 0px 10px;
+}
+.price{
+	font-size: 1.6em;
+	padding-right: 30px;
+	position: relative;
+	top: 5px;
+}

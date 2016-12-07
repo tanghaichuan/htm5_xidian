@@ -104,3 +104,13 @@ body{
 	left: 115px;
 	top: -10px;
 }
+
+#shopping_list{
+	padding: 0px 100px;
+}
+.price{
+	font-size: 1.6em;
+	padding-right: 70px;
+	position: relative;
+	top: 5px;
+}

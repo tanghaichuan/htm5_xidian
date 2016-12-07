@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="__PUBLIC__/home/css/bootstrap.min.css">
     <link rel="stylesheet" media="screen and (max-width:1024px)" href="__PUBLIC__/home/css/medium.css" type="text/css" />
     <link rel="stylesheet" media="screen and (min-width:1025px)" href="__PUBLIC__/home/css/large.css" type="text/css" />
+    <link rel="stylesheet" href="__PUBLIC__/home/css/userEdit.css">
     <script src="__PUBLIC__/home/js/jquery.js"></script>    
     <script src="__PUBLIC__/home/js/bootstrap.min.js"></script>
     <script src="__PUBLIC__/home/js/homeEdit.js"></script>
@@ -31,7 +32,7 @@
                 <a href="__MODULE__/login/index.html" style="padding: 15px 10px 15px 0px;" id="isLogin">欢迎：{$username}</a>
               </li>
               <li>
-                <a href="__MODULE__/login/register.html" style="padding: 15px 50px 15px 0px;">注册</a>
+                <a href="__MODULE__/login/quit" style="padding: 15px 50px 15px 0px;">退出</a>
               </li>
             <else/> 
                 <li>
@@ -136,11 +137,12 @@
       </div>
       <div id="avater">
         <img src="__PUBLIC__/home/images/avater.jpeg" class="img-circle" />
-        <b style="position: relative;top: 10px;left: 5px;">这里放昵称</b>
+        <b style="position: relative;top: 10px;left: 5px;">{$username}</b>
       </div>
       <!---->
       <div class="row clearfix" style="padding: 40px 0px;">
-        <div class="col-md-3 column">
+
+        <div class="col-sm-2 col-xs-12 col-md-3 column">
            <ul style="list-style-type: none;text-align: center;font-size: 17px;">
              <li style="padding: 10px;background-color: #C0C0C0;">个人中心</li>
              <li style="padding: 10px;background-color: white;"><a href="__MODULE__/users/index.html">我的首页</a></li>
@@ -148,53 +150,47 @@
              <li style="padding: 10px;background-color: white;"><a href="__MODULE__/users/reset_password.html">修改密码</a></li>
            </ul>
         </div>
+
         <div class="col-md-9 column">
         <!--我的收藏-->
-          <div style="background-color: white;border-radius: 1px;margin: 0px 45px 0px 20px;height: 260px;">
+          <div style="background-color: white;border-radius: 1px;margin: 0px 45px 0px 20px;height: 295px;">
             <div style="padding: 15px 20px;">
               <label style="font-size: 1.2em;">我的收藏</label>
             </div>
+
+
             <div id="collect_list">
-              <div class="col-sm-2">
-                <img src="__PUBLIC__/home/images/personal_pic1.jpg">
-                <div class="collect_information">
-                  <h5>餐点</h5>
-                  <p>by&nbsp;作者</p>
+              <volist name="foodList" id="n">
+                <div class="col-sm-2">
+                  <img src="__PUBLIC__/{$n.img}">
+                  <div class="collect_information">
+                    <h5>{$n.name}</h5>
+                    <p>by&nbsp;{$n.publish_name}</p>
+                    <p class="quitFavor">取消收藏</p>
+                  </div>
                 </div>
-              </div>
-              <div class="col-sm-2">
-                <img src="__PUBLIC__/home/images/personal_pic1.jpg">
-                <div class="collect_information">
-                  <h5>餐点</h5>
-                  <p>by&nbsp;作者</p>
-                </div>
-              </div>
-              <div class="col-sm-2">
-                <img src="__PUBLIC__/home/images/personal_pic1.jpg">
-                <div class="collect_information">
-                  <h5>餐点</h5>
-                  <p>by&nbsp;作者</p>
-                </div>
-              </div>
-              <div class="col-sm-2">
-                <img src="__PUBLIC__/home/images/personal_pic1.jpg">
-                <div class="collect_information">
-                  <h5>餐点</h5>
-                  <p>by&nbsp;作者</p>
-                </div>
-              </div>
-              <div class="col-sm-2">
-                <img src="__PUBLIC__/home/images/personal_pic1.jpg">
-                <div class="collect_information">
-                  <h5>餐点</h5>
-                  <p>by&nbsp;作者</p>
-                </div>
-              </div>
+              </volist>
+              
             </div>
             </br>
-          </div>
-          </br>
 
+            <nav>
+              <ul class="pagination">
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+              </ul>
+            </nav>
+
+
+          </div>
+
+          </br>
+          
           <!--我的发布-->
           <div style="background-color: white;border-radius: 1px;margin: 0px 45px 0px 20px;height: 260px;">
             <div style="padding: 15px 20px;">

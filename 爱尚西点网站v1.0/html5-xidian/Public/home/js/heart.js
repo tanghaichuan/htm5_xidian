@@ -10,7 +10,7 @@ $(document).ready(function(){
 			'username':username
 		}
 		$.ajax({
-			type : "post",  
+			type : "post", 
           	url : "getFav",  
           	data : $data,  
           	async : true,  

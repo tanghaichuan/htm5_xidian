@@ -10,7 +10,19 @@ class UsersController extends Controller {
         }
     }
     public function index(){
-       $usersModel = M("public_users");
+        $model=M("favorite");
+        $username=session("username");
+        import('Org.Util.Page');
+        $count=count($foodList);
+        $page = new \Think\Page($count,5);
+        $nowPage = isset($_GET['p'])?intval($_GET['p']):1;
+        $page -> setConfig('first','第一页');
+        $page -> setConfig('prev','<<');
+        $page -> setConfig('next','>>');
+        $foodList = $model->join('foods on favorite.food_id=foods.id') -> order('id desc') -> page($nowPage.',5') -> select();
+        $show = $page -> show();
+        $this -> assign('page',$show);
+        $this -> assign('foodList',$foodList); 
         $this->display();
     }
     public function reset_information(){
@@ -69,11 +81,16 @@ class UsersController extends Controller {
         }
     }
 
+    function getFavor(){
+        
+    }
+
+
     function isMobile($mobile) {
     if (!is_numeric($mobile)) {
         return false;
     }
     return preg_match('#^13[\d]{9}$|^14[5,7]{1}\d{8}$|^15[^4]{1}\d{8}$|^17[0,6,7,8]{1}\d{8}$|^18[\d]{9}$#', $mobile) ? true : false;
-}
+    }
 
 }

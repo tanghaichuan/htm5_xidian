@@ -6,8 +6,10 @@ $(function(){
 		$("ul",this).css("display","none");
 	});
 
-
-	function getCookie(cookie_name){  
+  $('body').on("click",'.quitFavor',function(){
+      
+  });
+	/*function getCookie(cookie_name){  
       var allcookies = document.cookie;  
       var cookie_pos = allcookies.indexOf(cookie_name);   
       //索引的长度  
@@ -27,6 +29,6 @@ $(function(){
     var cookie=getCookie("username");
     if(cookie){
     	$("#isLogin").html("欢迎："+cookie);
-    }
+    }*/
     
 });

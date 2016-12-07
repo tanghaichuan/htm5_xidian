@@ -41,4 +41,12 @@ class LoginController extends Controller {
             $this->error($adminModel->getError());
         }
     }
+    public function quit(){
+        if(session_destroy()){
+            $this->success("退出成功！",U("Home/index/index"));
+        }
+        else{
+            $this->error("请先登录！");
+        }
+    }   
 }

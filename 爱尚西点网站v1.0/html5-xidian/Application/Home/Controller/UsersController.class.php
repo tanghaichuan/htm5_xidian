@@ -12,6 +12,7 @@ class UsersController extends Controller {
     public function index(){
         $model=M("favorite");
         $username=session("username");
+        $foodList = $model->where(array("user_name"=>$username))->join('foods on favorite.food_id=foods.id')->select();
         import('Org.Util.Page');
         $count=count($foodList);
         $page = new \Think\Page($count,5);
@@ -19,7 +20,7 @@ class UsersController extends Controller {
         $page -> setConfig('first','第一页');
         $page -> setConfig('prev','<<');
         $page -> setConfig('next','>>');
-        $foodList = $model->join('foods on favorite.food_id=foods.id') -> order('id desc') -> page($nowPage.',5') -> select();
+        $foodList = $model->where(array("user_name"=>$username))->join('foods on favorite.food_id=foods.id') -> order('id desc') -> page($nowPage.',5') -> select();
         $show = $page -> show();
         $this -> assign('page',$show);
         $this -> assign('foodList',$foodList); 
@@ -81,8 +82,16 @@ class UsersController extends Controller {
         }
     }
 
-    function getFavor(){
-        
+    function quitFavor(){
+        $data["food_id"]=I("post.id");
+        $data["food_name"]=session("username");
+        $model=M("favorite");
+        if($model->where($data)->delete()){
+            echo "取消成功!";
+        }
+        else{
+            echo "取消失败!";
+        }
     }
 
 

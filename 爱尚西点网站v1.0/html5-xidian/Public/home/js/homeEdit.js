@@ -7,7 +7,14 @@ $(function(){
 	});
 
   $('body').on("click",'.quitFavor',function(){
-      
+      var id=$(this).attr("name");
+      $data={
+        'id':id
+      }
+      $.post("quitFavor",$data,function(res){
+          alert(res);
+          location.reload();
+      });
   });
 	/*function getCookie(cookie_name){  
       var allcookies = document.cookie;  

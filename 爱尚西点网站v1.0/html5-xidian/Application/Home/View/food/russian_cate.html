@@ -175,9 +175,9 @@
     					<div class="row">
               <volist name="food" id="n">
                 <div class="col-md-3 col-sm-4 col-xs-5">
-                  <div class="thumbnail">
+                  <div class="thumbnail" id="thumbnail">
                     <a href="__MODULE__/food/content/id/{$n.id}">
-                      <img alt="意式餐点" src="__PUBLIC__/{$n.img}" class="food-thumb"  />
+                      <img alt="意式餐点" src="__PUBLIC__/{$n.img}" id="food-thumb"  />
                     </a>
                     <div class="food-info">
                       <p>{$n.name}</p>
@@ -191,7 +191,7 @@
                   </div>
                 </div>
               </volist> 
-            </div>
+            </div> 
     					<br /><br/>		
     		</div>
     	</div>				

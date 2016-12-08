@@ -9,8 +9,10 @@ class IndexController extends Controller {
             $this->assign('username',session("username"));
         }
     }
-
     public function index(){
-    	$this->display();
+        $model=M("tags");
+        $tagList=$model->select();
+        $this->assign("tagList",$tagList);
+        $this->display();
     }
 }

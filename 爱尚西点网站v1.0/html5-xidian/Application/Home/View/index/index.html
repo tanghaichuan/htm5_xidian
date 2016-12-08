@@ -12,6 +12,8 @@
     <script src="__PUBLIC__/home/js/bootstrap.min.js"></script>
     <script src="__PUBLIC__/home/js/homeEdit.js"></script>
     <script src="__PUBLIC__/home/js/animation.js"></script>
+    <link rel="stylesheet" href="__PUBLIC__/home/css/awesomplete.css" />
+<script src="__PUBLIC__/home/js/awesomplete.js" async></script>
   </head>
   <body>
   <!--页头-->
@@ -122,9 +124,12 @@
             </li>
             <li>
               <form class="navbar-form navbar-left" role="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" />
-                </div>
+                <input class="awesomplete" data-list="#mylist" />
+                   <ul id="mylist" style="display:none">
+                      <volist name="tagList" id="n">
+                         <li>{$n.tagname}</li>
+                      </volist>
+                   </ul>             
                 <button type="submit" class="btn btn-default">搜索</button>
               </form>
             </li>

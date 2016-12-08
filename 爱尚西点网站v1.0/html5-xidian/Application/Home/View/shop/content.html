@@ -5,12 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <meta charset="utf-8">
     <link rel="stylesheet" href="__PUBLIC__/home/css/bootstrap.min.css">
-    <link rel="stylesheet" href="__PUBLIC__/home/css/Shopping_content.css">
     <link rel="stylesheet" media="screen and (max-width:1024px)" href="__PUBLIC__/home/css/medium.css" type="text/css" />
     <link rel="stylesheet" media="screen and (min-width:1025px)" href="__PUBLIC__/home/css/large.css" type="text/css" />
     <script src="__PUBLIC__/home/js/jquery.js"></script>    
     <script src="__PUBLIC__/home/js/bootstrap.min.js"></script>
     <script src="__PUBLIC__/home/js/homeEdit.js"></script>
+    <style type="text/css">
+      .shopping_mall{
+        height:50px;
+        width:1170px;
+        background-image:url(__PUBLIC__/home/images/Shopping_content_bg2.png);
+        margin-top:30px;
+      }
+      body{
+      	background-image:url(__PUBLIC__/home/images/bg.png);
+      }
+    </style>
   </head>
   <body>
   <div class="header" style="height: 50px;">
@@ -31,7 +41,7 @@
                 <a href="__MODULE__/login/index.html" style="padding: 15px 10px 15px 0px;" id="isLogin">欢迎：{$username}</a>
               </li>
               <li>
-                <a href="__MODULE__/login/quit" style="padding: 15px 50px 15px 0px;">退出</a>
+                <a href="__MODULE__/login/register.html" style="padding: 15px 50px 15px 0px;">注册</a>
               </li>
             <else/> 
               <li>
@@ -132,16 +142,16 @@
     </div>
 
     <div class="row-fluid">
-        <div class="span4">
-            <ul class="breadcrumb">
-                <li>
-                    <a href="__MODULE__/index/index.html">首页</a>
-                </li>
-                <li class="active">
-                   食材商城
-                </li>
-            </ul>
-        </div>
+      <div class="col-md-12">
+        <ul class="breadcrumb">
+          <li>
+            <a href="__MODULE__/index/index.html">首页</a> 
+          </li>
+          <li class="active">
+            食材商城
+          </li>
+        </ul>
+      </div>
     </div>
  </div>
  <div style="background-image: url(__PUBLIC__/home/images/Shopping_content_bg1.jpg);padding-top:80px">
@@ -169,29 +179,30 @@
                             <input id="add" name="" type="button" value="+" />  
   
                             <script>
-								               $(document).ready(function(){
-								               //获得文本框对象
-   									              var t = $("#text_box");
-									                //初始化数量为1,并失效减
-									                $('#min').attr('disabled',true);
-    								              //数量增加操作
-   			 							            $("#add").click(function(){    
-        									           t.val(parseInt(t.val())+1)
-        									           if (parseInt(t.val())!=1){
-            									          $('#min').attr('disabled',false);
-        									           }
-    								              }) 
-    								              //数量减少操作
-    								              $("#min").click(function(){
-        								             t.val(parseInt(t.val())-1);
-        								             if (parseInt(t.val())==1){
-            								            $('#min').attr('disabled',true);
-        								             }
+								$(document).ready(function(){
+								//获得文本框对象
+   									var t = $("#text_box");
+									//初始化数量为1,并失效减
+									$('#min').attr('disabled',true);
+    								//数量增加操作
+   			 							$("#add").click(function(){    
+        									t.val(parseInt(t.val())+1)
+        									if (parseInt(t.val())!=1){
+            									$('#min').attr('disabled',false);
+        									}
       
-   	 								              })
+    								}) 
+    								//数量减少操作
+    								$("#min").click(function(){
+        								t.val(parseInt(t.val())-1);
+        								if (parseInt(t.val())==1){
+            								$('#min').attr('disabled',true);
+        								}
+      
+   	 								})
    
-								               });
-							              </script>  
+								});
+							</script>  
                             </div>                                
           					<div class="row clearfix">
             					<div class="col-md-6 column">
@@ -206,7 +217,7 @@
    		 		</div>
       			<div class="row clearfix">
         			<div class="col-md-12 column">
-              			<div class="one">
+              			<div class="shopping_mall">
               				<span style="font-size:20px;font-weight:bold;color:white">食品商城</span>
               			</div>
         			</div>

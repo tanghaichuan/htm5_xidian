@@ -4,8 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
-  <title>商城列表页</title>    
-  <link href="__PUBLIC__/home/css/Shopping_list.css" charset="UTF-8" rel="stylesheet" type="text/css" media="screen">
+  <title>商城列表页</title>
   <link rel="stylesheet" href="__PUBLIC__/home/css/bootstrap.min.css">
   <link rel="stylesheet" media="screen and (max-width:1024px)" href="__PUBLIC__/home/css/medium.css" type="text/css" />
   <link rel="stylesheet" media="screen and (min-width:1025px)" href="__PUBLIC__/home/css/large.css" type="text/css" />
@@ -32,7 +31,7 @@
                 <a href="__MODULE__/login/index.html" style="padding: 15px 10px 15px 0px;" id="isLogin">欢迎：{$username}</a>
               </li>
               <li>
-                <a href="__MODULE__/login/quit" style="padding: 15px 50px 15px 0px;">退出</a>
+                <a href="__MODULE__/login/register.html" style="padding: 15px 50px 15px 0px;">注册</a>
               </li>
             <else/> 
               <li>
@@ -49,8 +48,6 @@
 
   <!--背景-->
   <div style="background-image: url(__PUBLIC__/home/images/bg.png);">
-    <!--内容-->
-    <div class="content">
     <!--导航栏-->
       <nav class="navbar navbar-default navbar-static-top" role="navigation" style="background-image: url(__PUBLIC__/home/images/bg.png);border-bottom: 1px solid #C0C0C0;">
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -70,7 +67,6 @@
                 <li>
                    <a href="__MODULE__/food/us_cate.html">美式菜肴</a>
                 </li>
-               
                 <li>
                    <a href="__MODULE__/food/italy_cate.html">意式菜肴</a>
                 </li>
@@ -81,15 +77,13 @@
             </li>
             <li class="dropdown">
                <a href="__MODULE__/publish/index.html" class="dropdown-toggle">美食DIY</a>
-              <ul class="dropdown-menu" style="text-align: center;min-width: 82.68px;">
-         
+              <ul class="dropdown-menu" style="text-align: center;min-width: 82.68px;">       
                 <li>
                    <a href="__MODULE__/publish/index.html">发布美食</a>
                 </li>
-
               </ul>
             </li>
-           <li class="dropdown">
+           	<li class="dropdown">
                <a href="__MODULE__/shop/index.html" class="dropdown-toggle">食材商城</a>
               <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
                 <li>
@@ -98,10 +92,9 @@
                 <li>
                    <a href="__MODULE__/shop/index.html">食材</a>
                 </li>
-            
               </ul>
             </li>
-          <li class="dropdown">
+          	<li class="dropdown">
                <a href="__MODULE__/users/index.html" class="dropdown-toggle">个人中心</a>
               <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
                 <li>
@@ -131,46 +124,103 @@
         </div>
       </nav>
     </div>
-  </div>
+
+  <!--面包屑-->
   <div class="row-fluid">
-    <div class="span4">
-        <ul class="breadcrumb">
-            <li>
-                <a href="__MODULE__/index/index.html">首页</a>
-            </li>
-            <li class="active">
-                食材商城
-            </li>
-        </ul>
+    <div class="col-md-12">
+      <ul class="breadcrumb">
+        <li>
+          <a href="__MODULE__/index/index.html">首页</a> 
+        </li>
+        <li class="active">
+          食材商城
+        </li>
+      </ul>
     </div>
   </div>
-  <div class="one clearfix">
-    <div class="two clearfix">
+
+  <!--商城内容-->
+  <div id="shopping_list">
+  	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="thumbnail">
+						<img alt="300x300" src="__PUBLIC__/home/images/food-US-3.png" />
+						<div class="caption">
+							<p style="padding: 0px 8px"><a href="#">菲力牛排套装8份装</a></p>
+							<p><b class="price">￥100</b><a class="btn" href="#" style="color: #fff">加入购物车</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="thumbnail">
+						<img alt="300x300" src="__PUBLIC__/home/images/avater.jpeg" />
+						<div class="caption">
+							<p style="padding: 0px 8px"><a href="#">菲力牛排套装8份装</a></p>
+							<p><b class="price">￥100</b><a class="btn" href="#" style="color: #fff">加入购物车</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="thumbnail">
+						<img alt="300x300" src="__PUBLIC__/home/images/food-US-2.png" />
+						<div class="caption">
+							<p style="padding: 0px 8px"><a href="#">菲力牛排套装8份装</a></p>
+							<p><b class="price">￥100</b><a class="btn" href="#" style="color: #fff">加入购物车</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="thumbnail">
+						<img alt="300x300" src="__PUBLIC__/home/images/food-US-2.png" />
+						<div class="caption">
+							<p style="padding: 0px 8px"><a href="#">菲力牛排套装8份装</a></p>
+							<p><b class="price">￥100</b><a class="btn" href="#" style="color: #fff">加入购物车</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  </div>
+  <!--
+    <div class="clearfix">
         <volist name="goods" id="n"> 
-            <div class="three">
-                <div class="four">
+            <div>
+                <div>
                     <a href="__MODULE__/shop/content/id/{$n.id}" target="_blank">
                         <img alt="{$n.name}" src="__PUBLIC__/{$n.img}">
                     </a>       
                 </div>
-                <div class="five">
+                <div>
                     <a href="__MODULE__/shop/content/id/{$n.id}" target="_blank" title="{$n.name}">
                         <h3>{$n.name}</h3>
                     </a>
-                    <div class="six">
+                    <div>
                         <span>￥{$n.price}</span>                   
                     </div>
                 </div>
-                <div class="seven">月售 1288 件</div>
-                <div class="eight">包邮</div>
+                <div>月售 1288 件</div>
+                <div>包邮</div>
             </div>
         </volist>
     </div>
-  </div>
-  <div class="container-fluid" style="padding-left:750px">
+   -->
+   <!--分页-->
+  <div class="container" >
     <div class="row-fluid">
         <div align="right">
             <ul class="pagination">
+                <li>
+                    <a href="#">上一页</a>
+                </li>
+                <li>
+                    <a href="#">...</a>
+                </li>
+                <li>
+                    <a href="#">下一页</a>
+                </li>
             </ul>
         </div>
     </div>

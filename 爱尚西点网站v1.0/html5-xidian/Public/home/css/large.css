@@ -71,6 +71,9 @@ body{
 	top: 370px;
 	left: 100px;
 }
+#avater b{
+  position: relative;top: 10px;left: 5px;
+}
 #collect_list{
 	position: relative;
 	left: 80px;
@@ -113,12 +116,14 @@ body{
 	height: 178px;
 }
 .caption{
-	height: 120px;
+	height: 100px;
 }
 .caption div{
   position: relative;
-  top: -20px;
-  font-size: 10px;
+  top: -10px;
+}
+.count{
+  padding-top: 20px;
 }
 .caption div p{
   color: #999;
@@ -135,9 +140,9 @@ body{
  **/
 a.btn {
   display: inline-block;
-  position: relative;
-  top: -23px;
-  left: 130px;
+  position: absolute;
+  top: 220px;
+  left: 160px;
   font-size: 26px;
   font-size: 1.625rem;
   text-decoration: none;

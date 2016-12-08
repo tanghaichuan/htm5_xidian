@@ -80,6 +80,9 @@ img{
 #avater img{
 	width: 52%;
 }
+#avater b{
+  position: relative;top: -43px;left: 90px;
+}
 #collect_list{
 	position: relative;
 	left: 56px;
@@ -126,12 +129,15 @@ img{
 	height: 149px;
 }
 .caption{
-	height: 115px;
+	height: 100px;
 }
 .caption div{
   position: relative;
-  top: -20px;
-  font-size: 10px;
+  top: -23px;
+}
+.caption b{
+  position: relative;
+  top: 22px;
 }
 .caption div p{
   color: #999;
@@ -149,7 +155,7 @@ img{
 a.btn {
   display: inline-block;
   position: relative;
-  top: -23px;
+  top: -33px;
   left: 90px;
   font-size: 26px;
   font-size: 1.625rem;

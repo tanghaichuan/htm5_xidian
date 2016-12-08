@@ -11,7 +11,7 @@ class ShopController extends Controller {
     }
     public function index(){
     	$model=M("mall");
-      	$goods=$model->where(array('classify'=>"食材"))->select();
+      	$goods=$model->select();
       	//var_dump($food);
       	$this->assign("goods",$goods);
       	$this->display();
@@ -24,5 +24,23 @@ class ShopController extends Controller {
       $this->display();
     }
 
+    public function addCart(){
+      $model=M("shopping_cart");
+      $username=I("post.username");
+      $data['mall_id']=I("post.mall_id");
+      $user=M("public_users")->where(array('username'=>$username))->find();
+      $data['user_id']=$user['id'];
+      if($model->where($data)->find()){
+        echo "same";
+        return false;
+      }
+      if($model->add($data)){
+        echo "success";
+      }
+      else{
+        echo "error";
+      }
+      
+    }
 
 }

@@ -11,6 +11,18 @@ class CartController extends Controller {
     }
 	
     public function index(){
-       $this->display();
+        $model=M("shopping_cart");
+        $username=session("username");
+        $user=M("public_users")->where(array('username'=>$username))->find();
+        $data['user_id']=$user['id'];
+        $cart=$model->where('user_id='.$data['user_id'])->find();
+        if(!$cart){
+            echo "none";
+        }
+        else{
+            $goods=M('mall')->where('id='.$cart['mall_id'])->select();
+            $this->assign("goods",$goods);
+        }
+        $this->display();
     }
 }

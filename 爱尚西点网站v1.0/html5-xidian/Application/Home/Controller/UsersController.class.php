@@ -94,6 +94,13 @@ class UsersController extends Controller {
         }
     }
 
+    public function content(){
+      $model=M("foods");
+      $id = isset($_GET['id']) ? intval($_GET['id']) : '';
+      $content=$model->find($id);
+      $this->assign("content",$content);
+      $this->display("Home/food/content");
+    }
 
     function isMobile($mobile) {
     if (!is_numeric($mobile)) {

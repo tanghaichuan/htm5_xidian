@@ -146,81 +146,23 @@
       <div style="margin: 20px;background-color: white;">
         <table class="table">
           <tbody>
-            <tr>
-              <td id="table_fir">
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" /><img src="__PUBLIC__/home/images/shopping_cart_pic1.jpg" class="img-rounded"> 
-                  </label>
-                  <div style="display: inline;">
-                    <b>【菲力牛排套装8份装】</b>
+            <volist name="goods" id="n">
+              <tr>
+                <td id="table_fir">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" /><img src="__PUBLIC__/{$n.img}" class="img-rounded"> 
+                    </label>
+                    <div style="display: inline;">
+                      <b>{$n.name}</b>
+                    </div>
                   </div>
-                </div>
-              </td>
-              <td><p>现价：￥100</p></td>
-              <td></td>
-              <td><p style="text-align: right;"><a href="#">从购物车中删除</a>&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
-            </tr>
-            <tr>
-              <td>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" /><img src="__PUBLIC__/home/images/shopping_cart_pic1.jpg" class="img-rounded"> 
-                  </label>
-                  <div style="display: inline;">
-                    <b>【菲力牛排套装8份装】</b>
-                  </div>
-                </div>
-              </td>
-              <td><p>现价：￥100</p></td>
-              <td></td>
-              <td><p style="text-align: right;"><a href="#">从购物车中删除</a>&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
-            </tr>
-            <tr>
-              <td>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" /><img src="__PUBLIC__/home/images/shopping_cart_pic1.jpg" class="img-rounded"> 
-                  </label>
-                  <div style="display: inline;">
-                    <b>【菲力牛排套装8份装】</b>
-                  </div>
-                </div>
-              </td>
-              <td><p>现价：￥100</p></td>
-              <td></td>
-              <td><p style="text-align: right;"><a href="#">从购物车中删除</a>&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
-            </tr>
-            <tr>
-              <td>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" /><img src="__PUBLIC__/home/images/shopping_cart_pic1.jpg" class="img-rounded"> 
-                  </label>
-                  <div style="display: inline;">
-                    <b>【菲力牛排套装8份装】</b>
-                  </div>
-                </div>
-              </td>
-              <td><p>现价：￥100</p></td>
-              <td></td>
-              <td><p style="text-align: right;"><a href="#">从购物车中删除</a>&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
-            </tr>
-            <tr>
-              <td>
-                <div class="checkbox">
-                  <label>
-                    <input type="checkbox" /><img src="__PUBLIC__/home/images/shopping_cart_pic1.jpg" class="img-rounded"> 
-                  </label>
-                  <div style="display: inline;">
-                    <b>【菲力牛排套装8份装】</b>
-                  </div>
-                </div>
-              </td>
-              <td><p>现价：￥100</p></td>
-              <td></td>
-              <td><p style="text-align: right;"><a href="#">从购物车中删除</a>&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
-            </tr>
+                </td>
+                <td><p>现价：￥{$n.price}</p></td>
+                <td></td>
+                <td><p style="text-align: right;"><a href="#">从购物车中删除</a>&nbsp;&nbsp;&nbsp;&nbsp;</p></td>
+              </tr>
+            </volist>
           </tbody>
         </table>
       </div>

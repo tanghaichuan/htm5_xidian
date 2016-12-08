@@ -137,7 +137,7 @@
       </div>
       <div id="avater">
         <img src="__PUBLIC__/home/images/avater.jpeg" class="img-circle" />
-        <b style="position: relative;top: 10px;left: 5px;">{$username}</b>
+        <b>{$username}</b>
       </div>
       <!---->
       <div class="row clearfix" style="padding: 40px 0px;">
@@ -148,119 +148,140 @@
              <li style="padding: 10px;background-color: white;"><a href="__MODULE__/users/index.html">我的首页</a></li>
              <li style="padding: 10px;background-color: white;"><a href="__MODULE__/users/reset_information.html">修改信息</a></li>
              <li style="padding: 10px;background-color: white;"><a href="__MODULE__/users/reset_password.html">修改密码</a></li>
+             <li style="padding: 10px;background-color: white;"><a href="__MODULE__/cart/index.html">我的购物车</a></li>
            </ul>
         </div>
 
         <div class="col-md-9 column">
         <!--我的收藏-->
-          <div style="background-color: white;border-radius: 1px;margin: 0px 45px 0px 20px;height: 295px;">
+          <div id="collect_plate">
             <div style="padding: 15px 20px;">
               <label style="font-size: 1.2em;">我的收藏</label>
             </div>
 
-
             <div id="collect_list">
               <volist name="foodList" id="n">
                 <div class="col-sm-2">
-                  <img src="__PUBLIC__/{$n.img}">
-                  <div class="collect_information">
-                    <h5>{$n.name}</h5>
-                    <p>by&nbsp;{$n.publish_name}</p>
-                    <p class="quitFavor" name="{$n.id}">取消收藏</p>
+                  <div class="thumbnail">
+                    <img src="__PUBLIC__/{$n.img}">
+                    <div class="caption">
+                      <div class="collect_information">
+                        <h5>{$n.name}</h5>
+                        <p>by&nbsp;{$n.publish_name}</p>
+                        <p class="quitFavor" name="{$n.id}" style="float: right;"><a href="">取消收藏</a></p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </volist>
-              
+              </volist> 
             </div>
             </br>
-
-            <nav>
-              <ul class="pagination">
-                <li><a href="#">&laquo;</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#">&raquo;</a></li>
-              </ul>
-            </nav>
-
-
+              <div id="collect_page">
+              <div align="right">
+                <ul class="pagination">
+                  <li>
+                    <a href="#">&laquo;</a>
+                  </li>
+                  <li>
+                    <a href="#">...</a>
+                  </li>
+                  <li>
+                    <a href="#">&raquo;</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-
           </br>
           
           <!--我的发布-->
-          <div style="background-color: white;border-radius: 1px;margin: 0px 45px 0px 20px;height: 260px;">
+          <div id="publish_plate">
             <div style="padding: 15px 20px;">
               <label style="font-size: 1.2em;">我的发布</label>
             </div>
             <div id="publish_list">
               <div class="col-sm-2">
-                <img src="__PUBLIC__/home/images/personal_pic1.jpg">
-                <div class="publish_information">
-                  <h5>餐点</h5>
-                  <p>by&nbsp;作者</p>
+                <div class="thumbnail">
+                  <img src="__PUBLIC__/home/images/personal_pic1.jpg" />
+                  <div class="caption">
+                    <div class="publish_information">
+                      <h5>餐点</h5>
+                      <p>by&nbsp;作者</p>
+                      <p><a href="" style="float: right;">取消收藏</a></p>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="col-sm-2">
-                <img src="__PUBLIC__/home/images/personal_pic1.jpg">
-                <div class="publish_information">
-                  <h5>餐点</h5>
-                  <p>by&nbsp;作者</p>
+                <div class="thumbnail">
+                  <img src="__PUBLIC__/home/images/personal_pic1.jpg" />
+                  <div class="caption">
+                    <div class="publish_information">
+                      <h5>餐点</h5>
+                      <p>by&nbsp;作者</p>
+                      <p><a href="" style="float: right;">取消收藏</a></p>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="col-sm-2">
-                <img src="__PUBLIC__/home/images/personal_pic1.jpg">
-                <div class="publish_information">
-                  <h5>餐点</h5>
-                  <p>by&nbsp;作者</p>
+                <div class="thumbnail">
+                  <img src="__PUBLIC__/home/images/personal_pic1.jpg" />
+                  <div class="caption">
+                    <div class="publish_information">
+                      <h5>餐点</h5>
+                      <p>by&nbsp;作者</p>
+                      <p><a href="" style="float: right;">取消收藏</a></p>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="col-sm-2">
-                <img src="__PUBLIC__/home/images/personal_pic1.jpg">
-                <div class="publish_information">
-                  <h5>餐点</h5>
-                  <p>by&nbsp;作者</p>
+                <div class="thumbnail">
+                  <img src="__PUBLIC__/home/images/personal_pic1.jpg" />
+                  <div class="caption">
+                    <div class="publish_information">
+                      <h5>餐点</h5>
+                      <p>by&nbsp;作者</p>
+                      <p><a href="" style="float: right;">取消收藏</a></p>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="col-sm-2">
-                <img src="__PUBLIC__/home/images/personal_pic1.jpg">
-                <div class="publish_information">
-                  <h5>餐点</h5>
-                  <p>by&nbsp;作者</p>
+                <div class="thumbnail">
+                  <img src="__PUBLIC__/home/images/personal_pic1.jpg" />
+                  <div class="caption">
+                    <div class="publish_information">
+                      <h5>餐点</h5>
+                      <p>by&nbsp;作者</p>
+                      <p><a href="" style="float: right;">取消收藏</a></p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             </br>
+            <div id="publish_page">
+              <div align="right">
+                <ul class="pagination">
+                  <li>
+                    <a href="#">&laquo;</a>
+                  </li>
+                  <li>
+                    <a href="#">...</a>
+                  </li>
+                  <li>
+                    <a href="#">&raquo;</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
           </br>
-
-          <!--我的购物车-->
-          <div style="background-color: white;border-radius: 1px;margin: 0px 45px 0px 20px;height: 180px;">
-            <div style="padding: 15px 20px;">
-              <label style="font-size: 1.2em;">我的购物车</label>
-            </div>
-            <div id="cart_list">
-              <div class="col-sm-6">
-                <img src="__PUBLIC__/home/images/personal_pic2.jpg">
-                <div style="display: inline;">
-                  <b>【菲力牛排套装8份装】</b>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <img src="__PUBLIC__/home/images/personal_pic2.jpg">
-                <div style="display: inline;">
-                  <b>【菲力牛排套装8份装】</b>
-                </div>
-              </div>
-            </div>
-            </br>
-          </div>
-        </div>
+          </br>
       </div>
-
+      </br>
   <!--页脚-->
     <div class="footer">
       <div class="row clearfix" id="footer_padding">

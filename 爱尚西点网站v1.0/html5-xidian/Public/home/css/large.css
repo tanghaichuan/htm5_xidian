@@ -143,8 +143,16 @@ body{
 #table_fir{
 	width: 600px;
 }
+.table img{
+  width: 50px;
+  height: 50px;
+}
 .table p{
 	padding-top: 24px;
+}
+.table a.btn{
+  margin-top: 18px;
+  margin-right: 18px;
 }
 #sum_pos{
 	position: absolute;
@@ -182,7 +190,7 @@ body{
 /**
  * $Bottom 
  **/
-a.btn {
+.caption a.btn {
   display: inline-block;
   position: absolute;
   top: 220px;
@@ -202,7 +210,7 @@ a.btn {
   -webkit-transition: -webkit-box-shadow .3s;
   transition: box-shadow .2s;
 }
-a.btn:hover, a.btn:focus {
+.caption a.btn:hover,.caption a.btn:focus {
   -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 4px #ff0364;
   box-shadow: 0 0 0 2px #fff, 0 0 0 4px #ff0364;
   -webkit-transition-timing-function: cubic-bezier(0.6, 4, 0.3, 0.8);
@@ -211,17 +219,17 @@ a.btn:hover, a.btn:focus {
   animation: gelatine 0.5s 1;
 }
 
-a.btn-secondary {
+.caption a.btn-secondary {
   background: #c8c8a9;
   -webkit-box-shadow: 0 0 0 -2px #fff, 0 0 0 -1px #c8c8a9;
   box-shadow: 0 0 0 -2px #fff, 0 0 0 -1px #c8c8a9;
 }
-a.btn-secondary:hover {
+.caption a.btn-secondary:hover {
   -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 4px #bebe99;
   box-shadow: 0 0 0 2px #fff, 0 0 0 4px #bebe99;
 }
 
-a.btn:active,a.btn-secondary:active {
+.caption a.btn:active,.caption a.btn-secondary:active {
   background: #ff0364;
   -webkit-transition-duration: 0;
   transition-duration: 0;

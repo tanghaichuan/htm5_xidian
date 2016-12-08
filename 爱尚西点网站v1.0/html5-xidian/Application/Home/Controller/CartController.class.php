@@ -14,12 +14,8 @@ class CartController extends Controller {
         $model=M("shopping_cart");
         $username=session("username");
         $user=M("public_users")->where(array('username'=>$username))->find();
-        $data['user_id']=$user['id'];
-        $cart=$model->where('user_id='.$data['user_id'])->find();
-        if($cart){
-            $goods=M('mall')->where('id='.$cart['mall_id'])->select();
-            $this->assign("goods",$goods);
-        }
+        $cart=$model->where(array("user_id"=>$user['id']))->join('mall on shopping_cart.mall_id=mall.id')->select();
+        $this->assign("goods",$cart);
         $this->display();
     }
 }

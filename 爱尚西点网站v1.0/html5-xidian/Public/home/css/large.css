@@ -108,7 +108,7 @@ body{
 #shopping_list{
 	padding: 0px 100px;
 }
-.thumbnail img{
+.thumbnail .shopping_pic{
 	width: 100%;
 	height: 178px;
 }

@@ -16,10 +16,7 @@ class CartController extends Controller {
         $user=M("public_users")->where(array('username'=>$username))->find();
         $data['user_id']=$user['id'];
         $cart=$model->where('user_id='.$data['user_id'])->find();
-        if(!$cart){
-            echo "none";
-        }
-        else{
+        if($cart){
             $goods=M('mall')->where('id='.$cart['mall_id'])->select();
             $this->assign("goods",$goods);
         }

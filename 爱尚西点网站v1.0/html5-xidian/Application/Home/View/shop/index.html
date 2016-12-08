@@ -31,7 +31,7 @@
                 <a href="__MODULE__/login/index.html" style="padding: 15px 10px 15px 0px;" id="isLogin">欢迎：{$username}</a>
               </li>
               <li>
-                <a href="__MODULE__/login/quit" style="padding: 15px 50px 15px 0px;">注册</a>
+                <a href="__MODULE__/login/quit" style="padding: 15px 50px 15px 0px;">退出</a>
               </li>
             <else/> 
               <li>
@@ -144,54 +144,21 @@
   	<div class="row clearfix">
 		<div class="col-md-12 column">
 			<div class="row">
-				<div class="col-md-3">
-					<div class="thumbnail">
-            <img class="shopping_pic" src="__PUBLIC__/home/images/avater.jpeg" />
-            <div class="caption">
-              <p style="padding: 0px 8px"><a href="#">菲力牛排套装8份装</a></p>
-              <div><b class="price">￥1</b></div><a class="btn" href="#" style="color: #fff">加入购物车</a>
-              <div class="count">
-                <p style="display: inline;">月售：100件</p><p style="display: inline;float: right;">包邮</p> 
+        <volist name="goods" id="n">
+          <div class="col-md-3">
+            <div class="thumbnail">
+              <a href="content/id/{$n.id}"><img class="shopping_pic" src="__PUBLIC__/{$n.img}" /></a>
+              <div class="caption">
+                <a href="#"><p style="padding: 0px 8px" title="{$n.name}">{$n.name|mb_substr=0,20,utf8}...</p></a>
+                <div><b class="price">￥{$n.price}</b></div>
+                <a class="btn"  style="color: #fff" id="cart" name="{$username}" value="{$n.id}">加入购物车</a>
+                <div class="count">
+                  <p style="display: inline;">月售：100件</p><p style="display: inline;float: right;">包邮</p> 
+                </div>
               </div>
             </div>
           </div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-						<img class="shopping_pic" src="__PUBLIC__/home/images/avater.jpeg" />
-						<div class="caption">
-							<p style="padding: 0px 8px"><a href="#">菲力牛排套装8份装</a></p>
-							<div><b class="price">￥10</b></div><a class="btn" href="#" style="color: #fff">加入购物车</a>
-              <div class="count">
-                <p style="display: inline;">月售：100件</p><p style="display: inline;float: right;">包邮</p> 
-              </div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-            <img class="shopping_pic" src="__PUBLIC__/home/images/avater.jpeg" />
-            <div class="caption">
-              <p style="padding: 0px 8px"><a href="#">菲力牛排套装8份装</a></p>
-              <div><b class="price">￥100</b></div><a class="btn" href="#" style="color: #fff">加入购物车</a>
-              <div class="count">
-                <p style="display: inline;">月售：100件</p><p style="display: inline;float: right;">包邮</p> 
-              </div>
-            </div>
-          </div>
-				</div>
-				<div class="col-md-3">
-					<div class="thumbnail">
-            <img class="shopping_pic" src="__PUBLIC__/home/images/avater.jpeg" />
-            <div class="caption">
-              <p style="padding: 0px 8px"><a href="#">菲力牛排套装8份装</a></p>
-              <div><b class="price">￥1000</b></div><a class="btn" href="#" style="color: #fff">加入购物车</a>
-              <div class="count">
-                <p style="display: inline;">月售：100件</p><p style="display: inline;float: right;">包邮</p> 
-              </div>
-            </div>
-          </div>
-				</div>
+        </volist>
 			</div>
 		</div>
 	</div>

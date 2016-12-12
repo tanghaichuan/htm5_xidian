@@ -1,0 +1,59 @@
+
+body{
+	overflow-x: hidden;
+	font: normal 140% Helvetica, Arial, sans-serif;
+	font-family: 微软雅黑;
+}
+.font{
+	
+}
+ul li{
+	list-style: none;
+}
+.foodlist{
+	width: 100%;
+}
+.font-a{
+	font-size:2em;
+	font-family:仿宋;
+	font-weight:bold;
+	text-align:left;
+	padding: 20px;
+}
+.font-b{
+	font-size:1.5em;
+	font-family:仿宋;
+	text-align:left;
+	padding: 10px 2px;
+}
+.font-c{
+	font-size:1.2em;
+	font-family:仿宋;
+	text-align:left;
+	padding: 13px 2px;
+	position: relative;
+	left: -100px;
+}
+
+.badge{
+	position: relative;
+	top: -15px;
+	left: 27px;
+}
+.label{
+	position: relative;
+	top: -15px;
+	left: 36px;
+}
+
+.border-a{
+	height:20px;
+	background-color:#C0C0C0;
+	padding:10px;
+	font-weight:bold;
+	color: #7d6877;
+}
+.col-md-2 img{
+	width:196px;
+	height: 180px;
+}

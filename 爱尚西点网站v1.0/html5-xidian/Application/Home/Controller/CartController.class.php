@@ -18,4 +18,18 @@ class CartController extends Controller {
         $this->assign("goods",$cart);
         $this->display();
     }
+
+    public function delCart(){
+        $id=I("post.id");
+        $username=I("post.username");
+        $user_id=M("public_users")->where(array('username'=>$username))->find();
+        $data['user_id']=$user_id['id'];
+        $data['mall_id']=$id;
+        if(M('shopping_cart')->where($data)->delete()){
+            echo "success";
+        }
+        else{
+            echo "error";
+        }
+    }
 }

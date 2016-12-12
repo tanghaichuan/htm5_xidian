@@ -9,3 +9,42 @@
     from{ transform:scale(0.7);}
     to{ transform:scale(1.02);}
 }
+
+#inputComment{
+	margin-left: 25px;
+}
+#inputComment p{
+	margin: auto;
+}
+#inputComment button{
+	width: 70px;
+    height: 32px;
+    border-radius: 3px;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    left: -7px;
+}
+#inputComment textarea{
+	margin: 0px 0px 0px;
+    padding: 5px;
+    border: 1px solid rgb(222, 222, 211);
+    font-size: 14px;
+    font-family: Tahoma, 宋体;
+    word-wrap: break-word;
+    line-height: 18px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    outline: none;
+}
+#inputComment h3{
+	display: inline-block;
+	margin-left: 20px;
+}
+#text{
+	padding: 0px 0 0 8px;
+}
+#avater-img{
+	padding-right: 10px;
+	text-align: center;
+}

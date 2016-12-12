@@ -1,15 +1,14 @@
-
-@media screen and (max-width: 1380px){
+@media screen and (max-width: 1025px) {
 	#food-thumb{
 		height: 180px;
 	}
 	#thumbnail{
-		height: 290px;
+		height: 220px;
 		background-color: rgba(255, 255, 255, 0.2);
 	}
 	.heart{
-		position: absolute;
-	    left: 45%;
+		/*position: absolute;*/
+	    left: 55%;
 	    top: 175px;
 	}
 }
@@ -19,10 +18,6 @@ body{
  }
 .dropdown-menu li a{
     padding: 3px 13px;
-}
-.col-md-12 img{
-	width:100%;
-	height:340px;
 }
 .font{
 	writing-mode:tb-rl;
@@ -66,8 +61,7 @@ body{
 	margin-top: 10px;
 	margin-right: 10px;
 	padding: 0;
-	height: 380px;
-	width:193px;
+	height: 340px;
 }
 .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
    
@@ -81,25 +75,22 @@ body{
 .thumbnail p{
 	font-family: arial;
 }
-.thumbnail span{
-	font-family: arial;
-}
 /*.food-info{
 	width: 100%;
-	height: 20px;
-	
+	height: 30px;
 }*/
-/*.food-info p{
+.food-info p{
 	display: inline-block;
 	position: relative;
 	line-height: 30px;
 	margin: 0 0 0 5px;
 	float: left;
-}*/
+}
 .user-info {
 	line-height: 80px;
 	position: relative;
-	/*width:180px;*/
+	height: 80px;
+	
 }
 .user-info p{
 	position: relative;
@@ -107,10 +98,10 @@ body{
 	display: inline-block;
 }
 .user-info img{
-	width: 40%;
-	/*position:relative;
+	width: 28%;
+	position:relative;
  	left:112px,
- 	top:112px;*//*上下位置*/
+ 	top:112px;/*上下位置*/
 	
 }
 .user-info span{

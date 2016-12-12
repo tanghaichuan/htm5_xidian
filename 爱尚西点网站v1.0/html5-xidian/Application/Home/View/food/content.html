@@ -16,7 +16,7 @@
 <script src="__PUBLIC__/home/js/amazeui.min.js"></script>
 <script src="__PUBLIC__/home/js/homeEdit.js"></script>
 <script src="__PUBLIC__/home/js/register_form.js"></script>
-<script src="__PUBLIC__/home/js/food_list_cartoon.js"></script>
+
 </head>
 <body>
 <!--页头-->
@@ -160,7 +160,7 @@
         </div>
         <!-- 制作步骤 -->
         <div class="col-md-7">
-          <div class="font-a">
+          <div class="font-a" name="{$content.id}">
           {$content.name}
           </div>
           <div>
@@ -268,59 +268,53 @@
 
      
     <br/><br/><br/><br/>
-      <div class="row">
-      <div class="col-md-11">
+    <div class="row">
+      <!--评论框-->
+      <div class="col-md-11 col-s-10 col-xs-10">
+        
+        <form action="{:U('Home/food/addcomment')}" method="post" role="form" class="form-horizontal" id="inputComment">
+          <h3>{$content.name}的评论</h3>
+          <div class="form-group">
+            <div class="col-md-1" id="avater-img">
+              <img src="__PUBLIC__/home/images/avater.jpeg" alt="" class="img-circle" width="46px" height="46px">
+              <p id="commentUser">{$username}</p>
+            </div>
+            <div class="col-md-5" id="text">
+              <textarea rows="5" cols="70" maxlength="140" name="comment"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-1 col-xs-1 col-sm-1">
+              <button type="button" class="btn btn-info" id="commentBtn" name="{$username}" rel="{$content.id}">评论</button>
+            </div>
+          </div>  
+        </form>
+      </div>
+      <!--评论列表-->
+      <div class="col-md-11"> 
         <ul class="am-comment-list">
-          <li class="am-comment am-comment-highlight">
-            <a href="#">
-            <img src="__PUBLIC__/home/images/food-UK-1.png" alt="头像" class="am-comment-avatar" width="48" height="48"/>
-            </a>
-            <div class="am-comment-main">
-              <header class="am-comment-hd">
+
+          <volist name="commentList" id="n">
+            <li class="am-comment am-comment-highlight">
+              <a href="#">
+              <img src="__PUBLIC__/home/images/food-UK-1.png" alt="头像" class="am-comment-avatar" width="48" height="48"/>
+              </a>
+              <div class="am-comment-main">
+                <header class="am-comment-hd">
                 <div class="am-comment-meta">
-                  <a href="#link-to-user" class="am-comment-author">小明</a>
-                  评论于 <time datetime="2016-07-27T04:54:29-07:00">2016-7-12 15:30</time>
+                  <a href="#link-to-user" class="am-comment-author">{$n.username}</a>
+                  评论于 <time datetime="2016-07-27T04:54:29-07:00">{$n.com_time}</time><a href="javascript:void(0);" class="reply" name="{$n.username}">回复</a>
                 </div>
-              </header>
-              <div class="am-comment-bd">
-                威武！
-              </div>
-            </div>
-          </li>
-          <br/>
-          <li class="am-comment am-comment-highlight">
-            <a href="#">
-            <img src="__PUBLIC__/home/images/food-UK-1.png" alt="头像" class="am-comment-avatar" width="48" height="48"/>
-            </a>
-            <div class="am-comment-main">
-              <header class="am-comment-hd">
-                <div class="am-comment-meta">
-                <a href="#link-to-user" class="am-comment-author">xxx</a>
-                评论于 <time datetime="2016-07-27T04:54:29-07:00">2016-7-12 15:30</time>
+                </header>
+                  <div class="am-comment-bd">
+                  {$n.comment}
                 </div>
-              </header>
-              <div class="am-comment-bd">
-              xxxxxxx！
               </div>
-            </div>
-          </li>
-          <br/>
-          <li class="am-comment am-comment-highlight">
-            <a href="#">
-            <img src="__PUBLIC__/home/images/food-UK-1.png" alt="头像" class="am-comment-avatar" width="48" height="48"/>
-            </a>
-            <div class="am-comment-main">
-              <header class="am-comment-hd">
-              <div class="am-comment-meta">
-                <a href="#link-to-user" class="am-comment-author">xxx</a>
-                评论于 <time datetime="2016-07-27T04:54:29-07:00">2016-7-12 15:30</time>
-              </div>
-              </header>
-                <div class="am-comment-bd">
-                不错不错！
-              </div>
-            </div>
-          </li>
+            </li>
+          </volist>
+          
+
+
         </ul>
       </div><!-- col-md-11 -->
       <div class="col-md-1"></div>

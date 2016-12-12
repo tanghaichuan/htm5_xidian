@@ -55,6 +55,20 @@ class FoodController extends Controller {
       $id = isset($_GET['id']) ? intval($_GET['id']) : '';
       $content=$model->find($id);
       $this->assign("content",$content);
+
+      $model=M("comment");
+      $commentList = $model->where(array('food_id'=>$id))->select();
+      import('Org.Util.Page');
+      $count=count($commentList);
+      $page = new \Think\Page($count,5);
+      $nowPage = isset($_GET['p'])?intval($_GET['p']):1;
+      $page -> setConfig('first','第一页');
+      $page -> setConfig('prev','<<');
+      $page -> setConfig('next','>>');
+      $commentList = $model->where(array('food_id'=>$id))-> order('id desc') -> page($nowPage.',5') -> select();
+      $show = $page -> show();
+      $this -> assign('page',$show);
+      $this -> assign('commentList',$commentList); 
       $this->display();
     }
 
@@ -91,4 +105,19 @@ class FoodController extends Controller {
         echo "unlike";
       }
     }
+
+    public function addComment(){
+      $data['username']=I("post.username");
+      $data['food_id']=I("post.food_id");
+      $data['comment']=I("post.comment");
+      $data['com_time']=getTime();
+      //echo $data['username'].$data['food_id'].$data['comment'].$data['com_time'];
+      if(M('comment')->add($data)){
+        echo "success";
+      }
+      else{
+        echo "error";
+      }
+    }
+
 }

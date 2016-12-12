@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
- 	<meta charset="utf-8">
- 	<link rel="stylesheet" href="__PUBLIC__/home/css/bootstrap.min.css">
-  <link rel="stylesheet" href="__PUBLIC__/home/css/amazeui.css"/>
+  <title></title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="__PUBLIC__/home/css/bootstrap.min.css">
+  
   <link rel="stylesheet" media="screen and (max-width:1024px)" href="__PUBLIC__/home/css/medium.css" type="text/css" />
   <link rel="stylesheet" media="screen and (min-width:1025px)" href="__PUBLIC__/home/css/large.css" type="text/css" />
   <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/heartStyle.css">
+  <script src="__PUBLIC__/home/js/food_templet.js"></script>  
+  <link rel="stylesheet" href="__PUBLIC__/home/css/food_templet.css"/ >
   <script src="__PUBLIC__/home/js/jquery.js"></script>    
   <script src="__PUBLIC__/home/js/bootstrap.min.js"></script>
   <script src="__PUBLIC__/home/js/amazeui.min.js"></script>
   <script src="__PUBLIC__/home/js/homeEdit.js"></script>
   <script src="__PUBLIC__/home/js/register_form.js"></script>
- 	<link rel="stylesheet" href="__PUBLIC__/home/css/food.css"/>
+  <link rel="stylesheet" href="__PUBLIC__/home/css/food.css"/>
 </head>
 <body>
   <div class="header" style="height: 50px;">
@@ -134,13 +136,13 @@
       </nav>
     </div>
     <div class="container-fluid">
-    	
-    	<div class="row">
+      
+      <div class="row">
         <div class="col-md-12">
           <a href="content.html"><img alt="法式餐点" src="__PUBLIC__/home/images/food-F-0.png" class=""/>
         </div>
       </div>
-    	<br / >
+      <br / >
       <div class="row">
         <div class="col-md-12">
           <div class="row">
@@ -161,7 +163,7 @@
         </div>
       </div>
 
-    	    <div class="row">
+          <div class="row">
             <div class="col-md-1 col-sm-1 col-xs-1">
             <!-- 文字实现竖排 -->
               <div class="font-a">法式餐点</div>
@@ -175,42 +177,53 @@
           </div>
           <!-- 下方为图片列表内容   -->
     
-            <div class="row">
+           <div class="row">
               <volist name="food" id="n">
                 <div class="col-md-3 col-sm-4 col-xs-5">
-                  <div class="thumbnail" id="thumbnail">
-                    <a href="__MODULE__/food/content/id/{$n.id}">
-                      <img alt="意式餐点" src="__PUBLIC__/{$n.img}" id="food-thumb"  />
-                    </a>
-                    <div class="food-info">
-                      <p>{$n.name}</p>
-                      <div class="heart" id="like1" rel="like" title="收藏" name="{$n.id}" value="{$username}"></div>
-                    </div>
-                    <div class="user-info">
-                      <img src="__PUBLIC__/home/images/avater.jpeg" alt="" class="col-sm img-circle">
-                      <p>by&nbsp zhangsan</p>
-                      <span class="col-sm-6">发布于&nbsp&nbsp{$n.food_public_time}</span>
-                    </div>
-                  </div>
+                      <div class="thumbnail" id="thumbnail">
+
+                            <figure class="templet ">
+                            <img alt="意式餐点" src="__PUBLIC__/{$n.img}" id="food-thumb"  />
+                            <figcaption>
+                            <h3>{$n.name}</h3>
+                            <p>by&nbsp;&nbsp;zhangsan</p>
+                            <p>发布于&nbsp;&nbsp;{$n.food_public_time}</p>
+                            </figcaption>
+
+                            <a href="__MODULE__/food/content/id/{$n.id}"></a>
+                            </figure>
+                            <br/> <br/> <br/>
+                            <p>{$n.name}</p>
+                            <!-- <div class="user-info">
+                            <img src="__PUBLIC__/home/images/avater.jpeg" alt="" class="col-sm-3 img-circle">
+
+                            <span class="col-sm-6">发布于&nbsp;&nbsp;{$n.food_public_time}</span>
+                            </div> -->
+                      </div>
+                      <div class="food-info">
+
+                            <div class="heart" id="like1" rel="like" title="收藏" name="{$n.id}" value="{$username}"></div>
+
+                      </div>
                 </div>
               </volist> 
-            </div> 
+            </div>  
 
         </div>
-      </div>				
-    	<br/><br/>
-    	<div class="row">
-    		<div class="col-md-8">
-    		</div>
-    		<div class="col-md-4">
-    			<ul class="pagination">
-    				
-    			</ul>
-    		</div>
-    	</div>
-    	<br/>
-    	<div class="row">
-    		<div class="footer">
+      </div>        
+      <br/><br/>
+      <div class="row">
+        <div class="col-md-8">
+        </div>
+        <div class="col-md-4">
+          <ul class="pagination">
+            
+          </ul>
+        </div>
+      </div>
+      <br/>
+      <div class="row">
+        <div class="footer">
           <div class="row clearfix" id="footer_padding">
             <div class="col-md-3 column" id="qrc">
               <a href="#"><img src="__PUBLIC__/home/images/qrc.jpg"></a>

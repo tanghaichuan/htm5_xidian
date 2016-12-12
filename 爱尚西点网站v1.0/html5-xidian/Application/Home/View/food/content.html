@@ -7,7 +7,8 @@
 <link rel="stylesheet" media="screen and (max-width:1024px)" href="__PUBLIC__/home/css/medium.css" type="text/css" />
 <link rel="stylesheet" media="screen and (min-width:1025px)" href="__PUBLIC__/home/css/large.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/home/css/bootstrap.min.css">
-<link rel="stylesheet" href="__PUBLIC__/home/css/food_content.css">
+<link rel="stylesheet" media="screen and (max-width:1024px)" href="__PUBLIC__/home/css/food_content_medium.css" type="text/css" />
+<link rel="stylesheet" media="screen and (min-width:1025px)" href="__PUBLIC__/home/css/food_content_large.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/home/css/amazeui.css"/>
 <link rel="stylesheet" href="__PUBLIC__/home/css/food_list_cartoon.css">
 <script src="__PUBLIC__/home/js/jquery.js"></script>    
@@ -134,26 +135,25 @@
   </div><!-- content结束 -->
   <div class="container-fluid">
     <div class="row">
-        <div class="col-md-12">
-          <ul class="breadcrumb">
-            <li>
-              <a href="__MODULE__/index/index.html">首页</a> 
-            </li>
-            <li>
-              <a href="__MODULE__/food/french_cate.html">美食鉴赏</a> 
-            </li>
-            <li>
-              <a href="__MODULE__/food/french_cate.html">法式美食</a> 
-            </li>
-            <li class="active">
-            当前
-            </li>
-          </ul>
-        </div>
-    </div><!-- row -->
+      <div class="col-md-12">
+        <ul class="breadcrumb">
+          <li>
+            <a href="__MODULE__/index/index.html">首页</a> 
+          </li>
+          <li>
+            <a href="__MODULE__/food/french_cate.html">美食鉴赏</a> 
+          </li>
+          <li>
+            <a href="__MODULE__/food/french_cate.html">法式美食</a> 
+          </li>
+          <li class="active">
+          当前
+          </li>
+        </ul>
+      </div>
+    </div>
     <!-- 美食图片 -->
       <div class="row">
-        <br/><br/>  <br/>
         <div class="col-md-1"></div>
         <div class="col-md-4">
           <img alt="Bootstrap Image Preview" src="__PUBLIC__/{$content.img}" class="foodlist" id="foodlist"/>
@@ -163,61 +163,56 @@
           <div class="font-a">
           {$content.name}
           </div>
-          <br/><br/>
-          <div class="row">
-            <div class="col-md-11">
-             
-              <div class="col-md-4">
-                <div class="font-b">
-                菜品食材：
-                </div>
-              </div>
-              <div class="col-md-8">
-                <div class="font-c">
-                {$content.ingredients}
-                </div>
-              </div>
-            </div><!-- col-md-11-->
-            <div class="col-md-1"></div>
-            <br /> <br /><br /> <br />
+          <div>
+            <a href="#">
+              <span class="badge badge-warning">甜品</span>
+            </a>
+            <a href="">
+              <span class="label label-warning">加入收藏</span>
+            </a>
           </div>
           <div class="row">
-            <div class="col-md-11">
-              <div class="col-md-4">
-                <div class="font-b">
-                操作步骤：
-                </div>
-              </div>
-              <div class="col-md-8">
-                <div class="font-c">
-                {$content.practice} 
-                </div>
+            <div class="col-md-3">
+              <div class="font-b">
+              美食介绍：
               </div>
             </div>
-            <div class="col-md-1"></div>
-            <br /> <br />
+            <div class="col-md-9">
+              <div class="font-c">
+              {$content.ingredients}{$content.practice}
+              </div>
+            </div>
           </div>
-          <br/><br/><br/><br/>
           <div class="row">
-          <div class="col-md-2">
+            <div class="col-md-3">
+              <div class="font-b">
+              菜品食材：
+              </div>
+            </div>
+            <div class="col-md-9">
+              <div class="font-c">
+              {$content.ingredients}
+              </div>
+            </div>
           </div>
-          <div class="col-md-10">
-
-            <div class="title-a">
-              <div class="col-md-1"></div>
-              <div class="col-md-3 ">
-              收藏
-              </div> <div class="col-md-8">分享</div>
-            </div><!--title-a  -->
-          </div>;&nbsp;
-          </div><!-- row -->
-        </div><!-- col-md-7 -->
-      </div><!-- row -->
-    <br/><br/><br/>
-    <div class="row">
-      <div class="content-a">
-        <font face="仿宋" size="5px" >你可能需要：</font>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="font-b">
+              操作步骤：
+              </div>
+            </div>
+            <div class="col-md-9">
+              <div class="font-c">
+              {$content.practice}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+    <br/><br/><br/> 
+
+    <div class="border-a">
+      <font style="position: relative;top: -10px;font-family:仿宋;color: black;" >你可能需要：</font>
     </div>
     <div class="row clearfix">
       <div class="col-md-12 column">
@@ -231,7 +226,7 @@
             <!-- 轮播（Carousel）项目 -->
             <div class="carousel-inner bor_btm">
               <div class="item active" >
-                  <div class="pic" style="padding-left:18px">
+                  <div class="pic">
                       <div class="col-md-1"></div>
                       <div class="col-md-2"> <img src="__PUBLIC__/home/images/food-UK-1.png" ></div>
                       <div class="col-md-2"><img src="__PUBLIC__/home/images/food-UK-2.png" ></div>
@@ -265,17 +260,13 @@
               </div>
             </div>
             <!-- 轮播（Carousel）导航 -->
-            <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-            <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>      
+            <a class="carousel-control left" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" style="overflow: hidden;"></span></a>
+            <a class="carousel-control right" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right" style="overflow: hidden;"></span></a>      
         </div>
       </div><!-- col-md-12 column -->
     </div><!-- row clearfix -->
 
-      <div class="row">
-        <div class="content-a">
-        <font face="仿宋" size="5px" >商品评论：</font>
-        </div>
-      </div>
+     
     <br/><br/><br/><br/>
       <div class="row">
       <div class="col-md-11">

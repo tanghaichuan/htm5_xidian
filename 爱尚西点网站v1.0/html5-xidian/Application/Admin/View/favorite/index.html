@@ -31,7 +31,7 @@
 								<tbody>
 									<volist name="userList" id="n">
 										<tr>
-											<td><a href="index/id/{$n.id}">{$n.username}</a></td>
+											<td><a href="{:U('favorite/index',array('id'=>$n['id']))}">{$n.username}</a></td>
 											<td>{$n.telphone}</td>
 										</tr>
 									</volist>
@@ -50,7 +50,7 @@
 										<tr>
 											<td>{$n.name}</td>
 											<td><img src="__PUBLIC__/{$n.img}" alt="" width="50" height="30px"></td>
-											<td><a href="{:U('favorite/del',array('id'=>$n['id']))}" onClick="delConfirm()" name={$n.id}>删除</a></td>
+											<td><a href="{:U('favorite/del',array('id'=>$n['id'],'username'=>$choose['username']))}" onClick="delConfirm()" name={$n.id}>删除</a></td>
 										</tr>
 									</volist>
 									

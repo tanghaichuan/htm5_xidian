@@ -3,10 +3,11 @@
 		height: 180px;
 	}
 	#thumbnail{
-		height: 290px;
+		height: 220px;
+		background-color: rgba(255, 255, 255, 0.2);
 	}
 	.heart{
-		position: absolute;
+		/*position: absolute;*/
 	    left: 55%;
 	    top: 175px;
 	}
@@ -63,19 +64,21 @@ body{
 	height: 340px;
 }
 .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
-    position: relative;
+   
     display: block;
     max-width: 100%;
     width: 100%;
     height: 230px;
+   	
 }
+
 .thumbnail p{
 	font-family: arial;
 }
-.food-info{
+/*.food-info{
 	width: 100%;
 	height: 30px;
-}
+}*/
 .food-info p{
 	display: inline-block;
 	position: relative;
@@ -87,7 +90,7 @@ body{
 	line-height: 80px;
 	position: relative;
 	height: 80px;
-	background-color: #FAFAFA;
+	
 }
 .user-info p{
 	position: relative;
@@ -96,6 +99,10 @@ body{
 }
 .user-info img{
 	width: 28%;
+	position:relative;
+ 	left:112px,
+ 	top:112px;/*上下位置*/
+	
 }
 .user-info span{
 	position: relative;

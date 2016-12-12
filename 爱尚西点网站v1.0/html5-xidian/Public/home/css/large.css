@@ -322,3 +322,11 @@ body{
     transform: scale(0.95, 1.05);
   }
 }
+
+
+.item .pic img{
+  width: 24.3%;
+}
+#shopping_pic{
+  width: 90%;
+}

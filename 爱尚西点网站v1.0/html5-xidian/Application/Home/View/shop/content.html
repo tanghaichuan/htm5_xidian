@@ -12,9 +12,8 @@
     <script src="__PUBLIC__/home/js/homeEdit.js"></script>
     <style type="text/css">
       .shopping_mall{
-        height:50px;
-        width:1170px;
-        background-image:url(__PUBLIC__/home/images/Shopping_content_bg2.png);
+        height:26px;
+        background:black;
         margin-top:30px;
       }
       body{
@@ -154,119 +153,115 @@
       </div>
     </div>
  </div>
- <div style="background-image: url(__PUBLIC__/home/images/Shopping_content_bg1.jpg);padding-top:80px">
+ <div style="padding-top:80px">
  	<div class="container" >
-  		<div class="row clearfix">
-    		<div class="col-md-12 column">
-      			<div class="row clearfix">
-        			<div class="col-md-6 column">
-          				<img alt="140x140" src="__PUBLIC__/{$content.img}" style="padding-left:50px"/>
-        			</div>
-        			<div class="col-md-6 column">
-           				<font style="font-size:20px;font-weight:bold;">{$content.name}</font>
-          				<div class="form-group" style="padding-top:20px">
-                            <label >相关信息：</label>
-                                <span>{$content.content}</span>
-                        </div>
-          				<div class="form-group" style="padding-top:20px;">
-                            <label>价格：</label>
-                            <span>￥{$content.price}</span> 
-                        </div>   
-                        <div class="form-group" style="padding-top:20px">
-                            <label>数量：</label>
-                            <input id="min" name="" type="button" value="-" />  
-                            <input id="text_box" name="" type="text" value="1"style="width:30px;"/>  
-                            <input id="add" name="" type="button" value="+" />  
+  	<div class="row clearfix">
+    	<div class="col-md-12 column">
+      		<div class="row clearfix">
+        		<div class="col-md-6 column">
+          		<img src="__PUBLIC__/{$content.img}" id="shopping_pic" />
+        		</div>
+        		<div class="col-md-6 column" style="padding-top: 30px;">
+           		<font style="font-size:20px;font-weight:bold;">{$content.name}</font>
+          		<div class="form-group" style="padding-top:20px">
+                <label >相关信息：</label></br>
+                  <span>{$content.content}</span>
+                </div>
+          			<div class="form-group" style="padding-top:20px;">
+                  <label>价格：</label>
+                  <span>￥{$content.price}</span> 
+                  &nbsp;
+                  <label>数量：</label>
+                  <input id="min" name="" type="button" value="-" />  
+                  <input id="text_box" name="" type="text" value="1" style="width:30px;text-align: center;"/>  
+                  <input id="add" name="" type="button" value="+" />  
   
-                            <script>
-								$(document).ready(function(){
-								//获得文本框对象
-   									var t = $("#text_box");
-									//初始化数量为1,并失效减
-									$('#min').attr('disabled',true);
-    								//数量增加操作
-   			 							$("#add").click(function(){    
-        									t.val(parseInt(t.val())+1)
-        									if (parseInt(t.val())!=1){
-            									$('#min').attr('disabled',false);
-        									}
-      
-    								}) 
-    								//数量减少操作
-    								$("#min").click(function(){
-        								t.val(parseInt(t.val())-1);
-        								if (parseInt(t.val())==1){
-            								$('#min').attr('disabled',true);
-        								}
-      
-   	 								})
-   
-								});
-							</script>  
-                            </div>                                
-          					<div class="row clearfix">
-            					<div class="col-md-6 column">
-               						<button type="button" class="btn btn-default">立即购买</button>
-            					</div>
-            					<div class="col-md-6 column">
-               						<button type="button" class="btn btn-default">加入购物车</button>
-            					</div>
-          					</div>
-        				</div>
-      				</div>
-   		 		</div>
+                    <script>
+      								$(document).ready(function(){
+      								//获得文本框对象
+         									var t = $("#text_box");
+      									//初始化数量为1,并失效减
+      									$('#min').attr('disabled',true);
+          								//数量增加操作
+         			 							$("#add").click(function(){
+              									t.val(parseInt(t.val())+1)
+              									if (parseInt(t.val())!=1){
+                  									$('#min').attr('disabled',false);
+              									}
+            
+          								}) 
+          								//数量减少操作
+          								$("#min").click(function(){
+              								t.val(parseInt(t.val())-1);
+              								if (parseInt(t.val())==1){
+                  								$('#min').attr('disabled',true);
+              								}
+            
+         	 								})
+         
+      								});
+      							</script>  
+                </div>                                
+        			  <div class="row clearfix">
+          		    <div class="col-md-6 column">
+             		     <button type="button" class="btn btn-default">加入购物车</button>
+          		    </div>
+        		  </div>
+        	  </div>
+      	  </div>
+   		 	</div>
       			<div class="row clearfix">
         			<div class="col-md-12 column">
               			<div class="shopping_mall">
-              				<span style="font-size:20px;font-weight:bold;color:white">食品商城</span>
+              				<span style="font-size:13px;font-weight:bold;color:white;position: relative;top: 3px;left: 5px;">食品商城</span>
               			</div>
         			</div>
       			</div>
       			<div class="row clearfix">
-        			<div class="col-md-12 column">
-                      <div id="myCarousel" class="carousel slide pad_010 b_k" data-ride="carousel">
-              		  <!-- 轮播（Carousel）指标 -->
-              		  <ol class="carousel-indicators">
-                	  	<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                  		<li data-target="#myCarousel" data-slide-to="1"></li>
-                  		<li data-target="#myCarousel" data-slide-to="2"></li>
-              		  </ol>   
-              		  <!-- 轮播（Carousel）项目 -->
-              		  <div class="carousel-inner bor_btm">
-                  	  	<div class="item active" >
-                      		<div class="pic" style="padding-left:18px">
-                          		<img src="__PUBLIC__/home/images/Shopping_content_1.jpg" >
-                          		<img src="__PUBLIC__/home/images/Shopping_content_2.jpg" >
-                          		<img src="__PUBLIC__/home/images/Shopping_content_3.jpg" >
-                          		<img src="__PUBLIC__/home/images/Shopping_content_4.jpg" >
-                      		</div>
-                  		</div>
-                  		<div class="item">
-                      		<div class="pic" style="padding-left:18px">
-                          		<img src="__PUBLIC__/home/images/Shopping_content_1.jpg" >
-                          		<img src="__PUBLIC__/home/images/Shopping_content_2.jpg" >
-                          		<img src="__PUBLIC__/home/images/Shopping_content_3.jpg" >
-                          		<img src="__PUBLIC__/home/images/Shopping_content_4.jpg" >
-                      		</div>
-                  		</div>
-                  		<div class="item">
-                      		<div class="pic" style="padding-left:18px">
-                          		<img src="__PUBLIC__/home/images/Shopping_content_1.jpg" >
-                          		<img src="__PUBLIC__/home/images/Shopping_content_2.jpg" >
-                          		<img src="__PUBLIC__/home/images/Shopping_content_3.jpg" >
-                          		<img src="__PUBLIC__/home/images/Shopping_content_4.jpg" >
-                      		</div>
-                  		</div>
-              		</div>
+      			<div class="col-md-12 column">
+              <div id="myCarousel" class="carousel slide pad_010 b_k" data-ride="carousel">
+          		  <!-- 轮播（Carousel）指标 -->
+          		  <ol class="carousel-indicators">
+            	  	<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              		<li data-target="#myCarousel" data-slide-to="1"></li>
+              		<li data-target="#myCarousel" data-slide-to="2"></li>
+          		  </ol>   
+          		  <!-- 轮播（Carousel）项目 -->
+          		  <div class="carousel-inner bor_btm">
+            	  	<div class="item active" >
+                		<div class="pic" style="padding-left:18px">
+                    		<img src="__PUBLIC__/home/images/Shopping_content_1.jpg" >
+                    		<img src="__PUBLIC__/home/images/Shopping_content_2.jpg" >
+                    		<img src="__PUBLIC__/home/images/Shopping_content_3.jpg" >
+                    		<img src="__PUBLIC__/home/images/Shopping_content_4.jpg" >
+                		</div>
+            		</div>
+            		<div class="item">
+                		<div class="pic" style="padding-left:18px">
+                    		<img src="__PUBLIC__/home/images/Shopping_content_1.jpg" >
+                    		<img src="__PUBLIC__/home/images/Shopping_content_2.jpg" >
+                    		<img src="__PUBLIC__/home/images/Shopping_content_3.jpg" >
+                    		<img src="__PUBLIC__/home/images/Shopping_content_4.jpg" >
+                		</div>
+            		</div>
+            		<div class="item">
+                		<div class="pic" style="padding-left:18px">
+                    		<img src="__PUBLIC__/home/images/Shopping_content_1.jpg" >
+                    		<img src="__PUBLIC__/home/images/Shopping_content_2.jpg" >
+                    		<img src="__PUBLIC__/home/images/Shopping_content_3.jpg" >
+                    		<img src="__PUBLIC__/home/images/Shopping_content_4.jpg" >
+                		</div>
+            		</div>
+            	</div>
               <!-- 轮播（Carousel）导航 -->
-              <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-              <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>      
+              <a class="carousel-control left" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" style="overflow: hidden;"></span></a>
+              <a class="carousel-control right" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right" style="overflow: hidden;"></span></a>      
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </div>
 
     <div class="footer">

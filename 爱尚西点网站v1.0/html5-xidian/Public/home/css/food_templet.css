@@ -1,0 +1,135 @@
+
+body {
+  background-color: #212121;
+}
+
+.templet {
+  font-family: 'Playfair Display', Arial, sans-serif;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 0;
+  min-width: 100px;
+  max-width: 188px;
+  max-height: 188px;
+  width: 100%;
+  color: #ffffff;
+  text-align: right;
+  font-size: 16px;
+  background-color: #000000;
+}
+
+.templet * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+.templet img {
+  max-width: 188px;
+ 
+  backface-visibility: hidden;
+}
+
+.templet figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+ /* z-index: 1;
+  opacity: 1;*/
+ padding: 30px 0 30px 10px;
+  background-color: rgba(255, 255, 255, 0);
+  width: 40%;
+  -webkit-transform: translateX(150%);
+  transform: translateX(150%);
+}
+
+.templet figcaption:before {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 100%;
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 120px 120px 120px 0;
+  border-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+}
+
+.templet:after {
+  position: absolute;
+  bottom: 50%;
+  right: 40%;
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 120px 120px 0 120px;
+  border-color: rgba(255, 255, 255, 0) transparent transparent transparent;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+.templet h3,
+.templet p {
+  line-height: 1.5em;
+  -webkit-transform: translateX(-30px);
+  transform: translateX(-30px);
+  margin: 0;
+}
+
+.templet h3 {
+  margin: 0 0 5px;
+  line-height: 1.1em;
+  font-weight: 188;
+  font-size: 1em;
+  opacity: 0.75;
+}
+
+.templet p {
+  font-size: 0.8em;
+}
+
+.templet i {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px 20px;
+  font-size: 30px;
+  color: #ffffff;
+  opacity: 0;
+}
+
+.templet a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.templet:hover img,
+.templet.active img {
+  zoom: 1;
+  filter: alpha(opacity=50);
+  -webkit-opacity: 0.5;
+  opacity: 0.5;
+}
+
+.templet:hover:after,
+.templet.active:after,
+.templet:hover figcaption,
+.templet.active figcaption,
+.templet:hover i,
+.templet.active i {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+}

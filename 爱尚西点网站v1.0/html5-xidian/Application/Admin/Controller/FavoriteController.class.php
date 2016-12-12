@@ -38,11 +38,13 @@ class FavoriteController extends Controller {
 
     public function del(){
     	$id = isset($_GET['id']) ? intval($_GET['id']) : '';
-        if(M("favorite")->where(array('food_id'=>$id))->delete()){
+        $username=$_GET['username'];
+        if(M("favorite")->where(array('food_id'=>$id,'user_name'=>$username))->delete()){
             $this->success("删除成功!",U("favorite/index"));
         }
         else{
             $this->error("删除失败!");
         }
     }
+
 }

@@ -16,7 +16,7 @@
 						<h4>购物车管理</h4>
 					</div>
 					<div class="col-md-7">
-						<h4>当前用户：<span class="choose">张三</span></h4>
+						<h4>当前用户：<span class="choose">{$choose.username}</span></h4>
 					</div>
 					<!--favorite-->
 					<div class="col-md-12">
@@ -29,26 +29,13 @@
 									</tr>
 								</thead>
 								<tbody>
-									<tr>
-										<td><a href="">张三</a></td>
-										<td>15232112345</td>
-									</tr>
-									<tr>
-										<td><a href="">李四</a></td>
-										<td>15232112345</td>
-									</tr>
-									<tr>
-										<td><a href="">王五</a></td>
-										<td>15232112345</td>
-									</tr>
-									<tr>
-										<td><a href="">张三</a></td>
-										<td>15232112345</td>
-									</tr>
-									<tr>
-										<td><a href="">张三</a></td>
-										<td>15232112345</td>
-									</tr>
+									<volist name="userList" id="n">
+										<tr>
+											<td><a href="{:U('cart/index',array('id'=>$n['id']))}">{$n.username}</a></td>
+											<td>{$n.telphone}</td>
+										</tr>
+									</volist>
+									
 								</tbody>
 							</table>
 						</div>
@@ -60,56 +47,27 @@
 									<th>操作</th>
 								</thead>
 								<tbody>
-									<tr>
-										<td>法式面包</td>
-										<td><img src="__PUBLIC__/admin/images/shopList.png" alt="" width="50" height="30px"></td>
-										<td><a href="">删除</a></td>
-									</tr>
-									<tr>
-										<td>法式面包</td>
-										<td><img src="__PUBLIC__/admin/images/shopList.png" alt="" width="50" height="30px"></td>
-										<td><a href="">删除</a></td>
-									</tr>
-									<tr>
-										<td>法式面包</td>
-										<td><img src="__PUBLIC__/admin/images/shopList.png" alt="" width="50" height="30px"></td>
-										<td><a href="">删除</a></td>
-									</tr>
-									<tr>
-										<td>法式面包</td>
-										<td><img src="__PUBLIC__/admin/images/shopList.png" alt="" width="50" height="30px"></td>
-										<td><a href="">删除</a></td>
-									</tr>
+									<volist name="foodList" id="n">
+										<tr>
+											<td>{$n.name}</td>
+											<td><img src="__PUBLIC__/{$n.img}" alt="" width="50" height="30px"></td>
+											<td><a href="{:U('cart/del',array('id'=>$n['id'],'username'=>$choose['username']))}" onClick="delConfirm()" name={$n.id}>删除</a></td>
+										</tr>
+									</volist>
 									
 								</tbody>
 							</table>
 							<!--pagination-->
 							<div class="col-md-5 col-md-offset-7 page">
 								<ul class="pagination">
-									<li>
-										 <a href="#"><<</a>
-									</li>
-									<li>
-										 <a href="#">1</a>
-									</li>
-									<li>
-										 <a href="#">2</a>
-									</li>
-									<li>
-										 <a href="#">3</a>
-									</li>
-									<li>
-										 <a href="#">4</a>
-									</li>
-									<li>
-										 <a href="#">5</a>
-									</li>
-									<li>
-										 <a href="#">>></a>
-									</li>
+									
 								</ul>
 							</div>
 						</div>
 					</div>					
 				</div>
-			
+			<script>
+				function delConfirm(){
+					return confirm("确定删除?");
+				}
+			</script>

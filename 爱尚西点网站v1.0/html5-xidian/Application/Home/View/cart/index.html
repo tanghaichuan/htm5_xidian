@@ -131,8 +131,22 @@
       </nav>
 
       <!--面包屑-->
-      <div style="padding: 0px 20px;">
-        <p><a href="#">首页</a>><a href="#">个人中心</a>><a href="__MODULE__/cart/cart.html">我的购物车</a></p>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <ul class="breadcrumb">
+              <li>
+                <a href="__MODULE__/index/index.html">首页</a> 
+              </li>
+              <li>
+                <a href="__MODULE__/users/index.html">个人中心</a> 
+              </li>
+              <li>
+                <a href="__MODULE__/cart/index.html">我的购物车</a> 
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       <!--购物车列表-->
@@ -180,8 +194,7 @@
             <div class="col-md-3 column">
               <div id="sum_pos">
                 合计：￥<span id="total">0</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <button type="button" class="btn btn-primary btn-lg">结算</button>
-              </div>
+              </div><button type="button" class="btn btn-primary btn-lg" id="sumbtn_pos">结算</button>
             </div>
           </div>
         </div>

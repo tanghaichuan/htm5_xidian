@@ -55,6 +55,7 @@ class FoodController extends Controller {
             $data['food_public_time']=getTime();
             $data['classify']=I("post.classify");
             $data['tagname']=I("post.tagname");
+            $data['publish_name']="西点官方";
             //var_dump(I("post.tagname"));  
             //添加
             if($model->create()&&$model->add($data)){

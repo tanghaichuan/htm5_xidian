@@ -14,6 +14,17 @@
 	    top: 175px;
 	}
 }
+@media screen and (max-width: 1380px)and (min-width: 1300px){
+.row-a{
+	width:1000px;
+	margin-left: 80px;
+
+}
+.col-md-3{
+	width:250px;
+
+}
+}
 body{
 	overflow-x: hidden;
 	font-family: "仿宋" Helvetica, Arial, sans-serif;
@@ -63,13 +74,18 @@ body{
 .left,.right{
 	padding: 0px 0 0 10px;
 }
+/*.row volist{
+	text-align:center;
+}*/
 .thumbnail{
 	margin-top: 10px;
 	margin-right: 10px;
 	padding: 0;
 	height: 380px;
 	width:193px;
+
 }
+
 .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
    
     display: block;

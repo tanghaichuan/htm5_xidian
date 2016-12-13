@@ -28,7 +28,7 @@ $(function(){
           'mall_id':mall_id,
           'username':username
         }
-        $.post("addCart",$data,function(res){
+        $.post("/html5-xidian/home.php/Home/shop/addCart",$data,function(res){
             if(res=="success"){
               alert('添加成功!');
             }

@@ -157,7 +157,12 @@ body{
 #sum_pos{
 	position: absolute;
 	left: 115px;
-	top: -10px;
+	top: 3px;
+}
+#sumbtn_pos{
+  position: relative;
+  right: -210px;
+  bottom: 10px;
 }
 
 #shopping_list{

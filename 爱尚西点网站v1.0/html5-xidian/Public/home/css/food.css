@@ -1,40 +1,59 @@
 
-@media screen and (max-width: 1380px){
-	#food-thumb{
-		width:188px;
-		height: 180px;
+@media screen and (max-width: 1024px){
+	.heart{
+	position: absolute;
+    left: 59%;
+    top: 178px;
 	}
-	#thumbnail{
-		height: 290px;
-		background-color: rgba(255, 255, 255, 0.2);
+	.col-md-12 img{
+	width:100%;
+	height:260px;
+	}
+}
+@media screen and (min-width: 1025px){
+	.row-a{
+		width:1000px;
+		margin-left: 80px;
+
+	}
+	.col-md-3{
+		width:250px;
+	}
+	.font-a{
+	 	font-size:3.2em;
+	 	font-family:仿宋;
+	 	font: normal 120%;
+	 	padding-left: 90px;
+	}
+	.font-b{
+	 	font-size:1.2em;
+	 	font-family:"仿宋";
+	 	color: #333;
+	 	padding: 0px 110px 0px 90px;
 	}
 	.heart{
-		position: absolute;
-	    left: 45%;
-	    top: 175px;
+	position: absolute;
+    left: 50%;
+    top: 178px;
 	}
-}
-@media screen and (max-width: 1380px)and (min-width: 1300px){
-.row-a{
-	width:1000px;
-	margin-left: 80px;
-
-}
-.col-md-3{
-	width:250px;
-
-}
+	.col-md-12 img{
+	width:100%;
+	height:300px;
+	}
 }
 body{
 	overflow-x: hidden;
 	font-family: "仿宋" Helvetica, Arial, sans-serif;
  }
+#food-thumb{
+	width:188px;
+	height: 180px;
+}
+#thumbnail{
+	height: 265px;
+}
 .dropdown-menu li a{
     padding: 3px 13px;
-}
-.col-md-12 img{
-	width:100%;
-	height:340px;
 }
 .font{
 	writing-mode:tb-rl;
@@ -57,7 +76,6 @@ body{
  	color:#688d72;
  	font-weight:bolder;
 }
-
 .breadcrumb a{
  	font-size:1.1em;
  	font-family:微软雅黑;
@@ -72,51 +90,30 @@ body{
 	z-index: 100;
 }
 .left,.right{
-	padding: 0px 0 0 10px;
+	padding-left: 10px;
 }
-/*.row volist{
-	text-align:center;
-}*/
 .thumbnail{
 	margin-top: 10px;
 	margin-right: 10px;
-	padding: 0;
 	height: 380px;
 	width:193px;
-
 }
-
-.thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {
-   
+.thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {  
     display: block;
     max-width: 100%;
     width: 100%;
-    height: 230px;
-   	
+    height: 230px;  	
 }
-
 .thumbnail p{
 	font-family: arial;
 }
 .thumbnail span{
 	font-family: arial;
 }
-/*.food-info{
-	width: 100%;
-	height: 20px;
-	
-}*/
-/*.food-info p{
-	display: inline-block;
-	position: relative;
-	line-height: 30px;
-	margin: 0 0 0 5px;
-	float: left;
-}*/
 .user-info {
 	line-height: 65px;
 	position: relative;
-	/*width:180px;*/
+	top: -13px;
 }
 .user-info p{
 	position: relative;
@@ -124,9 +121,7 @@ body{
 	display: inline-block;
 }
 .user-info img{
-	width: 40%;
-	
-	
+	width: 40%;	
 }
 .user-info span{
 	position: relative;

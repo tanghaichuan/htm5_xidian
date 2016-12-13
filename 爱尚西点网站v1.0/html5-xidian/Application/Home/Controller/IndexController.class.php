@@ -10,9 +10,11 @@ class IndexController extends Controller {
         }
     }
     public function index(){
-        $model=M("tags");
-        $tagList=$model->select();
-        $this->assign("tagList",$tagList);
-        $this->display();
+      $model=M("tuisong");
+      $lists = $model -> order('id desc') ->limit(3)-> select();
+      $this -> assign('lists',$lists); 
+      $this->display();
     }
+
+    
 }

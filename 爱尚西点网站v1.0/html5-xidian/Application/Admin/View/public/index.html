@@ -6,77 +6,61 @@
 							 <a href="__MODULE__/index/index.html">首页</a>
 						</li>
 						<li>
-							 <a href="#">美食发布</a>
+							 <a href="__MODULE__/public/index.html">美食管理</a>
+						</li>
+						<li>
+							 <a href="#">美食列表</a>
 						</li>
 					</ul>
 				</div>
-				<!--List-->
+				<!--userList-->
 				<div class="col-md-12 userList">
-					<div class="col-xs-4 col-md-4">
-						<h4>美食推送</h4>
-					</div>
-					<div class="col-xs-3 col-md-3">
-						<h4>当前分类：<span class="choose">{$food}</span></h4>
-					</div>
 					<div class="col-xs-2 col-md-2">
-						<h4>推送页:</h4>
+						<h4>美食列表</h4>
 					</div>
-					<div class="col-xs-3 col-md-3" style="padding: 5px 0 0 0;">
-						<label for="" class="shopRadio"><input type="radio" id="publicPage" value="home" name="public" style="position: relative;top: 3px;" />首页</label>
-						<label for="" class="shopRadio"><input type="radio" id="publicPage" value="content" name="public" style="position: relative;top: 3px;"/>美食内容页</label>
+					<div class="col-xs-5 col-md-5 input-group">
+						<form action="{:U('Admin/public/searchFood')}" method="post" enctype="multipart/form-data" class="input-group searchForm">
+							<input type="text" class="foodSearch" name="name">
+							<span class="glyphicon glyphicon-search searchSpan"></span>
+						</form>
 					</div>
-					<!--favorite-->
+					<!--shop-->
 					<div class="col-md-12">
-						<div class="col-xs-4 col-md-4">
-							<table class="table table-striped table-hover" id="table">
-								<thead>
-									<tr>
-										<th>分类</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td><a href="{:U('Admin/public/classify/food/法式菜肴')}">法式菜肴</a></td>
-									</tr>
-									<tr>
-										<td><a href="{:U('Admin/public/classify/food/意式菜肴')}">意式菜肴</a></td>
-									</tr>
-									<tr>
-										<td><a href="{:U('Admin/public/classify/food/美式菜肴')}">美式菜肴</a></td>
-									</tr>
-									<tr>
-										<td><a href="{:U('Admin/public/classify/food/俄式菜肴')}">俄式菜肴</a></td>
-									</tr>
-									<tr>
-										<td><a href="{:U('Admin/public/classify/food/英式菜肴')}">英式菜肴</a></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						<div class="col-md-8">
-							<table class="table table-striped table-hover">
-								<thead>
-									<th>美食名称</th>
+						<table class="table table-striped table-hover">
+							<thead>
+								<tr>
+									<th>分类</th>
+									<th>名称</th>
 									<th>图片</th>
+									<th>发布时间</th>
 									<th>操作</th>
-								</thead>
-								<tbody>
-									<volist name="foodList" id="n">
-										<tr>
-											<td>{$n.name}</td>
-											<td><img src="__PUBLIC__/{$n.img}" alt="" width="50" height="30px"></td>
-											<td><a href="">推送</a></td>
-										</tr>
-									</volist>
-								</tbody>
-							</table>
-							<!--pagination-->
-							<div class="col-xs-5 col-md-5 col-md-offset-7 page">
-								<ul class="pagination">
-									<li>{$page}</li>
-								</ul>
-							</div>
+								</tr>
+							</thead>
+							<tbody>
+								<volist name="foodList" id="n">
+									<tr>
+										<td>{$n.classify}</td>
+										<td>{$n.name}</td>
+										<td><img src="__PUBLIC__/{$n.img}" alt="" width="70" height="38px"></td>
+										<td>{$n.food_public_time}</td>
+										<td>
+											<a href="edit/id/{$n.id}">修改</a>
+											<a href="del/id/{$n.id}" onClick="delConfirm()">删除</a>
+										</td>
+									</tr>
+								</volist>
+							</tbody>
+						</table>
+						<!--pagination-->
+						<div class="col-md-4 col-md-offset-8 page">
+							<ul class="pagination">
+								<li>{$page}</li>
+							</ul>
 						</div>
-					</div>					
+					</div>
 				</div>
-			
+			<script>
+				function delConfirm(){
+					return confirm("确定删除?");
+				}
+			</script>

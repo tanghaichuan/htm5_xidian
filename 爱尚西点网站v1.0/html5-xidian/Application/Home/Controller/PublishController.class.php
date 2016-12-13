@@ -37,6 +37,7 @@ class PublishController extends Controller {
                 //设置img字段属性(目录+名字)
             $data['img']=$info['img']['savepath'].$info['img']['savename'];
             $data['food_public_time']=getTime();
+            $data['publish_name']=session("username");
             //var_dump(I("post.tagname"));  
             //添加
             if($model->create()&&$model->add($data)&&$relation->add($rela)){

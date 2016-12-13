@@ -226,7 +226,7 @@
             <!-- 轮播（Carousel）项目 -->
             <div class="carousel-inner bor_btm">
               <div class="item active" >
-                  <div class="pic">
+                  <div>
                       <div class="col-md-1"></div>
                       <div class="col-md-2"> <img src="__PUBLIC__/home/images/food-UK-1.png" ></div>
                       <div class="col-md-2"><img src="__PUBLIC__/home/images/food-UK-2.png" ></div>
@@ -237,7 +237,7 @@
                   </div>
               </div>
               <div class="item">
-                  <div class="pic" style="padding-left:18px">
+                  <div style="padding-left:18px">
                       <div class="col-md-1"></div>
                       <div class="col-md-2"> <img src="__PUBLIC__/home/images/food-UK-1.png" ></div>
                       <div class="col-md-2"><img src="__PUBLIC__/home/images/food-UK-2.png" ></div>
@@ -248,7 +248,7 @@
                   </div>
               </div>
               <div class="item">
-                  <div class="pic" style="padding-left:18px">
+                  <div style="padding-left:18px">
                       <div class="col-md-1"></div>
                       <div class="col-md-2"> <img src="__PUBLIC__/home/images/food-UK-1.png" ></div>
                       <div class="col-md-2"><img src="__PUBLIC__/home/images/food-UK-2.png" ></div>
@@ -268,84 +268,84 @@
 
      
     <br/><br/><br/><br/>
-    <div class="row">
-      <!--评论框-->
-      <div class="col-md-11 col-s-10 col-xs-10">
-        
-        <form action="{:U('Home/food/addcomment')}" method="post" role="form" class="form-horizontal" id="inputComment">
-          <h3>{$content.name}的评论</h3>
-          <div class="form-group">
-            <div class="col-md-1" id="avater-img">
-              <img src="__PUBLIC__/home/images/avater.jpeg" alt="" class="img-circle" width="46px" height="46px">
-              <p id="commentUser">{$username}</p>
-            </div>
-            <div class="col-md-5" id="text">
-              <textarea rows="5" cols="70" maxlength="140" name="comment"></textarea>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="col-sm-offset-1 col-xs-1 col-sm-1">
-              <button type="button" class="btn btn-info" id="commentBtn" name="{$username}" rel="{$content.id}">评论</button>
-            </div>
-          </div>  
-        </form>
-      </div>
-      <!--评论列表-->
-      <div class="col-md-11"> 
-        <ul class="am-comment-list">
-
-          <volist name="commentList" id="n">
-            <li class="am-comment am-comment-highlight">
-              <a href="#">
-              <img src="__PUBLIC__/home/images/food-UK-1.png" alt="头像" class="am-comment-avatar" width="48" height="48"/>
-              </a>
-              <div class="am-comment-main">
-                <header class="am-comment-hd">
-                <div class="am-comment-meta">
-                  <a href="#link-to-user" class="am-comment-author">{$n.username}</a>
-                  评论于 <time datetime="2016-07-27T04:54:29-07:00">{$n.com_time}</time><a href="javascript:void(0);" class="reply" name="{$n.username}">回复</a>
-                </div>
-                </header>
-                  <div class="am-comment-bd">
-                  {$n.comment}
-                </div>
-              </div>
-            </li>
-          </volist>
+      <div class="container">
+        <div class="row">
+        <!--评论框-->
+        <div class="col-md-11 col-s-10 col-xs-10">
           
+          <form action="{:U('Home/food/addcomment')}" method="post" role="form" class="form-horizontal" id="inputComment">
+            <h3>{$content.name}的评论</h3>
+            <div class="form-group">
+              <div class="col-md-1" id="avater-img">
+                <img src="__PUBLIC__/home/images/avater.jpeg" alt="" class="img-circle" width="46px" height="46px">
+                <p id="commentUser">{$username}</p>
+              </div>
+              <div class="col-md-5" id="text">
+                <textarea rows="5" cols="70" maxlength="140" name="comment"></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-1 col-xs-1 col-sm-1">
+                <button type="button" class="btn btn-info" id="commentBtn" name="{$username}" rel="{$content.id}">评论</button>
+              </div>
+            </div>  
+          </form>
+        </div>
+        <!--评论列表-->
+        <div class="col-md-11"> 
+          <ul class="am-comment-list">
 
-
-        </ul>
-      </div><!-- col-md-11 -->
-      <div class="col-md-1"></div>
+            <volist name="commentList" id="n">
+              <li class="am-comment">
+                <a href="#">
+                <img src="__PUBLIC__/home/images/food-UK-1.png" alt="头像" class="am-comment-avatar" width="48" height="48"/>
+                </a>
+                <div class="am-comment-main">
+                  <header class="am-comment-hd">
+                  <div class="am-comment-meta">
+                    <a href="#link-to-user" class="am-comment-author">{$n.username}</a>
+                    评论于 <time datetime="2016-07-27T04:54:29-07:00">{$n.com_time}</time><a href="javascript:void(0);" class="reply" name="{$n.username}">回复</a>
+                  </div>
+                  </header>
+                    <div class="am-comment-bd">
+                    {$n.comment}
+                  </div>
+                </div>
+              </li>
+            </volist>
+            
+          </ul>
+        </div><!-- col-md-11 -->
+        <div class="col-md-1"></div>
+        </div>
+      </div>   
+    </div>   <!-- container-fluid结束 -->   
+    <br/><br/><br/>
+    <div class="row">
+      <div class="col-md-8">
       </div>
-  </div>   <!-- container-fluid结束 -->   
-<br/><br/><br/>
-<div class="row">
-  <div class="col-md-8">
-  </div>
-  <div class="col-md-4">
-    <ul class="pagination">
-     <!-- 分页 -->
-    </ul>
-  </div>
-</div>
-<br/>
-  <div class="row">
-    <div class="footer">
-      <div class="row clearfix" id="footer_padding">
-        <div class="col-md-3 column" id="qrc">
-        <a href="#"><img src="__PUBLIC__/home/images/qrc.jpg"></a>
-        </div>
-        <div class="col-md-5 column" id="footer_introduce">
-        <p>爱尚美食，西餐美食菜谱分享网站。每天都有新分享，拥有最实用的美食、菜谱、食谱的做法，同是还有聚餐百万美食爱好者的美食家社区，欢迎加入！</p>
-        </div>
-        <div class="col-md-4 column" id="footer_contact">
-        <p>联系方式：15800000000</br>邮箱：aishangxidian@163.com</br>地址：河北省石家庄市裕华区南二环东路20号</br></p>
+      <div class="col-md-4">
+        <ul class="pagination">
+          <!-- 分页 -->
+        </ul>
+      </div>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="footer">
+        <div class="row clearfix" id="footer_padding">
+          <div class="col-md-3 column" id="qrc">
+          <a href="#"><img src="__PUBLIC__/home/images/qrc.jpg"></a>
+          </div>
+          <div class="col-md-5 column" id="footer_introduce">
+          <p>爱尚美食，西餐美食菜谱分享网站。每天都有新分享，拥有最实用的美食、菜谱、食谱的做法，同是还有聚餐百万美食爱好者的美食家社区，欢迎加入！</p>
+          </div>
+          <div class="col-md-4 column" id="footer_contact">
+          <p>联系方式：15800000000</br>邮箱：aishangxidian@163.com</br>地址：河北省石家庄市裕华区南二环东路20号</br></p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </body>
 </html>

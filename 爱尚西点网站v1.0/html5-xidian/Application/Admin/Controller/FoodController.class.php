@@ -64,11 +64,6 @@ class FoodController extends Controller {
             }
         }
     }
-
-    public function comment(){
-    	$this->display();
-    }
-
     public function edit(){
         if(IS_POST){
             $model=D("foods");
@@ -128,5 +123,36 @@ class FoodController extends Controller {
         $foodList=$model->where($where)->select();
         $this -> assign('foodList',$foodList); 
         $this->display('index');
+    }
+
+    public function comment(){
+        $id = isset($_GET['id']) ? intval($_GET['id']) : '';
+        $model=M("foods");
+        $food=$model->find($id);
+        $comment=M("comment")->where(array('food_id'=>$id))->select();
+        import('Org.Util.Page');
+        $count = $model->count();
+        //实例化分页类，传入总记录数和每一页显示的记录数8
+        $page = new \Think\Page($count,15);
+        $nowPage = isset($_GET['p'])?intval($_GET['p']):1;
+        $page -> setConfig('first','第一页');
+        $page -> setConfig('prev','<<');
+        $page -> setConfig('next','>>');
+        $foodList = $model -> order('id desc') -> page($nowPage.',15') -> select();
+        $show = $page -> show();
+        $this->assign("comment",$comment);
+        $this->assign("food",$food);
+        $this -> assign('page',$show);
+        $this -> assign('foodList',$foodList);
+        $this->display();
+    }
+    public function delComment(){
+        $id = isset($_GET['id']) ? intval($_GET['id']) : '';
+        if(M("comment")->where(array('id'=>$id))->delete()){
+            $this->success("删除成功!",U('food/comment'));
+        }
+        else{
+            $this->error("删除失败!");
+        }
     }
 }

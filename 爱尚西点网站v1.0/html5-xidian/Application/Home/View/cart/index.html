@@ -131,21 +131,9 @@
       </nav>
 
       <!--面包屑-->
-        <div class="row-fluid">
-          <div class="col-md-12">
-            <ul class="breadcrumb">
-              <li>
-                <a href="__MODULE__/index/index.html">首页</a> 
-              </li>
-              <li>
-                <a href="__MODULE__/users/index.html">个人中心</a> 
-              </li>
-              <li class="active">
-                我的购物车
-              </li>
-            </ul>
-          </div>
-        </div>
+      <div style="padding: 0px 20px;">
+        <p><a href="#">首页</a>><a href="#">个人中心</a>><a href="__MODULE__/cart/cart.html">我的购物车</a></p>
+      </div>
 
       <!--购物车列表-->
       <div style="padding: 0px 20px;">
@@ -163,7 +151,7 @@
                 <td id="table_fir">
                   <div class="checkbox">
                     <label>
-                      <input type="checkbox" /><img src="__PUBLIC__/{$n.img}" class="img-rounded"> 
+                      <input type="checkbox" rel="{$n.price}" id="check" /><img src="__PUBLIC__/{$n.img}" class="img-rounded">
                     </label>
                     <div style="display: inline;">
                       <b>{$n.name}</b>
@@ -172,7 +160,7 @@
                 </td>
                 <td><p>现价：￥{$n.price}</p></td>
                 <td></td>
-                <td><a class="btn btn-warning" href="#" style="float: right;">从购物车中删除</a>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td><a class="btn btn-warning" style="float: right;" id="delCart" name="{$n.id}">从购物车中删除</a>&nbsp;&nbsp;&nbsp;&nbsp;</td>
               </tr>
             </volist>
           </tbody>
@@ -191,7 +179,7 @@
             </div>
             <div class="col-md-3 column">
               <div id="sum_pos">
-                合计：￥1000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                合计：￥<span id="total">0</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <button type="button" class="btn btn-primary btn-lg">结算</button>
               </div>
             </div>

@@ -104,4 +104,18 @@ $(function(){
       $("textarea").val("@"+replyName+" ");
   });
 
+  var total=0
+
+  $('tr').each(function(){
+      $("input:checkbox",this).click(function(){
+        var price=$(this).attr("rel");
+        if($(this).prop('checked')){
+          total=parseInt(total)+parseInt(price);
+        }
+        else{
+          total=parseInt(total)-parseInt(price);
+        }
+        $("#total").html(parseInt(total));
+      });
+  });
 });

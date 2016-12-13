@@ -135,7 +135,7 @@
       
       <div class="row">
         <div class="col-md-12">
-          <a href="content.html"><img alt="法式餐点" src="__PUBLIC__/home/images/food-F-0.png" class=""/>
+          <a href="content.html"><img alt="法式餐点" src="__PUBLIC__/home/images/food-R-0.png" class=""/>
         </div>
       </div>
       <br / >
@@ -165,47 +165,41 @@
           <div class="font-a">俄式餐点</div>
         </div>
         <div class="col-md-11">
-          <div class="row">
-             <p>
-                <div class="font-b">俄罗斯人比较讲究饮食，菜肴的品种丰富多彩，"俄式大餐"在世界很有名气，珍贵的鱼子酱，正宗的罗宋汤，还有传统小煎饼，都是非常有民族特色的。</div>
-              </p>
-            <br /><br />
+          <div class="row" style="height: 70px;">
+            <p>
+              <div class="font-b">俄罗斯人比较讲究饮食，菜肴的品种丰富多彩，"俄式大餐"在世界很有名气，珍贵的鱼子酱，正宗的罗宋汤，还有传统小煎饼，都是非常有民族特色的。</div>
+            </p>
           </div><!-- 下方为图片列表内容   -->
             <!-- 第一行图片 -->
-         <div class="row-a">
-              <volist name="food" id="n">
-                <div class="col-md-3 col-sm-4 col-xs-5">
-                      <div class="thumbnail" id="thumbnail">
+          <div class="row-a">
+            <volist name="food" id="n">
+              <div class="col-md-3 col-sm-4 col-xs-5" style="height: 300px;">
+                <div class="thumbnail" id="thumbnail">
+                  <figure class="templet ">
+                      <img src="__PUBLIC__/{$n.img}" id="food-thumb"  />
+                      <figcaption>
+                          <h3>{$n.name}</h3>
+                          <p>by&nbsp;&nbsp;zhangsan</p>
+                          <p>发布于&nbsp;&nbsp;{$n.food_public_time}</p>
+                      </figcaption>
 
-                            <figure class="templet ">
-                                <img alt="意式餐点" src="__PUBLIC__/{$n.img}" id="food-thumb"  />
-                                <figcaption>
-                                    <h3>{$n.name}</h3>
-                                    <p>by&nbsp;&nbsp;zhangsan</p>
-                                    <p>发布于&nbsp;&nbsp;{$n.food_public_time}</p>
-                                </figcaption>
-
-                                <a href="__MODULE__/food/content/id/{$n.id}"></a>
-                            </figure>
-                            <br/> <br/> <br/>
-                            <p>{$n.name}</p>
-                            <br/>
-                            <div class="user-info">
-                              <img src="__PUBLIC__/home/images/avater.jpeg" alt="" class="col-sm-3 img-circle" />
-                              <p>by&nbsp;&nbsp;zhangsan</p>
-                              <span class="col-sm-7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;发布于&nbsp;&nbsp;{$n.food_public_time}</span>
-                            </div> 
-                      </div>
-                      <div class="food-info">
-      
-                            <div class="heart" id="like1" rel="like" title="收藏" name="{$n.id}" value="{$username}"></div>
-
-                      </div>
+                      <a href="__MODULE__/food/content/id/{$n.id}"></a>
+                  </figure>
+                  <br/> <br/> <br/>
+                  <p>&nbsp;&nbsp;{$n.name}</p>
+                  <br/>
+                  <div class="user-info">
+                    <img src="__PUBLIC__/home/images/avater.jpeg" alt="" class="col-sm-3 img-circle" />
+                    <p>by&nbsp;&nbsp;zhangsan</p>
+                    <span class="col-sm-7">&nbsp;&nbsp;&nbsp;发布于&nbsp;&nbsp;{$n.food_public_time}</span>
+                  </div> 
                 </div>
-              </volist> 
-            </div>  
-              <br /><br />
-            </div>
+                <div class="food-info">
+                  <div class="heart" id="like1" rel="like" title="收藏" name="{$n.id}" value="{$username}"></div>
+                </div>
+              </div>
+            </volist> 
+          </div> 
         </div>
       </div>        
       <br/><br/>

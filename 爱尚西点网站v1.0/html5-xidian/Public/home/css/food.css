@@ -1,6 +1,7 @@
 
 @media screen and (max-width: 1380px){
 	#food-thumb{
+		width:188px;
 		height: 180px;
 	}
 	#thumbnail{

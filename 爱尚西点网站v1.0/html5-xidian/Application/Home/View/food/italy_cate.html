@@ -179,8 +179,7 @@
                       <img src="__PUBLIC__/{$n.img}" id="food-thumb"  />
                       <figcaption>
                           <h3>{$n.name}</h3>
-                          <p>by&nbsp;&nbsp;zhangsan</p>
-                          <p>发布于&nbsp;&nbsp;{$n.food_public_time}</p>
+                          <p>{$n.content|mb_substr=0,22,'utf-8'}...</p>
                       </figcaption>
 
                       <a href="__MODULE__/food/content/id/{$n.id}"></a>
@@ -190,7 +189,7 @@
                   <br/>
                   <div class="user-info">
                     <img src="__PUBLIC__/home/images/avater.jpeg" alt="" class="col-sm-3 img-circle" />
-                    <p>by&nbsp;&nbsp;zhangsan</p>
+                    <p>by&nbsp;&nbsp;{$n.publish_name}</p>
                     <span class="col-sm-7">&nbsp;&nbsp;&nbsp;发布于&nbsp;&nbsp;{$n.food_public_time}</span>
                   </div> 
                 </div>
@@ -198,7 +197,7 @@
                   <div class="heart" id="like1" rel="like" title="收藏" name="{$n.id}" value="{$username}"></div>
                 </div>
               </div>
-            </volist> 
+            </volist>  
           </div>   		
     		</div>
     	</div>				

@@ -172,38 +172,13 @@
                     </div>
                   </div>
                 </td>
-                <td style="position: relative;top: 22px;">
+                <td style="position: relative;top: 22px;" class="number">
                   <input id="min" name="" type="button" value="-" />  
-                  <input id="text_box" name="" type="text" value="1" style="width:30px;text-align: center;"/>  
+                  <input id="text_box" name="" type="text" value="1" style="width:30px;text-align: center;" /> 
                   <input id="add" name="" type="button" value="+" />  
-  
-                    <script>
-                      $(document).ready(function(){
-                      //获得文本框对象
-                          var t = $("#text_box");
-                        //初始化数量为1,并失效减
-                        $('#min').attr('disabled',true);
-                          //数量增加操作
-                            $("#add").click(function(){
-                                t.val(parseInt(t.val())+1)
-                                if (parseInt(t.val())!=1){
-                                    $('#min').attr('disabled',false);
-                                }
-            
-                          }) 
-                          //数量减少操作
-                          $("#min").click(function(){
-                              t.val(parseInt(t.val())-1);
-                              if (parseInt(t.val())==1){
-                                  $('#min').attr('disabled',true);
-                              }
-            
-                          })
-         
-                      });
-                    </script>
                 </td>
-                <td><p>现价：￥{$n.price}</p></td>
+                <td><p>现价：￥<span id="price">{$n.price}</span></p></td>
+                <td><p>金额：￥<span class="sum">{$n.price}</span></p></td>
                 <td><a class="btn btn-warning" style="float: right;" id="delCart" name="{$n.id}">从购物车中删除</a>&nbsp;&nbsp;&nbsp;&nbsp;</td>
               </tr>
             </volist>
@@ -215,8 +190,8 @@
           <div class="row clearfix">
             <div class="col-md-3 column">
               <label>
-                <input type="checkbox" />
-                <b><a href="#">全选</a>&nbsp;&nbsp;&nbsp;<a href="#">删除</a></b>
+                <input type="checkbox" class="selectAll"/>
+                <b><a href="javascript:void(0)" class="selectAll">全选</a>&nbsp;&nbsp;&nbsp;<a href="javascript:void(0)">删除</a></b>
               </label>
             </div>
             <div class="col-md-6 column">

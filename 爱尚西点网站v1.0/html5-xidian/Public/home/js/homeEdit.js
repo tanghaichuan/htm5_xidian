@@ -104,18 +104,82 @@ $(function(){
       $("textarea").val("@"+replyName+" ");
   });
 
-  var total=0
 
-  $('tr').each(function(){
-      $("input:checkbox",this).click(function(){
-        var price=$(this).attr("rel");
-        if($(this).prop('checked')){
-          total=parseInt(total)+parseInt(price);
+  
+  //变换商品数量
+  $(".number").each(function(){
+      var that=$("#text_box",this);
+      $('#min',this).attr('disabled',true);
+      var min=$('#min',this);
+      //增加
+      $("#add",this).click(function(){
+        that.val(parseInt(that.val())+1)
+        if (parseInt(that.val())!=1){
+            min.attr('disabled',false);
         }
-        else{
-          total=parseInt(total)-parseInt(price);
+      });
+      //减少
+      $("#min",this).click(function(){
+        that.val(parseInt(that.val())-1)
+        if (parseInt(that.val())==1){
+            min.attr('disabled',true);
         }
-        $("#total").html(parseInt(total));
       });
   });
+
+    //购物车全选、全不选
+    var tag=true;
+    $(".selectAll").click(function(){
+        if(!tag){
+          $(".selectAll").prop("checked",false);
+          tag=true;
+        }
+        else{
+          $(".selectAll").prop("checked",true);
+          tag=false;
+        }
+        if($(".selectAll").prop("checked")){
+          $("tr").each(function(){
+            $("input:checkbox",this).prop("checked",true);
+          });
+        }
+        else{
+          $("tr").each(function(){
+            $("input:checkbox",this).prop("checked",false);
+          });
+        }
+    });
+
+    //购物车总价结算
+    var total=0
+    $('tr').each(function(){
+      var count=$("#text_box",this);//商品数量
+      var add=$("#add",this);//+
+      var min=$("#min",this);//-
+      var that=$(this);
+      var price =$(this).find("#price").text();//单价
+      var sum =$(this).find(".sum").text();//金额
+      add.click(function(){
+          sum=parseInt(price)*count.val();
+          that.find(".sum").html(sum);
+      });
+      min.click(function(){
+          sum=parseInt(price)*count.val();
+          that.find(".sum").html(sum);
+     });
+      //遍历被选中的文本框，累加求和
+      $("input:checkbox",this).click(function(){
+        //该商品被选中
+        if($(this).prop('checked')){
+          var sum =that.find(".sum").text();//金额
+          total=parseInt(total)+parseInt(sum);
+        }
+        else{
+          var sum =that.find(".sum").text();//金额
+          total=parseInt(total)-parseInt(sum);
+        }
+          $("#total").html(parseInt(total));
+      });
+    });
+
 });

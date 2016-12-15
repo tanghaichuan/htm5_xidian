@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="__PUBLIC__/home/css/bootstrap.min.css">
   <link rel="stylesheet" media="screen and (max-width:1024px)" href="__PUBLIC__/home/css/medium.css" type="text/css" />
   <link rel="stylesheet" media="screen and (min-width:1025px)" href="__PUBLIC__/home/css/large.css" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/base.css" />
+  <script src="__PUBLIC__/home/js/jquery-1.7.min.js"></script>
+  <script type="text/javascript" src="__PUBLIC__/home/js/common.js?v=725"></script>
+  <script type="text/javascript" src="__PUBLIC__/home/js/quick_links.js"></script>
   <script src="__PUBLIC__/home/js/jquery.js"></script>    
   <script src="__PUBLIC__/home/js/bootstrap.min.js"></script>
   <script src="__PUBLIC__/home/js/homeEdit.js"></script>
@@ -142,54 +146,81 @@
   <!--商城内容-->
   <div id="shopping_list">
   	<div class="row clearfix">
-		<div class="col-md-12 column">
-			<div class="row">
-        <volist name="goods" id="n">
-          <div class="col-md-3">
-            <div class="thumbnail">
-              <a href="content/id/{$n.id}"><img class="shopping_pic" src="__PUBLIC__/{$n.img}" /></a>
-              <div class="caption">
-                <a href="#"><p style="padding: 0px 8px" title="{$n.name}">{$n.name|mb_substr=0,20,utf8}...</p></a>
-                <div><b class="price">￥{$n.price}</b></div>
-                <a class="btn"  style="color: #fff" id="cart" name="{$username}" value="{$n.id}">加入购物车</a>
-                <div class="count">
-                  <p style="display: inline;">月售：100件</p><p style="display: inline;float: right;">包邮</p> 
+  		<div class="col-md-12 column">
+  			<div class="row" >
+          <volist name="goods" id="n">
+            <div class="col-md-3">
+              <div class="thumbnail">
+                <a target="_blank" href="content/id/{$n.id}"><img class="shopping_pic" src="__PUBLIC__/{$n.img}" /></a>
+                <div class="caption">
+                  <a target="_blank" href="#"><p title="{$n.name}">{$n.name}</p></a>
+                  <div><b class="price">￥{$n.price}</b></div>
+                  <a class="btn add_cart_large btnCart"  style="color: #fff" id="cart" name="{$username}" value="{$n.id}">加入购物车</a>
+                  <div class="count">
+                    <p style="display: inline;">月售：100件</p><p style="display: inline;float: right;">包邮</p> 
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </volist>
-			</div>
-		</div>
-	</div>
-  </div>
-  <!--
-    <div class="clearfix">
-        <volist name="goods" id="n"> 
-            <div>
-                <div>
-                    <a href="__MODULE__/shop/content/id/{$n.id}" target="_blank">
-                        <img alt="{$n.name}" src="__PUBLIC__/{$n.img}">
-                    </a>       
-                </div>
-                <div>
-                    <a href="__MODULE__/shop/content/id/{$n.id}" target="_blank" title="{$n.name}">
-                        <h3>{$n.name}</h3>
-                    </a>
-                    <div>
-                        <span>￥{$n.price}</span>                   
+          </volist>
+  			</div>
+  		</div>
+  	</div>
+
+    <div class="mui-mbar-tabs">
+
+<div class="quick_link_mian">
+
+    <div class="quick_links_panel">
+        <div id="quick_links" class="quick_links">
+            <li>
+                <a href="#" class="my_qlinks"><i class="setting"></i></a>
+                <div class="ibar_login_box status_login">
+                    <div class="avatar_box">
+                        <p class="avatar_imgbox">
+                            <img src="__PUBLIC__/home/images/no-img_mid_.jpg" />
+                        </p>
+                        <ul class="user_info">
+                            <br/>
+                            <li>用户名：我是用户名</li>
+                        </ul>
                     </div>
+                    <i class="icon_arrow_white"></i>
                 </div>
-                <div>月售 1288 件</div>
-                <div>包邮</div>
-            </div>
-        </volist>
+            </li>
+            <li id="shopCart">
+                <a href="#" class="message_list" ><i class="message"></i>
+                    <div class="span">购物车</div>
+                    <span class="cart_num">0</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="mpbtn_wdsc"><i class="wdsc"></i></a>
+                <div class="mp_tooltip">我的收藏<i class="icon_arrow_right_black"></i></div>
+            </li>
+        </div>
+        <div class="quick_toggle">
+            <li>
+                <a href="#none"><i class="mpbtn_qrcode"></i></a>
+                <div class="mp_qrcode" style="display:none;"><img src="__PUBLIC__/home/images/weixin_code_145.png" style="width: 90%" /><i class="icon_arrow_white"></i></div>
+            </li>
+            <li>
+                <a href="#top" class="return_top"><i class="top"></i></a>
+            </li>
+        </div>
     </div>
-   -->
-   <!--分页-->
+
+    <div id="quick_links_pop" class="quick_links_pop hide"></div>
+
+</div>
+
+</div>
+
+  </div>
+
   <div class="container" >
     <div class="row-fluid">
-        <div align="right">
+        <div align="right" style="padding-right: 9px;">
             <ul class="pagination">
                 <li>
                     <a href="#">上一页</a>
@@ -217,6 +248,103 @@
       </div>
     </div>
   </div>
-<!--<div class="ajifenshow"><a class="yshfootbg" href="/mall/contact" target="_blank"></a></div> -->
+
+  <script src="__PUBLIC__/home/js/parabola.js"></script>
+  <script type="text/javascript">
+
+  $(".quick_links_panel li").mouseenter(function(){
+
+    $(this).children(".mp_tooltip").animate({left:-92,queue:true});
+
+    $(this).children(".mp_tooltip").css("visibility","visible");
+
+    $(this).children(".ibar_login_box").css("display","block");
+
+  });
+
+  $(".quick_links_panel li").mouseleave(function(){
+
+    $(this).children(".mp_tooltip").css("visibility","hidden");
+
+    $(this).children(".mp_tooltip").animate({left:-121,queue:true});
+
+    $(this).children(".ibar_login_box").css("display","none");
+
+  });
+
+  $(".quick_toggle li").mouseover(function(){
+
+    $(this).children(".mp_qrcode").show();
+
+  });
+
+  $(".quick_toggle li").mouseleave(function(){
+
+    $(this).children(".mp_qrcode").hide();
+
+  });
+
+
+
+// 元素以及其他一些变量
+
+var eleFlyElement = document.querySelector("#flyItem"), eleShopCart = document.querySelector("#shopCart");
+
+var numberItem = 0;
+
+// 抛物线运动
+
+var myParabola = funParabola(eleFlyElement, eleShopCart, {
+
+  speed: 400, //抛物线速度
+
+  curvature: 0.0008, //控制抛物线弧度
+
+  complete: function() {
+
+    eleFlyElement.style.visibility = "hidden";
+
+    eleShopCart.querySelector("span").innerHTML = ++numberItem;
+
+  }
+
+});
+
+// 绑定点击事件
+
+if (eleFlyElement && eleShopCart) {
+
+  
+
+  [].slice.call(document.getElementsByClassName("btnCart")).forEach(function(button) {
+
+    button.addEventListener("click", function(event) {
+
+      // 滚动大小
+
+      var scrollLeft = document.documentElement.scrollLeft || document.body.scrollLeft || 0,
+
+          scrollTop = document.documentElement.scrollTop || document.body.scrollTop || 0;
+
+      eleFlyElement.style.left = event.clientX + scrollLeft + "px";
+
+      eleFlyElement.style.top = event.clientY + scrollTop + "px";
+
+      eleFlyElement.style.visibility = "visible";
+
+      
+
+      // 需要重定位
+
+      myParabola.position().move();     
+
+    });
+
+  });
+
+}
+
+</script>
+
 </body>
 </html>

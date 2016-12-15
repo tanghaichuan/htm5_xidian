@@ -41,7 +41,7 @@ $(function(){
         });
       } 
   });
-
+  //取消购物车商品
   $('body').on("click",'#delCart',function(){
       var str=$('#isLogin').text();
       var pos=str.indexOf('：');
@@ -66,7 +66,7 @@ $(function(){
         });
       }
   });
-
+  //评论
   $('body').on('click','#commentBtn',function(){
     var comment=$('textarea').val();
     var username=$('#commentUser').text();
@@ -182,4 +182,17 @@ $(function(){
       });
     });
 
+    //个人中心 取消发布
+    $(".quitPublish").click(function(){
+        var publish_name=$(this).attr("name");
+        var id=$(this).attr("rel");
+        $data={
+          'publish_name':publish_name,
+          'id':id
+        }
+        $.post("/html5-xidian/home.php/Home/users/quitpublish",$data,function(res){
+            alert(res);
+            location.reload();
+        });
+    });
 });

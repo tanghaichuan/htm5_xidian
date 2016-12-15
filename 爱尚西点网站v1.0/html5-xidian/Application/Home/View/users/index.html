@@ -163,7 +163,7 @@
               <volist name="foodList" id="n">
                 <div class="col-sm-2">
                   <div class="thumbnail">
-                    <img src="__PUBLIC__/{$n.img}">
+                    <a href="{:U('Home/food/content',array('id'=>$n['id']))}"><img src="__PUBLIC__/{$n.img}"></a>
                     <div class="caption">
                       <div class="collect_information">
                         <h5>{$n.name}</h5>
@@ -179,15 +179,7 @@
               <div id="collect_page">
               <div align="right">
                 <ul class="pagination">
-                  <li>
-                    <a href="#">&laquo;</a>
-                  </li>
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                  <li>
-                    <a href="#">&raquo;</a>
-                  </li>
+                  <li>{$page}</li>
                 </ul>
               </div>
             </div>
@@ -200,80 +192,28 @@
               <label style="font-size: 1.2em;">我的发布</label>
             </div>
             <div id="publish_list">
-              <div class="col-sm-2">
+              
+              <volist name="publish" id="n">
+                <div class="col-sm-2">
                 <div class="thumbnail">
-                  <img src="__PUBLIC__/home/images/personal_pic1.jpg" />
-                  <div class="caption">
-                    <div class="publish_information">
-                      <h5>餐点</h5>
-                      <p>by&nbsp;作者</p>
-                      <p><a href="" style="float: right;">取消收藏</a></p>
+                  <a href="{:U('Home/food/content',array('id'=>$n['id']))}"><img src="__PUBLIC__/{$n.img}" /></a>
+                    <div class="caption">
+                      <div class="publish_information">
+                        <h5>{$n.name}</h5>
+                        <p>by&nbsp;{$username}</p>
+                        <p><a href="javascript:void(0)" style="float: right;" class="quitPublish" name="{$username}" rel="{$n.id}">取消发布</a></p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-sm-2">
-                <div class="thumbnail">
-                  <img src="__PUBLIC__/home/images/personal_pic1.jpg" />
-                  <div class="caption">
-                    <div class="publish_information">
-                      <h5>餐点</h5>
-                      <p>by&nbsp;作者</p>
-                      <p><a href="" style="float: right;">取消收藏</a></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-2">
-                <div class="thumbnail">
-                  <img src="__PUBLIC__/home/images/personal_pic1.jpg" />
-                  <div class="caption">
-                    <div class="publish_information">
-                      <h5>餐点</h5>
-                      <p>by&nbsp;作者</p>
-                      <p><a href="" style="float: right;">取消收藏</a></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-2">
-                <div class="thumbnail">
-                  <img src="__PUBLIC__/home/images/personal_pic1.jpg" />
-                  <div class="caption">
-                    <div class="publish_information">
-                      <h5>餐点</h5>
-                      <p>by&nbsp;作者</p>
-                      <p><a href="" style="float: right;">取消收藏</a></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-2">
-                <div class="thumbnail">
-                  <img src="__PUBLIC__/home/images/personal_pic1.jpg" />
-                  <div class="caption">
-                    <div class="publish_information">
-                      <h5>餐点</h5>
-                      <p>by&nbsp;作者</p>
-                      <p><a href="" style="float: right;">取消收藏</a></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              </volist>
+                          
             </div>
             </br>
             <div id="publish_page">
               <div align="right">
                 <ul class="pagination">
-                  <li>
-                    <a href="#">&laquo;</a>
-                  </li>
-                  <li>
-                    <a href="#">...</a>
-                  </li>
-                  <li>
-                    <a href="#">&raquo;</a>
-                  </li>
+                  
                 </ul>
               </div>
             </div>

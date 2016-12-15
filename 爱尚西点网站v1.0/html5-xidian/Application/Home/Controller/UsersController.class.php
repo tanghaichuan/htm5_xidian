@@ -24,6 +24,11 @@ class UsersController extends Controller {
         $show = $page -> show();
         $this -> assign('page',$show);
         $this -> assign('foodList',$foodList); 
+
+        $foodModel=M("foods");
+        $publish=$foodModel->where(array('publish_name'=>$username))->limit(1,5)->order("food_public_time desc")->select();
+
+        $this->assign("publish",$publish);
         $this->display();
     }
     public function reset_information(){
@@ -93,7 +98,17 @@ class UsersController extends Controller {
             echo "取消失败!";
         }
     }
-
+    function quitpublish(){
+        $data["id"]=I("post.id");
+        $data["publish_name"]=I("post.publish_name");
+        $model=M("foods");
+        if($model->where($data)->delete()){
+            echo "取消成功!";
+        }
+        else{
+            echo "取消失败!";
+        }
+    }
     public function content(){
       $model=M("foods");
       $id = isset($_GET['id']) ? intval($_GET['id']) : '';

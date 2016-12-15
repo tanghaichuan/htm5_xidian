@@ -185,7 +185,7 @@ img{
 }
 
 #shopping_list{
-	padding: 0px 10px;
+	padding: 0px 40px;
 }
 .thumbnail .shopping_pic{
 	width: 100%;
@@ -219,7 +219,7 @@ img{
   display: inline-block;
   position: relative;
   top: -33px;
-  left: 90px;
+  left: 80px;
   font-size: 26px;
   font-size: 1.625rem;
   text-decoration: none;

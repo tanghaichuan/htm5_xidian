@@ -1,0 +1,23 @@
+@charset "utf-8";
+.clertfix a,img{border:0;}
+em{font-style:normal;}
+.clertfix a,a:visited,a:hover,a:active,a:link{text-decoration:none;}
+/* tag */
+.default-tag a,.default-tag a span{background:url(../images/tagbg.png) no-repeat;}
+.tagbtn a{color:#333333;display:block;float:left;height:22px;line-height:22px;overflow:hidden;margin:0 10px 10px 0;padding:0 10px 0 5px;white-space:nowrap;}
+/* default-tag */
+.default-tag{padding:6px 0 0 0;}
+.default-tag a span{padding:0 0 0 11px;background-position:0 -60px;}
+
+.default-tag a:hover{background-position:100% -22px;}
+.default-tag a:hover span{background-position:0 -98px;} /*！*/
+
+#tag_span_click{
+	background-position:0 -98px;
+}
+#tag_a_click{
+	background-position:100% -22px;
+}
+
+
+

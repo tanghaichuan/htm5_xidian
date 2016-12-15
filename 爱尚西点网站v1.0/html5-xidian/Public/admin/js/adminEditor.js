@@ -10,7 +10,7 @@ $(function(){
 	$(".telphone").change(testTelphone);
 	$("#registerBtn").click(testDisable);
 	$("#inputNewPwd").change(testEditPwd);
-	$(":file").change(submit_upload_picture);
+	//$(":file").change(submit_upload_picture);
 	$("#inputTelphone").change(function(){
 		var str=$(this).val().trim("");
 		var tel_patten=/^1(3|4|5|7|8)\d{9}$/;

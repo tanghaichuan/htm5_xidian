@@ -34,11 +34,22 @@
 							<div class="form-group">
 								 <label for="inputFoodTag" class="col-xs-2 col-md-2 control-label">标签：</label>
 								<div class="col-xs-5 col-md-5">
-									<select class="form-control" id="inputFoodTag" name="tagname">
+									<input type="text" name="tags" id="postTag" style="display: none;">
+									<!--标签-->
+									<div id="mycard-plus">
+										<div class="default-tag tagbtn">
+											<div class="clearfix">
+												<volist name="tagList" id="n">
+													<a value="-1" title="选择一个标签" href="javascript:void(0);" class="addTag" rel="none"><span>{$n.tagname}</span><em></em></a>
+												</volist>
+											</div>
+										</div><!--mycard-plus end-->
+									</div>	
+									<!--<select class="form-control" id="inputFoodTag" name="tagname" multiple="multiple" size="2">
 									  <volist name="tagList" id="n">
-										<option>{$n.tagname}</option>
+										<option value="{$n.tagname}">{$n.tagname}</option>
 									  </volist>
-									</select>
+									</select>-->
 								</div>
 							</div>
 							<div class="form-group">
@@ -57,6 +68,12 @@
 								 <label for="inputFoodStep" class="col-xs-2 col-sm-2 control-label">步骤：</label>
 								<div class="col-xs-5 col-md-5">
 									<textarea class="form-control" id="inputFoodStep" rows="3" name="practice"></textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								 <label for="inputFoodStep" class="col-xs-2 col-sm-2 control-label">内容：</label>
+								<div class="col-xs-5 col-md-5">
+									<textarea class="form-control" id="inputFoodContent" rows="3" name="content"></textarea>
 								</div>
 							</div>
 							<div class="form-group">

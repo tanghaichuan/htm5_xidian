@@ -58,7 +58,8 @@ class PublicController extends Controller {
             //var_dump(I("post.tagname"));  
             //添加
             if($model->create()&&$model->add($data)){
-                $this->success('添加成功', U("public/index"));
+                //$this->success('添加成功', U("public/index"));
+                $this->redirect("public/index",0);
             }else{
                  $this->error('添加失败');
             }
@@ -91,7 +92,8 @@ class PublicController extends Controller {
                 //var_dump($id);  
                 //添加
                 if($model->save($data)){
-                    $this->success('修改成功', U('public/index'));
+                    //$this->success('修改成功', U('public/index'));
+                    $this->redirect("public/index",0);
                 }else{
                      $this->error('修改失败');
                 }

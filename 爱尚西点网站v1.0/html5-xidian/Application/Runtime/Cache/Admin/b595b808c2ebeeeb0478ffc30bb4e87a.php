@@ -2,13 +2,16 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>首页</title>
 	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/bootstrap.css">
 	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/bootstrap-theme.css">
 	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/adminStyle.css">
+	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/jq22.css">
 	<script src="/html5-xidian/Public/admin/js/jquery.js"></script>
 	<script src="/html5-xidian/Public/admin/js/bootstrap.js"></script>
 	<script src="/html5-xidian/Public/admin/js/adminEditor.js"></script>		
+	<script src="/html5-xidian/Public/admin/js/adminAjax.js"></script>
 </head>
 <body>
 	<div class="wrapper">
@@ -20,8 +23,7 @@
 			<div class="top-right">
 				<ul>
 					<li><a href="/html5-xidian/index.php/Admin/login/index.html">欢迎：<?php echo ($username); ?></a></li>
-					<li><a href="/html5-xidian/index.php/Admin/login/register.html">注册</a></li>
-					<li><a href="#">退出</a></li>
+					<li><a href="<?php echo U('Admin/adminUsers/quit');?>">退出</a></li>
 				</ul>
 			</div>
 		</div>
@@ -38,7 +40,7 @@
 		<!--content-->
 		<div class="row content">
 			<!--slide-nav-->
-			<div class="col-md-2 slideNav">
+			<div class="col-xs-2 col-md-2 slideNav">
 				<div class="panel-group" id="panel-320451">
 					<div class="panel">
 						<div class="panel-heading" >
@@ -145,96 +147,99 @@
 							<div class="panel-body">
 								<a href="/html5-xidian/index.php/Admin/public/index.html">美食推送</a>
 							</div>
+							<div class="panel-body">
+								<a href="/html5-xidian/index.php/Admin/public/add.html">添加推送</a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-10">
+			<div class="col-xs-10 col-md-10 middle">
 			
 				<!--breadcrumb-->
-				<div class="col-md-12 bread">
+				<div class="col-xs-12 col-md-12 bread">
 					<ul class="breadcrumb">
 						<li>
 							 <a href="/html5-xidian/index.php/Admin/index/index.html">首页</a>
 						</li>
 					</ul>
 				</div>
-				<div class="col-md-12 viewList">
-					<div class="col-md-6 view">
-						<div class="col-md-3">
-							<img src="/html5-xidian/Public/admin/images/admin.png" alt="" width="75px" height="60px">
+				<div class="col-xs-12 col-md-12 viewList">
+					<div class="col-xs-6 col-md-6 view">
+						<div class="col-xs-3 col-md-3">
+							<img src="/html5-xidian/Public/admin/images/admin.png" alt="" width="60px" height="60px">
 						</div>
-						<div class="col-md-9">
+						<div class="col-xs-9 col-md-9">
 							<h4>管理员管理</h4>
 							<p> 统一管理管理员账户，用于添加后台管理员及修改，删除管理员信息。</p>
 							<a href="/html5-xidian/index.php/Admin/adminUsers/index.html"><button>点击进入</button></a>
 						</div>
 					</div>
-					<div class="col-md-6 view">
-						<div class="col-md-3">
-							<img src="/html5-xidian/Public/admin/images/user.png" alt="" width="75px" height="60px">
+					<div class="col-xs-6 col-md-6 view">
+						<div class="col-xs-3 col-md-3">
+							<img src="/html5-xidian/Public/admin/images/user.png" alt="" width="60px" height="60px">
 						</div>
-						<div class="col-md-9">
+						<div class="col-xs-9 col-md-9">
 							<h4>用户管理</h4>
 							<p>  同一管理管理员账户，可以添加删除或者修改用户信息。</p>
 							<a href="/html5-xidian/index.php/Admin/user/index.html"><button>点击进入</button></a>
 						</div>
 					</div>
-					<div class="col-md-6 view">
-						<div class="col-md-3">
+					<div class="col-xs-6 col-md-6 view">
+						<div class="col-xs-3 col-md-3">
 							<img src="/html5-xidian/Public/admin/images/foodmanage.png" alt="" width="75px" height="60px">
 						</div>
-						<div class="col-md-9">
+						<div class="col-xs-9 col-md-9">
 							<h4>美食管理</h4>
 							<p> 统一管理美食信息，可以添加美食图片，食材，步骤，并进行修改删除</p>
 							<a href="/html5-xidian/index.php/Admin/food/index.html"><button>点击进入</button></a>
 						</div>
 					</div>
-					<div class="col-md-6 view">
-						<div class="col-md-3">
+					<div class="col-xs-6 col-md-6 view">
+						<div class="col-xs-3 col-md-3">
 							<img src="/html5-xidian/Public/admin/images/shopmanage.png" alt="" width="75px" height="60px">
 						</div>
-						<div class="col-md-9">
+						<div class="col-xs-9 col-md-9">
 							<h4>商城管理</h4>
 							<p>  统一管理商城信息，可以对商城的食材和用具相关信息进行修改、删除，并上传美食信息。</p>
 							<a href="/html5-xidian/index.php/Admin/shop/index.html"><button>点击进入</button></a>
 						</div>
 					</div>
-					<div class="col-md-6 view">
-						<div class="col-md-3">
+					<div class="col-xs-6 col-md-6 view">
+						<div class="col-xs-3 col-md-3">
 							<img src="/html5-xidian/Public/admin/images/tagmanage.png" alt="" width="75px" height="60px">
 						</div>
-						<div class="col-md-9">
+						<div class="col-xs-9 col-md-9">
 							<h4>标签管理</h4>
 							<p> 可以根据美食信息添加可供用户选择的标签，并且可以修改删除标签。</p>
 							<a href="/html5-xidian/index.php/Admin/tag/index.html"><button>点击进入</button></a>
 						</div>
 					</div>
-					<div class="col-md-6 view">
-						<div class="col-md-3">
+					<div class="col-xs-6 col-md-6 view">
+						<div class="col-xs-3 col-md-3">
 							<img src="/html5-xidian/Public/admin/images/favoritemanage.png" alt="" width="75px" height="60px">
 						</div>
-						<div class="col-md-9">
+						<div class="col-xs-9 col-md-9">
 							<h4>收藏夹管理</h4>
 							<p>  统一管理用户在收藏夹中添加的美食信息，可以进行修改或者删除操作。</p>
 							<a href="/html5-xidian/index.php/Admin/favorite/index.html"><button>点击进入</button></a>
 						</div>
 					</div>
-					<div class="col-md-6 view">
-						<div class="col-md-3">
+					<div class="col-xs-6 col-md-6 view">
+						<div class="col-xs-3 col-md-3">
 							<img src="/html5-xidian/Public/admin/images/cartmanage.png" alt="" width="75px" height="60px">
 						</div>
-						<div class="col-md-9">
+						<div class="col-xs-9 col-md-9">
 							<h4>购物车管理</h4>
 							<p>  统一用户在购物车中添加的美食信息，可以进行修改或者删除操作。</p>
 							<a href="/html5-xidian/index.php/Admin/cart/index.html"><button>点击进入</button></a>
 						</div>
 					</div>
-					<div class="col-md-6 view">
-						<div class="col-md-3">
+					<div class="col-xs-6 col-md-6 view">
+						<div class="col-xs-3 col-md-3">
 							<img src="/html5-xidian/Public/admin/images/foodpublic.png" alt="" width="75px" height="60px">
 						</div>
-						<div class="col-md-9">
+						<div class="col-xs-9 col-md-9">
 							<h4>美食推送</h4>
 							<p>  添加用于在网站首页显示的美食信息，可以上传图片等信息。</p>
 							<a href="/html5-xidian/index.php/Admin/public/index.html"><button>点击进入</button></a>

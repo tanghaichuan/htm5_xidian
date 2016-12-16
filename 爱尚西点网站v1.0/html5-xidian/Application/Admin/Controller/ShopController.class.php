@@ -54,7 +54,8 @@ class ShopController extends Controller {
 				//var_dump($data);
 				//添加
 				if($model->add($data)){
-					$this->success('美食添加成功', 'index');
+					//$this->success('美食添加成功', 'index');
+					$this->redirect("shop/index",0);
 				}else{
 					$this->error('美食添加失败');
 				}
@@ -97,7 +98,8 @@ class ShopController extends Controller {
 				//var_dump();
 				//添加
 				if($model->save($data)){
-					$this->success('数据修改成功', U('Admin/shop/index'));
+					//$this->success('数据修改成功', U('Admin/shop/index'));
+					$this->redirect("Admin/shop/index",0);
 				}else{
 					$this->error('数据修改失败');
 				}

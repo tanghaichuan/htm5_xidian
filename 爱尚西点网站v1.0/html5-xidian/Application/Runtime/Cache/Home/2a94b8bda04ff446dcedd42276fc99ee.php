@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <meta charset="utf-8">
     <link rel="stylesheet" href="/html5-xidian/Public/home/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/html5-xidian/Public/home/css/animation.css">
+    <link rel="stylesheet" media="screen and (max-width:1024px)" href="/html5-xidian/Public/home/css/medium.css" type="text/css" />
+    <link rel="stylesheet" media="screen and (min-width:1025px)" href="/html5-xidian/Public/home/css/large.css" type="text/css" />
     <script src="/html5-xidian/Public/home/js/jquery.js"></script>    
     <script src="/html5-xidian/Public/home/js/bootstrap.min.js"></script>
     <script src="/html5-xidian/Public/home/js/homeEdit.js"></script>
-    <style type="text/css">
-      *{
-        font-family: "微软雅黑";
-      }
-    </style>
+    <script src="/html5-xidian/Public/home/js/animation.js"></script>
+    <link rel="stylesheet" href="/html5-xidian/Public/home/css/awesomplete.css" />
+<script src="/html5-xidian/Public/home/js/awesomplete.js"></script>
   </head>
   <body>
   <!--页头-->
-  <div class="header" style="height: 50px;">
-    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="background-color: white;">
+  <div class="header" style="height: 50px;overflow: hidden;">
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="background-color: white;overflow: hidden;">
       <div class="navbar-header">
          <a href="#"><img src="/html5-xidian/Public/home/images/logo1.png"></a>
       </div>
@@ -29,12 +30,19 @@
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right" >
-          <li>
-            <a href="/html5-xidian/home.php/Home/login/index.html" style="padding: 15px 10px 15px 0px;" id="isLogin">登录</a>
-          </li>
-          <li>
-            <a href="/html5-xidian/home.php/Home/login/register.html" style="padding: 15px 50px 15px 0px;">注册</a>
-          </li>
+          <?php if(!empty($username)): ?><li>
+                <a href="/html5-xidian/home.php/Home/login/index.html" style="padding: 15px 10px 15px 0px;" id="isLogin">欢迎：<?php echo ($username); ?></a>
+              </li>
+              <li>
+                <a href="/html5-xidian/home.php/Home/login/quit" style="padding: 15px 50px 15px 0px;">退出</a>
+              </li>
+            <?php else: ?> 
+                <li>
+                  <a href="/html5-xidian/home.php/Home/login/index.html" style="padding: 15px 10px 15px 0px;" id="isLogin">登录</a>
+                </li>
+                <li>
+                  <a href="/html5-xidian/home.php/Home/login/register.html" style="padding: 15px 50px 15px 0px;">注册</a>
+                </li><?php endif; ?>
         </ul>
       </div>
     </nav>
@@ -53,7 +61,7 @@
             </li>
            <li class="dropdown">
                <a href="/html5-xidian/home.php/Home/food/french_cate.html" class="dropdown-toggle">美食鉴赏</a>
-              <ul class="dropdown-menu" style="text-align: right;min-width: 100px;">
+              <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
                 <li>
                    <a href="/html5-xidian/home.php/Home/food/french_cate.html">法式菜肴</a>
                 </li>
@@ -73,18 +81,18 @@
               </ul>
             </li>
             <li class="dropdown">
-               <a href="/html5-xidian/home.php/Home/PUBLIC/index.html" class="dropdown-toggle">美食DIY</a>
-              <ul class="dropdown-menu" style="text-align: right;min-width: 100px;">
+               <a href="/html5-xidian/home.php/Home/publish/index.html" class="dropdown-toggle">美食DIY</a>
+              <ul class="dropdown-menu" style="text-align: center;min-width: 82.68px;">
          
                 <li>
-                   <a href="/html5-xidian/home.php/Home/PUBLIC/index.html">发布美食</a>
+                   <a href="/html5-xidian/home.php/Home/publish/index.html">发布美食</a>
                 </li>
 
               </ul>
             </li>
            <li class="dropdown">
                <a href="/html5-xidian/home.php/Home/shop/index.html" class="dropdown-toggle">食材商城</a>
-              <ul class="dropdown-menu" style="text-align: right;min-width: 100px;">
+              <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
                 <li>
                    <a href="/html5-xidian/home.php/Home/shop/index.html">用具</a>
                 </li>
@@ -96,7 +104,7 @@
             </li>
           <li class="dropdown">
                <a href="/html5-xidian/home.php/Home/users/index.html" class="dropdown-toggle">个人中心</a>
-              <ul class="dropdown-menu" style="text-align: right;min-width: 100px;">
+              <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
                 <li>
                    <a href="/html5-xidian/home.php/Home/users/reset_information.html">修改信息</a>
                 </li>
@@ -105,7 +113,7 @@
                    <a href="/html5-xidian/home.php/Home/users/reset_password.html">修改密码</a>
                 </li>
                  <li>
-                   <a href="/html5-xidian/home.php/Home/cart/index.html">我的购物车</a>
+                   <a href="/html5-xidian/home.php/Home/cart/index.html">购物车</a>
                 </li>
               </ul>
             </li>
@@ -114,9 +122,10 @@
             </li>
             <li>
               <form class="navbar-form navbar-left" role="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" />
-                </div>
+                <input class="awesomplete" data-list="#mylist" />
+                   <ul id="mylist" style="display:none">
+                      <?php if(is_array($tagList)): $i = 0; $__LIST__ = $tagList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><li><?php echo ($n["tagname"]); ?></li><?php endforeach; endif; else: echo "" ;endif; ?>
+                   </ul>             
                 <button type="submit" class="btn btn-default">搜索</button>
               </form>
             </li>
@@ -138,35 +147,35 @@
           <div class="carousel-inner">
             <div class="item active"
             >
-              <img alt="" src="/html5-xidian/Public/home/images/home_banner1.jpg"/>
+              <img alt="" src="/html5-xidian/Public/<?php echo ($lists[0]["img"]); ?>"/>
             </div>
             <div class="item">
-              <img alt="" src="/html5-xidian/Public/home/images/home_banner2.jpg"/>
+              <img alt="" src="/html5-xidian/Public/<?php echo ($lists[1]["img"]); ?>"/>
             </div>
             <div class="item">
-              <img alt="" src="/html5-xidian/Public/home/images/home_banner3.jpg"/>
+              <img alt="" src="/html5-xidian/Public/<?php echo ($lists[2]["img"]); ?>"/>
             </div>
-          </div> <a class="left carousel-control" href="#carousel-188560" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-188560" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+          </div> <a class="left carousel-control" href="#carousel-188560" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" style="overflow: hidden;"></span></a> <a class="right carousel-control" href="#carousel-188560" data-slide="next"><span class="glyphicon glyphicon-chevron-right" style="overflow: hidden;"></span></a>
         </div>
       </div>
 
       <!--各式餐点-->
       <div class="row clearfix" style="padding: 0px 25px;">
         <div class="col-md-3 column" style="padding: 0px;">
-          <a href="/html5-xidian/home.php/Home/food/french_cate.html"><img src="/html5-xidian/Public/home/images/home_pic1.jpg"></a>
-          <a href="#"><img src="/html5-xidian/Public/home/images/wbg2.png" style="position: relative;z-index: 1"></a>
-          <span style="position: absolute; top: 360px; left: 0px;z-index: 1;line-height: 170%;padding: 0px 20px;">
-            <h3>意氏西餐</h3>
-            &nbsp;&nbsp;有人问西餐之母是哪国菜？大部分人会说是法国菜，现在郑重地告诉大家，西餐之母是意大利菜！意大利菜系非常丰富，菜品成千上万，除了大家耳熟能详的比萨饼和意大利粉，它的海鲜和甜品都闻名遐迩。源远流长的意大利餐，对欧美国家的餐饮产生了深厚影响，并发展出包括法餐、美国餐在内的多种派系，故有“西餐之母”之美称。
+          <a href="/html5-xidian/home.php/Home/food/french_cate.html"><img src="/html5-xidian/Public/home/images/home_pic6.jpg" id="animatorfrench" class="animationfrench"></a>
+          <a href="#"><img src="/html5-xidian/Public/home/images/wbg2.png" class="wbg2"></a>
+          <span id="italy_introduce">
+            <h3 style="overflow: hidden;">意氏西餐</h3>
+            &nbsp;&nbsp;有人问西餐之母是哪国菜？大部分人会说是法国菜，现在郑重地告诉大家，西餐之母是意大利菜！源远流长的意大利餐，对欧美国家的餐饮产生了深厚影响，并发展出多种派系，故有“西餐之母”之美称。
           </span> 
         </div>
         <div class="col-md-3 column" style="padding: 0px;">
-          <a href="#"><img src="/html5-xidian/Public/home/images/wbg1.png" style="position: relative;left: -15px;"></a>
-          <span style="position: absolute; top: 30px; left: 0px;z-index: 1;line-height: 170%;padding: 0px 20px;">
-            <h3>法氏西餐</h3>
-            &nbsp;&nbsp;法国不仅是浪漫之国,也是美食美酒的天堂。法国菜是世界上著名菜系之一，已为众所公认。它的口感之细腻、酱料之美味、餐具摆设之华美，简直可称之为一种艺术。 法国的烹饪技术一向著称于世界。法国菜不仅美味可口，而且菜肴的种类很多，烹调方法也有独到之处。
+          <a href="#"><img src="/html5-xidian/Public/home/images/wbg1.png" class="wbg1"></a>
+          <span id="french_introduce">
+            <h3 style="overflow: hidden;">法氏西餐</h3>
+            &nbsp;&nbsp;法国不仅是浪漫之国,也是美食美酒的天堂。法国菜是世界上著名菜系之一，已为众所公认。它的口感之细腻、酱料之美味、餐具摆设之华美，简直可称之为一种艺术。
           </span>
-          <a href="/html5-xidian/home.php/Home/food/italy_cate.html"><img src="/html5-xidian/Public/home/images/home_pic1.jpg"></a>
+          <a href="/html5-xidian/home.php/Home/food/italy_cate.html"><img src="/html5-xidian/Public/home/images/home_pic5.jpg" id="animatoritaly" class="animationitaly"></a>
         </div>
         <div class="col-md-6 column" style="padding: 0px;">
           <a href="#"><img src="/html5-xidian/Public/home/images/home_pic3.jpg"></a>
@@ -177,50 +186,36 @@
           <a href="#"><img src="/html5-xidian/Public/home/images/home_pic2.jpg"></a>
         </div>
         <div class="col-md-3 column" style="padding: 0px;">
-          <a href="/html5-xidian/home.php/Home/food/uk_cate.html"><img src="/html5-xidian/Public/home/images/home_pic1.jpg"></a>
-          <a href="#"><img src="/html5-xidian/Public/home/images/wbg2.png" style="position: relative;z-index: 1"></a>
-          <span style="position: absolute; top: 360px; left: 0px;z-index: 1;line-height: 170%;padding: 0px 20px;">
-            <h3>俄氏西餐</h3>
-            &nbsp;&nbsp;俄罗斯菜肴特点为选料广泛、讲究制作、加工精细、因料施技、讲究色泽、味道多样、适应性强、油大、味重。作为一个地跨欧亚大陆的世界上领土面积最大的国家，虽然俄罗斯在亚洲的领土非常辽阔，但由于其绝大部分居民居住在欧洲部分，因而其饮食文化更多地接受了欧洲大陆的影响，呈现出欧洲大陆饮食文化的基本特征，但由于特殊的地理环境、人文环境以及独特的历史发展进程，也造就了独具特色的俄罗斯饮食文化。
+          <a href="/html5-xidian/home.php/Home/food/uk_cate.html"><img src="/html5-xidian/Public/home/images/home_pic4.jpg" id="animatoruk" class="animationuk"></a>
+          <a href="#"><img src="/html5-xidian/Public/home/images/wbg2.png" class="wbg2"></a>
+          <span id="russian_introduce">
+            <h3 style="overflow: hidden;">俄氏西餐</h3>
+            &nbsp;&nbsp;俄罗斯菜肴特点为选料广泛、讲究制作、加工精细、因料施技、讲究色泽、味道多样、适应性强、油大、味重。由于其特殊的地理环境、人文环境以及独特的历史发展进程，从而造就了独具特色的俄罗斯饮食文化。
           </span>
         </div>
         <div class="col-md-3 column" style="padding: 0px;">
-          <a href="#"><img src="/html5-xidian/Public/home/images/wbg1.png" style="position: relative;left: -15px;"></a>
-            <span style="position: absolute; top: 30px; left: 0px;z-index: 1;line-height: 170%;padding: 0px 20px;">
-            <h3>英氏西餐</h3>
-            &nbsp;&nbsp;英国菜可以用一个词来形容——“Simple”（简单）。吃英国菜就是在恋爱,味道与爱情,都是自己选择的。并非是用舌头来评判味道,而是用心。英国的饮食文化里，英国菜是很丰富的，人体说需要的各种营养都会从这些不同的食物中得到满足。英国菜的烹调对原料的取舍不多，一般用单一的原料制作，要求厨师不加配料，要保持菜式的原汁原味。
+          <a href="#"><img src="/html5-xidian/Public/home/images/wbg1.png" class="wbg1"></a>
+            <span id="uk_introduce">
+            <h3 style="overflow: hidden;">英氏西餐</h3>
+            &nbsp;&nbsp;英国菜可以用一个词来形容——“Simple”（简单）。吃英国菜就是在恋爱,味道与爱情,都是自己选择的。并非是用舌头来评判味道,而是用心。英国菜的烹调对原料的取舍不多，尽量保持菜式的原汁原味。
           </span>
-          <a href="/html5-xidian/home.php/Home/food/russian_cate.html"><img src="/html5-xidian/Public/home/images/home_pic1.jpg"></a>
+          <a href="/html5-xidian/home.php/Home/food/russian_cate.html"><img src="/html5-xidian/Public/home/images/home_pic1.jpg" id="animatorrussion" class="animationrussion"></a>
         </div>
       </div>
     </div>
 
   <!--页脚-->
     <div class="footer">
-      <div class="row clearfix">
-        <div class="col-md-6 column">
-        </div>
-        <div class="col-md-3 column">
-        </div>
-        <div class="col-md-3 column">
-        </div>
-      </div>
-      <div class="row clearfix" style="padding: 30px 30px 10px 30px;">
-        <div class="col-md-3 column" style="padding: 0px 10px 0px 70px;border-right: 1px solid #C0C0C0;">
+      <div class="row clearfix" id="footer_padding">
+        <div class="col-md-3 column" id="qrc">
           <a href="#"><img src="/html5-xidian/Public/home/images/qrc.jpg"></a>
         </div>
-        <div class="col-md-5 column" style="padding: 0px 50px;line-height: 260%;">
-        </br>
-          <p>爱尚美食，西餐美食菜谱分享网站。850000道菜谱，625000条美食日记，7500000位美食达人，每天都有新分享，拥有最实用的美食、菜谱、食谱的做法，同是还有聚餐百万美食爱好者的美食家社区，欢迎加入！</p>
+        <div class="col-md-5 column" id="footer_introduce">
+          <p>爱尚美食，西餐美食菜谱分享网站。每天都有新分享，拥有最实用的美食、菜谱、食谱的做法，同是还有聚餐百万美食爱好者的美食家社区，欢迎加入！</p>
         </div>
-        <div class="col-md-4 column" style="padding: 10px 20px;">
-        </br>
-          <p style="line-height: 260%;">联系方式：xxxx</br>邮箱：xxxx</br>地址：xxxx</br></p>
+        <div class="col-md-4 column" id="footer_contact">
+          <p>联系方式：15800000000</br>邮箱：aishangxidian@163.com</br>地址：河北省石家庄市裕华区南二环东路20号</br></p>
         </div>
-      </div>
-
-      <div style="border-top: 1px solid #C0C0C0;border-bottom: 1px solid #C0C0C0;text-align: center;">
-        <a>Home</a> | <a>About</a> | <a>Service</a> | <a>Products</a> | <a>Contact</a>
       </div>
     </div>
   </div>

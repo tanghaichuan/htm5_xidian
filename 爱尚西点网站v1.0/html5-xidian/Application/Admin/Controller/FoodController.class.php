@@ -70,7 +70,8 @@ class FoodController extends Controller {
             //var_dump(I("post.tagname"));  
             //添加
             if($model->create()&&$model->add($data)&&$tag_rela_Model->addAll($tagData)){
-                $this->success('添加成功', U("food/add"));
+                //$this->success('添加成功', U("food/add"));
+                $this->redirect("food/add",0);
             }else{
                  $this->error('添加失败');
             }
@@ -98,7 +99,9 @@ class FoodController extends Controller {
                 //var_dump($id);  
                 //添加
                 if($model->save($data)){
-                    $this->success('修改成功', U('food/index'));
+                    //$this->success('修改成功', U('food/index'));
+                    $this->redirect("food/add",0);
+
                 }else{
                      $this->error('修改失败');
                 }
@@ -145,12 +148,12 @@ class FoodController extends Controller {
         import('Org.Util.Page');
         $count = $model->count();
         //实例化分页类，传入总记录数和每一页显示的记录数8
-        $page = new \Think\Page($count,15);
+        $page = new \Think\Page($count,12);
         $nowPage = isset($_GET['p'])?intval($_GET['p']):1;
         $page -> setConfig('first','第一页');
         $page -> setConfig('prev','<<');
         $page -> setConfig('next','>>');
-        $foodList = $model -> order('id desc') -> page($nowPage.',15') -> select();
+        $foodList = $model -> order('id desc') -> page($nowPage.',12') -> select();
         $show = $page -> show();
         $this->assign("comment",$comment);
         $this->assign("food",$food);
@@ -161,7 +164,8 @@ class FoodController extends Controller {
     public function delComment(){
         $id = isset($_GET['id']) ? intval($_GET['id']) : '';
         if(M("comment")->where(array('id'=>$id))->delete()){
-            $this->success("删除成功!",U('food/comment'));
+            //$this->success("删除成功!",U('food/comment'));
+            $this->redirect("food/comment",0);
         }
         else{
             $this->error("删除失败!");

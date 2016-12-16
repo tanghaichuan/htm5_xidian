@@ -2,13 +2,16 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>首页</title>
 	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/bootstrap.css">
 	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/bootstrap-theme.css">
 	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/adminStyle.css">
+	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/jq22.css">
 	<script src="/html5-xidian/Public/admin/js/jquery.js"></script>
 	<script src="/html5-xidian/Public/admin/js/bootstrap.js"></script>
 	<script src="/html5-xidian/Public/admin/js/adminEditor.js"></script>		
+	<script src="/html5-xidian/Public/admin/js/adminAjax.js"></script>
 </head>
 <body>
 	<div class="wrapper">
@@ -20,8 +23,7 @@
 			<div class="top-right">
 				<ul>
 					<li><a href="/html5-xidian/index.php/Admin/login/index.html">欢迎：<?php echo ($username); ?></a></li>
-					<li><a href="/html5-xidian/index.php/Admin/login/register.html">注册</a></li>
-					<li><a href="#">退出</a></li>
+					<li><a href="<?php echo U('Admin/adminUsers/quit');?>">退出</a></li>
 				</ul>
 			</div>
 		</div>
@@ -38,7 +40,7 @@
 		<!--content-->
 		<div class="row content">
 			<!--slide-nav-->
-			<div class="col-md-2 slideNav">
+			<div class="col-xs-2 col-md-2 slideNav">
 				<div class="panel-group" id="panel-320451">
 					<div class="panel">
 						<div class="panel-heading" >
@@ -145,11 +147,14 @@
 							<div class="panel-body">
 								<a href="/html5-xidian/index.php/Admin/public/index.html">美食推送</a>
 							</div>
+							<div class="panel-body">
+								<a href="/html5-xidian/index.php/Admin/public/add.html">添加推送</a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-10">
+			<div class="col-xs-10 col-md-10 middle">
 			
 				<!--breadcrumb-->
 				<div class="col-md-12 bread">
@@ -174,46 +179,46 @@
 					<div class="col-md-12">
 						<form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
 							<div class="form-group">
-								<label for="inputRadio" class="col-md-3 control-label" style="width: 120px;">选择商品类型：</label>
-								<div class="col-md-3">
+								<label for="inputRadio" class="col-xs-3 col-md-3 control-label" style="width: 120px;">选择商品类型：</label>
+								<div class="col-xs-3 col-md-3">
 									<label for="" class="shopRadio"><input type="radio" id="inputUserName" value="食材" name="classify" />食材</label>
 									<label for="" class="shopRadio"><input type="radio"  id="inputUserName" value="用具" name="classify" />用具</label>
 								</div>
 							</div>
 							<div class="form-group">
-								 <label for="inputGoodsName" class="col-md-2 control-label">商品名：</label>
-								<div class="col-md-3">
+								 <label for="inputGoodsName" class="col-xs-2 col-md-2 control-label">商品名：</label>
+								<div class="col-xs-5 col-md-5">
 									<input type="text" class="form-control" id="inputGoodsName" name="name" />
 								</div>
 							</div>
 							<div class="form-group">
-								 <label for="inputGoodsInfo" class="col-sm-2 control-label">详细信息：</label>
-								<div class="col-sm-3">
+								 <label for="inputGoodsInfo" class="col-xs-2 col-sm-2 control-label">详细信息：</label>
+								<div class="col-xs-5 col-md-5">
 									<textarea class="form-control" id="inputGoodsInfo" rows="3" name="content"></textarea>
 								</div>
 							</div>
 							<div class="form-group">
-								 <label for="inputGoodsPrice" class="col-sm-2 control-label">数量(份)：</label>
-								<div class="col-sm-3">
+								 <label for="inputGoodsPrice" class="col-xs-2 col-sm-2 control-label">数量(份)：</label>
+								<div class="col-xs-5 col-md-5">
 									<input type="text" class="form-control" id="inputGoodsPrice
 									" name="num" />
 								</div>
 							</div>
 							<div class="form-group">
-								 <label for="inputGoodsPrice" class="col-sm-2 control-label">价格(元)：</label>
-								<div class="col-sm-3">
+								 <label for="inputGoodsPrice" class="col-xs-2 col-sm-2 control-label">价格(元)：</label>
+								<div class="col-xs-5 col-md-5">
 									<input type="text" class="form-control" id="inputGoodsPrice
 									" name="price" />
 								</div>
 							</div>
 							<div class="form-group">
-								 <label for="inputGoodsImg" class="col-sm-2 control-label">商品图片：</label>
-								<div class="col-sm-3">
+								 <label for="inputGoodsImg" class="col-xs-2 col-sm-2 control-label">商品图片：</label>
+								<div class="col-xs-5 col-md-5">
 									<input type="file" id="inputGoodsImg" class="form-control" name="img">
 								</div>
 							</div>
 							<div class="form-group">
-								<div class="col-sm-3">
+								<div class="col-xs-3 col-sm-3">
 									 <button type="submit" class="btn">添加</button>
 								</div>
 							</div>

@@ -34,7 +34,8 @@ class AdminUsersController extends Controller {
         if(IS_POST){
             $model=D("adminUsers");
             if($model->create()&&$model->add()){
-                $this->success("添加成功！", U('Admin/adminUsers/index'),0);
+                //$this->success("添加成功！", U('Admin/adminUsers/index'),0);
+                $this->redirect("adminUsers/index",0);
             }
             else{
                 $this->error("添加失败！");
@@ -55,7 +56,8 @@ class AdminUsersController extends Controller {
                 "telphone"=>I("post.telphone")
             );
             if($model->create()&&$model->save($data)){
-                $this->success("修改成功！",U("adminUsers/index"),0);
+                //$this->success("修改成功！",U("adminUsers/index"),0);
+                $this->redirect("adminUsers/index",0);
             }
             else{
                 $this->error("修改失败！");
@@ -86,7 +88,8 @@ class AdminUsersController extends Controller {
                 );
                 if($model->save($id)){
                     session('password',I('post.newPwd','','md5'));
-                    $this->success("修改成功", U("Admin/login/index"));
+                    //$this->success("修改成功", U("Admin/login/index"));
+                    $this->redirect("Admin/login/index",0);
                 }
                 else{ 
                     $this->error("修改失败！");
@@ -111,6 +114,15 @@ class AdminUsersController extends Controller {
             $this->error("删除失败！");
         }
     }
+    public function quit(){
+        if(session_destroy()){
+            //$this->success("退出成功！",U("Admin/login/index"));
+            $this->redirect("Admin/login/index",0);
+        }
+        else{
+            $this->error("请先登录！");
+        }
+    } 
 
     public function username_unique(){
         $adminModel=M("admin_users");

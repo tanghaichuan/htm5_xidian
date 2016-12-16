@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <meta charset="utf-8">
     <link rel="stylesheet" href="/html5-xidian/Public/home/css/bootstrap.min.css">
+    <link rel="stylesheet" media="screen and (max-width:1024px)" href="/html5-xidian/Public/home/css/medium.css" type="text/css" />
+    <link rel="stylesheet" media="screen and (min-width:1025px)" href="/html5-xidian/Public/home/css/large.css" type="text/css" />
+    <link rel="stylesheet" href="/html5-xidian/Public/home/css/userEdit.css">
     <script src="/html5-xidian/Public/home/js/jquery.js"></script>    
     <script src="/html5-xidian/Public/home/js/bootstrap.min.js"></script>
     <script src="/html5-xidian/Public/home/js/homeEdit.js"></script>
-    <style type="text/css">
-      *{
-        font-family: "微软雅黑";
-      }
-    </style>
   </head>
   <body>
   <!--页头-->
@@ -29,12 +27,19 @@
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right" >
-          <li>
-            <a href="/html5-xidian/home.php/Home/login/register.html" style="padding: 15px 10px 15px 0px;">注册</a>
-          </li>
-          <li>
-            <a href="/html5-xidian/home.php/Home/login/login.html" style="padding: 15px 50px 15px 0px;">登录</a>
-          </li>
+          <?php if(!empty($username)): ?><li>
+                <a href="/html5-xidian/home.php/Home/login/index.html" style="padding: 15px 10px 15px 0px;" id="isLogin">欢迎：<?php echo ($username); ?></a>
+              </li>
+              <li>
+                <a href="/html5-xidian/home.php/Home/login/quit" style="padding: 15px 50px 15px 0px;">退出</a>
+              </li>
+            <?php else: ?> 
+                <li>
+                  <a href="/html5-xidian/home.php/Home/login/index.html" style="padding: 15px 10px 15px 0px;" id="isLogin">登录</a>
+                </li>
+                <li>
+                  <a href="/html5-xidian/home.php/Home/login/register.html" style="padding: 15px 50px 15px 0px;">注册</a>
+                </li><?php endif; ?>
         </ul>
       </div>
     </nav>
@@ -53,7 +58,7 @@
             </li>
            <li class="dropdown">
                <a href="/html5-xidian/home.php/Home/food/french_cate.html" class="dropdown-toggle">美食鉴赏</a>
-              <ul class="dropdown-menu" style="text-align: right;min-width: 100px;">
+              <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
                 <li>
                    <a href="/html5-xidian/home.php/Home/food/french_cate.html">法式菜肴</a>
                 </li>
@@ -73,18 +78,18 @@
               </ul>
             </li>
             <li class="dropdown">
-               <a href="/html5-xidian/home.php/Home/public/public.html" class="dropdown-toggle">美食DIY</a>
-              <ul class="dropdown-menu" style="text-align: right;min-width: 100px;">
+               <a href="/html5-xidian/home.php/Home/publish/index.html" class="dropdown-toggle">美食DIY</a>
+              <ul class="dropdown-menu" style="text-align: center;min-width: 82.68px;">
          
                 <li>
-                   <a href="/html5-xidian/home.php/Home/public/public.html">发布美食</a>
+                   <a href="/html5-xidian/home.php/Home/publish/index.html">发布美食</a>
                 </li>
 
               </ul>
             </li>
            <li class="dropdown">
                <a href="/html5-xidian/home.php/Home/shop/list.html" class="dropdown-toggle">食材商城</a>
-              <ul class="dropdown-menu" style="text-align: right;min-width: 100px;">
+              <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
                 <li>
                    <a href="/html5-xidian/home.php/Home/shop/list.html">用具</a>
                 </li>
@@ -96,7 +101,7 @@
             </li>
           <li class="dropdown">
                <a href="/html5-xidian/home.php/Home/users/index.html" class="dropdown-toggle">个人中心</a>
-              <ul class="dropdown-menu" style="text-align: right;min-width: 100px;">
+              <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
                 <li>
                    <a href="/html5-xidian/home.php/Home/users/reset_information.html">修改信息</a>
                 </li>
@@ -105,7 +110,7 @@
                    <a href="/html5-xidian/home.php/Home/users/reset_password.html">修改密码</a>
                 </li>
                  <li>
-                   <a href="/html5-xidian/home.php/Home/cart/cart.html">我的购物车</a>
+                   <a href="/html5-xidian/home.php/Home/cart/index.html">购物车</a>
                 </li>
               </ul>
             </li>
@@ -128,183 +133,101 @@
       <div style="padding: 0px 36px;">
         <img src="/html5-xidian/Public/home/images/personal_banner.jpg">
       </div>
-      <div style="position: absolute;top: 370px;left: 100px;">
+      <div id="avater">
         <img src="/html5-xidian/Public/home/images/avater.jpeg" class="img-circle" />
-        <b style="position: relative;top: 10px;left: 5px;">这里放昵称</b>
+        <b><?php echo ($username); ?></b>
       </div>
       <!---->
       <div class="row clearfix" style="padding: 40px 0px;">
-        <div class="col-md-3 column">
+
+        <div class="col-sm-2 col-xs-12 col-md-3 column">
            <ul style="list-style-type: none;text-align: center;font-size: 17px;">
              <li style="padding: 10px;background-color: #C0C0C0;">个人中心</li>
              <li style="padding: 10px;background-color: white;"><a href="/html5-xidian/home.php/Home/users/index.html">我的首页</a></li>
              <li style="padding: 10px;background-color: white;"><a href="/html5-xidian/home.php/Home/users/reset_information.html">修改信息</a></li>
              <li style="padding: 10px;background-color: white;"><a href="/html5-xidian/home.php/Home/users/reset_password.html">修改密码</a></li>
+             <li style="padding: 10px;background-color: white;"><a href="/html5-xidian/home.php/Home/cart/index.html">我的购物车</a></li>
            </ul>
         </div>
+
         <div class="col-md-9 column">
         <!--我的收藏-->
-          <div style="background-color: white;border-radius: 1px;margin: 0px 45px 0px 20px;height: 260px;">
+          <div id="collect_plate">
             <div style="padding: 15px 20px;">
-              <label style="font-size: 16px;">我的收藏</label>
+              <label style="font-size: 1.2em;">我的收藏</label>
             </div>
-            <div style="padding: 0px 20px;">
-              <div class="col-sm-2">
-                <img src="/html5-xidian/Public/home/images/personal_pic1.jpg">
-                <div style="padding: 3px 25px;">
-                  <h5>餐点</h5>
-                  <p>by&nbsp;作者</p>
-                </div>
-              </div>
-              <div class="col-sm-2">
-                <img src="/html5-xidian/Public/home/images/personal_pic1.jpg">
-                <div style="padding: 3px 25px;">
-                  <h5>餐点</h5>
-                  <p>by&nbsp;作者</p>
-                </div>
-              </div>
-              <div class="col-sm-2">
-                <img src="/html5-xidian/Public/home/images/personal_pic1.jpg">
-                <div style="padding: 3px 25px;">
-                  <h5>餐点</h5>
-                  <p>by&nbsp;作者</p>
-                </div>
-              </div>
-              <div class="col-sm-2">
-                <img src="/html5-xidian/Public/home/images/personal_pic1.jpg">
-                <div style="padding: 3px 25px;">
-                  <h5>餐点</h5>
-                  <p>by&nbsp;作者</p>
-                </div>
-              </div>
-              <div class="col-sm-2">
-                <img src="/html5-xidian/Public/home/images/personal_pic1.jpg">
-                <div style="padding: 3px 25px;">
-                  <h5>餐点</h5>
-                  <p>by&nbsp;作者</p>
-                </div>
-              </div>
-              <div class="col-sm-2">
-                <img src="/html5-xidian/Public/home/images/personal_pic1.jpg">
-                <div style="padding: 3px 25px;">
-                  <h5>餐点</h5>
-                  <p>by&nbsp;作者</p>
-                </div>
-              </div>
+
+            <div id="collect_list">
+              <?php if(is_array($foodList)): $i = 0; $__LIST__ = $foodList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><div class="col-sm-2">
+                  <div class="thumbnail">
+                    <a href="<?php echo U('Home/food/content',array('id'=>$n['id']));?>"><img src="/html5-xidian/Public/<?php echo ($n["img"]); ?>"></a>
+                    <div class="caption">
+                      <div class="collect_information">
+                        <h5><?php echo ($n["name"]); ?></h5>
+                        <p>by&nbsp;<?php echo ($n["publish_name"]); ?></p>
+                        <p class="quitFavor" name="<?php echo ($n["id"]); ?>" style="float: right;"><a href="">取消收藏</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div><?php endforeach; endif; else: echo "" ;endif; ?> 
             </div>
             </br>
+              <div id="collect_page">
+              <div align="right">
+                <ul class="pagination">
+                  <li><?php echo ($page); ?></li>
+                </ul>
+              </div>
+            </div>
           </div>
           </br>
-
+          
           <!--我的发布-->
-          <div style="background-color: white;border-radius: 1px;margin: 0px 45px 0px 20px;height: 260px;">
+          <div id="publish_plate">
             <div style="padding: 15px 20px;">
-              <label style="font-size: 16px;">我的发布</label>
+              <label style="font-size: 1.2em;">我的发布</label>
             </div>
-            <div style="padding: 0px 20px;">
-              <div class="col-sm-2">
-                <img src="/html5-xidian/Public/home/images/personal_pic1.jpg">
-                <div style="padding: 3px 25px;">
-                  <h5>餐点</h5>
-                  <p>by&nbsp;作者</p>
-                </div>
-              </div>
-              <div class="col-sm-2">
-                <img src="/html5-xidian/Public/home/images/personal_pic1.jpg">
-                <div style="padding: 3px 25px;">
-                  <h5>餐点</h5>
-                  <p>by&nbsp;作者</p>
-                </div>
-              </div>
-              <div class="col-sm-2">
-                <img src="/html5-xidian/Public/home/images/personal_pic1.jpg">
-                <div style="padding: 3px 25px;">
-                  <h5>餐点</h5>
-                  <p>by&nbsp;作者</p>
-                </div>
-              </div>
-              <div class="col-sm-2">
-                <img src="/html5-xidian/Public/home/images/personal_pic1.jpg">
-                <div style="padding: 3px 25px;">
-                  <h5>餐点</h5>
-                  <p>by&nbsp;作者</p>
-                </div>
-              </div>
-              <div class="col-sm-2">
-                <img src="/html5-xidian/Public/home/images/personal_pic1.jpg">
-                <div style="padding: 3px 25px;">
-                  <h5>餐点</h5>
-                  <p>by&nbsp;作者</p>
-                </div>
-              </div>
-              <div class="col-sm-2">
-                <img src="/html5-xidian/Public/home/images/personal_pic1.jpg">
-                <div style="padding: 3px 25px;">
-                  <h5>餐点</h5>
-                  <p>by&nbsp;作者</p>
-                </div>
-              </div>
+            <div id="publish_list">
+              
+              <?php if(is_array($publish)): $i = 0; $__LIST__ = $publish;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><div class="col-sm-2">
+                <div class="thumbnail">
+                  <a href="<?php echo U('Home/food/content',array('id'=>$n['id']));?>"><img src="/html5-xidian/Public/<?php echo ($n["img"]); ?>" /></a>
+                    <div class="caption">
+                      <div class="publish_information">
+                        <h5><?php echo ($n["name"]); ?></h5>
+                        <p>by&nbsp;<?php echo ($username); ?></p>
+                        <p><a href="javascript:void(0)" style="float: right;" class="quitPublish" name="<?php echo ($username); ?>" rel="<?php echo ($n["id"]); ?>">取消发布</a></p>
+                      </div>
+                    </div>
+                  </div>
+                </div><?php endforeach; endif; else: echo "" ;endif; ?>
+                          
             </div>
             </br>
+            <div id="publish_page">
+              <div align="right">
+                <ul class="pagination">
+                  
+                </ul>
+              </div>
+            </div>
           </div>
           </br>
-
-          <!--我的购物车-->
-          <div style="background-color: white;border-radius: 1px;margin: 0px 45px 0px 20px;height: 180px;">
-            <div style="padding: 15px 20px;">
-              <label style="font-size: 16px;">我的购物车</label>
-            </div>
-            <div style="padding: 0px 20px;">
-              <div class="col-sm-4">
-                <img src="/html5-xidian/Public/home/images/personal_pic2.jpg">
-                <div style="display: inline;">
-                  <b>【菲力牛排套装8份装】</b>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <img src="/html5-xidian/Public/home/images/personal_pic2.jpg">
-                <div style="display: inline;">
-                  <b>【菲力牛排套装8份装】</b>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                <img src="/html5-xidian/Public/home/images/personal_pic2.jpg">
-                <div style="display: inline;">
-                  <b>【菲力牛排套装8份装】</b>
-                </div>
-              </div>
-            </div>
-            </br>
-          </div>
-        </div>
+          </br>
       </div>
-
+      </br>
   <!--页脚-->
     <div class="footer">
-      <div class="row clearfix">
-        <div class="col-md-6 column">
-        </div>
-        <div class="col-md-3 column">
-        </div>
-        <div class="col-md-3 column">
-        </div>
-      </div>
-      <div class="row clearfix" style="padding: 30px 30px 10px 30px;">
-        <div class="col-md-3 column" style="padding: 0px 10px 0px 70px;border-right: 1px solid #C0C0C0;">
+      <div class="row clearfix" id="footer_padding">
+        <div class="col-md-3 column" id="qrc">
           <a href="#"><img src="/html5-xidian/Public/home/images/qrc.jpg"></a>
         </div>
-        <div class="col-md-5 column" style="padding: 0px 50px;line-height: 260%;">
-        </br>
-          <p>爱尚美食，西餐美食菜谱分享网站。850000道菜谱，625000条美食日记，7500000位美食达人，每天都有新分享，拥有最实用的美食、菜谱、食谱的做法，同是还有聚餐百万美食爱好者的美食家社区，欢迎加入！</p>
+        <div class="col-md-5 column" id="footer_introduce">
+          <p>爱尚美食，西餐美食菜谱分享网站。每天都有新分享，拥有最实用的美食、菜谱、食谱的做法，同是还有聚餐百万美食爱好者的美食家社区，欢迎加入！</p>
         </div>
-        <div class="col-md-4 column" style="padding: 10px 20px;">
-        </br>
-          <p style="line-height: 260%;">联系方式：xxxx</br>邮箱：xxxx</br>地址：xxxx</br></p>
+        <div class="col-md-4 column" id="footer_contact">
+          <p>联系方式：15800000000</br>邮箱：aishangxidian@163.com</br>地址：河北省石家庄市裕华区南二环东路20号</br></p>
         </div>
-      </div>
-
-      <div style="border-top: 1px solid #C0C0C0;border-bottom: 1px solid #C0C0C0;text-align: center;">
-        <a>Home</a> | <a>About</a> | <a>Service</a> | <a>Products</a> | <a>Contact</a>
       </div>
     </div>
   </div>

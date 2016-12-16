@@ -26,7 +26,8 @@ class LoginController extends Controller {
             session('uid',$user['id']);
             session('password',$user['password']);
             session('username',$user['username']);
-            $this->success("登录中...",U("index/index"));
+            //$this->success("登录中...",U("index/index"));
+            $this->redirect("index/index",0);
         }
     }
     public function register(){
@@ -35,7 +36,8 @@ class LoginController extends Controller {
     public function register_add(){
         $adminModel=D("PublicUsers");
         if ($adminModel->create() && $adminModel->add()) {
-            $this->success("注册成功！", U('Home/login/index'));
+            //$this->success("注册成功！", U('Home/login/index'));
+            $this->redirect("Home/login/index",0);
         }
         else {
             $this->error($adminModel->getError());
@@ -43,7 +45,8 @@ class LoginController extends Controller {
     }
     public function quit(){
         if(session_destroy()){
-            $this->success("退出成功！",U("Home/index/index"));
+            //$this->success("退出成功！",U("Home/login/index"));
+            $this->redirect("Home/login/index",0);
         }
         else{
             $this->error("请先登录！");

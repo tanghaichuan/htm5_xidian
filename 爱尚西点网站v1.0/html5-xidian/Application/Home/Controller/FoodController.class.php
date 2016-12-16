@@ -2,6 +2,7 @@
 namespace Home\Controller;
 use Think\Controller;
 class FoodController extends Controller {
+
     public function __construct(){
         parent::__construct();
         if(isLogin()){
@@ -42,6 +43,7 @@ class FoodController extends Controller {
       $this->display();
     }
     public function french_cate(){
+      
       $model=M("foods");
       $food=$model->where(array('classify'=>"法式菜肴"))->select();
 

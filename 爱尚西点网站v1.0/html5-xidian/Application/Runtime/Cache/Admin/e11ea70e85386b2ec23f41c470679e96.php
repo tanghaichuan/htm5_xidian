@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>首页</title>
 	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/bootstrap.css">
 	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/bootstrap-theme.css">
@@ -9,6 +10,7 @@
 	<script src="/html5-xidian/Public/admin/js/jquery.js"></script>
 	<script src="/html5-xidian/Public/admin/js/bootstrap.js"></script>
 	<script src="/html5-xidian/Public/admin/js/adminEditor.js"></script>		
+	<script src="/html5-xidian/Public/admin/js/adminAjax.js"></script>
 </head>
 <body>
 	<div class="wrapper">
@@ -38,7 +40,7 @@
 		<!--content-->
 		<div class="row content">
 			<!--slide-nav-->
-			<div class="col-md-2 slideNav">
+			<div class="col-xs-2 col-md-2 slideNav">
 				<div class="panel-group" id="panel-320451">
 					<div class="panel">
 						<div class="panel-heading" >
@@ -145,11 +147,14 @@
 							<div class="panel-body">
 								<a href="/html5-xidian/index.php/Admin/public/index.html">美食推送</a>
 							</div>
+							<div class="panel-body">
+								<a href="/html5-xidian/index.php/Admin/public/add.html">添加推送</a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-10">
+			<div class="col-xs-10 col-md-10 middle">
 			
 				<!--breadcrumb-->
 				<div class="col-md-12 bread">
@@ -158,78 +163,62 @@
 							 <a href="/html5-xidian/index.php/Admin/index/index.html">首页</a>
 						</li>
 						<li>
-							 <a href="#">美食发布</a>
+							 <a href="/html5-xidian/index.php/Admin/public/index.html">美食管理</a>
+						</li>
+						<li>
+							 <a href="#">美食列表</a>
 						</li>
 					</ul>
 				</div>
-				<!--List-->
+				<!--userList-->
 				<div class="col-md-12 userList">
-					<div class="col-md-5">
-						<h4>美食推送</h4>
+					<div class="col-xs-2 col-md-2">
+						<h4>美食列表</h4>
 					</div>
-					<div class="col-md-2">
-						<h4>当前分类：<span class="choose"><?php echo ($food); ?></span></h4>
+					<div class="col-xs-5 col-md-5 input-group">
+						<form action="<?php echo U('Admin/public/searchFood');?>" method="post" enctype="multipart/form-data" class="input-group searchForm">
+							<input type="text" class="foodSearch" name="name">
+							<span class="glyphicon glyphicon-search searchSpan"></span>
+						</form>
 					</div>
-					<div class="col-md-1">
-						<h4>推送页:</h4>
-					</div>
-					<div class="col-md-4" style="padding: 5px 0 0 0;">
-						<label for="" class="shopRadio"><input type="radio" id="publicPage" value="home" name="public" style="position: relative;top: 3px;" />首页</label>
-						<label for="" class="shopRadio"><input type="radio" id="publicPage" value="content" name="public" style="position: relative;top: 3px;"/>美食内容页</label>
-					</div>
-					<!--favorite-->
+					<!--shop-->
 					<div class="col-md-12">
-						<div class="col-md-4">
-							<table class="table table-striped table-hover" id="table">
-								<thead>
-									<tr>
-										<th>分类</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td><a href="classify/food/法式菜肴">法式菜肴</a></td>
-									</tr>
-									<tr>
-										<td><a href="classify/food/意式菜肴">意式菜肴</a></td>
-									</tr>
-									<tr>
-										<td><a href="classify/food/美式菜肴">美式菜肴</a></td>
-									</tr>
-									<tr>
-										<td><a href="classify/food/俄式菜肴">俄式菜肴</a></td>
-									</tr>
-									<tr>
-										<td><a href="classify/food/英式菜肴">英式菜肴</a></td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						<div class="col-md-8">
-							<table class="table table-striped table-hover">
-								<thead>
-									<th>美食名称</th>
+						<table class="table table-striped table-hover">
+							<thead>
+								<tr>
+									<th>分类</th>
+									<th>名称</th>
 									<th>图片</th>
+									<th>发布时间</th>
 									<th>操作</th>
-								</thead>
-								<tbody>
-									<?php if(is_array($foodList)): $i = 0; $__LIST__ = $foodList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><tr>
-											<td><?php echo ($n["name"]); ?></td>
-											<td><img src="/html5-xidian/Public/<?php echo ($n["img"]); ?>" alt="" width="50" height="30px"></td>
-											<td><a href="">推送</a></td>
-										</tr><?php endforeach; endif; else: echo "" ;endif; ?>
-								</tbody>
-							</table>
-							<!--pagination-->
-							<div class="col-md-5 col-md-offset-7 page">
-								<ul class="pagination">
-									<li><?php echo ($page); ?></li>
-								</ul>
-							</div>
+								</tr>
+							</thead>
+							<tbody>
+								<?php if(is_array($foodList)): $i = 0; $__LIST__ = $foodList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><tr>
+										<td><?php echo ($n["classify"]); ?></td>
+										<td><?php echo ($n["name"]); ?></td>
+										<td><img src="/html5-xidian/Public/<?php echo ($n["img"]); ?>" alt="" width="70" height="38px"></td>
+										<td><?php echo ($n["food_public_time"]); ?></td>
+										<td>
+											<a href="edit/id/<?php echo ($n["id"]); ?>">修改</a>
+											<a href="del/id/<?php echo ($n["id"]); ?>" onClick="delConfirm()">删除</a>
+										</td>
+									</tr><?php endforeach; endif; else: echo "" ;endif; ?>
+							</tbody>
+						</table>
+						<!--pagination-->
+						<div class="col-md-4 col-md-offset-8 page">
+							<ul class="pagination">
+								<li><?php echo ($page); ?></li>
+							</ul>
 						</div>
-					</div>					
+					</div>
 				</div>
-			
+			<script>
+				function delConfirm(){
+					return confirm("确定删除?");
+				}
+			</script>
 			</div>
 		</div>
 	</div>

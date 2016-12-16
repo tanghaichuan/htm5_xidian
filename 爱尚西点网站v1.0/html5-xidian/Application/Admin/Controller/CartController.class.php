@@ -41,7 +41,8 @@ class CartController extends Controller {
         $username=$_GET['username'];
         $user=M('public_users')->where(array('username'=>$username))->find();
         if(M("shopping_cart")->where(array('mall_id'=>$id,'user_id'=>$user['id']))->delete()){
-            $this->success("删除成功!",U("favorite/index"));
+            //$this->success("删除成功!",U("favorite/index"));
+            $this->redirect("favorite/index",0);
         }
         else{
             $this->error("删除失败!");

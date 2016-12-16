@@ -192,7 +192,7 @@
             </div>
             <div class="form-group">
               <div class="col-xs-3 col-sm-3">
-                <input type="submit" class="btn btn-sm" value="发布" style="position: relative;left: 100px;"></input>
+                <input type="submit" class="btn btn-sm" value="发布" style="position: relative;left: 100px;" rel="{$username}" id="publish" />
               </div>
             </div>
           </form>
@@ -216,5 +216,17 @@
     </div>
   </div
 <!--<div class="ajifenshow"><a class="yshfootbg" href="/mall/contact" target="_blank"></a></div> -->
+<script>
+  $("#publish").click(function(){
+      var username=$(this).attr("rel");
+      if(!username){
+        alert("请先登录!");
+        return false;
+      }
+      else{
+        return submit();
+      }
+  });
+</script>
 </body>
 </html>

@@ -2,13 +2,16 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>首页</title>
 	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/bootstrap.css">
 	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/bootstrap-theme.css">
 	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/adminStyle.css">
+	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/jq22.css">
 	<script src="/html5-xidian/Public/admin/js/jquery.js"></script>
 	<script src="/html5-xidian/Public/admin/js/bootstrap.js"></script>
 	<script src="/html5-xidian/Public/admin/js/adminEditor.js"></script>		
+	<script src="/html5-xidian/Public/admin/js/adminAjax.js"></script>
 </head>
 <body>
 	<div class="wrapper">
@@ -20,8 +23,7 @@
 			<div class="top-right">
 				<ul>
 					<li><a href="/html5-xidian/index.php/Admin/login/index.html">欢迎：<?php echo ($username); ?></a></li>
-					<li><a href="/html5-xidian/index.php/Admin/login/register.html">注册</a></li>
-					<li><a href="#">退出</a></li>
+					<li><a href="<?php echo U('Admin/adminUsers/quit');?>">退出</a></li>
 				</ul>
 			</div>
 		</div>
@@ -38,7 +40,7 @@
 		<!--content-->
 		<div class="row content">
 			<!--slide-nav-->
-			<div class="col-md-2 slideNav">
+			<div class="col-xs-2 col-md-2 slideNav">
 				<div class="panel-group" id="panel-320451">
 					<div class="panel">
 						<div class="panel-heading" >
@@ -145,11 +147,14 @@
 							<div class="panel-body">
 								<a href="/html5-xidian/index.php/Admin/public/index.html">美食推送</a>
 							</div>
+							<div class="panel-body">
+								<a href="/html5-xidian/index.php/Admin/public/add.html">添加推送</a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-10">
+			<div class="col-xs-10 col-md-10 middle">
 			
 				<!--breadcrumb-->
 				<div class="col-md-12 bread">
@@ -158,7 +163,7 @@
 							 <a href="/html5-xidian/index.php/Admin/index/index.html">首页</a>
 						</li>
 						<li>
-							 <a href="/html5-xidian/index.php/Admin/shop/list.html">商品管理</a>
+							 <a href="/html5-xidian/index.php/Admin/shop/index.html">商品管理</a>
 						</li>
 						<li>
 							 <a href="#">商城列表</a>
@@ -175,8 +180,8 @@
 						<table class="table table-striped table-hover">
 							<thead>
 								<tr>
-									<th>库存</th>
-									<th>名称</th>
+									<th width=10%>库存</th>
+									<th width=30%>名称</th>
 									<th>图片</th>
 									<th>价格(元)</th>
 									<th>分类</th>
@@ -187,7 +192,7 @@
 							<tbody>
 								<?php if(is_array($list)): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><tr>
 										<td><?php echo ($n["num"]); ?></td>
-										<td><?php echo ($n["name"]); ?></td>
+										<td title="<?php echo ($n["name"]); ?>"><?php echo (mb_substr($n["name"],0,10,utf8)); ?>...</td>
 										<td><img src="/html5-xidian/Public/<?php echo ($n["img"]); ?>" alt="" width="70" height="38px"></td>
 										<td><?php echo ($n["price"]); ?></td>
 										<td><?php echo ($n["classify"]); ?></td>

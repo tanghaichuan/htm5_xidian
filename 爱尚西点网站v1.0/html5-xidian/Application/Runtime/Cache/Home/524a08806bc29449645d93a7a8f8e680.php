@@ -34,12 +34,12 @@
     </div>
 
     <!--背景-->
-  <div style="background-image: url(/html5-xidian/Public/home/images/bg.png);height: 615px;">
+  <div style="background-image: url(/html5-xidian/Public/home/images/bg.png);height: 660px;">
     <!--内容-->
     <div class="content" style="padding: 110px 10px;">
       <!--配图-->
       <div class="row clearfix">
-        <div class="col-md-7 column" style="padding: 50px 0px 0px 80px;">
+        <div class="col-md-7 column" style="padding: 110px 0px 0px 80px;">
           <img src="/html5-xidian/Public/home/images/sinin.png">
         </div>
         <!--表单-->
@@ -47,38 +47,43 @@
             <div style="background-color: white;border-radius: 5px;">
               <div style="padding: 15px 20px;">
                 <label style="font-size: 16px;">新用户注册</label>
-                <label style="text-align: right;position: absolute;right: 40px;">已有账号，<a href="/html5-xidian/home.php/Home/login/login.html">直接登录></a></label>
+                <label style="text-align: right;position: absolute;right: 40px;">已有账号，<a href="/html5-xidian/home.php/Home/login/index.html">直接登录></a></label>
               </div>
               <form class="form-horizontal" role="form" enctype="multipart/form-data" style="padding: 0px 50px 0px 20px;" method="post" action="register_add">
               <div class="form-group">
-                 <label class="col-sm-3 control-label">用户名:</label>
-                <div class="col-sm-9">
+                 <label class="col-sm-3 control-label" style="padding-right: 0px">用户名:</label>
+                <div class="col-sm-9" style="padding-right: 0px">
                   <input type="text" class="form-control" id="username" placeholder="请输入用户名" value="" name="username" />
+                  <div id="usernameput"></div>
                 </div>
               </div>
               <div class="form-group">
-                 <label class="col-sm-3 control-label">昵称:</label>
-                <div class="col-sm-9">
+                 <label class="col-sm-3 control-label" style="padding-right: 0px">昵称:</label>
+                <div class="col-sm-9" style="padding-right: 0px">
                   <input type="text" class="form-control" id="nickname" placeholder="请输入昵称" value="" name="realname" />
+                  <div id="nicknameput"></div>
                 </div>
               </div>
               <div class="form-group">
-                 <label class="col-sm-3 control-label">手机号:</label>
-                <div class="col-sm-9">
-                  <input type="text" class="form-control" id="password" placeholder="请输入手机号" value="" name="telphone" />
+                 <label class="col-sm-3 control-label" style="padding-right: 0px">手机号:</label>
+                <div class="col-sm-9" style="padding-right: 0px">
+                  <input type="text" class="form-control" id="telphone" placeholder="请输入手机号" value="" name="telphone" />
+                  <div id="telphoneput"></div>
                 </div>
               </div>
               <div class="form-group">
-                 <label class="col-sm-3 control-label">密码:</label>
-                <div class="col-sm-9">
+                 <label class="col-sm-3 control-label" style="padding-right: 0px">密码:</label>
+                <div class="col-sm-9" style="padding-right: 0px">
                   <input type="password" class="form-control" id="password" placeholder="请输入密码" value="" name="password" />
+                  <div id="passwordput"></div>
                 </div>
               </div>
               <div class="form-group">
-                 <label class="col-sm-3 control-label"></label>
-                <div class="col-sm-9">
+                 <label class="col-sm-3 control-label" style="padding-right: 0px"></label>
+                <div class="col-sm-9" style="padding-right: 0px">
                   <input type="password" class="form-control" id="repassword" placeholder="确认密码" value="" />
                 </div>
+                <div id="repasswordput"></div>
               </div>
               <div class="form-group">
                 <div class="col-sm-offset-3 col-sm-9">
@@ -88,23 +93,18 @@
                 </div>
               </div>
               <div class="form-group">
-                <div class="col-sm-offset-3 col-sm-9">
+                <div class="col-sm-offset-3 col-sm-9" style="padding-right: 0px">
                    <button type="submit" class="btn btn-block btn-primary"><b>注册</b></button>
                 </div>
               </div>
             </form>
             </br>
           </div>
-        <div class="col-md-1 column">
-        </div>
+          <div class="col-md-1 column">
+          </div>
         </div>
       </div>
     </div>
-
-    <!--页脚-->
-    <div class="footer" style="border-top: 1px solid #C0C0C0;border-bottom: 1px solid #C0C0C0;text-align: center;">
-      <a>Home</a> | <a>About</a> | <a>Service</a> | <a>Products</a> | <a>Contact</a>
-    </nav>
   </div>
   </body>
 </html>

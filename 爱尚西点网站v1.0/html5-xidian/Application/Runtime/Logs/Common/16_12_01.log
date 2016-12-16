@@ -1,0 +1,30 @@
+[ 2016-12-01T14:57:51+08:00 ] 127.0.0.1 /html5-xidian/index.php/public/classify/food/%E6%B3%95%E5%BC%8F%E8%8F%9C%E8%82%B4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000464s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-01T14:57:55+08:00 ] 127.0.0.1 /html5-xidian/index.php/public/classify/food/%E6%84%8F%E5%BC%8F%E8%8F%9C%E8%82%B4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-01T14:58:38+08:00 ] 127.0.0.1 /html5-xidian/index.php/public/classify/food=%E7%BE%8E%E5%BC%8F%E8%8F%9C%E8%82%B4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000880s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-01T15:01:34+08:00 ] 127.0.0.1 /html5-xidian/index.php/public/classify/food/%E6%84%8F%E5%BC%8F%E8%8F%9C%E8%82%B4.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000556s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-01T15:01:38+08:00 ] 127.0.0.1 /html5-xidian/index.php/public/classify/food/%E6%84%8F%E5%BC%8F%E8%8F%9C%E8%82%B4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000414s ]
+ERR: 无法加载模块:Public
+

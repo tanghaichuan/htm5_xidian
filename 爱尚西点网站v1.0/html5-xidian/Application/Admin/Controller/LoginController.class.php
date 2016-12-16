@@ -21,7 +21,9 @@ class LoginController extends Controller {
             session('uid',$user['id']);
             session('password',$user['password']);
             session('username',$user['username']);
-            $this->success("登录中...",U("index/index"));
+            //$this->success("登录中...",U("index/index"));
+            $this->redirect("index/index",0);
+
         }
     }
 
@@ -33,7 +35,9 @@ class LoginController extends Controller {
     public function register_add(){
     	$adminModel=D("AdminUsers");
     	if ($adminModel->create() && $adminModel->add()) {
-    		$this->success("注册成功！", U('Admin/login/index'));
+    		//$this->success("注册成功！", U('Admin/login/index'));
+            $this->redirect("login/index",0);
+
     	}
     	else {
     		$this->error($adminModel->getError());

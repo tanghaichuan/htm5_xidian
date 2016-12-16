@@ -1,98 +1,61 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
- 	<meta charset="utf-8">
- 	<link rel="stylesheet" href="__PUBLISH__/home/css/bootstrap.min.css">
-    <link rel="stylesheet" href="__PUBLISH__/home/css/amazeui.css"/>
-    <script src="__PUBLISH__/home/js/jquery.js"></script>    
-    <script src="__PUBLISH__/home/js/bootstrap.min.js"></script>
-    <script src="__PUBLISH__/home/js/amazeui.min.js"></script>
-    <script src="__PUBLISH__/home/js/homeEdit.js"></script>
-    <script src="__PUBLISH__/home/js/register_form.js"></script>
- 	<style type="text/css">
- 	 
- 		body{
- 			overflow-x: hidden;
- 			font: normal 135% Helvetica, Arial, sans-serif;
- 		}
- 		ul li{
- 			list-style: none;
- 		}
- 		.font{
- 			writing-mode:tb-rl;
- 			font-size:1.5em;
- 			font-family:仿宋;
- 		}
- 		.font-a{
- 			font-size:3.2em;
- 			font-family:仿宋;
- 			font: normal 120% ;
- 		}
- 		.font-b{
- 			font-size:1.2em;
- 			font-family:仿宋;
+  <title></title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/html5-xidian/Public/home/css/bootstrap.min.css">
+  
+  <link rel="stylesheet" media="screen and (max-width:1024px)" href="/html5-xidian/Public/home/css/medium.css" type="text/css" />
+  <link rel="stylesheet" media="screen and (min-width:1025px)" href="/html5-xidian/Public/home/css/large.css" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="/html5-xidian/Public/home/css/heartStyle.css">
+  <link rel="stylesheet" href="/html5-xidian/Public/home/css/food_templet.css"/ >
+  <link rel="stylesheet" href="/html5-xidian/Public/home/css/food.css"/>
+  <script src="/html5-xidian/Public/home/js/jquery.js"></script>    
+  <script src="/html5-xidian/Public/home/js/bootstrap.min.js"></script>
+  <script src="/html5-xidian/Public/home/js/amazeui.min.js"></script>
+  <script src="/html5-xidian/Public/home/js/homeEdit.js"></script>
+  <script src="/html5-xidian/Public/home/js/register_form.js"></script>
 
- 		}
- 		.font-c{
- 			font-size:1em;
- 			font-family:仿宋;
- 			color:#688d72;
- 			font-weight:bolder;
- 		}
- 		.col-md-12 img{
- 			width:100%;
- 			height: 300px;
- 		}
- 		.col-md-8 img{
- 			width:100%;
- 			height: 196px;
- 		}
- 		.breadcrumb a{
- 			font-size:1.1em;
- 			font-family:微软雅黑;
- 		}
- 		.nav navbar-nav navbar-right{
- 			padding: 15px 10px 15px 0px;
- 		}
- 		.dropdown-menu{
- 			text-align: right;min-width: 100px;
- 		}
-
- 	</style>
+  
 </head>
 <body>
   <div class="header" style="height: 50px;">
     <nav class="navbar navbar-default navbar-static-top" role="navigation" style="background-color: white;">
       <div class="navbar-header">
-         <a href="#"><img src="__PUBLISH__/home/images/logo1.png"></a>
+         <a href="#"><img src="/html5-xidian/Public/home/images/logo1.png"></a>
       </div>
-      
       <div class="collapse navbar-collapse" >
         <ul class="nav navbar-nav navbar-left" style="position: absolute;left: 40px;top: -10px;">
           <li>
-             <a href="#"><img src="__PUBLISH__/home/images/logo2.png"></a>
+             <a href="#"><img src="/html5-xidian/Public/home/images/logo2.png"></a>
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right" >
-          <li>
-            <a href="/html5-xidian/home.php/Home/login/register.html" >注册</a>
-          </li>
-          <li>
-            <a href="/html5-xidian/home.php/Home/login/login.html">登录</a>
-          </li>
+          <?php if(!empty($username)): ?><li>
+                <a href="/html5-xidian/home.php/Home/login/index.html" style="padding: 15px 10px 15px 0px;" id="isLogin">欢迎：<?php echo ($username); ?></a>
+              </li>
+              <li>
+                <a href="/html5-xidian/home.php/Home/login/quit" style="padding: 15px 50px 15px 0px;">退出</a>
+              </li>
+            <?php else: ?> 
+              <li>
+                <a href="/html5-xidian/home.php/Home/login/index.html" style="padding: 15px 10px 15px 0px;" id="isLogin">登录</a>
+              </li>
+              <li>
+                <a href="/html5-xidian/home.php/Home/login/register.html" style="padding: 15px 50px 15px 0px;">注册</a>
+              </li><?php endif; ?>
         </ul>
       </div>
     </nav>
   </div>
 
   <!--背景-->
-  <div style="background-image: url(__PUBLISH__/home/images/bg.png);">
+  <div style="background-image: url(/html5-xidian/Public/home/images/bg.png);">
     <!--内容-->
     <div class="content">
     <!--导航栏-->
-      <nav class="navbar navbar-default navbar-static-top" role="navigation" style="background-image: url(__PUBLISH__/home/images/bg.png);border-bottom: 1px solid #C0C0C0;">
+      <nav class="navbar navbar-default navbar-static-top" role="navigation" style="background-image: url(/html5-xidian/Public/home/images/bg.png);border-bottom: 1px solid #C0C0C0;">
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right" style="font-weight: bold;color: black;">
             <li class="dropdown">
@@ -100,7 +63,7 @@
             </li>
            <li class="dropdown">
                <a href="/html5-xidian/home.php/Home/food/french_cate.html" class="dropdown-toggle">美食鉴赏</a>
-              <ul class="dropdown-menu"  >
+              <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
                 <li>
                    <a href="/html5-xidian/home.php/Home/food/french_cate.html">法式菜肴</a>
                 </li>
@@ -120,30 +83,30 @@
               </ul>
             </li>
             <li class="dropdown">
-               <a href="/html5-xidian/home.php/Home/PUBLISH/PUBLISH.html" class="dropdown-toggle">美食DIY</a>
-              <ul class="dropdown-menu" >
+               <a href="/html5-xidian/home.php/Home/publish/index.html" class="dropdown-toggle">美食DIY</a>
+              <ul class="dropdown-menu" style="text-align: center;min-width: 82.68px;">
          
                 <li>
-                   <a href="/html5-xidian/home.php/Home/PUBLISH/PUBLISH.html">发布美食</a>
+                   <a href="/html5-xidian/home.php/Home/publish/index.html">发布美食</a>
                 </li>
 
               </ul>
             </li>
            <li class="dropdown">
-               <a href="/html5-xidian/home.php/Home/shop/list.html" class="dropdown-toggle">食材商城</a>
-              <ul class="dropdown-menu" >
+               <a href="/html5-xidian/home.php/Home/shop/index.html" class="dropdown-toggle">食材商城</a>
+              <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
                 <li>
-                   <a href="/html5-xidian/home.php/Home/shop/list.html">用具</a>
+                   <a href="/html5-xidian/home.php/Home/shop/index.html">用具</a>
                 </li>
                 <li>
-                   <a href="/html5-xidian/home.php/Home/shop/list.html">食材</a>
+                   <a href="/html5-xidian/home.php/Home/shop/index.html">食材</a>
                 </li>
             
               </ul>
             </li>
           <li class="dropdown">
                <a href="/html5-xidian/home.php/Home/users/index.html" class="dropdown-toggle">个人中心</a>
-              <ul class="dropdown-menu" >
+              <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
                 <li>
                    <a href="/html5-xidian/home.php/Home/users/reset_information.html">修改信息</a>
                 </li>
@@ -152,7 +115,7 @@
                    <a href="/html5-xidian/home.php/Home/users/reset_password.html">修改密码</a>
                 </li>
                  <li>
-                   <a href="/html5-xidian/home.php/Home/cart/cart.html">我的购物车</a>
+                   <a href="/html5-xidian/home.php/Home/cart/index.html">购物车</a>
                 </li>
               </ul>
             </li>
@@ -171,280 +134,104 @@
         </div>
       </nav>
     </div>
-  </div>
-<div class="container-fluid">
-	
-	<div class="row">
-		<div class="col-md-12">
-			<a href="content.html"><img alt="法式餐点" src="__PUBLISH__/home/images/food-F-0.png" class=""/>
-		</div>
-	</div>
-	<br / >
-	<div class="row">
-		<div class="col-md-12">
-			<div class="row">
-				<div class="col-md-12">
-					<ul class="breadcrumb">
-						<li>
-							<a href="/html5-xidian/home.php/Home/index/index.html">首页</a> 
-						</li>
-						<li>
-							<a href="/html5-xidian/home.php/Home/french/french_cate.html">美食鉴赏</a> 
-						</li>
-						<li class="active">
-							法式餐点
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="col-md-1">
-			<!-- 文字实现竖排 -->
-			<div class="font-a">法式餐点</div>
-		</div>
-		<div class="col-md-11">
-			<div class="row">
-				<div class="col-md-1">
-				</div>
-				<div class="col-md-11">
-					<p>
-						<div class="font-b">法国菜以其口感之细腻、酱料之美味、餐桌布置之华美，使饮食成为了一种艺术。并且因为各地所产原料和当地人口味不同，发展出多种多样的独特烹调方法，从而产生了变换无穷的美味。</div>
-					</p>
-				</div>
-				<br /><br /><br /><br /><br />
-			</div><!-- 下方为图片列表内容   -->
-				<!-- 第一行图片 -->
-					<div class="row">
-						<div class="col-md-4">
-							<div class="row">
-								<div class="col-md-8">
-									<a href="content.html"><img alt="法式餐点" src="__PUBLISH__/home/images/food-F-1.png" /></a>
-
-									<br/><br/>
-									<div class="font-c">
-									<div class="col-md-6">收藏</div>
-									<div class="col-md-6">赞(999+)</div>
-									</div>
-								</div>
-								
-								<div class="col-md-4">
-									<div class="font">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;鹅肝</div>
-								</div>
-								
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="row">
-								<div class="col-md-8">
-									<a href="content.html"><img alt="法式餐点" src="__PUBLISH__/home/images/food-F-2.png" /></a>
-									<br/><br/>
-									<div class="font-c">
-									<div class="col-md-6">收藏</div>
-									<div class="col-md-6">赞(999+)</div>
-									</div>
-								</div>
-								
-								<div class="col-md-4">
-									<div class="font">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quenelle</div>
-								</div>
-								
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="row">
-								<div class="col-md-8">
-									<a href="content.html"><img alt="法式餐点" src="__PUBLISH__/home/images/food-F-3.png" /></a>
-									<br/><br/>
-									<div class="font-c">
-									<div class="col-md-6">收藏</div>
-									<div class="col-md-6">赞(999+)</div>
-									</div>
-								</div>
-								
-								<div class="col-md-4">
-									<div class="font">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;可丽饼</div>
-								</div>
-								
-							</div>
-						</div>
-					</div>
-					<br /><br />
-					<!-- 第二行图片 -->
-								<div class="row">
-						<div class="col-md-4">
-							<div class="row">
-								<div class="col-md-8">
-									<a href="content.html"><img alt="法式餐点" src="__PUBLISH__/home/images/food-F-4.png" /></a>
-									<br/><br/>
-									<div class="font-c">
-									<div class="col-md-6">收藏</div>
-									<div class="col-md-6">赞(999+)</div>
-									</div>
-								</div>
-								
-								<div class="col-md-4">
-									<div class="font">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;法式焗蜗牛</div>
-								</div>
-								
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="row">
-								<div class="col-md-8">
-									<a href="content.html"><img alt="法式餐点" src="__PUBLISH__/home/images/food-F-5.png" /></a>
-									<br/><br/>
-									<div class="font-c">
-									<div class="col-md-6">收藏</div>
-									<div class="col-md-6">赞(999+)</div>
-									</div>
-								</div>
-								
-								<div class="col-md-4">
-									<div class="font">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;里昂沙拉</div>
-								</div>
-								
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="row">
-								<div class="col-md-8">
-									<a href="content.html"><img alt="法式餐点" src="__PUBLISH__/home/images/food-F-6.png" /></a>
-									<br/><br/>
-									<div class="font-c">
-									<div class="col-md-6">收藏</div>
-									<div class="col-md-6">赞(999+)</div>
-									</div>
-								</div>
-								
-								<div class="col-md-4">
-									<div class="font">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;镶牛肚</div>
-								</div>
-								
-							</div>
-						</div>
-					</div>
-					<br /><br />
-					<!-- 第三行图片 -->
-								<div class="row">
-						<div class="col-md-4">
-							<div class="row">
-								<div class="col-md-8">
-									<a href="content.html"><img alt="法式餐点" src="__PUBLISH__/home/images/food-F-7.png" /></a>
-									<br/><br/>
-									<div class="font-c">
-									<div class="col-md-6">收藏</div>
-									<div class="col-md-6">赞(999+)</div>
-									</div>
-								</div>
-								
-								<div class="col-md-4">
-									<div class="font">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;马卡龙</div>
-								</div>
-								
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="row">
-								<div class="col-md-8">
-									<a href="content.html"><img alt="法式餐点" src="__PUBLISH__/home/images/food-F-8.png" /></a>
-									<br/><br/>
-									<div class="font-c">
-									<div class="col-md-6">收藏</div>
-									<div class="col-md-6">赞(999+)</div>
-									</div>
-								</div>
-								
-								<div class="col-md-4">
-									<div class="font">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;洋葱汤</div>
-								</div>
-								
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="row">
-								<div class="col-md-8">
-									<a href="content.html"><img alt="法式餐点" src="__PUBLISH__/home/images/food-F-9.png" /></a>
-									<br/><br/>
-									<div class="font-c">
-									<div class="col-md-6">收藏</div>
-									<div class="col-md-6">赞(999+)</div>
-									</div>
-								</div>
-							
-								<div class="col-md-4">
-									<div class="font">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;羊鞍扒</div>
-								</div>
-								
-							</div>
-						</div>
-					</div>
-		</div>
-	</div>				
-	<br/><br/>
-	<div class="row">
-		<div class="col-md-8">
-		</div>
-		<div class="col-md-4">
-			<ul class="pagination">
-				<li>
-					<a href="#">上一页</a>
-				</li>
-				<li>
-					<a href="#">1</a>
-				</li>
-				<li>
-					<a href="#">2</a>
-				</li>
-				<li>
-					<a href="#">3</a>
-				</li>
-				<li>
-					<a href="#">4</a>
-				</li>
-				<li>
-					<a href="#">5</a>
-				</li>
-				<li>
-					<a href="#">下一页</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<br/>
-	<div class="row">
-		<div class="footer">
-      		<!-- <div class="row clearfix">
-        		<div class="col-md-6 column">
-       		    </div>
-                <div class="col-md-3 column">
-                </div>
-                <div class="col-md-3 column">
-                </div>
-            </div> -->
-     <div class="row clearfix" style="padding: 30px 30px 10px 30px;">
-         	<div class="col-md-3 column" style="padding: 0px 10px 0px 70px;border-right: 1px solid #C0C0C0;">
-          		<a href="#"><img src="__PUBLISH__/home/images/qrc.jpg"></a>
-        	</div>
-        <div class="col-md-5 column" style="padding: 0px 50px;line-height: 260%;">
-        	</br>
-         	 <p>爱尚美食，西餐美食菜谱分享网站。850000道菜谱，625000条美食日记，7500000位美食达人，每天都有新分享，拥有最实用的美食、菜谱、食谱的做法，同是还有聚餐百万美食爱好者的美食家社区，欢迎加入！</p>
+    <div class="container-fluid">
+      
+      <div class="row">
+        <div class="col-md-12">
+          <img alt="法式餐点" src="/html5-xidian/Public/home/images/food-F-0.png" />
         </div>
-        <div class="col-md-4 column" style="padding: 10px 20px;">
-        	</br>
-          	<p style="line-height: 260%;">联系方式：xxxx</br>邮箱：xxxx</br>地址：xxxx</br></p>
-        </div>
-     </div>
-
-      <div style="border-top: 1px solid #C0C0C0;border-bottom: 1px solid #C0C0C0;text-align: center;">
-        <a>Home</a> | <a>About</a> | <a>Service</a> | <a>Products</a> | <a>Contact</a>
       </div>
-   </div>
-</div>
-</div>
-</div>
+      <br / >
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-12">
+              <ul class="breadcrumb">
+                <li>
+                  <a href="/html5-xidian/home.php/Home/index/index.html">首页</a> 
+                </li>
+                <li>
+                  <a href="/html5-xidian/home.php/Home/french/french_cate.html">美食鉴赏</a> 
+                </li>
+                <li class="active">
+                  法式餐点
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 
+          <div class="row">
+            <div class="col-md-1 col-sm-1 col-xs-1">
+            <!-- 文字实现竖排 -->
+              <div class="font-a">法式餐点</div>
+            </div>
+        <div class="col-md-11 col-sm-11 col-xs-11">
+          <div class="row" style="height: 70px;">
+            <p>
+              <div class="font-b">法国菜以其口感之细腻、酱料之美味、餐桌布置之华美，使饮食成为了一种艺术。并且因为各地所产原料和当地人口味不同，发展出多种多样的独特烹调方法，从而产生了变换无穷的美味。</div>
+            </p>
+          </div>
+          <!-- 下方为图片列表内容   -->
+    
+          <div class="row-a">
+            <?php if(is_array($food)): $i = 0; $__LIST__ = $food;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><div class="col-md-3 col-sm-4 col-xs-5" style="height: 300px;">
+                <div class="thumbnail" id="thumbnail">
+                  <figure class="templet ">
+                      <img src="/html5-xidian/Public/<?php echo ($n["img"]); ?>" id="food-thumb"  />
+                      <figcaption>
+                          <h3><?php echo ($n["name"]); ?></h3>
+                          <p><?php echo (mb_substr($n["content"],0,22,'utf-8')); ?>...</p>
+                      </figcaption>
+
+                      <a href="/html5-xidian/home.php/Home/food/content/id/<?php echo ($n["id"]); ?>"></a>
+                  </figure>
+                  <br/> <br/> <br/>
+                  <p>&nbsp;&nbsp;<?php echo ($n["name"]); ?></p>
+                  <br/>
+                  <div class="user-info">
+                    <img src="/html5-xidian/Public/home/images/avater.jpeg" alt="" class="col-sm-3 img-circle" />
+                    <p>by&nbsp;&nbsp;<?php echo ($n["publish_name"]); ?></p>
+                    <span class="col-sm-7">&nbsp;&nbsp;&nbsp;发布于&nbsp;&nbsp;<?php echo ($n["food_public_time"]); ?></span>
+                  </div> 
+                </div>
+                <div class="food-info">
+                  <div class="heart" id="like1" rel="like" title="收藏" name="<?php echo ($n["id"]); ?>" value="<?php echo ($username); ?>"></div>
+                </div>
+              </div><?php endforeach; endif; else: echo "" ;endif; ?> 
+          </div>  
+        </div>
+      </div>        
+      <br/><br/>
+      <div class="row">
+        <div class="col-md-8">
+        </div>
+        <div class="col-md-4">
+          <ul class="pagination">
+            
+          </ul>
+        </div>
+      </div>
+      <br/>
+      <div class="row">
+        <div class="footer">
+          <div class="row clearfix" id="footer_padding">
+            <div class="col-md-3 column" id="qrc">
+              <a href="#"><img src="/html5-xidian/Public/home/images/qrc.jpg"></a>
+            </div>
+            <div class="col-md-5 column" id="footer_introduce">
+              <p>爱尚美食，西餐美食菜谱分享网站。每天都有新分享，拥有最实用的美食、菜谱、食谱的做法，同是还有聚餐百万美食爱好者的美食家社区，欢迎加入！</p>
+            </div>
+            <div class="col-md-4 column" id="footer_contact">
+              <p>联系方式：15800000000</br>邮箱：aishangxidian@163.com</br>地址：河北省石家庄市裕华区南二环东路20号</br></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="/html5-xidian/Public/home/js/heart.js"></script>
 </body>
 </html>

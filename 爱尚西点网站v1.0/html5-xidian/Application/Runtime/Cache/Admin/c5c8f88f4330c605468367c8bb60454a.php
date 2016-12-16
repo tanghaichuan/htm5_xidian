@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>首页</title>
 	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/bootstrap.css">
 	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/bootstrap-theme.css">
@@ -9,6 +10,7 @@
 	<script src="/html5-xidian/Public/admin/js/jquery.js"></script>
 	<script src="/html5-xidian/Public/admin/js/bootstrap.js"></script>
 	<script src="/html5-xidian/Public/admin/js/adminEditor.js"></script>		
+	<script src="/html5-xidian/Public/admin/js/adminAjax.js"></script>
 </head>
 <body>
 	<div class="wrapper">
@@ -38,7 +40,7 @@
 		<!--content-->
 		<div class="row content">
 			<!--slide-nav-->
-			<div class="col-md-2 slideNav">
+			<div class="col-xs-2 col-md-2 slideNav">
 				<div class="panel-group" id="panel-320451">
 					<div class="panel">
 						<div class="panel-heading" >
@@ -149,7 +151,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-10">
+			<div class="col-xs-10 col-md-10 middle">
 			
 				<!--breadcrumb-->
 				<div class="col-md-12 bread">
@@ -174,26 +176,26 @@
 					<div class="col-md-12">
 						<form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
 							<div class="form-group">
-								 <label for="inputUserName" class="col-md-2 control-label">用户名：</label>
-								<div class="col-md-3">
+								 <label for="inputUserName" class="col-xs-2 col-md-2 control-label">用户名：</label>
+								<div class="col-xs-4 col-sm-4">
 									<input type="text" class="form-control" id="inputUserName"  placeholder="<?php echo ($data["username"]); ?>" disabled />
 								</div>
 							</div>
 							<div class="form-group">
-								 <label for="inputRealName" class="col-sm-2 control-label">真实姓名：</label>
-								<div class="col-sm-3">
+								 <label for="inputRealName" class="col-xs-2 col-sm-2 control-label">真实姓名：</label>
+								<div class="col-xs-4 col-sm-4">
 									<input type="text" class="form-control" id="inputRealName" name="realname" value="<?php echo ($data["realname"]); ?>" />
 								</div>
 							</div>
 							<div class="form-group">
-								 <label for="inputRealName" class="col-sm-2 control-label">手机号：</label>
-								<div class="col-sm-3">
+								 <label for="inputRealName" class="col-xs-2 col-sm-2 control-label">手机号：</label>
+								<div class="col-xs-4 col-sm-4">
 									<input type="text" class="form-control" id="inputTelphone" name="telphone" value="<?php echo ($data["telphone"]); ?>" />
 								</div>
 							</div>
 							
 							<div class="form-group">
-								<div class="col-sm-3">
+								<div class="col-xs-4 col-sm-4">
 									 <button type="submit" class="btn">修改</button>
 								</div>
 							</div>
@@ -205,6 +207,5 @@
 			</div>
 		</div>
 	</div>
-	
 </body>
 </html>

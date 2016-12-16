@@ -21,7 +21,6 @@
 			<div class="top-right">
 				<ul>
 					<li><a href="/html5-xidian/index.php/Admin/login/index.html">登录</a></li>
-					<li><a href="/html5-xidian/index.php/Admin/login/register.html">注册</a></li>
 					<li><a href="#">退出</a></li>
 				</ul>
 			</div>
@@ -56,9 +55,7 @@
 							<label class="checkbox"><input type="checkbox" />记住我</label> 
 							<button type="submit" class="loginBtn">登陆</button>
 					</div>
-					<div class="controls">
-						<a href="register.html">注册</a>
-					</div>
+					
 				</div>
 			</form>
 		</div>

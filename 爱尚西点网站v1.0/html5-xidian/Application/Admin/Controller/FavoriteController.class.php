@@ -40,7 +40,8 @@ class FavoriteController extends Controller {
     	$id = isset($_GET['id']) ? intval($_GET['id']) : '';
         $username=$_GET['username'];
         if(M("favorite")->where(array('food_id'=>$id,'user_name'=>$username))->delete()){
-            $this->success("删除成功!",U("favorite/index"));
+            //$this->success("删除成功!",U("favorite/index"));
+            $this->redirect("favorite/index",0);
         }
         else{
             $this->error("删除失败!");

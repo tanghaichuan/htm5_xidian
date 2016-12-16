@@ -8,12 +8,12 @@
 		}
 	}
 	function getTime(){ 
-		return date("Y-m-d H:i:s");
+		return date("Y-m-d");
 	}
 
 	function getPublishDate(){ 
 		return date("Y-m-d");
 	}
-
+	
 
 ?>

@@ -39,7 +39,8 @@ class UserController extends Controller {
                 "telphone"=>I("post.telphone")
             );
             if($model->create()&&$model->save($data)){
-                $this->success("修改成功！",U("user/index"));
+                //$this->success("修改成功！",U("user/index"));
+                $this->redirect("user/index",0);
             }
             else{
                 $this->error("修改失败！");

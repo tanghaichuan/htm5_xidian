@@ -38,8 +38,8 @@
 		</div>
 		<!--content-->
 		<div class="row content">
-			<span id="res"></span>
-			<form class="form form-horizontal register" style="margin: 110px 0 0 0;" enctype="multipart/form-data" method="post" action="register_add">
+			<span id="res">用户已经注册</span>
+			<form class="form form-horizontal register" style="margin: 110px 0 0 0;" enctype="multipart/form-data" method="post" action="<?php echo U('Admin/login/register_add');?>">
 				<div class="control-group">
 					<div class="controls">
 						<img src="/html5-xidian/Public/admin/images/login.png" alt="" width="20" height="22px">
@@ -49,7 +49,7 @@
 				<div class="control-group">
 					<div class="controls">
 						<img src="/html5-xidian/Public/admin/images/password.png" alt="" width="22" height="22px">
-						<input id="input" type="password" class="password" placeholder="密码:6-10位数字或者字母" name="password" />
+						<input id="input" type="password"        class="password" placeholder="密码:6-10位数字或者字母" name="password" />
 					</div>
 				</div>
 				<div class="control-group">

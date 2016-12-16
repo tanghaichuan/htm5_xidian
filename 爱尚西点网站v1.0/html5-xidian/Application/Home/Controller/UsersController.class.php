@@ -42,7 +42,8 @@ class UsersController extends Controller {
             );
             var_dump($data);
             if($model->create()&&$model->save($data)){
-                $this->success("修改成功！",U("users/index"),0);
+                //$this->success("修改成功！",U("users/index"),0);
+                $this->redirect("users/index",0);
             }
             else{
                 $this->error("修改失败！");
@@ -72,7 +73,8 @@ class UsersController extends Controller {
                 );
                 if($model->save($id)){
                     session('password',I('post.newPwd','','md5'));
-                    $this->success("修改成功", U("Home/login/index"));
+                    //$this->success("修改成功", U("Home/login/index"));
+                    $this->redirect("Home/login/index",0);
                 }
                 else{ 
                     $this->error("修改失败！");

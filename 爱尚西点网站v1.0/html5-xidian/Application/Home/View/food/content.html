@@ -164,12 +164,10 @@
           {$content.name}
           </div>
           <div>
-            <a href="#">
-              <span class="badge badge-warning">甜品</span>
-            </a>
-            <a href="">
-              <span class="label label-warning">加入收藏</span>
-            </a>
+              <volist name="tagList" id="n">
+                <span class="badge badge-warning">{$n.tag_name}</span>
+              </volist>
+            <a href="javascript:void(0)" id="addFav" name="{$content.id}" value="{$username}">加入收藏</a>
           </div>
           <div class="row">
             <div class="col-md-3">

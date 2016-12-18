@@ -57,7 +57,10 @@ class FoodController extends Controller {
       $id = isset($_GET['id']) ? intval($_GET['id']) : '';
       $content=$model->find($id);
       $this->assign("content",$content);
-
+      //标签
+      $tagList=M("tag_food_relation")->where(array('food_name'=>$content['name']))->select();
+      $this->assign("tagList",$tagList);
+      //评论
       $model=M("comment");
       $commentList = $model->where(array('food_id'=>$id))->select();
       import('Org.Util.Page');

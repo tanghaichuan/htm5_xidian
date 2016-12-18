@@ -232,5 +232,33 @@ $(function(){
         }
        
     });
-
+    //内容页加入收藏
+    $("#addFav").click(function(){
+        var username=$(this).attr("value");
+        var id=$(this).attr("name");
+        if(!username){
+          alert("请先登录！");
+        }
+        else{
+          $data={
+          'id':id,
+          'username':username
+          }
+          var that=this;
+          $.post("/html5-xidian/home.php/Home/food/favorite",$data,function(res){
+            if(res=="success"){
+              alert("收藏成功!");
+            }
+            else if(res=="error"){
+              alert("收藏失败!");
+            }
+            else if(res=="quitSuccess"){
+              alert("取消收藏成功");
+            }
+            else{
+              alert("未知错误!");
+            }
+          }); 
+        }
+    });
 });

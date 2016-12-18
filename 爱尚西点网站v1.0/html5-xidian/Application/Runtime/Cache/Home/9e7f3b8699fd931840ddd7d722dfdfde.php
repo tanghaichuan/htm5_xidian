@@ -162,12 +162,8 @@
           <?php echo ($content["name"]); ?>
           </div>
           <div>
-            <a href="#">
-              <span class="badge badge-warning">甜品</span>
-            </a>
-            <a href="">
-              <span class="label label-warning">加入收藏</span>
-            </a>
+              <?php if(is_array($tagList)): $i = 0; $__LIST__ = $tagList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><span class="badge badge-warning"><?php echo ($n["tag_name"]); ?></span><?php endforeach; endif; else: echo "" ;endif; ?>
+            <a href="javascript:void(0)" id="addFav" name="<?php echo ($content["id"]); ?>" value="<?php echo ($username); ?>">加入收藏</a>
           </div>
           <div class="row">
             <div class="col-md-3">

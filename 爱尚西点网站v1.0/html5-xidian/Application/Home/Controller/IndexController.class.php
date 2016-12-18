@@ -15,6 +15,23 @@ class IndexController extends Controller {
       $this -> assign('lists',$lists); 
       $this->display();
     }
-
-    
+    public function content(){
+      $data=I("post.data");
+      $model=M("foods");
+      $where['name']=array('like',$data.'%');
+      $content=$model->where($where)->select();
+      $this->redirect("Home/food/content/id/".$content[0]['id'],0);
+    }
+    public function search(){
+      $data=I("post.data");
+      $model=M("foods");
+      $where['name']=array('like',$data.'%');
+      $foodList=$model->where($where)->select();
+      if($foodList){
+        echo json_encode($foodList);
+      }
+      else{
+        echo "";
+      }
+    }
 }

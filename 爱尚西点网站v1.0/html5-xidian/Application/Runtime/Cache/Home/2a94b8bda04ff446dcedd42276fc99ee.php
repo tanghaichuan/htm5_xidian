@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="/html5-xidian/Public/home/css/animation.css">
     <link rel="stylesheet" media="screen and (max-width:1024px)" href="/html5-xidian/Public/home/css/medium.css" type="text/css" />
     <link rel="stylesheet" media="screen and (min-width:1025px)" href="/html5-xidian/Public/home/css/large.css" type="text/css" />
+    <link rel="stylesheet" href="/html5-xidian/Public/home/css/awesomplete.css" type="text/css" />
     <script src="/html5-xidian/Public/home/js/jquery.js"></script>    
     <script src="/html5-xidian/Public/home/js/bootstrap.min.js"></script>
     <script src="/html5-xidian/Public/home/js/homeEdit.js"></script>
     <script src="/html5-xidian/Public/home/js/animation.js"></script>
-    <link rel="stylesheet" href="/html5-xidian/Public/home/css/awesomplete.css" />
-<script src="/html5-xidian/Public/home/js/awesomplete.js"></script>
+
   </head>
   <body>
   <!--页头-->
@@ -121,12 +121,11 @@
                <a href="#" class="dropdown-toggle">关于我们</a>
             </li>
             <li>
-              <form class="navbar-form navbar-left" role="search">
-                <input class="awesomplete" data-list="#mylist" />
-                   <ul id="mylist" style="display:none">
-                      <?php if(is_array($tagList)): $i = 0; $__LIST__ = $tagList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><li><?php echo ($n["tagname"]); ?></li><?php endforeach; endif; else: echo "" ;endif; ?>
-                   </ul>             
+              <form class="navbar-form navbar-left" role="search" action="<?php echo U('Home/index/content');?>" method="post">
+                <input class="awesomplete" placeholder="搜索想要的美食..." id="searchFood" name="data"/>             
                 <button type="submit" class="btn btn-default">搜索</button>
+                <ul class="mylist">
+                </ul> 
               </form>
             </li>
           </ul>

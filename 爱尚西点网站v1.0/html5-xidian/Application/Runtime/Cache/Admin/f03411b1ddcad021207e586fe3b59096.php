@@ -23,8 +23,7 @@
 			<div class="top-right">
 				<ul>
 					<li><a href="/html5-xidian/index.php/Admin/login/index.html">欢迎：<?php echo ($username); ?></a></li>
-					<li><a href="/html5-xidian/index.php/Admin/login/register.html">注册</a></li>
-					<li><a href="#">退出</a></li>
+					<li><a href="<?php echo U('Admin/adminUsers/quit');?>">退出</a></li>
 				</ul>
 			</div>
 		</div>

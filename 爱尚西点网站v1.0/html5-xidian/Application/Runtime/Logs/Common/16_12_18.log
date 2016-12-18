@@ -1,0 +1,6 @@
+[ 2016-12-18T20:35:21+08:00 ] 127.0.0.1 /html5-xidian/home.php/food/content/id/14.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000565s ]
+ERR: 无法加载模块:Food
+

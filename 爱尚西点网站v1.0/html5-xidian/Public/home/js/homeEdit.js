@@ -195,4 +195,42 @@ $(function(){
             location.reload();
         });
     });
+
+    //前台模糊搜索
+    /*$(".awesomplete").onpropertychange(function(){
+        var data=$(this).val();
+        $data={
+          'data':data
+        }
+        $.post("/html5-xidian/home.php/Home/index/search",$data,function(res){
+            console.log(res);
+        });
+    });*/
+    
+    $('#searchFood').bind('change', function() { 
+        var data=$(this).val();
+        if(data.length==0){
+          $(".mylist").empty();
+        }
+        else{
+           $data={
+          'data':data
+          }
+          $.post("/html5-xidian/home.php/Home/index/search",$data,function(res){
+              $(".mylist").empty();
+              if(res){
+                $li="<li>您可能想要...</li>";
+                $(".mylist").append($li);
+                var req=JSON.parse(res);
+                for(var i=0;i<req.length;i++){
+                  $li="<a href='"+"/html5-xidian/home.php/Home/food/content/id/"+req[i].id+"'><li>"+req[i].name+"</li></a>"
+                  //$li="<a href="+"{:U(Home/food/content',array('id'=>"+req[i].id+"))}><li>"+req[i].name+"</li></a>"
+                  $(".mylist").append($li);
+                }
+              } 
+          });
+        }
+       
+    });
+
 });

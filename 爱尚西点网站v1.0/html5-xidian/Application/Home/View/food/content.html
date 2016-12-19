@@ -170,7 +170,7 @@
               <volist name="tagList" id="n">
                 <span class="badge badge-warning">{$n.tag_name}</span>
               </volist>
-            <a href="javascript:void(0)" id="addFav" name="{$content.id}" value="{$username}">加入收藏</a>
+            <a href="javascript:void(0)" id="addFav" name="{$content.id}" value="{$username}" style="position: relative;top: -15px;left: 30px;">加入收藏</a>
           </div>
           <div class="row">
             <div class="col-md-3">
@@ -212,9 +212,6 @@
       </div>
     <br/><br/><br/> 
 
-    <div class="border-a">
-      <font style="position: relative;top: -10px;font-family:仿宋;color: black;" >你可能需要：</font>
-    </div>
     <div id="panda-show">
   <div class="full">
     <div class="content">
@@ -233,13 +230,11 @@
                     <div class="name">{$n.name}</div>
                     <div class="intro">{$n.content}</div>
                     <div class="icon-shuffer-live"></div>
-                    <div class="number"><i></i>¥{$n.price}</div>
                 </div>
               </a>            
             </div> 
           </volist>
                   
-
         </div>
       </div>
             <div class="cover-right"></div>
@@ -305,18 +300,18 @@ window.onresize=function() {
 
     <br/><br/><br/><br/>
       <div class="container">
-        <div class="row">
+        <div class="row" id="pd">
         <!--评论框-->
-        <div class="col-md-11 col-s-10 col-xs-10">
+        <div class="col-md-12">
           
           <form action="{:U('Home/food/addcomment')}" method="post" role="form" class="form-horizontal" id="inputComment">
-            <h3>{$content.name}的评论</h3>
+            <h3 id="fd_name">{$content.name}的评论</h3>
             <div class="form-group">
               <div class="col-md-1" id="avater-img">
                 <img src="__PUBLIC__/home/images/avater.jpeg" alt="" class="img-circle" width="46px" height="46px">
                 <p id="commentUser">{$username}</p>
               </div>
-              <div class="col-md-5" id="text">
+              <div class="col-md-6" id="text">
                 <textarea rows="5" cols="70" maxlength="140" name="comment"></textarea>
               </div>
             </div>
@@ -332,7 +327,7 @@ window.onresize=function() {
           <ul class="am-comment-list">
 
             <volist name="commentList" id="n">
-              <li class="am-comment">
+              <li class="am-comment" style="padding-bottom: 2px;">
                 <a href="#">
                 <img src="__PUBLIC__/home/images/food-UK-1.png" alt="头像" class="am-comment-avatar" width="48" height="48"/>
                 </a>

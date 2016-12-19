@@ -6,10 +6,21 @@
 	padding: 0;
 }
 
-#panda-show {
+@media screen and (min-width:1025px) {
+	#panda-show {
 	font: 12px/1.5 "STHeiti","Microsoft YaHei","Helvetica Neue","Helvetica","SimSun","STSong","Arial","sans-serif";
 	background: url(../images/bg.jpg) no-repeat center top;
 	background-size: 100% auto;
+	margin: 0px 110px;
+	}
+}
+
+@media screen and (max-width:1024px) {
+	#panda-show {
+	font: 12px/1.5 "STHeiti","Microsoft YaHei","Helvetica Neue","Helvetica","SimSun","STSong","Arial","sans-serif";
+	background: url(../images/bg.jpg) no-repeat center top;
+	background-size: 100% auto;
+	}
 }
 
 #panda-show .shuffer-title {
@@ -22,7 +33,6 @@
 #panda-show  .full {
 	width: 100%;
 	overflow: hidden;
-	min-width: 1000px;
 }
 
 #panda-show  .content {
@@ -31,7 +41,7 @@
 	position: relative;
 }
 
-@media screen and (min-width:1400px) {
+/*@media screen and (min-width:1400px) {
 	#panda-show	.content {
 		width: 1200px;
 	}
@@ -41,7 +51,7 @@
 	#panda-show	.content {
 		width: 1460px;
 	}
-}
+}*/
 
 #panda-show  .cover-left {
 	width: 2000px;
@@ -87,7 +97,8 @@
 	opacity: 1;
 }
 
-#panda-show  .arrow-left {
+@media screen and (min-width:1025px) {
+	#panda-show  .arrow-left {
 	background: url(../images/arrows.png) no-repeat left top;
 	position: absolute;
 	left: -40px;
@@ -96,17 +107,41 @@
 	width: 35px;
 	height: 80px;
 	z-index: 15;
+	}
+
+	#panda-show .arrow-right {
+		background: url(../images/arrows.png) no-repeat right top;
+		position: absolute;
+		right: -40px;
+		top: 50%;
+		margin-top: -40px;
+		width: 35px;
+		height: 80px;
+		z-index: 15;
+	}
 }
 
-#panda-show .arrow-right {
-	background: url(../images/arrows.png) no-repeat right top;
+@media screen and (max-width:1024px) {
+	#panda-show  .arrow-left {
+	background: url(../images/arrows.png) no-repeat left top;
 	position: absolute;
-	right: -40px;
 	top: 50%;
 	margin-top: -40px;
 	width: 35px;
 	height: 80px;
 	z-index: 15;
+	}
+
+	#panda-show .arrow-right {
+		background: url(../images/arrows.png) no-repeat right top;
+		position: absolute;
+		right: 0px;
+		top: 50%;
+		margin-top: -40px;
+		width: 35px;
+		height: 80px;
+		z-index: 15;
+	}
 }
 /**/
 #panda-show .shuffer-line {
@@ -121,15 +156,14 @@
 }
 
 #panda-show a:hover .shuffer-line {
-	height: 95px;
+	height: 68px;
 	background-color: #1dd388;
 	opacity: .8;
 }
 
 #panda-show .stars-info {
-	height: 110px;
 	position: absolute;
-	bottom: 0;
+	bottom: 1;
 	text-align: center;
 	width: 100%;
 	-webkit-transition: all linear 250ms;
@@ -138,7 +172,7 @@
 }
 
 #panda-show a:hover .stars-info {
-	height: 95px;
+	height: 68px;
 	border-bottom: 0 none;
 }
 
@@ -149,10 +183,12 @@
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+	padding: 0px 20px;
 }
 
 #panda-show a:hover .stars-info .name {
 	margin: 8px 0 0;
+	padding: 0px 20px;
 }
 
 #panda-show .stars-info .intro {
@@ -182,25 +218,4 @@
 
 #panda-show a:hover .stars-info .icon-shuffer-live {
 	opacity: 0;
-}
-
-#panda-show .stars-info .number {
-	display: inline-block;
-	overflow: hidden;
-	-webkit-transition: all linear 250ms;
-	transition: all linear 250ms;
-	height: 20px;
-	line-height: 20px;
-	width: 100%;
-	position: absolute;
-	bottom: 8px;
-	left: 0;
-}
-
-#panda-show .stars-info .number i {
-	width: 16px;
-	height: 12px;
-	display: inline-block;
-	background: url(../images/eye.png) no-repeat center;
-	margin-right: 8px;
 }

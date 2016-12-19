@@ -6,6 +6,9 @@ body{
 	overflow:-Scroll;
 	overflow-x:hidden
 }
+a:hover{
+  text-decoration: none;
+}
 .dropdown-menu li a{
 	padding: 3px 13px;
 }
@@ -349,8 +352,26 @@ img{
 }
 
 #foodlist{
-  padding-top: 30px;
+  padding-top: 70px;
 }
 .item .pic img{
   width: 24.2%;
+}
+
+#pd{
+  border: 1px solid #C0C0C0;
+  border-radius: 1px;
+  margin: 0px 40px;
+}
+#fd_name{
+  position: relative;
+  left: -55px;
+  padding-top: 5px;
+}
+#commentUser{
+  font-size: 0.7em;
+}
+#avater-img img{
+  position: relative;
+  left: 5px;
 }

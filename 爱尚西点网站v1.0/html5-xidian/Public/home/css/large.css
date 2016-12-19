@@ -6,6 +6,9 @@ body{
 	overflow:-Scroll;
 	overflow-x:hidden
 }
+a{
+  text-decoration: none;
+}
 .dropdown-menu li a{
 	padding: 3px 13px;
 }
@@ -334,4 +337,15 @@ body{
 }
 #shopping_pic{
   width: 90%;
+}
+
+#pd{
+  border: 1px solid #C0C0C0;
+  border-radius: 1px;
+  margin: 0px 23px;
+}
+#fd_name{
+  position: relative;
+  left: -55px;
+  padding-top: 5px;
 }

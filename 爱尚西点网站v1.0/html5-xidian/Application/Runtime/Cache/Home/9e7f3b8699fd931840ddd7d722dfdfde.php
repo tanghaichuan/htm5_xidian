@@ -16,6 +16,9 @@
 <script src="/html5-xidian/Public/home/js/amazeui.min.js"></script>
 <script src="/html5-xidian/Public/home/js/homeEdit.js"></script>
 <script src="/html5-xidian/Public/home/js/register_form.js"></script>
+<link rel="stylesheet" href="/html5-xidian/Public/home/css/idangerous.swiper.css">
+<link rel="stylesheet" href="/html5-xidian/Public/home/css/style.css">
+<script src="/html5-xidian/Public/home/js/idangerous.swiper.min.js"></script>
 
 </head>
 <body>
@@ -208,59 +211,92 @@
     <div class="border-a">
       <font style="position: relative;top: -10px;font-family:仿宋;color: black;" >你可能需要：</font>
     </div>
-    <div class="row clearfix">
-      <div class="col-md-12 column">
-          <div id="myCarousel" class="carousel slide pad_010 b_k" data-ride="carousel">
-          <!-- 轮播（Carousel）指标 -->
-            <ol class="carousel-indicators">
-              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-              <li data-target="#myCarousel" data-slide-to="1"></li>
-              <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>   
-            <!-- 轮播（Carousel）项目 -->
-            <div class="carousel-inner bor_btm">
-              <div class="item active" >
-                  <div>
-                      <div class="col-md-1"></div>
-                      <div class="col-md-2"> <img src="/html5-xidian/Public/home/images/food-UK-1.png" ></div>
-                      <div class="col-md-2"><img src="/html5-xidian/Public/home/images/food-UK-2.png" ></div>
-                      <div class="col-md-2"><img src="/html5-xidian/Public/home/images/food-UK-3.png" ></div>
-                      <div class="col-md-2"><img src="/html5-xidian/Public/home/images/food-UK-4.png" ></div>
-                      <div class="col-md-2"><img src="/html5-xidian/Public/home/images/food-UK-5.png" ></div>
-                      <div class="col-md-1"></div>
-                  </div>
-              </div>
-              <div class="item">
-                  <div style="padding-left:18px">
-                      <div class="col-md-1"></div>
-                      <div class="col-md-2"> <img src="/html5-xidian/Public/home/images/food-UK-1.png" ></div>
-                      <div class="col-md-2"><img src="/html5-xidian/Public/home/images/food-UK-2.png" ></div>
-                      <div class="col-md-2"><img src="/html5-xidian/Public/home/images/food-UK-3.png" ></div>
-                      <div class="col-md-2"><img src="/html5-xidian/Public/home/images/food-UK-4.png" ></div>
-                      <div class="col-md-2"><img src="/html5-xidian/Public/home/images/food-UK-5.png" ></div>
-                      <div class="col-md-1"></div>
-                  </div>
-              </div>
-              <div class="item">
-                  <div style="padding-left:18px">
-                      <div class="col-md-1"></div>
-                      <div class="col-md-2"> <img src="/html5-xidian/Public/home/images/food-UK-1.png" ></div>
-                      <div class="col-md-2"><img src="/html5-xidian/Public/home/images/food-UK-2.png" ></div>
-                      <div class="col-md-2"><img src="/html5-xidian/Public/home/images/food-UK-3.png" ></div>
-                      <div class="col-md-2"><img src="/html5-xidian/Public/home/images/food-UK-4.png" ></div>
-                      <div class="col-md-2"><img src="/html5-xidian/Public/home/images/food-UK-5.png" ></div>
-                      <div class="col-md-1"></div>
-                  </div>
-              </div>
-            </div>
-            <!-- 轮播（Carousel）导航 -->
-            <a class="carousel-control left" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" style="overflow: hidden;"></span></a>
-            <a class="carousel-control right" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right" style="overflow: hidden;"></span></a>      
-        </div>
-      </div><!-- col-md-12 column -->
-    </div><!-- row clearfix -->
+    <div id="panda-show">
+  <div class="full">
+    <div class="content">
+      <a class="arrow-left" href="#"></a>
+      <a class="arrow-right" href="#"></a>
+      <div class="cover-left"></div>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          
+          <?php if(is_array($goods)): $i = 0; $__LIST__ = $goods;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><div class="swiper-slide">
+              <a href="" target="_blank">
+                <img src="/html5-xidian/Public/<?php echo ($n["img"]); ?>"/>
+                <div class="shuffer-line"></div>
+                <div class="stars-info">
+                    <div class="name"><?php echo ($n["name"]); ?></div>
+                    <div class="intro"><?php echo ($n["content"]); ?></div>
+                    <div class="icon-shuffer-live"></div>
+                    <div class="number"><i></i>¥<?php echo ($n["price"]); ?></div>
+                </div>
+              </a>            
+            </div><?php endforeach; endif; else: echo "" ;endif; ?>
+                  
 
-     
+        </div>
+      </div>
+            <div class="cover-right"></div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+    slidesPerView=4
+  slidesPerGroup=4
+if(document.body.clientWidth>1400){
+  slidesPerView=5
+  slidesPerGroup=5
+}
+
+  var mySwiper = new Swiper('.swiper-container',{
+    loop: true,
+    speed:1000,
+  onlyExternal : true,
+  slidesPerView :  slidesPerView,
+  slidesPerGroup : slidesPerGroup,
+  loopedSlides :20,
+  loopAdditionalSlides : 20,
+  onSlideChangeEnd: function(swiper){
+  //alert(swiper.activeIndex);
+    if(swiper.activeIndex==40){
+      swiper.swipeTo(0,0)
+      }
+    },
+
+  });  
+  $('.arrow-left').on('click', function(e){
+    e.preventDefault()
+    mySwiper.swipePrev()
+  })
+  $('.arrow-right').on('click', function(e){
+    e.preventDefault()
+    mySwiper.swipeNext()
+  })
+
+  
+  
+window.onresize=function() {
+//  alert(document.body.clientWidth );
+  
+  if(document.body.clientWidth<1400){
+    mySwiper.params.slidesPerView=mySwiper.params.slidesPerGroup=4;
+    mySwiper.reInit();
+    mySwiper.swipeTo(0,0)
+    }else if(document.body.clientWidth<1660){
+      mySwiper.params.slidesPerView=mySwiper.params.slidesPerGroup=5;
+      mySwiper.reInit();
+      mySwiper.swipeTo(0,0)
+    }else{
+      mySwiper.params.slidesPerView=mySwiper.params.slidesPerGroup=5;
+      mySwiper.reInit();
+      mySwiper.swipeTo(0,0)
+      }
+  
+
+}
+  
+</script>
+
     <br/><br/><br/><br/>
       <div class="container">
         <div class="row">

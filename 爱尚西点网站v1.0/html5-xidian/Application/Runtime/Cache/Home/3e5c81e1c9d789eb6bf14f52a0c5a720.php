@@ -10,6 +10,10 @@
     <script src="/html5-xidian/Public/home/js/jquery.js"></script>    
     <script src="/html5-xidian/Public/home/js/bootstrap.min.js"></script>
     <script src="/html5-xidian/Public/home/js/homeEdit.js"></script>
+    <link rel="stylesheet" href="/html5-xidian/Public/home/css/idangerous.swiper.css">
+    <link rel="stylesheet" href="/html5-xidian/Public/home/css/style.css">
+    <script src="/html5-xidian/Public/home/js/jquery-1.10.1.min.js"></script>
+    <script src="/html5-xidian/Public/home/js/idangerous.swiper.min.js"></script>
     <style type="text/css">
       .shopping_mall{
         height:26px;
@@ -215,48 +219,91 @@
               			</div>
         			</div>
       			</div>
-      			<div class="row clearfix">
-      			<div class="col-md-12 column">
-              <div id="myCarousel" class="carousel slide pad_010 b_k" data-ride="carousel">
-          		  <!-- 轮播（Carousel）指标 -->
-          		  <ol class="carousel-indicators">
-            	  	<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-              		<li data-target="#myCarousel" data-slide-to="1"></li>
-              		<li data-target="#myCarousel" data-slide-to="2"></li>
-          		  </ol>   
-          		  <!-- 轮播（Carousel）项目 -->
-          		  <div class="carousel-inner bor_btm">
-            	  	<div class="item active" >
-                		<div class="pic" style="padding-left:18px">
-                    		<img src="/html5-xidian/Public/home/images/Shopping_content_1.jpg" >
-                    		<img src="/html5-xidian/Public/home/images/Shopping_content_2.jpg" >
-                    		<img src="/html5-xidian/Public/home/images/Shopping_content_3.jpg" >
-                    		<img src="/html5-xidian/Public/home/images/Shopping_content_4.jpg" >
-                		</div>
-            		</div>
-            		<div class="item">
-                		<div class="pic" style="padding-left:18px">
-                    		<img src="/html5-xidian/Public/home/images/Shopping_content_1.jpg" >
-                    		<img src="/html5-xidian/Public/home/images/Shopping_content_2.jpg" >
-                    		<img src="/html5-xidian/Public/home/images/Shopping_content_3.jpg" >
-                    		<img src="/html5-xidian/Public/home/images/Shopping_content_4.jpg" >
-                		</div>
-            		</div>
-            		<div class="item">
-                		<div class="pic" style="padding-left:18px">
-                    		<img src="/html5-xidian/Public/home/images/Shopping_content_1.jpg" >
-                    		<img src="/html5-xidian/Public/home/images/Shopping_content_2.jpg" >
-                    		<img src="/html5-xidian/Public/home/images/Shopping_content_3.jpg" >
-                    		<img src="/html5-xidian/Public/home/images/Shopping_content_4.jpg" >
-                		</div>
-            		</div>
-            	</div>
-              <!-- 轮播（Carousel）导航 -->
-              <a class="carousel-control left" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" style="overflow: hidden;"></span></a>
-              <a class="carousel-control right" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right" style="overflow: hidden;"></span></a>      
-            </div>
-          </div>
+      		<div id="panda-show">
+  <div class="full">
+    <div class="content">
+                 <a class="arrow-left" href="#"></a>
+            <a class="arrow-right" href="#"></a>
+        <div class="cover-left"></div>
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+        
+          <?php if(is_array($goods)): $i = 0; $__LIST__ = $goods;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><div class="swiper-slide">
+              <a href="" target="_blank">
+                <img src="/html5-xidian/Public/<?php echo ($n["img"]); ?>"/>
+                <div class="shuffer-line"></div>
+                <div class="stars-info">
+                    <div class="name"><?php echo ($n["name"]); ?></div>
+                    <div class="intro"><?php echo ($n["content"]); ?></div>
+                    <div class="icon-shuffer-live"></div>
+                    <div class="number"><i></i>¥<?php echo ($n["price"]); ?></div>
+                </div>
+              </a>            
+            </div><?php endforeach; endif; else: echo "" ;endif; ?>
+          
+          
         </div>
+      </div>
+            <div class="cover-right"></div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+    slidesPerView=4
+  slidesPerGroup=4
+if(document.body.clientWidth>1400){
+  slidesPerView=5
+  slidesPerGroup=5
+}
+
+  var mySwiper = new Swiper('.swiper-container',{
+    loop: true,
+    speed:1000,
+  onlyExternal : true,
+  slidesPerView :  slidesPerView,
+  slidesPerGroup : slidesPerGroup,
+  loopedSlides :20,
+  loopAdditionalSlides : 20,
+  onSlideChangeEnd: function(swiper){
+  //alert(swiper.activeIndex);
+    if(swiper.activeIndex==40){
+      swiper.swipeTo(0,0)
+      }
+    },
+
+  });  
+  $('.arrow-left').on('click', function(e){
+    e.preventDefault()
+    mySwiper.swipePrev()
+  })
+  $('.arrow-right').on('click', function(e){
+    e.preventDefault()
+    mySwiper.swipeNext()
+  })
+
+  
+  
+window.onresize=function() {
+//  alert(document.body.clientWidth );
+  
+  if(document.body.clientWidth<1400){
+    mySwiper.params.slidesPerView=mySwiper.params.slidesPerGroup=4;
+    mySwiper.reInit();
+    mySwiper.swipeTo(0,0)
+    }else if(document.body.clientWidth<1660){
+      mySwiper.params.slidesPerView=mySwiper.params.slidesPerGroup=5;
+      mySwiper.reInit();
+      mySwiper.swipeTo(0,0)
+    }else{
+      mySwiper.params.slidesPerView=mySwiper.params.slidesPerGroup=5;
+      mySwiper.reInit();
+      mySwiper.swipeTo(0,0)
+      }
+  
+
+}
+  
+</script>
       </div>
     </div>
   </div>

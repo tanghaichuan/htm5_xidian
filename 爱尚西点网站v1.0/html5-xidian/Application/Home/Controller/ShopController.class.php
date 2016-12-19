@@ -21,6 +21,12 @@ class ShopController extends Controller {
       $id = isset($_GET['id']) ? intval($_GET['id']) : '';
       $content=$model->find($id);
       $this->assign("content",$content);
+
+      //轮播图
+      $goods=M("mall")->order("public_time desc")->select();
+      $this->assign("goods",$goods);      
+
+
       $this->display();
     }
 

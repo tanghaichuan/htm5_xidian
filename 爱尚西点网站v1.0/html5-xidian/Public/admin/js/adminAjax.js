@@ -60,5 +60,4 @@ $(function(){
 		//console.log(tag);
 		$("#postTag").val(tag);
 	});
-	
 });

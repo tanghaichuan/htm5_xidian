@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="/html5-xidian/Public/home/css/bootstrap.min.css">
   <link rel="stylesheet" media="screen and (max-width:1024px)" href="/html5-xidian/Public/home/css/medium.css" type="text/css" />
   <link rel="stylesheet" media="screen and (min-width:1025px)" href="/html5-xidian/Public/home/css/large.css" type="text/css" />
+  <link rel="stylesheet" href="/html5-xidian/Public/home/css/awesomplete.css" type="text/css" />
   <script src="/html5-xidian/Public/home/js/jquery.js"></script>    
   <script src="/html5-xidian/Public/home/js/bootstrap.min.js"></script>
   <script src="/html5-xidian/Public/home/js/homeEdit.js"></script>
@@ -83,14 +84,6 @@
             </li>
            	<li class="dropdown">
                <a href="/html5-xidian/home.php/Home/shop/index.html" class="dropdown-toggle">食材商城</a>
-              <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
-                <li>
-                   <a href="/html5-xidian/home.php/Home/shop/index.html">用具</a>
-                </li>
-                <li>
-                   <a href="/html5-xidian/home.php/Home/shop/index.html">食材</a>
-                </li>
-              </ul>
             </li>
           	<li class="dropdown">
                <a href="/html5-xidian/home.php/Home/users/index.html" class="dropdown-toggle">个人中心</a>

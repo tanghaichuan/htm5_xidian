@@ -53,4 +53,15 @@ class UserController extends Controller {
             $this->display("edit"); 
         }
     }
+
+    public function del(){
+        $id = isset($_GET['id']) ? intval($_GET['id']) : '';
+        if(M("public_users")->delete($id)){
+            $this->redirect('adminUsers/index',0);
+            //$this->success("删除成功",0);
+        }
+        else{ 
+            $this->error("删除失败！");
+        }
+    }
 }

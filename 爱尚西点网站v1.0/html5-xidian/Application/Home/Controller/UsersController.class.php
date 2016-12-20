@@ -26,7 +26,7 @@ class UsersController extends Controller {
         $this -> assign('foodList',$foodList); 
 
         $foodModel=M("foods");
-        $publish=$foodModel->where(array('publish_name'=>$username))->limit(1,5)->order("food_public_time desc")->select();
+        $publish=$foodModel->where(array('publish_name'=>session("username")))->order("food_public_time desc")->select();
 
         $this->assign("publish",$publish);
         $this->display();

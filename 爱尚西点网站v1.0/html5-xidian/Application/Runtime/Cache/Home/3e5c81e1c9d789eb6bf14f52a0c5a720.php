@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/html5-xidian/Public/home/css/bootstrap.min.css">
     <link rel="stylesheet" media="screen and (max-width:1024px)" href="/html5-xidian/Public/home/css/medium.css" type="text/css" />
     <link rel="stylesheet" media="screen and (min-width:1025px)" href="/html5-xidian/Public/home/css/large.css" type="text/css" />
+    <link rel="stylesheet" href="/html5-xidian/Public/home/css/awesomplete.css" type="text/css" />
     <script src="/html5-xidian/Public/home/js/jquery.js"></script>    
     <script src="/html5-xidian/Public/home/js/bootstrap.min.js"></script>
     <script src="/html5-xidian/Public/home/js/homeEdit.js"></script>
@@ -101,15 +102,6 @@
             </li>
            <li class="dropdown">
                <a href="/html5-xidian/home.php/Home/shop/index.html" class="dropdown-toggle">食材商城</a>
-              <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
-                <li>
-                   <a href="/html5-xidian/home.php/Home/shop/index.html">用具</a>
-                </li>
-                <li>
-                   <a href="/html5-xidian/home.php/Home/shop/index.html">食材</a>
-                </li>
-            
-              </ul>
             </li>
           <li class="dropdown">
                <a href="/html5-xidian/home.php/Home/users/index.html" class="dropdown-toggle">个人中心</a>
@@ -130,11 +122,11 @@
                <a href="#" class="dropdown-toggle">关于我们</a>
             </li>
             <li>
-              <form class="navbar-form navbar-left" role="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" />
-                </div>
-                <button type="submit" class="btn btn-default">搜索</button>
+              <form class="navbar-form navbar-left" role="search" action="<?php echo U('Home/index/content');?>" method="post">
+                <input class="awesomplete" placeholder="搜索想要的美食..." id="searchFood" name="data" style="position: relative;top: 3px;" />             
+                <button type="submit" class="btn btn-default btn-sm" style="position: relative;top: 1.5px;">搜索</button>
+                <ul class="mylist">
+                </ul> 
               </form>
             </li>
           </ul>
@@ -169,7 +161,7 @@
                 <label >相关信息：</label></br>
                   <span><?php echo ($content["content"]); ?></span>
                 </div>
-          			<div class="form-group" style="padding-top:20px;">
+          		<div class="form-group" style="padding-top:20px;">
                   <label>价格：</label>
                   <span>￥<?php echo ($content["price"]); ?></span> 
                   &nbsp;
@@ -179,39 +171,40 @@
                   <input id="add" name="" type="button" value="+" />  
   
                     <script>
-      								$(document).ready(function(){
-      								//获得文本框对象
-         									var t = $("#text_box");
-      									//初始化数量为1,并失效减
-      									$('#min').attr('disabled',true);
-          								//数量增加操作
-         			 							$("#add").click(function(){
-              									t.val(parseInt(t.val())+1)
-              									if (parseInt(t.val())!=1){
-                  									$('#min').attr('disabled',false);
-              									}
-            
-          								}) 
-          								//数量减少操作
-          								$("#min").click(function(){
-              								t.val(parseInt(t.val())-1);
-              								if (parseInt(t.val())==1){
-                  								$('#min').attr('disabled',true);
-              								}
-            
-         	 								})
-         
-      								});
-      							</script>  
+						$(document).ready(function(){
+						//获得文本框对象
+								var t = $("#text_box");
+							//初始化数量为1,并失效减
+							$('#min').attr('disabled',true);
+							//数量增加操作
+		 							$("#add").click(function(){
+									t.val(parseInt(t.val())+1)
+									if (parseInt(t.val())!=1){
+  									$('#min').attr('disabled',false);
+									}
+
+							}) 
+							//数量减少操作
+							$("#min").click(function(){
+								t.val(parseInt(t.val())-1);
+								if (parseInt(t.val())==1){
+  								$('#min').attr('disabled',true);
+								}
+
+ 								})
+
+						});
+					</script>  
                 </div>                                
-        			  <div class="row clearfix">
+        		<div class="row clearfix">
           		    <div class="col-md-6 column">
-             		     <button type="button" class="btn btn-default" id="cart" name="<?php echo ($username); ?>" value="<?php echo ($content["id"]); ?>">加入购物车</button>
+             		    <button type="button" class="btn btn-default" id="cart" name="<?php echo ($username); ?>" value="<?php echo ($content["id"]); ?>">加入购物车</button>
           		    </div>
-        		  </div>
-        	  </div>
-      	  </div>
-   		 	</div>
+        		</div>
+        	</div>
+      	</div>
+   	</div>
+   	</div>
       			<div class="row clearfix">
         			<div class="col-md-12 column">
               			<div class="shopping_mall">
@@ -220,34 +213,32 @@
         			</div>
       			</div>
       		<div id="panda-show">
-  <div class="full">
-    <div class="content">
-                 <a class="arrow-left" href="#"></a>
-            <a class="arrow-right" href="#"></a>
-        <div class="cover-left"></div>
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-        
-          <?php if(is_array($goods)): $i = 0; $__LIST__ = $goods;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><div class="swiper-slide">
-              <a href="" target="_blank">
-                <img src="/html5-xidian/Public/<?php echo ($n["img"]); ?>"/>
-                <div class="shuffer-line"></div>
-                <div class="stars-info">
-                    <div class="name"><?php echo ($n["name"]); ?></div>
-                    <div class="intro"><?php echo ($n["content"]); ?></div>
-                    <div class="icon-shuffer-live"></div>
-                    <div class="number"><i></i>¥<?php echo ($n["price"]); ?></div>
-                </div>
-              </a>            
-            </div><?php endforeach; endif; else: echo "" ;endif; ?>
-          
-          
-        </div>
-      </div>
-            <div class="cover-right"></div>
-    </div>
-  </div>
-</div>
+			  <div class="full">
+			    <div class="content">
+			        <a class="arrow-left" href="#"></a>
+			        <a class="arrow-right" href="#"></a>
+			        <div class="cover-left"></div>
+			      	<div class="swiper-container">
+				        <div class="swiper-wrapper">
+				        
+				          <?php if(is_array($goods)): $i = 0; $__LIST__ = $goods;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><div class="swiper-slide">
+				              <a href="<?php echo U('Home/shop/content',array('id'=>$n['id']));?>" target="_blank">
+				                <img src="/html5-xidian/Public/<?php echo ($n["img"]); ?>"/>
+				                <div class="shuffer-line"></div>
+				                <div class="stars-info">
+				                    <div class="name"><?php echo ($n["name"]); ?></div>
+				                    <div class="intro"><?php echo ($n["content"]); ?></div>
+				                    <div class="icon-shuffer-live"></div>
+				                </div>
+				              </a>            
+				            </div><?php endforeach; endif; else: echo "" ;endif; ?>
+				          
+				        </div>
+			      	</div>
+            		<div class="cover-right"></div>
+		    	</div>
+		  	   </div>
+			</div>
 <script type="text/javascript">
     slidesPerView=4
   slidesPerGroup=4

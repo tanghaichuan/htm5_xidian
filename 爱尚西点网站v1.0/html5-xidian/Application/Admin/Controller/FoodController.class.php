@@ -100,7 +100,7 @@ class FoodController extends Controller {
                 //添加
                 if($model->save($data)){
                     //$this->success('修改成功', U('food/index'));
-                    $this->redirect("food/add",0);
+                    $this->redirect("food/index",0);
 
                 }else{
                      $this->error('修改失败');

@@ -10,9 +10,11 @@
   <link rel="stylesheet" media="screen and (max-width:1024px)" href="__PUBLIC__/home/css/medium.css" type="text/css" />
   <link rel="stylesheet" media="screen and (min-width:1025px)" href="__PUBLIC__/home/css/large.css" type="text/css" />
   <link rel="stylesheet" href="__PUBLIC__/home/css/awesomplete.css" type="text/css" />
+  <link rel="stylesheet" href="__PUBLIC__/admin/css/jq22.css">
   <script src="__PUBLIC__/home/js/jquery.js"></script>    
   <script src="__PUBLIC__/home/js/bootstrap.min.js"></script>
   <script src="__PUBLIC__/home/js/homeEdit.js"></script>
+  <script src="__PUBLIC__/admin/js/adminAjax.js"></script>
 </head>
 <body>
   <div class="header" style="height: 50px;">
@@ -150,15 +152,26 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="inputFoodTag" class="col-xs-3 col-md-3 control-label">标签：</label>
-              <div class="col-xs-6 col-md-6">
-                <select class="form-control" id="inputFoodTag" name="tagname">
-                  <volist name="tagList" id="n">
-                    <option>{$n.tagname}</option>
-                  </volist>
-                </select>
+                 <label for="inputFoodTag" class="col-xs-2 col-md-2 control-label">标签：</label>
+                <div class="col-xs-6 col-md-6">
+                  <input type="text" name="tags" id="postTag" style="display: none;">
+                  <!--标签-->
+                  <div id="mycard-plus">
+                    <div class="default-tag tagbtn">
+                      <div class="clearfix">
+                        <volist name="tagList" id="n">
+                          <a value="-1" title="选择一个标签" href="javascript:void(0);" class="addTag" rel="none"><span>{$n.tagname}</span><em></em></a>
+                        </volist>
+                      </div>
+                    </div><!--mycard-plus end-->
+                  </div>  
+                  <!--<select class="form-control" id="inputFoodTag" name="tagname" multiple="multiple" size="2">
+                    <volist name="tagList" id="n">
+                    <option value="{$n.tagname}">{$n.tagname}</option>
+                    </volist>
+                  </select>-->
+                </div>
               </div>
-            </div>
             <div class="form-group">
               <label for="inputFoodName" class="col-xs-2 col-sm-2 control-label">名称：</label>
               <div class="col-xs-6 col-sm-6">
@@ -178,6 +191,12 @@
               </div>
             </div>
             <div class="form-group">
+              <label for="inputFoodStep" class="col-xs-2 col-sm-2 control-label">相关信息：</label>
+              <div class="col-xs-6 col-sm-6">
+                <textarea class="form-control" id="inputFoodStep" rows="3" name="content"></textarea>
+              </div>
+            </div>
+            <div class="form-group">
               <label for="inputFoodImg" class="col-xs-2 col-sm-2 control-label">美食图片：</label>
               <div class="col-xs-6 col-sm-6">
                 <input type="file" id="inputFoodImg" class="form-control" name="img">
@@ -185,7 +204,7 @@
             </div>
             <div class="form-group">
               <div class="col-xs-3 col-sm-3">
-                <input type="submit" class="btn btn-sm" value="发布" style="position: relative;left: 100px;" rel="{$username}" id="publish" />
+                <input type="submit" class="btn btn-sm" value="发布" style="position: relative;left: 100px;" rel="{$username}" id="submit" />
               </div>
             </div>
           </form>

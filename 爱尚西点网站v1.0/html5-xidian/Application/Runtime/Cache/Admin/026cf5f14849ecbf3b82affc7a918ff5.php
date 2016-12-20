@@ -181,7 +181,7 @@
 							<div class="form-group">
 								 <label for="inputUserName" class="col-xs-2 col-md-2 control-label">用户名：</label>
 								<div class="col-xs-4 col-md-4">
-									<input type="text" class="form-control" id="inputUserName" name="username" value="<?php echo ($data["username"]); ?>" disabled />
+									<input type="text" class="form-control" id="inputUserName" name="username" value="<?php echo ($data["username"]); ?>" disabled placeholder="<?php echo ($username); ?>" />
 								</div>
 							</div>
 							<div class="form-group">

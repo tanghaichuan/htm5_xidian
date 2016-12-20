@@ -220,7 +220,7 @@
         <div class="swiper-wrapper">
           
           <?php if(is_array($goods)): $i = 0; $__LIST__ = $goods;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><div class="swiper-slide">
-              <a href="" target="_blank">
+              <a href="<?php echo U('Home/shop/content',array('id'=>$n['id']));?>" target="_blank">
                 <img src="/html5-xidian/Public/<?php echo ($n["img"]); ?>"/>
                 <div class="shuffer-line"></div>
                 <div class="stars-info">

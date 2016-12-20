@@ -9,9 +9,12 @@
   <link rel="stylesheet" href="/html5-xidian/Public/home/css/bootstrap.min.css">
   <link rel="stylesheet" media="screen and (max-width:1024px)" href="/html5-xidian/Public/home/css/medium.css" type="text/css" />
   <link rel="stylesheet" media="screen and (min-width:1025px)" href="/html5-xidian/Public/home/css/large.css" type="text/css" />
+  <link rel="stylesheet" href="/html5-xidian/Public/home/css/awesomplete.css" type="text/css" />
+  <link rel="stylesheet" href="/html5-xidian/Public/admin/css/jq22.css">
   <script src="/html5-xidian/Public/home/js/jquery.js"></script>    
   <script src="/html5-xidian/Public/home/js/bootstrap.min.js"></script>
   <script src="/html5-xidian/Public/home/js/homeEdit.js"></script>
+  <script src="/html5-xidian/Public/admin/js/adminAjax.js"></script>
 </head>
 <body>
   <div class="header" style="height: 50px;">
@@ -85,15 +88,7 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a href="/html5-xidian/home.php/Home/shop/index.html" class="dropdown-toggle">食材商城</a>
-              <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
-                <li>
-                  <a href="/html5-xidian/home.php/Home/shop/index.html">用具</a>
-                </li>
-                <li>
-                  <a href="/html5-xidian/home.php/Home/shop/index.html">食材</a>
-                </li>
-              </ul>
+               <a href="/html5-xidian/home.php/Home/shop/index.html" class="dropdown-toggle">食材商城</a>
             </li>
             <li class="dropdown">
               <a href="/html5-xidian/home.php/Home/users/index.html" class="dropdown-toggle">个人中心</a>
@@ -155,13 +150,22 @@
               </div>
             </div>
             <div class="form-group">
-              <label for="inputFoodTag" class="col-xs-3 col-md-3 control-label">标签：</label>
-              <div class="col-xs-6 col-md-6">
-                <select class="form-control" id="inputFoodTag" name="tagname">
-                  <?php if(is_array($tagList)): $i = 0; $__LIST__ = $tagList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><option><?php echo ($n["tagname"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
-                </select>
+                 <label for="inputFoodTag" class="col-xs-2 col-md-2 control-label">标签：</label>
+                <div class="col-xs-6 col-md-6">
+                  <input type="text" name="tags" id="postTag" style="display: none;">
+                  <!--标签-->
+                  <div id="mycard-plus">
+                    <div class="default-tag tagbtn">
+                      <div class="clearfix">
+                        <?php if(is_array($tagList)): $i = 0; $__LIST__ = $tagList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><a value="-1" title="选择一个标签" href="javascript:void(0);" class="addTag" rel="none"><span><?php echo ($n["tagname"]); ?></span><em></em></a><?php endforeach; endif; else: echo "" ;endif; ?>
+                      </div>
+                    </div><!--mycard-plus end-->
+                  </div>  
+                  <!--<select class="form-control" id="inputFoodTag" name="tagname" multiple="multiple" size="2">
+                    <?php if(is_array($tagList)): $i = 0; $__LIST__ = $tagList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><option value="<?php echo ($n["tagname"]); ?>"><?php echo ($n["tagname"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                  </select>-->
+                </div>
               </div>
-            </div>
             <div class="form-group">
               <label for="inputFoodName" class="col-xs-2 col-sm-2 control-label">名称：</label>
               <div class="col-xs-6 col-sm-6">
@@ -181,6 +185,12 @@
               </div>
             </div>
             <div class="form-group">
+              <label for="inputFoodStep" class="col-xs-2 col-sm-2 control-label">相关信息：</label>
+              <div class="col-xs-6 col-sm-6">
+                <textarea class="form-control" id="inputFoodStep" rows="3" name="content"></textarea>
+              </div>
+            </div>
+            <div class="form-group">
               <label for="inputFoodImg" class="col-xs-2 col-sm-2 control-label">美食图片：</label>
               <div class="col-xs-6 col-sm-6">
                 <input type="file" id="inputFoodImg" class="form-control" name="img">
@@ -188,7 +198,7 @@
             </div>
             <div class="form-group">
               <div class="col-xs-3 col-sm-3">
-                <input type="submit" class="btn btn-sm" value="发布" style="position: relative;left: 100px;" rel="<?php echo ($username); ?>" id="publish" />
+                <input type="submit" class="btn btn-sm" value="发布" style="position: relative;left: 100px;" rel="<?php echo ($username); ?>" id="submit" />
               </div>
             </div>
           </form>

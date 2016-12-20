@@ -89,16 +89,7 @@
               </ul>
             </li>
            <li class="dropdown">
-               <a href="/html5-xidian/home.php/Home/shop/list.html" class="dropdown-toggle">食材商城</a>
-              <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
-                <li>
-                   <a href="/html5-xidian/home.php/Home/shop/list.html">用具</a>
-                </li>
-                <li>
-                   <a href="/html5-xidian/home.php/Home/shop/list.html">食材</a>
-                </li>
-            
-              </ul>
+               <a href="/html5-xidian/home.php/Home/shop/index.html" class="dropdown-toggle">食材商城</a>
             </li>
           <li class="dropdown">
                <a href="/html5-xidian/home.php/Home/users/index.html" class="dropdown-toggle">个人中心</a>

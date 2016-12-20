@@ -10,10 +10,17 @@
     <script src="__PUBLIC__/home/js/homeEdit.js"></script>
     <script src="__PUBLIC__/home/js/register_form.js"></script>
     <style type="text/css">
-      *{
-        font-family: "微软雅黑";
-      }
-    </style>
+	 	@media screen and (min-width:1025px) {
+		  #pt{
+		  	padding: 50px 0px 0px 100px;
+		  }
+		}
+		@media screen and (max-width:1024px) {
+		  #pt{
+		  	padding: 40px 0px 0px 40px;
+		  }
+		}
+	</style>
   </head>
   <body>
     <!--页头-->
@@ -39,7 +46,7 @@
     <div class="content" style="padding: 140px 10px;">
       <!--配图-->
       <div class="row clearfix">
-        <div class="col-md-7 column" style="padding: 110px 0px 0px 80px;">
+        <div class="col-md-7 column" id="pt">
           <img src="__PUBLIC__/home/images/sinin.png">
         </div>
         <!--表单-->

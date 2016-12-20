@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="/html5-xidian/Public/home/css/bootstrap.min.css">
 <link rel="stylesheet" media="screen and (max-width:1024px)" href="/html5-xidian/Public/home/css/food_content_medium.css" type="text/css" />
 <link rel="stylesheet" media="screen and (min-width:1025px)" href="/html5-xidian/Public/home/css/food_content_large.css" type="text/css" />
+   <link rel="stylesheet" href="/html5-xidian/Public/home/css/awesomplete.css" type="text/css" />
 <link rel="stylesheet" href="/html5-xidian/Public/home/css/amazeui.css"/>
 <link rel="stylesheet" href="/html5-xidian/Public/home/css/food_list_cartoon.css">
 <script src="/html5-xidian/Public/home/js/jquery.js"></script>    
@@ -19,8 +20,17 @@
 <link rel="stylesheet" href="/html5-xidian/Public/home/css/idangerous.swiper.css">
 <link rel="stylesheet" href="/html5-xidian/Public/home/css/style.css">
 <script src="/html5-xidian/Public/home/js/idangerous.swiper.min.js"></script>
-
 </head>
+<style type="text/css">
+  @media screen and (min-width:1025px) {
+  #panda-show {
+  font: 12px/1.5 "STHeiti","Microsoft YaHei","Helvetica Neue","Helvetica","SimSun","STSong","Arial","sans-serif";
+  background: url(../images/bg.jpg) no-repeat center top;
+  background-size: 100% auto;
+  margin: 0px 110px;
+  }
+}
+</style>
 <body>
 <!--页头-->
   <div class="header" style="height: 50px;">
@@ -94,16 +104,8 @@
               </ul>
           </li>
           <li class="dropdown">
-            <a href="/html5-xidian/home.php/Home/shop/index.html" class="dropdown-toggle">食材商城</a>
-            <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
-              <li>
-              <a href="/html5-xidian/home.php/Home/shop/index.html">用具</a>
-              </li>
-              <li>
-              <a href="/html5-xidian/home.php/Home/shop/index.html">食材</a>
-              </li>
-            </ul>
-          </li>
+               <a href="/html5-xidian/home.php/Home/shop/index.html" class="dropdown-toggle">食材商城</a>
+            </li>
           <li class="dropdown">
             <a href="/html5-xidian/home.php/Home/users/index.html" class="dropdown-toggle">个人中心</a>
             <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
@@ -123,12 +125,12 @@
             <a href="#" class="dropdown-toggle">关于我们</a>
           </li>
           <li>
-            <form class="navbar-form navbar-left" role="search">
-              <div class="form-group">
-              <input type="text" class="form-control" />
-              </div>
-              <button type="submit" class="btn btn-default">搜索</button>
-            </form>
+            <form class="navbar-form navbar-left" role="search" action="<?php echo U('Home/index/content');?>" method="post">
+                <input class="awesomplete" placeholder="搜索想要的美食..." id="searchFood" name="data" style="position: relative;top: 3px;" />             
+                <button type="submit" class="btn btn-default btn-sm" style="position: relative;top: 1.5px;">搜索</button>
+                <ul class="mylist">
+                </ul> 
+              </form>
           </li>
         </ul>
       </div>
@@ -166,7 +168,7 @@
           </div>
           <div>
               <?php if(is_array($tagList)): $i = 0; $__LIST__ = $tagList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><span class="badge badge-warning"><?php echo ($n["tag_name"]); ?></span><?php endforeach; endif; else: echo "" ;endif; ?>
-            <a href="javascript:void(0)" id="addFav" name="<?php echo ($content["id"]); ?>" value="<?php echo ($username); ?>">加入收藏</a>
+            <a href="javascript:void(0)" id="addFav" name="<?php echo ($content["id"]); ?>" value="<?php echo ($username); ?>" style="position: relative;top: -15px;left: 30px;">加入收藏</a>
           </div>
           <div class="row">
             <div class="col-md-3">
@@ -208,9 +210,6 @@
       </div>
     <br/><br/><br/> 
 
-    <div class="border-a">
-      <font style="position: relative;top: -10px;font-family:仿宋;color: black;" >你可能需要：</font>
-    </div>
     <div id="panda-show">
   <div class="full">
     <div class="content">
@@ -228,12 +227,10 @@
                     <div class="name"><?php echo ($n["name"]); ?></div>
                     <div class="intro"><?php echo ($n["content"]); ?></div>
                     <div class="icon-shuffer-live"></div>
-                    <div class="number"><i></i>¥<?php echo ($n["price"]); ?></div>
                 </div>
               </a>            
             </div><?php endforeach; endif; else: echo "" ;endif; ?>
                   
-
         </div>
       </div>
             <div class="cover-right"></div>
@@ -299,18 +296,18 @@ window.onresize=function() {
 
     <br/><br/><br/><br/>
       <div class="container">
-        <div class="row">
+        <div class="row" id="pd">
         <!--评论框-->
-        <div class="col-md-11 col-s-10 col-xs-10">
+        <div class="col-md-12">
           
           <form action="<?php echo U('Home/food/addcomment');?>" method="post" role="form" class="form-horizontal" id="inputComment">
-            <h3><?php echo ($content["name"]); ?>的评论</h3>
+            <h3 id="fd_name"><?php echo ($content["name"]); ?>的评论</h3>
             <div class="form-group">
               <div class="col-md-1" id="avater-img">
                 <img src="/html5-xidian/Public/home/images/avater.jpeg" alt="" class="img-circle" width="46px" height="46px">
                 <p id="commentUser"><?php echo ($username); ?></p>
               </div>
-              <div class="col-md-5" id="text">
+              <div class="col-md-6" id="text">
                 <textarea rows="5" cols="70" maxlength="140" name="comment"></textarea>
               </div>
             </div>
@@ -325,7 +322,7 @@ window.onresize=function() {
         <div class="col-md-11"> 
           <ul class="am-comment-list">
 
-            <?php if(is_array($commentList)): $i = 0; $__LIST__ = $commentList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><li class="am-comment">
+            <?php if(is_array($commentList)): $i = 0; $__LIST__ = $commentList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><li class="am-comment" style="padding-bottom: 2px;">
                 <a href="#">
                 <img src="/html5-xidian/Public/home/images/food-UK-1.png" alt="头像" class="am-comment-avatar" width="48" height="48"/>
                 </a>

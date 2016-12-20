@@ -92,15 +92,6 @@
             </li>
            <li class="dropdown">
                <a href="/html5-xidian/home.php/Home/shop/index.html" class="dropdown-toggle">食材商城</a>
-              <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
-                <li>
-                   <a href="/html5-xidian/home.php/Home/shop/index.html">用具</a>
-                </li>
-                <li>
-                   <a href="/html5-xidian/home.php/Home/shop/index.html">食材</a>
-                </li>
-            
-              </ul>
             </li>
           <li class="dropdown">
                <a href="/html5-xidian/home.php/Home/users/index.html" class="dropdown-toggle">个人中心</a>
@@ -122,8 +113,8 @@
             </li>
             <li>
               <form class="navbar-form navbar-left" role="search" action="<?php echo U('Home/index/content');?>" method="post">
-                <input class="awesomplete" placeholder="搜索想要的美食..." id="searchFood" name="data"/>             
-                <button type="submit" class="btn btn-default">搜索</button>
+                <input class="awesomplete" placeholder="搜索想要的美食..." id="searchFood" name="data" style="position: relative;top: 3px;" />             
+                <button type="submit" class="btn btn-default btn-sm" style="position: relative;top: 1.5px;">搜索</button>
                 <ul class="mylist">
                 </ul> 
               </form>

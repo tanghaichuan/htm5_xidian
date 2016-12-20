@@ -82,3 +82,39 @@ INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000476s ]
 ERR: 无法加载模块:Public
 
+[ 2016-12-20T11:16:21+08:00 ] 127.0.0.1 /html5-xidian/Public/home/images/live.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000958s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-20T11:17:06+08:00 ] 127.0.0.1 /html5-xidian/Public/home/images/live.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000473s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-20T11:18:39+08:00 ] 127.0.0.1 /html5-xidian/Public/home/images/live.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000075s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001002s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-20T14:02:22+08:00 ] 127.0.0.1 /html5-xidian/Public/home/images/live.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000466s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-20T14:02:24+08:00 ] 127.0.0.1 /html5-xidian/Public/home/images/live.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000446s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-20T14:02:27+08:00 ] 127.0.0.1 /html5-xidian/Public/home/images/live.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001258s ]
+ERR: 无法加载模块:Public
+

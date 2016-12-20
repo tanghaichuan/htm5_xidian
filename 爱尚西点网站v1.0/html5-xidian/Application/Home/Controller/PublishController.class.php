@@ -46,7 +46,7 @@ class PublishController extends Controller {
             $data['img']=$info['img']['savepath'].$info['img']['savename'];
             $data['food_public_time']=getTime();
             $data['classify']=I("post.classify");
-            $data['publish_name']="西点官方";
+            $data['publish_name']=session("username");
             //var_dump(I("post.tagname"));  
             //添加
             if($model->create()&&$model->add($data)&&$tag_rela_Model->addAll($tagData)){

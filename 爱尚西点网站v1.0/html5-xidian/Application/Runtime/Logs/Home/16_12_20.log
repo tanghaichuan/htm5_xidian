@@ -2951,3 +2951,651 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001079s ]
 INFO: [ app_end ] --END-- [ RunTime:0.001194s ]
 
+[ 2016-12-20T11:16:12+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/food/french_cate.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000509s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000704s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000763s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0069s ]
+SQL: SHOW COLUMNS FROM `foods` [ RunTime:0.0073s ]
+SQL: SELECT * FROM `foods` WHERE `classify` = '法式菜肴'  [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000194s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012764s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012870s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000469s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000523s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000961s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001055s ]
+
+[ 2016-12-20T11:16:14+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/food/getFav
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000643s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000873s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000979s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0061s ]
+SQL: SHOW COLUMNS FROM `favorite` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `favorite` WHERE `food_id` = 15 AND `user_name` = 'qqqqqq' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000771s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000837s ]
+
+[ 2016-12-20T11:16:15+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/food/getFav
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000468s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000642s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000702s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0065s ]
+SQL: SHOW COLUMNS FROM `favorite` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `favorite` WHERE `food_id` = 45 AND `user_name` = 'qqqqqq' LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000875s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000933s ]
+
+[ 2016-12-20T11:16:16+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/food/getFav
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000716s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002090s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002215s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0067s ]
+SQL: SHOW COLUMNS FROM `favorite` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `favorite` WHERE `food_id` = 46 AND `user_name` = 'qqqqqq' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000863s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000928s ]
+
+[ 2016-12-20T11:16:17+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/food/getFav
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000765s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001062s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001186s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0062s ]
+SQL: SHOW COLUMNS FROM `favorite` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `favorite` WHERE `food_id` = 43 AND `user_name` = 'qqqqqq' LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000822s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000895s ]
+
+[ 2016-12-20T11:16:18+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/food/getFav
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000740s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001706s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001911s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0061s ]
+SQL: SHOW COLUMNS FROM `favorite` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `favorite` WHERE `food_id` = 44 AND `user_name` = 'qqqqqq' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000878s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000938s ]
+
+[ 2016-12-20T11:16:19+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/food/getFav
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000876s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001700s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0061s ]
+SQL: SHOW COLUMNS FROM `favorite` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `favorite` WHERE `food_id` = 40 AND `user_name` = 'qqqqqq' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001030s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001104s ]
+
+[ 2016-12-20T11:16:20+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/food/getFav
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000446s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000565s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000625s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `favorite` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `favorite` WHERE `food_id` = 39 AND `user_name` = 'qqqqqq' LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000769s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000824s ]
+
+[ 2016-12-20T11:16:21+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/food/content/id/45
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000578s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000635s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0059s ]
+SQL: SHOW COLUMNS FROM `foods` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `foods` WHERE `id` = 45 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `mall` [ RunTime:0.0101s ]
+SQL: SELECT * FROM `mall` ORDER BY public_time desc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tag_food_relation` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `tag_food_relation` WHERE `food_name` = '法式面包'  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `comment` WHERE `food_id` = 45  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `comment` WHERE `food_id` = 45 ORDER BY id desc LIMIT 0,5   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000169s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000256s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017660s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017735s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000497s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000885s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000990s ]
+
+[ 2016-12-20T11:16:21+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/food/content/images/bg.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000806s ]
+
+[ 2016-12-20T11:16:58+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/food/getFav
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000762s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000831s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0083s ]
+SQL: SHOW COLUMNS FROM `favorite` [ RunTime:0.0095s ]
+SQL: SELECT * FROM `favorite` WHERE `food_id` = 15 AND `user_name` = 'qqqqqq' LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000851s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000909s ]
+
+[ 2016-12-20T11:16:59+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/food/getFav
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000668s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001060s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001167s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0081s ]
+SQL: SHOW COLUMNS FROM `favorite` [ RunTime:0.0082s ]
+SQL: SELECT * FROM `favorite` WHERE `food_id` = 46 AND `user_name` = 'qqqqqq' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000793s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000873s ]
+
+[ 2016-12-20T11:17:00+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/food/getFav
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000785s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000968s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001084s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `favorite` [ RunTime:0.0075s ]
+SQL: SELECT * FROM `favorite` WHERE `food_id` = 45 AND `user_name` = 'qqqqqq' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000756s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000813s ]
+
+[ 2016-12-20T11:17:01+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/food/getFav
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000671s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000969s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001113s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0062s ]
+SQL: SHOW COLUMNS FROM `favorite` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `favorite` WHERE `food_id` = 44 AND `user_name` = 'qqqqqq' LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000759s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000835s ]
+
+[ 2016-12-20T11:17:02+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/food/getFav
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000612s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000755s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000856s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0063s ]
+SQL: SHOW COLUMNS FROM `favorite` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `favorite` WHERE `food_id` = 43 AND `user_name` = 'qqqqqq' LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000966s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001037s ]
+
+[ 2016-12-20T11:17:03+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/food/getFav
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000502s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000655s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000742s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0067s ]
+SQL: SHOW COLUMNS FROM `favorite` [ RunTime:0.0074s ]
+SQL: SELECT * FROM `favorite` WHERE `food_id` = 40 AND `user_name` = 'qqqqqq' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000745s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000803s ]
+
+[ 2016-12-20T11:17:05+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/food/getFav
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000433s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000617s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0065s ]
+SQL: SHOW COLUMNS FROM `favorite` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `favorite` WHERE `food_id` = 39 AND `user_name` = 'qqqqqq' LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000876s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000964s ]
+
+[ 2016-12-20T11:17:06+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/food/content/id/46
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000524s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000657s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0066s ]
+SQL: SHOW COLUMNS FROM `foods` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `foods` WHERE `id` = 46 LIMIT 1   [ RunTime:0.0008s ]
+SQL: SHOW COLUMNS FROM `mall` [ RunTime:0.0072s ]
+SQL: SELECT * FROM `mall` ORDER BY public_time desc  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `tag_food_relation` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `tag_food_relation` WHERE `food_name` = '牛排'  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `comment` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `comment` WHERE `food_id` = 46  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `comment` WHERE `food_id` = 46 ORDER BY id desc LIMIT 0,5   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000215s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015555s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015629s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000519s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000882s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001025s ]
+
+[ 2016-12-20T11:18:39+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/shop/content/id/10.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000643s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000773s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000848s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0061s ]
+SQL: SHOW COLUMNS FROM `mall` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `mall` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `mall` ORDER BY public_time desc  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000122s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000214s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012943s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013023s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000383s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000446s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001019s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001132s ]
+
+[ 2016-12-20T14:02:09+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/shop/addCart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000603s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001337s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001500s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `shopping_cart` [ RunTime:0.0077s ]
+SQL: SELECT * FROM `public_users` WHERE `username` = 'qqqqqq' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `shopping_cart` WHERE `mall_id` = 10 AND `user_id` = 6 LIMIT 1   [ RunTime:0.0005s ]
+SQL: INSERT INTO `shopping_cart` (`mall_id`,`user_id`) VALUES ('10','6') [ RunTime:0.0007s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001139s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001235s ]
+
+[ 2016-12-20T14:02:14+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/shop/addCart
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000439s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000610s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000666s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0072s ]
+SQL: SHOW COLUMNS FROM `shopping_cart` [ RunTime:0.0069s ]
+SQL: SELECT * FROM `public_users` WHERE `username` = 'qqqqqq' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `shopping_cart` WHERE `mall_id` = 10 AND `user_id` = 6 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000762s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000833s ]
+
+[ 2016-12-20T14:02:21+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/shop/content/id/9.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000465s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000597s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000661s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `mall` [ RunTime:0.0076s ]
+SQL: SELECT * FROM `mall` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `mall` ORDER BY public_time desc  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012479s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012580s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000498s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000709s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000790s ]
+
+[ 2016-12-20T14:02:24+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/shop/content/id/10.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000499s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000667s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000740s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0077s ]
+SQL: SHOW COLUMNS FROM `mall` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `mall` WHERE `id` = 10 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `mall` ORDER BY public_time desc  [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012640s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012713s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000354s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000805s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000907s ]
+
+[ 2016-12-20T14:02:27+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/shop/content/id/13.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000456s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000666s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000731s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0065s ]
+SQL: SHOW COLUMNS FROM `mall` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `mall` WHERE `id` = 13 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `mall` ORDER BY public_time desc  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000176s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012707s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012816s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000426s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000947s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001053s ]
+
+[ 2016-12-20T14:03:05+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/food/content/images/bg.jpg
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000494s ]
+
+[ 2016-12-20T14:03:38+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/publish/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000536s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000688s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000748s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0067s ]
+SQL: SHOW COLUMNS FROM `tags` [ RunTime:0.0081s ]
+SQL: SELECT * FROM `tags`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000189s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012299s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012371s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000472s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000525s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000872s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000945s ]
+
+[ 2016-12-20T14:04:01+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/publish/publish.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000530s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000739s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000810s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0066s ]
+SQL: SHOW COLUMNS FROM `tag_food_relation` [ RunTime:0.0072s ]
+SQL: SHOW COLUMNS FROM `foods` [ RunTime:0.0071s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given K:\html5\wwwroot\html5-xidian\thinkphp\Library\Think\Upload.class.php 第 170 行.
+NOTIC: [8] Undefined index: validate K:\html5\wwwroot\html5-xidian\thinkphp\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto K:\html5\wwwroot\html5-xidian\thinkphp\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [8] Undefined index: validate K:\html5\wwwroot\html5-xidian\thinkphp\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto K:\html5\wwwroot\html5-xidian\thinkphp\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `foods` (`classify`,`name`,`ingredients`,`practice`,`content`,`img`,`food_public_time`,`publish_name`) VALUES ('意式菜肴','测试','测试测试','测试测试','测试测试','../Public/uploads/2016-12-20/5858c9d1b7f8d.png','2016-12-20','西点官方') [ RunTime:0.0006s ]
+SQL: INSERT INTO `tag_food_relation` (`tag_name`,`food_name`) VALUES ('英式','测试'),('西点','测试') [ RunTime:0.0005s ]
+
+[ 2016-12-20T14:04:02+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/publish/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000452s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000636s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0064s ]
+SQL: SHOW COLUMNS FROM `tags` [ RunTime:0.0074s ]
+SQL: SELECT * FROM `tags`  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011783s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011880s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000468s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000532s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001065s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001166s ]
+
+[ 2016-12-20T14:04:30+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/users/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000518s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000818s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000899s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0078s ]
+SQL: SHOW COLUMNS FROM `favorite` [ RunTime:0.0073s ]
+SQL: SELECT * FROM `favorite` INNER JOIN foods on favorite.food_id=foods.id  WHERE `user_name` = 'qqqqqq'  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `favorite` INNER JOIN foods on favorite.food_id=foods.id  WHERE `user_name` = 'qqqqqq' ORDER BY id desc LIMIT 0,5   [ RunTime:0.0035s ]
+SQL: SHOW COLUMNS FROM `foods` [ RunTime:0.0072s ]
+SQL: SELECT * FROM `foods` WHERE `publish_name` = 'qqqqqq' ORDER BY food_public_time desc  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000108s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000177s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012867s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012936s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000438s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001006s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001151s ]
+
+[ 2016-12-20T14:04:34+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/users/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000626s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000685s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0067s ]
+SQL: SHOW COLUMNS FROM `favorite` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `favorite` INNER JOIN foods on favorite.food_id=foods.id  WHERE `user_name` = 'qqqqqq'  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `favorite` INNER JOIN foods on favorite.food_id=foods.id  WHERE `user_name` = 'qqqqqq' ORDER BY id desc LIMIT 0,5   [ RunTime:0.0038s ]
+SQL: SHOW COLUMNS FROM `foods` [ RunTime:0.0071s ]
+SQL: SELECT * FROM `foods` WHERE `publish_name` = 'qqqqqq' ORDER BY food_public_time desc  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000106s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000169s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012487s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012555s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000353s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000401s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000815s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000895s ]
+
+[ 2016-12-20T14:05:37+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/users/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000548s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000740s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000809s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0061s ]
+SQL: SHOW COLUMNS FROM `favorite` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `favorite` INNER JOIN foods on favorite.food_id=foods.id  WHERE `user_name` = 'qqqqqq'  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `favorite` INNER JOIN foods on favorite.food_id=foods.id  WHERE `user_name` = 'qqqqqq' ORDER BY id desc LIMIT 0,5   [ RunTime:0.0034s ]
+SQL: SHOW COLUMNS FROM `foods` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `foods` WHERE `publish_name` = 'qqqqqq' ORDER BY food_public_time desc  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000163s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013360s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013453s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000414s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000467s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000960s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001036s ]
+
+[ 2016-12-20T14:06:06+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/publish/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000491s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000702s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000763s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0075s ]
+SQL: SHOW COLUMNS FROM `tags` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `tags`  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000202s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013822s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013899s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000461s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000515s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000975s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001076s ]
+
+[ 2016-12-20T14:06:20+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/publish/publish.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000513s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000723s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000796s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0061s ]
+SQL: SHOW COLUMNS FROM `tag_food_relation` [ RunTime:0.0059s ]
+SQL: SHOW COLUMNS FROM `foods` [ RunTime:0.0083s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given K:\html5\wwwroot\html5-xidian\thinkphp\Library\Think\Upload.class.php 第 170 行.
+NOTIC: [8] Undefined index: validate K:\html5\wwwroot\html5-xidian\thinkphp\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto K:\html5\wwwroot\html5-xidian\thinkphp\Library\Think\Model.class.php 第 1128 行.
+NOTIC: [8] Undefined index: validate K:\html5\wwwroot\html5-xidian\thinkphp\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto K:\html5\wwwroot\html5-xidian\thinkphp\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `foods` (`classify`,`name`,`ingredients`,`practice`,`content`,`img`,`food_public_time`,`publish_name`) VALUES ('英式菜肴','测试','测试','测试','测试','../Public/uploads/2016-12-20/5858ca5cbdc62.png','2016-12-20','qqqqqq') [ RunTime:0.0006s ]
+SQL: INSERT INTO `tag_food_relation` (`tag_name`,`food_name`) VALUES ('西点','测试'),('面包','测试'),('法式','测试') [ RunTime:0.0005s ]
+
+[ 2016-12-20T14:06:21+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/publish/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000451s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000638s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0068s ]
+SQL: SHOW COLUMNS FROM `tags` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `tags`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000188s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014564s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014664s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000714s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000827s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001305s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001444s ]
+
+[ 2016-12-20T14:06:24+08:00 ] 127.0.0.1 /html5-xidian/home.php/Home/users/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000459s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000640s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0067s ]
+SQL: SHOW COLUMNS FROM `favorite` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `favorite` INNER JOIN foods on favorite.food_id=foods.id  WHERE `user_name` = 'qqqqqq'  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `favorite` INNER JOIN foods on favorite.food_id=foods.id  WHERE `user_name` = 'qqqqqq' ORDER BY id desc LIMIT 0,5   [ RunTime:0.0032s ]
+SQL: SHOW COLUMNS FROM `foods` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `foods` WHERE `publish_name` = 'qqqqqq' ORDER BY food_public_time desc  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000200s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013635s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013710s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000355s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000406s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000750s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000819s ]
+

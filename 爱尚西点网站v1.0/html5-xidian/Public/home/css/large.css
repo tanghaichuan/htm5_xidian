@@ -195,6 +195,12 @@ a{
 	position: relative;
 	top: 9px;
 }
+
+#foodlist{
+  width: 80%;
+  position: relative;
+  left: 110px;
+}
 /**
  * $Bottom 
  **/

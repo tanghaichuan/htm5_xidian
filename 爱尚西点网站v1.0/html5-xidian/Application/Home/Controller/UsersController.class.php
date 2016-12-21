@@ -40,7 +40,7 @@ class UsersController extends Controller {
                 "realname"=>I("post.realname"),
                 "telphone"=>I("post.telphone")
             );
-            var_dump($data);
+            //var_dump($data);
             if($model->create()&&$model->save($data)){
                 //$this->success("修改成功！",U("users/index"),0);
                 $this->redirect("users/index",0);
@@ -50,8 +50,7 @@ class UsersController extends Controller {
             }
         }
         else{
-            $id = isset($_GET['id']) ? intval($_GET['id']) : session('uid');
-            $data = M("public_users")->find($id);
+            $data = M("public_users")->where(array('username'=>session('username')))->find();
             $this->assign("data", $data);
             $this->assign("id",$id);
             $this->display(); 

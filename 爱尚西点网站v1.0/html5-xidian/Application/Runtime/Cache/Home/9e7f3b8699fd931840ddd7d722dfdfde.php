@@ -157,9 +157,8 @@
     </div>
     <!-- 美食图片 -->
       <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-4">
-          <img alt="Bootstrap Image Preview" src="/html5-xidian/Public/<?php echo ($content["img"]); ?>" class="foodlist" id="foodlist"/>
+        <div class="col-md-5">
+          <img alt="Bootstrap Image Preview" src="/html5-xidian/Public/<?php echo ($content["img"]); ?>" class="foodlist" id="foodlist" />
         </div>
         <!-- 制作步骤 -->
         <div class="col-md-7">

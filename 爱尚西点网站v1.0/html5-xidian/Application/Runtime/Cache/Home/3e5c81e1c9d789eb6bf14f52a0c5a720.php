@@ -147,13 +147,12 @@
       </div>
     </div>
  </div>
- <div style="padding-top:80px">
- 	<div class="container" >
+ <div id="shopping_content">
   	<div class="row clearfix">
     	<div class="col-md-12 column">
       		<div class="row clearfix">
-        		<div class="col-md-6 column">
-          		<img src="/html5-xidian/Public/<?php echo ($content["img"]); ?>" id="shopping_pic" />
+        		<div class="col-md-6 column" style="padding: 0px">
+          		<img src="/html5-xidian/Public/<?php echo ($content["img"]); ?>" id="shopping_pic" style="width: 455px;height: 318px" />
         		</div>
         		<div class="col-md-6 column" style="padding-top: 30px;">
            		<font style="font-size:20px;font-weight:bold;"><?php echo ($content["name"]); ?></font>
@@ -165,36 +164,7 @@
                   <label>价格：</label>
                   <span>￥<?php echo ($content["price"]); ?></span> 
                   &nbsp;
-                  <label>数量：</label>
-                  <input id="min" name="" type="button" value="-" />  
-                  <input id="text_box" name="" type="text" value="1" style="width:30px;text-align: center;"/>  
-                  <input id="add" name="" type="button" value="+" />  
-  
-                    <script>
-						$(document).ready(function(){
-						//获得文本框对象
-								var t = $("#text_box");
-							//初始化数量为1,并失效减
-							$('#min').attr('disabled',true);
-							//数量增加操作
-		 							$("#add").click(function(){
-									t.val(parseInt(t.val())+1)
-									if (parseInt(t.val())!=1){
-  									$('#min').attr('disabled',false);
-									}
-
-							}) 
-							//数量减少操作
-							$("#min").click(function(){
-								t.val(parseInt(t.val())-1);
-								if (parseInt(t.val())==1){
-  								$('#min').attr('disabled',true);
-								}
-
- 								})
-
-						});
-					</script>  
+                    
                 </div>                                
         		<div class="row clearfix">
           		    <div class="col-md-6 column">
@@ -203,7 +173,6 @@
         		</div>
         	</div>
       	</div>
-   	</div>
    	</div>
       			<div class="row clearfix">
         			<div class="col-md-12 column">

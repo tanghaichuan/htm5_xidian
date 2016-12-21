@@ -9,6 +9,7 @@
   <link rel="stylesheet" media="screen and (max-width:1024px)" href="/html5-xidian/Public/home/css/medium.css" type="text/css" />
   <link rel="stylesheet" media="screen and (min-width:1025px)" href="/html5-xidian/Public/home/css/large.css" type="text/css" />
   <link rel="stylesheet" type="text/css" href="/html5-xidian/Public/home/css/heartStyle.css">
+  <link rel="stylesheet" href="/html5-xidian/Public/home/css/awesomplete.css" type="text/css" />
   <script src="/html5-xidian/Public/home/js/food_templet.js"></script>  
   <link rel="stylesheet" href="/html5-xidian/Public/home/css/food_templet.css"/ >
   <script src="/html5-xidian/Public/home/js/jquery.js"></script>    
@@ -92,14 +93,6 @@
             </li>
            <li class="dropdown">
                <a href="/html5-xidian/home.php/Home/shop/index.html" class="dropdown-toggle">食材商城</a>
-              <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
-                <li>
-                   <a href="/html5-xidian/home.php/Home/shop/index.html">用具</a>
-                </li>
-                <li>
-                   <a href="/html5-xidian/home.php/Home/shop/index.html">食材</a>
-                </li>
-              </ul>
             </li>
           <li class="dropdown">
                <a href="/html5-xidian/home.php/Home/users/index.html" class="dropdown-toggle">个人中心</a>
@@ -119,11 +112,11 @@
                <a href="#" class="dropdown-toggle">关于我们</a>
             </li>
             <li>
-              <form class="navbar-form navbar-left" role="search">
-                <div class="form-group">
-                  <input type="text" class="form-control" />
-                </div>
-                <button type="submit" class="btn btn-default">搜索</button>
+              <form class="navbar-form navbar-left" role="search" action="<?php echo U('Home/index/content');?>" method="post">
+                <input class="awesomplete" placeholder="搜索想要的美食..." id="searchFood" name="data" style="position: relative;top: 3px;" />             
+                <button type="submit" class="btn btn-default btn-sm" style="position: relative;top: 1.5px;">搜索</button>
+                <ul class="mylist">
+                </ul> 
               </form>
             </li>
           </ul>

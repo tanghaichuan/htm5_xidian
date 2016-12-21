@@ -10,10 +10,17 @@
     <script src="/html5-xidian/Public/home/js/homeEdit.js"></script>
     <script src="/html5-xidian/Public/home/js/register_form.js"></script>
     <style type="text/css">
-      *{
-        font-family: "微软雅黑";
+      @media screen and (min-width:1025px) {
+        #pt{
+          padding: 110px 0px 0px 100px;
+        }
       }
-    </style>
+      @media screen and (max-width:1024px) {
+        #pt{
+          padding: 115px 0px 0px 35px;
+        }
+      }
+  </style>
   </head>
   <body>
     <!--页头-->
@@ -26,7 +33,7 @@
         <div class="collapse navbar-collapse" >
           <ul class="nav navbar-nav navbar-left" style="position: absolute;left: 40px;top: -10px;">
             <li>
-               <a href="#"><img src="/html5-xidian/Public/home/images/logo2.png"></a>
+               <a href="/html5-xidian/home.php/Home/index/index"><img src="/html5-xidian/Public/home/images/logo2.png"></a>
             </li>
           </ul>
         </div>
@@ -39,7 +46,7 @@
     <div class="content" style="padding: 110px 10px;">
       <!--配图-->
       <div class="row clearfix">
-        <div class="col-md-7 column" style="padding: 110px 0px 0px 80px;">
+        <div class="col-md-7 column" id="pt">
           <img src="/html5-xidian/Public/home/images/sinin.png">
         </div>
         <!--表单-->
@@ -87,8 +94,8 @@
               </div>
               <div class="form-group">
                 <div class="col-sm-offset-3 col-sm-9">
-                  <div class="checkbox">
-                     <label><input type="checkbox" />我已阅读并同意爱尚西点使用协议</label>
+                  <div class="checkbox" >
+                     <label><input type="checkbox" /><p style="font-size: 0.8em;position: relative;top: 2px;">我已阅读并同意使用协议</p></label>
                   </div>
                 </div>
               </div>

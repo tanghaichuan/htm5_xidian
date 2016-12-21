@@ -163,55 +163,52 @@
 							 <a href="/html5-xidian/index.php/Admin/index/index.html">首页</a>
 						</li>
 						<li>
-							 <a href="/html5-xidian/index.php/Admin/public/index.html">美食推送</a>
+							 <a href="javascript:void(0)">美食推送</a>
 						</li>
-						
 					</ul>
 				</div>
 				<!--userList-->
 				<div class="col-md-12 userList">
-					<div class="col-xs-2 col-md-2">
-						<h4>推送列表</h4>
+					<div class="col-md-12">
+						<h4>修改推送</h4>
 					</div>
-					
 					<!--shop-->
 					<div class="col-md-12">
-						<table class="table table-striped table-hover">
-							<thead>
-								<tr>
-									<th>分类</th>
-									<th>名称</th>
-									<th>图片</th>
-									<th>发布时间</th>
-									<th>操作</th>
-								</tr>
-							</thead>
-							<tbody>
-								<?php if(is_array($foodList)): $i = 0; $__LIST__ = $foodList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><tr>
-										<td><?php echo ($n["classify"]); ?></td>
-										<td><?php echo ($n["name"]); ?></td>
-										<td><img src="/html5-xidian/Public/<?php echo ($n["img"]); ?>" alt="" width="70" height="38px"></td>
-										<td><?php echo ($n["food_public_time"]); ?></td>
-										<td>
-											<a href="edit/id/<?php echo ($n["id"]); ?>">修改</a>
-											<a href="del/id/<?php echo ($n["id"]); ?>" onClick="delConfirm()">删除</a>
-										</td>
-									</tr><?php endforeach; endif; else: echo "" ;endif; ?>
-							</tbody>
-						</table>
-						<!--pagination-->
-						<div class="col-md-4 col-md-offset-8 page">
-							<ul class="pagination">
-								<li><?php echo ($page); ?></li>
-							</ul>
-						</div>
+						<form class="form-horizontal" role="form" action="/html5-xidian/index.php/Admin/Public/edit/id/<?php echo ($data["id"]); ?>" method="post" enctype="multipart/form-data">
+							<div class="form-group">
+								<label for="inputFoodClassify" class="col-xs-3 col-md-3 control-label" style="width: 120px;">选择商品类型：</label>
+								<div class="col-xs-9 col-md-9">
+									<label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="法式菜肴" name="classify" />法式菜肴</label>
+									<label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="意式菜肴" name="classify" />意式菜肴</label>
+									<label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="美式菜肴" name="classify" />美式菜肴</label>
+									<label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="英式菜肴" name="classify" />英式菜肴</label>
+									<label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="俄式菜肴" name="classify" />俄式菜肴</label>
+								</div>
+							</div>
+							<div class="form-group">
+							</div>
+							<div class="form-group">
+								 <label for="inputFoodName" class="col-xs-2 col-sm-2 control-label">名称：</label>
+								<div class="col-xs-5 col-md-5">
+									<input type="text" class="form-control" id="inputFoodName" name="name" value="<?php echo ($data["name"]); ?>"/>
+								</div>
+							</div>
+							<div class="form-group">
+								 <label for="inputFoodImg" class="col-xs-2 col-sm-2 control-label">美食图片：</label>
+								<div class="col-xs-5 col-md-5">
+									<input type="file" id="inputFoodImg" class="form-control" name="img">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="col-xs-3 col-sm-3">
+									 <button type="submit" id="submit" class="btn">修改</button>
+								</div>
+							</div>
+						</form>
+						
 					</div>
 				</div>
-			<script>
-				function delConfirm(){
-					return confirm("确定删除?");
-				}
-			</script>
+			
 			</div>
 		</div>
 	</div>

@@ -166,36 +166,6 @@
                   <label>价格：</label>
                   <span>￥{$content.price}</span> 
                   &nbsp;
-                  <label>数量：</label>
-                  <input id="min" name="" type="button" value="-" />  
-                  <input id="text_box" name="" type="text" value="1" style="width:30px;text-align: center;"/>  
-                  <input id="add" name="" type="button" value="+" />  
-  
-                    <script>
-						$(document).ready(function(){
-						//获得文本框对象
-								var t = $("#text_box");
-							//初始化数量为1,并失效减
-							$('#min').attr('disabled',true);
-							//数量增加操作
-		 							$("#add").click(function(){
-									t.val(parseInt(t.val())+1)
-									if (parseInt(t.val())!=1){
-  									$('#min').attr('disabled',false);
-									}
-
-							}) 
-							//数量减少操作
-							$("#min").click(function(){
-								t.val(parseInt(t.val())-1);
-								if (parseInt(t.val())==1){
-  								$('#min').attr('disabled',true);
-								}
-
- 								})
-
-						});
-					</script>  
                 </div>                                
         		<div class="row clearfix">
           		    <div class="col-md-6 column">

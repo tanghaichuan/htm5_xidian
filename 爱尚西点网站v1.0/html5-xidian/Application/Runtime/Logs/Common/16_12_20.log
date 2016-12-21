@@ -118,3 +118,51 @@ INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
 INFO: [ app_init ] --END-- [ RunTime:0.001258s ]
 ERR: 无法加载模块:Public
 
+[ 2016-12-20T14:59:00+08:00 ] 127.0.0.1 /html5-xidian/Public/home/images/live.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001268s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-20T15:01:15+08:00 ] 127.0.0.1 /html5-xidian/Public/home/images/live.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000799s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-20T15:05:24+08:00 ] 127.0.0.1 /html5-xidian/Public/home/images/live.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000467s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-20T15:05:57+08:00 ] 127.0.0.1 /html5-xidian/Public/home/images/live.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001452s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-20T15:06:10+08:00 ] 127.0.0.1 /html5-xidian/Public/home/images/live.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000591s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-20T15:06:22+08:00 ] 127.0.0.1 /html5-xidian/Public/home/images/live.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000868s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-20T15:06:41+08:00 ] 127.0.0.1 /html5-xidian/Public/home/images/live.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000967s ]
+ERR: 无法加载模块:Public
+
+[ 2016-12-20T15:14:02+08:00 ] 127.0.0.1 /html5-xidian/Public/home/images/live.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000771s ]
+ERR: 无法加载模块:Public
+

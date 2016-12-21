@@ -1,0 +1,925 @@
+[ 2016-12-21T08:36:55+08:00 ] 127.0.0.1 /html5-xidian/index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000499s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000674s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000046s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000113s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016892s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000628s ]
+
+[ 2016-12-21T08:36:58+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000694s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000773s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000145s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069664s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.069747s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000478s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000549s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000941s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001012s ]
+
+[ 2016-12-21T08:37:01+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/login/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000425s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000655s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.1152s ]
+SQL: SELECT * FROM `admin_users` WHERE `username` = 'ssssss' LIMIT 1   [ RunTime:0.0127s ]
+SQL: UPDATE `admin_users` SET `last_login_time`='2016-12-21 08-37-01' WHERE `username` = 'ssssss' [ RunTime:0.0112s ]
+
+[ 2016-12-21T08:37:02+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000470s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000622s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0059s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024049s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024124s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000482s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000721s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000801s ]
+
+[ 2016-12-21T08:37:07+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/adminUsers/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000552s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000668s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000729s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0065s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `admin_users` LIMIT 1   [ RunTime:0.0386s ]
+SQL: SELECT * FROM `admin_users` ORDER BY id desc LIMIT 0,8   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000154s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.028162s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028278s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000412s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000855s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000924s ]
+
+[ 2016-12-21T08:37:09+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/adminUsers/editInfo.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000456s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000675s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `admin_users` WHERE `id` = 23 LIMIT 1   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011639s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011721s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000495s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000816s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000895s ]
+
+[ 2016-12-21T08:37:11+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/adminUsers/editPwd.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000432s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000566s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000622s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0069s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000174s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017883s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017958s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000386s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000438s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000823s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000902s ]
+
+[ 2016-12-21T08:37:13+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/adminUsers/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000436s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000792s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0066s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000129s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000227s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012084s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012161s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000630s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000691s ]
+
+[ 2016-12-21T08:37:14+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/adminUsers/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000530s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000704s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000761s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0089s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016893s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016982s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000481s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000547s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001154s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001288s ]
+
+[ 2016-12-21T08:37:15+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/adminUsers/username_unique
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000441s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000680s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0081s ]
+SQL: SELECT * FROM `admin_users` WHERE `username` = 'ssssss' LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000768s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000847s ]
+
+[ 2016-12-21T08:37:20+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/user/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000455s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000574s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000630s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0063s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0838s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `public_users` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `public_users` ORDER BY id desc LIMIT 0,8   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000163s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.055106s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.055212s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000482s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000570s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001017s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001143s ]
+
+[ 2016-12-21T08:37:24+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/shop/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000427s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000545s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000618s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0073s ]
+SQL: SHOW COLUMNS FROM `mall` [ RunTime:0.0062s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mall` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `mall` ORDER BY id desc LIMIT 0,8   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000091s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000157s ]
+NOTIC: [8] Use of undefined constant utf8 - assumed 'utf8' K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\52fa67f14c08742f6c521ab8140bab06.php 第 195 行.
+NOTIC: [8] Use of undefined constant utf8 - assumed 'utf8' K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\52fa67f14c08742f6c521ab8140bab06.php 第 195 行.
+NOTIC: [8] Use of undefined constant utf8 - assumed 'utf8' K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\52fa67f14c08742f6c521ab8140bab06.php 第 195 行.
+NOTIC: [8] Use of undefined constant utf8 - assumed 'utf8' K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\52fa67f14c08742f6c521ab8140bab06.php 第 195 行.
+NOTIC: [8] Use of undefined constant utf8 - assumed 'utf8' K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\52fa67f14c08742f6c521ab8140bab06.php 第 195 行.
+NOTIC: [8] Use of undefined constant utf8 - assumed 'utf8' K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\52fa67f14c08742f6c521ab8140bab06.php 第 195 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011648s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011717s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000470s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000889s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000824s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000910s ]
+
+[ 2016-12-21T08:37:25+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/shop/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000509s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000702s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000760s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0061s ]
+SQL: SHOW COLUMNS FROM `mall` [ RunTime:0.0059s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `mall` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `mall` ORDER BY id desc LIMIT 0,8   [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000163s ]
+NOTIC: [8] Use of undefined constant utf8 - assumed 'utf8' K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\52fa67f14c08742f6c521ab8140bab06.php 第 195 行.
+NOTIC: [8] Use of undefined constant utf8 - assumed 'utf8' K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\52fa67f14c08742f6c521ab8140bab06.php 第 195 行.
+NOTIC: [8] Use of undefined constant utf8 - assumed 'utf8' K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\52fa67f14c08742f6c521ab8140bab06.php 第 195 行.
+NOTIC: [8] Use of undefined constant utf8 - assumed 'utf8' K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\52fa67f14c08742f6c521ab8140bab06.php 第 195 行.
+NOTIC: [8] Use of undefined constant utf8 - assumed 'utf8' K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\52fa67f14c08742f6c521ab8140bab06.php 第 195 行.
+NOTIC: [8] Use of undefined constant utf8 - assumed 'utf8' K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\52fa67f14c08742f6c521ab8140bab06.php 第 195 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012482s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012552s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000507s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000561s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000929s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001020s ]
+
+[ 2016-12-21T08:37:29+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/food/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000445s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000553s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000613s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0058s ]
+SQL: SHOW COLUMNS FROM `foods` [ RunTime:0.0065s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `foods` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `foods` ORDER BY id desc LIMIT 0,8   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000189s ]
+NOTIC: [8] Use of undefined constant utf8 - assumed 'utf8' K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\366640149ae8cbe094b01f770667186d.php 第 204 行.
+NOTIC: [8] Use of undefined constant utf8 - assumed 'utf8' K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\366640149ae8cbe094b01f770667186d.php 第 204 行.
+NOTIC: [8] Use of undefined constant utf8 - assumed 'utf8' K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\366640149ae8cbe094b01f770667186d.php 第 204 行.
+NOTIC: [8] Use of undefined constant utf8 - assumed 'utf8' K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\366640149ae8cbe094b01f770667186d.php 第 204 行.
+NOTIC: [8] Use of undefined constant utf8 - assumed 'utf8' K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\366640149ae8cbe094b01f770667186d.php 第 204 行.
+NOTIC: [8] Use of undefined constant utf8 - assumed 'utf8' K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\366640149ae8cbe094b01f770667186d.php 第 204 行.
+NOTIC: [8] Use of undefined constant utf8 - assumed 'utf8' K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\366640149ae8cbe094b01f770667186d.php 第 204 行.
+NOTIC: [8] Use of undefined constant utf8 - assumed 'utf8' K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\366640149ae8cbe094b01f770667186d.php 第 204 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013468s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013536s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000372s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000423s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000773s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000858s ]
+
+[ 2016-12-21T08:37:38+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/cart/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000464s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000935s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001038s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0086s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `public_users`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `public_users` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `shopping_cart` [ RunTime:0.1073s ]
+SQL: SELECT * FROM `shopping_cart` INNER JOIN mall on shopping_cart.mall_id=mall.id  WHERE `user_id` = null  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `shopping_cart` INNER JOIN mall on shopping_cart.mall_id=mall.id  WHERE `user_id` = null ORDER BY id desc LIMIT 0,5   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000166s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042158s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042240s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000476s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000831s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000906s ]
+
+[ 2016-12-21T08:37:42+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/favorite/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000572s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000653s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0074s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0064s ]
+SQL: SELECT * FROM `public_users`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `public_users` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `favorite` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `favorite` INNER JOIN foods on favorite.food_id=foods.id  WHERE `user_name` = null  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `favorite` INNER JOIN foods on favorite.food_id=foods.id  WHERE `user_name` = null ORDER BY id desc LIMIT 0,5   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000171s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014145s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014219s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000368s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000783s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000856s ]
+
+[ 2016-12-21T08:37:45+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/favorite/index/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000539s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000640s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000714s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0066s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0063s ]
+SQL: SELECT * FROM `public_users`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `public_users` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `favorite` [ RunTime:0.0059s ]
+SQL: SELECT * FROM `favorite` INNER JOIN foods on favorite.food_id=foods.id  WHERE `user_name` = 'ssssss'  [ RunTime:0.0008s ]
+SQL: SELECT * FROM `favorite` INNER JOIN foods on favorite.food_id=foods.id  WHERE `user_name` = 'ssssss' ORDER BY id desc LIMIT 0,5   [ RunTime:0.0035s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000130s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000234s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013588s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013657s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000357s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000406s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000741s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000824s ]
+
+[ 2016-12-21T08:37:57+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/favorite/del/id/15/username/ssssss.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000494s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000585s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000650s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0071s ]
+SQL: SHOW COLUMNS FROM `favorite` [ RunTime:0.0069s ]
+NOTIC: [2] Illegal offset type in isset or empty K:\html5\wwwroot\html5-xidian\thinkphp\Library\Think\Model.class.php 第 511 行.
+SQL: DELETE FROM `favorite` WHERE `food_id` = 15 AND `user_name` = 'ssssss' [ RunTime:0.0007s ]
+
+[ 2016-12-21T08:37:59+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/favorite/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000463s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000585s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000649s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0068s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0057s ]
+SQL: SELECT * FROM `public_users`  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `public_users` WHERE `id` = 0 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `favorite` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `favorite` INNER JOIN foods on favorite.food_id=foods.id  WHERE `user_name` = null  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `favorite` INNER JOIN foods on favorite.food_id=foods.id  WHERE `user_name` = null ORDER BY id desc LIMIT 0,5   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012969s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013073s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000416s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000757s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000842s ]
+
+[ 2016-12-21T08:38:01+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/favorite/index/id/7.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000600s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000698s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0062s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `public_users`  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `public_users` WHERE `id` = 7 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `favorite` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `favorite` INNER JOIN foods on favorite.food_id=foods.id  WHERE `user_name` = 'ssssss'  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `favorite` INNER JOIN foods on favorite.food_id=foods.id  WHERE `user_name` = 'ssssss' ORDER BY id desc LIMIT 0,5   [ RunTime:0.0034s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012656s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012749s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000426s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000483s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000751s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000853s ]
+
+[ 2016-12-21T08:38:07+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/public/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000489s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000577s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000635s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0074s ]
+SQL: SHOW COLUMNS FROM `tuisong` [ RunTime:0.0066s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuisong` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tuisong` ORDER BY id desc LIMIT 0,8   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+NOTIC: [8] Undefined index: classify K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\e11ea70e85386b2ec23f41c470679e96.php 第 198 行.
+NOTIC: [8] Undefined index: classify K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\e11ea70e85386b2ec23f41c470679e96.php 第 198 行.
+NOTIC: [8] Undefined index: classify K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\e11ea70e85386b2ec23f41c470679e96.php 第 198 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035412s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035523s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000344s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000397s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000816s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000900s ]
+
+[ 2016-12-21T08:38:30+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/public/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000490s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000649s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000734s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0067s ]
+SQL: SHOW COLUMNS FROM `tuisong` [ RunTime:0.0063s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuisong` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tuisong` ORDER BY id desc LIMIT 0,8   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000164s ]
+NOTIC: [8] Undefined index: classify K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\e11ea70e85386b2ec23f41c470679e96.php 第 198 行.
+NOTIC: [8] Undefined index: classify K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\e11ea70e85386b2ec23f41c470679e96.php 第 198 行.
+NOTIC: [8] Undefined index: classify K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\e11ea70e85386b2ec23f41c470679e96.php 第 198 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013220s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013292s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000383s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000936s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001028s ]
+
+[ 2016-12-21T08:39:08+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/public/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000526s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000633s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000705s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0085s ]
+SQL: SHOW COLUMNS FROM `tuisong` [ RunTime:0.0061s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuisong` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tuisong` ORDER BY id desc LIMIT 0,8   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000176s ]
+NOTIC: [8] Undefined index: classify K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\e11ea70e85386b2ec23f41c470679e96.php 第 196 行.
+NOTIC: [8] Undefined index: classify K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\e11ea70e85386b2ec23f41c470679e96.php 第 196 行.
+NOTIC: [8] Undefined index: classify K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\e11ea70e85386b2ec23f41c470679e96.php 第 196 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012740s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012842s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000600s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000708s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001075s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001196s ]
+
+[ 2016-12-21T08:39:13+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/public/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000510s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000748s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0068s ]
+SQL: SHOW COLUMNS FROM `tuisong` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuisong` LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tuisong` ORDER BY id desc LIMIT 0,8   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+NOTIC: [8] Undefined index: classify K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\e11ea70e85386b2ec23f41c470679e96.php 第 196 行.
+NOTIC: [8] Undefined index: classify K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\e11ea70e85386b2ec23f41c470679e96.php 第 196 行.
+NOTIC: [8] Undefined index: classify K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\e11ea70e85386b2ec23f41c470679e96.php 第 196 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017145s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017239s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000489s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000914s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000997s ]
+
+[ 2016-12-21T08:39:23+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/public/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000773s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001121s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001241s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0085s ]
+SQL: SHOW COLUMNS FROM `tuisong` [ RunTime:0.0075s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuisong` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tuisong` ORDER BY id desc LIMIT 0,8   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000194s ]
+NOTIC: [8] Undefined index: classify K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\e11ea70e85386b2ec23f41c470679e96.php 第 196 行.
+NOTIC: [8] Undefined index: classify K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\e11ea70e85386b2ec23f41c470679e96.php 第 196 行.
+NOTIC: [8] Undefined index: classify K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\e11ea70e85386b2ec23f41c470679e96.php 第 196 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014330s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014539s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000424s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000496s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000911s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000991s ]
+
+[ 2016-12-21T08:39:35+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/public/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000744s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001043s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001147s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0080s ]
+SQL: SHOW COLUMNS FROM `tuisong` [ RunTime:0.0081s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuisong` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tuisong` ORDER BY id desc LIMIT 0,8   [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000155s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000278s ]
+NOTIC: [8] Undefined index: classify K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\e11ea70e85386b2ec23f41c470679e96.php 第 191 行.
+NOTIC: [8] Undefined index: classify K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\e11ea70e85386b2ec23f41c470679e96.php 第 191 行.
+NOTIC: [8] Undefined index: classify K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\e11ea70e85386b2ec23f41c470679e96.php 第 191 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012786s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012858s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000473s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000546s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000946s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001028s ]
+
+[ 2016-12-21T08:39:41+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/public/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000604s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000738s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000820s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0068s ]
+SQL: SHOW COLUMNS FROM `tuisong` [ RunTime:0.0062s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuisong` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tuisong` ORDER BY id desc LIMIT 0,8   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+NOTIC: [8] Undefined index: classify K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\e11ea70e85386b2ec23f41c470679e96.php 第 191 行.
+NOTIC: [8] Undefined index: classify K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\e11ea70e85386b2ec23f41c470679e96.php 第 191 行.
+NOTIC: [8] Undefined index: classify K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\e11ea70e85386b2ec23f41c470679e96.php 第 191 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011066s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011137s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000366s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001145s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001268s ]
+
+[ 2016-12-21T08:39:45+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/public/edit/id/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000595s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0077s ]
+SQL: SHOW COLUMNS FROM `tuisong` [ RunTime:0.0094s ]
+SQL: SHOW COLUMNS FROM `tags` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `tuisong` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `tags`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000176s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035377s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035502s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000419s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000480s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001064s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001176s ]
+
+[ 2016-12-21T08:40:12+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/public/edit/id/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000792s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000827s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000927s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0072s ]
+SQL: SHOW COLUMNS FROM `tuisong` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `tags` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `tuisong` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `tags`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000101s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000170s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010844s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010924s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000414s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000837s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000907s ]
+
+[ 2016-12-21T08:40:37+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/public/edit/id/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000482s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000646s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000736s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0061s ]
+SQL: SHOW COLUMNS FROM `tuisong` [ RunTime:0.0064s ]
+SQL: SHOW COLUMNS FROM `tags` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `tuisong` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `tags`  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010219s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010286s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000338s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000729s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000810s ]
+
+[ 2016-12-21T08:40:40+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/public/edit/id/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000895s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001003s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0078s ]
+SQL: SHOW COLUMNS FROM `tuisong` [ RunTime:0.0067s ]
+SQL: SHOW COLUMNS FROM `tags` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `tuisong` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `tags`  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000225s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010956s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011044s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000399s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000452s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000808s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000880s ]
+
+[ 2016-12-21T08:40:54+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/public/edit/id/4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000433s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000900s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000982s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0072s ]
+SQL: SHOW COLUMNS FROM `tuisong` [ RunTime:0.0067s ]
+SQL: SHOW COLUMNS FROM `tags` [ RunTime:0.0076s ]
+SQL: SELECT * FROM `tuisong` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `tags`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000102s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010547s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010658s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000458s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000544s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000925s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001046s ]
+
+[ 2016-12-21T08:41:31+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/public/public
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000503s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000684s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0079s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000147s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000288s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.335409s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.335494s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000372s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000428s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001501s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001696s ]
+
+[ 2016-12-21T08:41:38+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/public/public?food=eshi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000526s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000709s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000774s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0070s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011297s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011385s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000465s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000512s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000832s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000926s ]
+
+[ 2016-12-21T08:42:31+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/public/public?food=eshi
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000697s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000765s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0075s ]
+ERR: 非法操作:public
+
+[ 2016-12-21T08:42:37+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/public/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000071s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000798s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000929s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001033s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0073s ]
+SQL: SHOW COLUMNS FROM `tuisong` [ RunTime:0.0064s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `tuisong` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `tuisong` ORDER BY id desc LIMIT 0,8   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+NOTIC: [8] Undefined index: classify K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\e11ea70e85386b2ec23f41c470679e96.php 第 191 行.
+NOTIC: [8] Undefined index: classify K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\e11ea70e85386b2ec23f41c470679e96.php 第 191 行.
+NOTIC: [8] Undefined index: classify K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\e11ea70e85386b2ec23f41c470679e96.php 第 191 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013084s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000918s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001026s ]
+
+[ 2016-12-21T08:42:40+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/public/add.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000414s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000587s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000653s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0071s ]
+SQL: SHOW COLUMNS FROM `tags` [ RunTime:0.0084s ]
+SQL: SELECT * FROM `tags`  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000215s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030523s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030612s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000343s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000395s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001103s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001209s ]
+
+[ 2016-12-21T08:42:44+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/user/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000504s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000581s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000640s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0066s ]
+SQL: SHOW COLUMNS FROM `public_users` [ RunTime:0.0091s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `public_users` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `public_users` ORDER BY id desc LIMIT 0,8   [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012395s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012472s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000978s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001080s ]
+
+[ 2016-12-21T08:42:48+08:00 ] 127.0.0.1 /html5-xidian/index.php/Admin/food/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000544s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000602s ]
+SQL: SHOW COLUMNS FROM `admin_users` [ RunTime:0.0064s ]
+SQL: SHOW COLUMNS FROM `foods` [ RunTime:0.0062s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `foods` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `foods` ORDER BY id desc LIMIT 0,8   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000157s ]
+NOTIC: [8] Use of undefined constant utf8 - assumed 'utf8' K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\366640149ae8cbe094b01f770667186d.php 第 204 行.
+NOTIC: [8] Use of undefined constant utf8 - assumed 'utf8' K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\366640149ae8cbe094b01f770667186d.php 第 204 行.
+NOTIC: [8] Use of undefined constant utf8 - assumed 'utf8' K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\366640149ae8cbe094b01f770667186d.php 第 204 行.
+NOTIC: [8] Use of undefined constant utf8 - assumed 'utf8' K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\366640149ae8cbe094b01f770667186d.php 第 204 行.
+NOTIC: [8] Use of undefined constant utf8 - assumed 'utf8' K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\366640149ae8cbe094b01f770667186d.php 第 204 行.
+NOTIC: [8] Use of undefined constant utf8 - assumed 'utf8' K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\366640149ae8cbe094b01f770667186d.php 第 204 行.
+NOTIC: [8] Use of undefined constant utf8 - assumed 'utf8' K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\366640149ae8cbe094b01f770667186d.php 第 204 行.
+NOTIC: [8] Use of undefined constant utf8 - assumed 'utf8' K:\html5\wwwroot\html5-xidian\Application\Runtime\Cache\Admin\366640149ae8cbe094b01f770667186d.php 第 204 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012749s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012816s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000365s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000734s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000816s ]
+

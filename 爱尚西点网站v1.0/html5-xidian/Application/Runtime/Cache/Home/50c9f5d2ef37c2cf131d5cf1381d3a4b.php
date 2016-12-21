@@ -27,13 +27,13 @@
     <div class="header" style="height: 50px;">
       <nav class="navbar navbar-default navbar-static-top" role="navigation" style="background-color: white;">
         <div class="navbar-header">
-           <a href="#"><img src="/html5-xidian/Public/home/images/logo1.png"></a>
+           <a href=""><img src="/html5-xidian/Public/home/images/logo1.png"></a>
         </div>
         
         <div class="collapse navbar-collapse" >
           <ul class="nav navbar-nav navbar-left" style="position: absolute;left: 40px;top: -10px;">
             <li>
-               <a href="#"><img src="/html5-xidian/Public/home/images/logo2.png"></a>
+               <a href="/html5-xidian/home.php/Home/index/index"><img src="/html5-xidian/Public/home/images/logo2.png"></a>
             </li>
           </ul>
         </div>

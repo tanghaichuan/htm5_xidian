@@ -11,8 +11,6 @@
 	}
 	
 }
-
-
 @media screen and (max-width: 990px) {
 	body{
 		overflow-x: hidden;
@@ -27,7 +25,6 @@
 		left: 200px;
 	}
 }
-
 img{
 	max-width: 100%;
 }
@@ -419,4 +416,32 @@ form input[type=radio]{
 	border-radius: 0.25rem;
 	border-width: 1px;
 	padding: 0px;
+}
+.preview{
+	padding: 0px;
+	color: #20BDF0;
+	font-family: "微软雅黑";
+}
+
+.dialog{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-color:rgba(0,0,0,.5);
+	z-index: 99;
+	filter: alpha(opacity=50)
+}
+.dialogMessage{
+	position: absolute;
+	width: 70%;
+	height: 100%;
+	left: 15%;
+	top: 0;
+	background-color:#fff;
+	z-index: 100;
+}
+.addStep{
+	font-family: "微软雅黑";
 }

@@ -173,7 +173,6 @@
 					<div class="col-xs-2 col-md-2">
 						<h4>推送列表</h4>
 					</div>
-					
 					<!--shop-->
 					<div class="col-md-12">
 						<table class="table table-striped table-hover">

@@ -49,6 +49,15 @@ class FoodController extends Controller {
         
         $tag_rela_Model=M("tag_food_relation");
         
+        $step=I("post.step");
+        $stepArr=explode("#",$step);//一维数组
+        $stepData = array();
+        //重组步骤数组
+        foreach($stepArr as $k=>$v){
+            $stepData[$k]['step']=$v;
+            $stepData[$k]['food_name']=$food_name;
+        }
+       
         $model=D("foods");
         $upload = new \Think\Upload();// 实例化上传类
         $upload->maxSize=3145728 ;// 设置附件上传大小
@@ -69,11 +78,11 @@ class FoodController extends Controller {
             $data['publish_name']="西点官方";
             //var_dump(I("post.tagname"));  
             //添加
-            if($model->create()&&$model->add($data)&&$tag_rela_Model->addAll($tagData)){
+            if($model->create()&&$model->add($data)&&$tag_rela_Model->addAll($tagData)&&M('step')->addAll($stepData)){
                 //$this->success('添加成功', U("food/add"));
                 $this->redirect("food/add",0);
             }else{
-                 $this->error('添加失败');
+                 //$this->error('添加失败');
             }
         }
     }

@@ -164,7 +164,6 @@
                   <label>价格：</label>
                   <span>￥<?php echo ($content["price"]); ?></span> 
                   &nbsp;
-                    
                 </div>                                
         		<div class="row clearfix">
           		    <div class="col-md-6 column">

@@ -219,7 +219,7 @@ $(function(){
           $.post("/html5-xidian/home.php/Home/index/search",$data,function(res){
               $(".mylist").empty();
               if(res){
-                $li="<li>您可能想要...</li>";
+                $li="<li'>您可能想要...</li>";
                 $(".mylist").append($li);
                 var req=JSON.parse(res);
                 for(var i=0;i<req.length;i++){

@@ -60,4 +60,18 @@ $(function(){
 		//console.log(tag);
 		$("#postTag").val(tag);
 	});
+	//向后台传步骤
+	
+	$("#submit").click(function(){
+		var step=[""];
+		for(var i = 0;i<$(".step").length;i++){
+	     	if(i!=$(".step").length-1){
+	          step=step+$(".step textarea:eq("+i+")").val()+"#";
+	     	}else{
+	          step=step+$(".step textarea:eq("+i+")").val();
+	    	}
+		}
+		//console.log(step);
+		$("#postStep").val(step);
+	});
 });

@@ -180,7 +180,55 @@ $(function(){
 	    var len=file.length;
 	    var postfix=file.substring(pos+1,len);
 	    console.log(typeof(file));
-	}	
+	}
+	//蒙版
+	$(".dialog").hide();
+	$(".userList").show();
+	$(".preview a").click(function(){
+		$(".dialog").show();
+		//$(".userList").hide();
+	});
+	$(".cancle").click(function(){
+		$(".dialog").hide();
+		//$(".userList").show();
+	});
+	//添加美食预览,显示图片
+	$("#inputFoodImg").change(function(){
+		var imgFile = this.files[0];
+	    var fr = new FileReader();
+	    fr.onload = function() {
+	        $(".diaImg")[0].src = fr.result;
+	    };
+	    fr.readAsDataURL(imgFile);
+	});
 
-
+	
+	var pracHeight=$(".step:first").height();
+	var sileHeight=$(".slideNav").height();
+	var wrapHeight=$(".wrapper").height();
+	//添加步骤
+	$('.addStep').click(function(){
+		$('.step:last').after($('.step:first').clone());
+		//清空输入域
+		$('.step:last textarea').val("");
+		//步骤数
+		var num=$('.step').length;
+		$('.step:last label span').html(num);
+		//背景高度适应
+		$(".wrapper").height(wrapHeight+pracHeight*num);
+		$(".slideNav").height(sileHeight+pracHeight*num);
+	});
+	//删除步骤
+	$("body").on("click",".removeStep",function(){
+		var num=$('.step').length;
+		if(num!=1){
+			$(this).parent().remove();
+			//变更步骤数
+			$(".step").each(function(){
+				var num=$(this).prevAll(".step").length;
+				$("label span",this).html(parseInt(num)+1);
+			});
+		}
+	});
+	
 });

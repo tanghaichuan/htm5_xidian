@@ -6,9 +6,11 @@
 	<title>首页</title>
 	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/bootstrap.css">
 	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/bootstrap-theme.css">
+	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/jquery-ui.css">
 	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/adminStyle.css">
 	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/jq22.css">
 	<script src="/html5-xidian/Public/admin/js/jquery.js"></script>
+	<script src="/html5-xidian/Public/admin/js/jquery-ui.js"></script>
 	<script src="/html5-xidian/Public/admin/js/bootstrap.js"></script>
 	<script src="/html5-xidian/Public/admin/js/adminEditor.js"></script>		
 	<script src="/html5-xidian/Public/admin/js/adminAjax.js"></script>

@@ -177,7 +177,7 @@
             </div>
             <div class="col-md-9">
               <div class="font-c">
-              <?php echo ($content["ingredients"]); echo ($content["practice"]); ?>
+              <?php echo ($content["content"]); ?>
               </div>
             </div>
           </div>

@@ -13,7 +13,9 @@
     <script src="/html5-xidian/Public/home/js/bootstrap.min.js"></script>
     <script src="/html5-xidian/Public/home/js/homeEdit.js"></script>
     <script src="/html5-xidian/Public/home/js/animation.js"></script>
-
+    <style>
+      a,a:link,a:visited,a:hover{text-decoration:none;font-size:14px;}
+    </style>
   </head>
   <body>
   <!--页头-->

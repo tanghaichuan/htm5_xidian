@@ -13,32 +13,34 @@ ul li{
 .foodlist{
 	width: 100%;
 }
+#foodlist{
+	padding-top: 20px
+}
 .font-a{
 	font-size:2em;
-	font-family:仿宋;
 	font-weight:bold;
 	text-align:left;
-	padding: 20px;
+	padding: 15px 0px 20px 0px;
 }
 .font-b{
-	font-size:1.5em;
-	font-family:仿宋;
+	font-size:1.3em;
 	text-align:left;
 	padding: 10px 2px;
+	color: #696969
 }
 .font-c{
 	font-size:1.2em;
-	font-family:仿宋;
 	text-align:left;
-	padding: 13px 2px;
+	padding: 9.5px 4px;
 	position: relative;
 	left: -40px;
+	color: #696969
 }
 
 .badge{
 	position: relative;
 	top: -15px;
-	left: 27px;
+	left: 2px;
 }
 .label{
 	position: relative;
@@ -56,4 +58,29 @@ ul li{
 .col-md-2 img{
 	width:136px;
 	height: 130px;
+}
+
+#step_list .step_side{
+	background-color: #317400;
+	float: left;
+	height: 120px;
+	width: 22.5px;
+	color: #ffffff
+}
+#step_list h2{
+	line-height: 220%;
+	position: relative;
+	left: 2px
+}
+#step_list p{
+	position: relative;
+	top: -10px;
+	padding: 0px 15px;
+	margin-left: 20px;
+	color:#317400;font:18px/24px Georgia, 微软雅黑, Times, serif;
+}
+#step_list .col-md-6{
+	padding: 5px;
+	margin-bottom: 10px;
+	border-radius: 1px;
 }

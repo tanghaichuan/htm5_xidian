@@ -80,32 +80,43 @@ a{
 #collect_plate{
   background-color: white;
   border-radius: 1px;
-  margin: 0px 45px 0px 20px;
-  height: 305px;
+  margin: 0px 32px 0px 20px;
 }
 #collect_list{
-	position: relative;
-	left: 80px;
+  padding-top: 5px;
+}
+#collect_list .col-md-5{
+  margin: 0px 40px;
+}
+#collect_list h5{
+  font-size: 1.2em;
+  position: relative;
+  left: 0px;
+  bottom: 17px;
+}
+#collect_list p{
+  font-size: 0.9em;
+  position: relative;
+  left: -33px;
+  top: 20px;
+}
+#collect_list a{
+  font-size: 0.8em;
+  position: relative;
+  left: 132px;
+  top: 23px;
 }
 #collect_list img{
-  width: 100%;
-  height: 100px;
+  height: 70px;
+  width: 100px
 }
-#collect_list .caption{
-  height: 85px;
-}
+
 #collect_page{
   position: relative;
   left: -40px;
   bottom: -163px;
 }
-.collect_information{
-	padding: 3px 6px;
-}
-.collect_information a{
-  font-size: 1em;
-  color: black;
-}
+
 #publish_plate{
   background-color: white;
   border-radius: 1px;
@@ -116,8 +127,26 @@ a{
 	position: relative;
 	left: 80px;
 }
-#publish_list .caption{
-  height: 85px;
+#publish_list .col-md-5{
+  margin: 0px 40px;
+}
+#publish_list h5{
+  font-size: 1.2em;
+  position: relative;
+  left: 0px;
+  bottom: 17px;
+}
+#publish_list p{
+  font-size: 0.9em;
+  position: relative;
+  left: -33px;
+  top: 20px;
+}
+#publish_list a{
+  font-size: 0.8em;
+  position: relative;
+  left: 132px;
+  top: 23px;
 }
 #publish_list img{
   width: 100%;
@@ -128,17 +157,7 @@ a{
   left: -60px;
   bottom: -163px;
 }
-.publish_information{
-	padding: 3px 6px;
-}
-.publish_information a{
-  font-size: 1em;
-  color: black;
-}
-#cart_list{
-	position: relative;
-	left: 80px;
-}
+
 
 #cart_logo{
 	border-radius: 5px;

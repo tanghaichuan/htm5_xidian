@@ -2,77 +2,90 @@
 @media screen and (max-width: 1024px){
 	.heart{
 	position: absolute;
-    left: 59%;
+    left: 63%;
     top: 178px;
 	}
 	.col-md-12 img{
 	width:100%;
 	height:260px;
 	}
+	#margin{
+	margin-bottom:40px;
+	height:300px;
+	}
+	.row-a{
+		margin-left: 25px;
+	}
+	.font-a{
+ 	font-size:3.2em;
+ 	font-family:微软雅黑;
+ 	font: normal 120%;
+ 	margin-left: 15px;
+}
+.font-b{
+ 	font-size:1.2em;
+ 	font-family:"微软雅黑";
+ 	color: #969292;
+ 	margin-left: 25px;
+}
 }
 @media screen and (min-width: 1025px){
 	.row-a{
-		width:1000px;
-		margin-left: 80px;
-
+		margin-left: 90px;
+		
 	}
 	.col-md-3{
-		width:250px;
-	}
-	.font-a{
-	 	font-size:3.2em;
-	 	font-family:仿宋;
-	 	font: normal 120%;
-	 	padding-left: 90px;
-	}
-	.font-b{
-	 	font-size:1.2em;
-	 	font-family:"仿宋";
-	 	color: #333;
-	 	padding: 0px 110px 0px 90px;
+		width:200px;
+		margin-right:35px;
 	}
 	.heart{
 	position: absolute;
-    left: 50%;
+    left: 76%;
     top: 178px;
 	}
 	.col-md-12 img{
 	width:100%;
 	height:300px;
 	}
+
+	#margin{
+	margin-bottom:40px;
+	height:300px;
+}
+.font-a{
+ 	font-size:3.2em;
+ 	font-family:微软雅黑;
+ 	font: normal 120%;
+ 	margin-left: 80px;
+}
+.font-b{
+ 	font-size:1.2em;
+ 	font-family:"微软雅黑";
+ 	color: #969292;
+ 	margin-left: 90px;
+ 	width:1160px;
+}
 }
 body{
 	overflow-x: hidden;
-	font-family: "仿宋" Helvetica, Arial, sans-serif;
+	font-family: "微软雅黑" Helvetica, Arial, sans-serif;
  }
 #food-thumb{
 	width:188px;
 	height: 180px;
 }
-#thumbnail{
-	height: 265px;
-}
+
 .dropdown-menu li a{
     padding: 3px 13px;
 }
 .font{
 	writing-mode:tb-rl;
  	font-size:1.2em;
- 	font-family:仿宋;
-}
-.font-a{
- 	font-size:3.2em;
- 	font-family:仿宋;
- 	font: normal 120%;
-}
-.font-b{
- 	font-size:1.2em;
- 	font-family:"仿宋";
- 	color: #333;
+ 	font-family:微软雅黑;
 }
 .font-c{
  	font-size:1em;
- 	font-family:仿宋;
+ 	font-family:微软雅黑;
  	color:#688d72;
  	font-weight:bolder;
 }
@@ -95,7 +108,8 @@ body{
 .thumbnail{
 	margin-top: 10px;
 	margin-right: 10px;
-	height: 380px;
+	margin-bottom:10px;
+	height: 300px;
 	width:193px;
 }
 .thumbnail>img, .thumbnail a>img, .carousel-inner>.item>img, .carousel-inner>.item>a>img {  
@@ -113,7 +127,9 @@ body{
 .user-info {
 	line-height: 65px;
 	position: relative;
-	top: -13px;
+	top: 8px;
+	background-color:#f1efe5;
+
 }
 .user-info p{
 	position: relative;
@@ -121,6 +137,7 @@ body{
 	display: inline-block;
 }
 .user-info img{
+	top:6px;
 	width: 40%;	
 }
 .user-info span{

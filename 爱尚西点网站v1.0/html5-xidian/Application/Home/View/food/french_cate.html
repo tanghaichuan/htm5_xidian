@@ -10,8 +10,9 @@
   <link rel="stylesheet" media="screen and (min-width:1025px)" href="__PUBLIC__/home/css/large.css" type="text/css" />
   <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/heartStyle.css">
   <link rel="stylesheet" href="__PUBLIC__/home/css/food_templet.css"/ >
+ 
+  <link rel="stylesheet" href="__PUBLIC__/home/css/awesomplete.css" type="text/css" /> 
   <link rel="stylesheet" href="__PUBLIC__/home/css/food.css"/>
-     <link rel="stylesheet" href="__PUBLIC__/home/css/awesomplete.css" type="text/css" />
   <script src="__PUBLIC__/home/js/jquery.js"></script>    
   <script src="__PUBLIC__/home/js/bootstrap.min.js"></script>
   <script src="__PUBLIC__/home/js/amazeui.min.js"></script>
@@ -98,18 +99,13 @@
            <li class="dropdown">
                <a href="__MODULE__/shop/index.html" class="dropdown-toggle">食材商城</a>
             </li>
-            <li class="dropdown">
-               <a href="__MODULE__/users/collect.html" class="dropdown-toggle">个人中心</a>
+          <li class="dropdown">
+               <a href="__MODULE__/users/index.html" class="dropdown-toggle">个人中心</a>
               <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
-                <li>
-                   <a href="__MODULE__/users/collect.html">我的收藏</a>
-                </li>
-                <li>
-                   <a href="__MODULE__/users/publish.html">我的发布</a>
-                </li>
                 <li>
                    <a href="__MODULE__/users/reset_information.html">修改信息</a>
                 </li>
+              
                 <li>
                    <a href="__MODULE__/users/reset_password.html">修改密码</a>
                 </li>
@@ -162,23 +158,24 @@
       </div>
 
           <div class="row">
-            <div class="col-md-1 col-sm-1 col-xs-1">
-            <!-- 文字实现竖排 -->
-              <div class="font-a">法式餐点</div>
-            </div>
-        <div class="col-md-11 col-sm-11 col-xs-11">
-          <div class="row" style="height: 70px;">
+          
+              <div class="font-a">&nbsp;&nbsp;法式餐点</div>
+          <br/>
+          <div class="col-md-12 col-sm-12 col-xs-12">
             <p>
               <div class="font-b">法国菜以其口感之细腻、酱料之美味、餐桌布置之华美，使饮食成为了一种艺术。并且因为各地所产原料和当地人口味不同，发展出多种多样的独特烹调方法，从而产生了变换无穷的美味。</div>
             </p>
           </div>
+          <br/><br/>
+          
           <!-- 下方为图片列表内容   -->
     
           <div class="row-a">
             <volist name="food" id="n">
-              <div class="col-md-3 col-sm-4 col-xs-5" style="height: 300px;">
+              <div class="col-md-3 col-sm-4 col-xs-5" style="height: 300px;" id="margin">
                 <div class="thumbnail" id="thumbnail">
                   <figure class="templet ">
+
                       <img src="__PUBLIC__/{$n.img}" id="food-thumb"  />
                       <figcaption>
                           <h3>{$n.name}</h3>
@@ -189,9 +186,10 @@
                   </figure>
                   <br/> <br/> <br/>
                   <p>&nbsp;&nbsp;{$n.name}</p>
-                  <br/>
+               
+                  <p>&nbsp;[材料]&nbsp;[材料]</p>
                   <div class="user-info">
-                    <img src="__PUBLIC__/home/images/avater.jpeg" alt="" class="col-sm-3 img-circle" />
+                    <img src="__PUBLIC__/home/images/avater.jpeg" alt="" class="col-sm-3 " />
                     <p>by&nbsp;&nbsp;{$n.publish_name}</p>
                     <span class="col-sm-7">&nbsp;&nbsp;&nbsp;发布于&nbsp;&nbsp;{$n.food_public_time}</span>
                   </div> 

@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="/html5-xidian/Public/home/css/bootstrap.min.css">
 <link rel="stylesheet" media="screen and (max-width:1024px)" href="/html5-xidian/Public/home/css/food_content_medium.css" type="text/css" />
 <link rel="stylesheet" media="screen and (min-width:1025px)" href="/html5-xidian/Public/home/css/food_content_large.css" type="text/css" />
-   <link rel="stylesheet" href="/html5-xidian/Public/home/css/awesomplete.css" type="text/css" />
+<link rel="stylesheet" href="/html5-xidian/Public/home/css/awesomplete.css" type="text/css" />
 <link rel="stylesheet" href="/html5-xidian/Public/home/css/amazeui.css"/>
 <link rel="stylesheet" href="/html5-xidian/Public/home/css/food_list_cartoon.css">
 <script src="/html5-xidian/Public/home/js/jquery.js"></script>    
@@ -107,20 +107,25 @@
                <a href="/html5-xidian/home.php/Home/shop/index.html" class="dropdown-toggle">食材商城</a>
             </li>
           <li class="dropdown">
-            <a href="/html5-xidian/home.php/Home/users/index.html" class="dropdown-toggle">个人中心</a>
-            <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
-              <li>
-                <a href="/html5-xidian/home.php/Home/users/reset_information.html">修改信息</a>
-              </li>
-
-              <li>
-                <a href="/html5-xidian/home.php/Home/users/reset_password.html">修改密码</a>
-              </li>
-              <li>
-                <a href="/html5-xidian/home.php/Home/cart/index.html">购物车</a>
-              </li>
-            </ul>
-          </li>
+               <a href="/html5-xidian/home.php/Home/users/collect.html" class="dropdown-toggle">个人中心</a>
+              <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
+                <li>
+                   <a href="/html5-xidian/home.php/Home/users/collect.html">我的收藏</a>
+                </li>
+                <li>
+                   <a href="/html5-xidian/home.php/Home/users/publish.html">我的发布</a>
+                </li>
+                <li>
+                   <a href="/html5-xidian/home.php/Home/users/reset_information.html">修改信息</a>
+                </li>
+                <li>
+                   <a href="/html5-xidian/home.php/Home/users/reset_password.html">修改密码</a>
+                </li>
+                 <li>
+                   <a href="/html5-xidian/home.php/Home/cart/index.html">购物车</a>
+                </li>
+              </ul>
+            </li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle">关于我们</a>
           </li>
@@ -157,17 +162,17 @@
     </div>
     <!-- 美食图片 -->
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-6">
           <img alt="Bootstrap Image Preview" src="/html5-xidian/Public/<?php echo ($content["img"]); ?>" class="foodlist" id="foodlist" />
         </div>
         <!-- 制作步骤 -->
-        <div class="col-md-7">
+        <div class="col-md-6">
           <div class="font-a" name="<?php echo ($content["id"]); ?>">
           <?php echo ($content["name"]); ?>
           </div>
           <div>
               <?php if(is_array($tagList)): $i = 0; $__LIST__ = $tagList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><span class="badge badge-warning"><?php echo ($n["tag_name"]); ?></span><?php endforeach; endif; else: echo "" ;endif; ?>
-            <a href="javascript:void(0)" id="addFav" name="<?php echo ($content["id"]); ?>" value="<?php echo ($username); ?>" style="position: relative;top: -15px;left: 30px;">加入收藏</a>
+            <a href="javascript:void(0)" id="addFav" name="<?php echo ($content["id"]); ?>" value="<?php echo ($username); ?>" style="position: relative;top: -15px;left: 10px;">加入收藏</a>
           </div>
           <div class="row">
             <div class="col-md-3">
@@ -193,7 +198,7 @@
               </div>
             </div>
           </div>
-          <div class="row">
+          <!-- <div class="row">
             <div class="col-md-3">
               <div class="font-b">
               操作步骤：
@@ -204,9 +209,28 @@
               <?php echo ($content["practice"]); ?>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
+      <br/> 
+
+    <!-- 操作步骤 -->
+    <div class="container-fluid">
+	    <div class="row clearfix" id="step_list">
+			<div class="col-md-6 column">
+			<div class="step_side"><h2>第一步</h2></div>
+				<p>1.口感之细腻、酱料之美味、餐桌布置之华美，使饮食成为了一种艺术。并且因为各地所产原料和当地人口味不同，发展出多种多样的独特烹调方法，从而产生了变换无穷的美味</p>
+			</div>
+			<div class="col-md-6 column">
+			<div class="step_side"><h2>第二步</h2></div>
+				<p>2.口感之细腻、酱料之美味、餐桌布置之华美，使饮食成为了一种艺术。并且因为各地所产原料和当地人口味不同，发展出多种多样的独特烹调方法，从而产生了变换无穷的美味</p>
+			</div>
+			<div class="col-md-6 column">
+			<div class="step_side"><h2>第三步</h2></div>
+				<p>3.口感之细腻、酱料之美味、餐桌布置之华美，使饮食成为了一种艺术。并且因为各地所产原料和当地人口味不同，发展出多种多样的独特烹调方法，从而产生了变换无穷的美味</p>
+			</div>
+		</div>
+	</div>
     <br/><br/><br/> 
 
     <div id="panda-show">

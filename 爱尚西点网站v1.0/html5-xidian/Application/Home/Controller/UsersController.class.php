@@ -10,6 +10,9 @@ class UsersController extends Controller {
         }
     }
     public function index(){
+        redirect(U('Home/users/collect'), 0);
+    }
+    public function collect(){
         $model=M("favorite");
         $username=session("username");
         $foodList = $model->where(array("user_name"=>$username))->join('foods on favorite.food_id=foods.id')->select();
@@ -23,11 +26,12 @@ class UsersController extends Controller {
         $foodList = $model->where(array("user_name"=>$username))->join('foods on favorite.food_id=foods.id') -> order('id desc') -> page($nowPage.',5') -> select();
         $show = $page -> show();
         $this -> assign('page',$show);
-        $this -> assign('foodList',$foodList); 
-
+        $this -> assign('foodList',$foodList);     
+        $this->display();
+    }
+    public function publish(){
         $foodModel=M("foods");
         $publish=$foodModel->where(array('publish_name'=>session("username")))->order("food_public_time desc")->select();
-
         $this->assign("publish",$publish);
         $this->display();
     }

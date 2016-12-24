@@ -48,7 +48,7 @@
   <!--背景-->
   <div style="background-image: url(/html5-xidian/Public/home/images/bg.png);">
     <!--导航栏-->
-      <nav class="navbar navbar-default navbar-static-top" role="navigation" style="background-image: url(/html5-xidian/Public/home/images/bg.png);border-bottom: 1px solid #C0C0C0;">
+      <nav class="navbar navbar-default navbar-static-top" role="navigation" style="background-image: url(/html5-xidian/Public/home/images/bg.png);border-bottom: 1px solid #C0C0C0;margin: 0px">
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right" style="font-weight: bold;color: black;">
             <li class="dropdown">
@@ -86,12 +86,17 @@
                <a href="/html5-xidian/home.php/Home/shop/index.html" class="dropdown-toggle">食材商城</a>
             </li>
           	<li class="dropdown">
-               <a href="/html5-xidian/home.php/Home/users/index.html" class="dropdown-toggle">个人中心</a>
+               <a href="/html5-xidian/home.php/Home/users/collect.html" class="dropdown-toggle">个人中心</a>
               <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
+                <li>
+                   <a href="/html5-xidian/home.php/Home/users/collect.html">我的收藏</a>
+                </li>
+                <li>
+                   <a href="/html5-xidian/home.php/Home/users/publish.html">我的发布</a>
+                </li>
                 <li>
                    <a href="/html5-xidian/home.php/Home/users/reset_information.html">修改信息</a>
                 </li>
-              
                 <li>
                    <a href="/html5-xidian/home.php/Home/users/reset_password.html">修改密码</a>
                 </li>
@@ -116,8 +121,9 @@
       </nav>
     </div>
 
+  <div style="background-image: url(/html5-xidian/Public/home/images/bg.png);">
   <!--面包屑-->
-  <div class="row-fluid">
+  <div class="row-fluid" style="padding-top: 20px">
     <div class="col-md-12">
       <ul class="breadcrumb">
         <li>
@@ -152,27 +158,6 @@
 		</div>
 	</div>
   </div>
-  <!--
-    <div class="clearfix">
-        <?php if(is_array($goods)): $i = 0; $__LIST__ = $goods;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><div>
-                <div>
-                    <a href="/html5-xidian/home.php/Home/shop/content/id/<?php echo ($n["id"]); ?>" target="_blank">
-                        <img alt="<?php echo ($n["name"]); ?>" src="/html5-xidian/Public/<?php echo ($n["img"]); ?>">
-                    </a>       
-                </div>
-                <div>
-                    <a href="/html5-xidian/home.php/Home/shop/content/id/<?php echo ($n["id"]); ?>" target="_blank" title="<?php echo ($n["name"]); ?>">
-                        <h3><?php echo ($n["name"]); ?></h3>
-                    </a>
-                    <div>
-                        <span>￥<?php echo ($n["price"]); ?></span>                   
-                    </div>
-                </div>
-                <div>月售 1288 件</div>
-                <div>包邮</div>
-            </div><?php endforeach; endif; else: echo "" ;endif; ?>
-    </div>
-   -->
    <!--分页-->
   <div class="container" >
     <div class="row-fluid">
@@ -195,6 +180,7 @@
         <p>联系方式：15800000000</br>邮箱：aishangxidian@163.com</br>地址：河北省石家庄市裕华区南二环东路20号</br></p>
       </div>
     </div>
+  </div>
   </div>
 <!--<div class="ajifenshow"><a class="yshfootbg" href="/mall/contact" target="_blank"></a></div> -->
 </body>

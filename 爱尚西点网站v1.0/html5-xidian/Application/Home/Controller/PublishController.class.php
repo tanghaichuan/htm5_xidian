@@ -29,7 +29,16 @@ class PublishController extends Controller {
         
         $tag_rela_Model=M("tag_food_relation");
         
-        $model=M("foods");
+        $step=I("post.step");
+        $stepArr=explode("#",$step);//一维数组
+        $stepData = array();
+        //重组步骤数组
+        foreach($stepArr as $k=>$v){
+            $stepData[$k]['step']=$v;
+            $stepData[$k]['food_name']=$food_name;
+        }
+       
+        $model=D("foods");
         $upload = new \Think\Upload();// 实例化上传类
         $upload->maxSize=3145728 ;// 设置附件上传大小
         $upload->exts=array('jpg', 'png', 'jpeg');// 设置附件上传类型
@@ -46,14 +55,15 @@ class PublishController extends Controller {
             $data['img']=$info['img']['savepath'].$info['img']['savename'];
             $data['food_public_time']=getTime();
             $data['classify']=I("post.classify");
-            $data['publish_name']=session("username");
+            $data['publish_name']=$food_name;
             //var_dump(I("post.tagname"));  
             //添加
-            if($model->create()&&$model->add($data)&&$tag_rela_Model->addAll($tagData)){
-                //$this->success('添加成功', U("food/add"));
-                $this->redirect("publish/index",0);
+            if($model->create()&&$model->add($data)&&$tag_rela_Model->addAll($tagData)&&M('step')->addAll($stepData)){
+                $this->redirect("food/french_cate",0);
             }else{
-                 $this->error('添加失败');
+                $this->assign('waitSecond',1);
+                $this->assign('message','发布失败啦!');
+                $this->error(U('publish/index'));
             }
         }
     }

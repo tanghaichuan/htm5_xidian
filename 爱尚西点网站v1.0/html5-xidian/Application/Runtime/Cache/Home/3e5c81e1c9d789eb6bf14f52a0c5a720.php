@@ -103,13 +103,18 @@
            <li class="dropdown">
                <a href="/html5-xidian/home.php/Home/shop/index.html" class="dropdown-toggle">食材商城</a>
             </li>
-          <li class="dropdown">
-               <a href="/html5-xidian/home.php/Home/users/index.html" class="dropdown-toggle">个人中心</a>
+            <li class="dropdown">
+               <a href="/html5-xidian/home.php/Home/users/collect.html" class="dropdown-toggle">个人中心</a>
               <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
+                <li>
+                   <a href="/html5-xidian/home.php/Home/users/collect.html">我的收藏</a>
+                </li>
+                <li>
+                   <a href="/html5-xidian/home.php/Home/users/publish.html">我的发布</a>
+                </li>
                 <li>
                    <a href="/html5-xidian/home.php/Home/users/reset_information.html">修改信息</a>
                 </li>
-              
                 <li>
                    <a href="/html5-xidian/home.php/Home/users/reset_password.html">修改密码</a>
                 </li>
@@ -146,7 +151,7 @@
         </ul>
       </div>
     </div>
- </div>
+
  <div id="shopping_content">
   	<div class="row clearfix">
     	<div class="col-md-12 column">
@@ -282,5 +287,6 @@ window.onresize=function() {
       </div>
     </div>
   </div>
+  
  </body>
 </html>

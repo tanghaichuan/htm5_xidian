@@ -91,13 +91,18 @@
            <li class="dropdown">
                <a href="/html5-xidian/home.php/Home/shop/index.html" class="dropdown-toggle">食材商城</a>
             </li>
-          <li class="dropdown">
-               <a href="/html5-xidian/home.php/Home/users/index.html" class="dropdown-toggle">个人中心</a>
+            <li class="dropdown">
+               <a href="/html5-xidian/home.php/Home/users/collect.html" class="dropdown-toggle">个人中心</a>
               <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
+                <li>
+                   <a href="/html5-xidian/home.php/Home/users/collect.html">我的收藏</a>
+                </li>
+                <li>
+                   <a href="/html5-xidian/home.php/Home/users/publish.html">我的发布</a>
+                </li>
                 <li>
                    <a href="/html5-xidian/home.php/Home/users/reset_information.html">修改信息</a>
                 </li>
-              
                 <li>
                    <a href="/html5-xidian/home.php/Home/users/reset_password.html">修改密码</a>
                 </li>
@@ -127,21 +132,22 @@
       </div>
       <div id="avater">
         <img src="/html5-xidian/Public/home/images/avater.jpeg" class="img-circle" />
-        <b style="position: relative;top: 10px;left: 5px;"><?php echo ($username); ?></b>
+        <b><?php echo ($username); ?></b>
       </div>
       <!---->
       <div class="row clearfix" style="padding: 40px 0px;">
-        <div class="col-md-3 column">
+        <div class="col-md-3 column" style="position: relative;left: -3px">
            <ul style="list-style-type: none;text-align: center;font-size: 17px;">
-             <li style="padding: 10px;background-color: #C0C0C0;">个人中心</li>
-             <li style="padding: 10px;background-color: white;"><a href="/html5-xidian/home.php/Home/users/index.html">我的首页</a></li>
+             <li style="padding: 10px;background-color: #C0C0C0;"><b>个人中心</b></li>
+             <li style="padding: 10px;background-color: white;"><a href="/html5-xidian/home.php/Home/users/collect.html">我的收藏</a></li>
+             <li style="padding: 10px;background-color: white;"><a href="/html5-xidian/home.php/Home/users/publish.html">我的发布</a></li>
+             <li style="padding: 10px;background-color: white;"><a href="/html5-xidian/home.php/Home/cart/index.html">我的购物车</a></li>
              <li style="padding: 10px;background-color: white;"><a href="/html5-xidian/home.php/Home/users/reset_information.html">修改信息</a></li>
              <li style="padding: 10px;background-color: white;"><a href="/html5-xidian/home.php/Home/users/reset_password.html">修改密码</a></li>
-             <li style="padding: 10px;background-color: white;"><a href="/html5-xidian/home.php/Home/cart/index.html">我的购物车</a></li>
            </ul>
         </div>
-        <div class="col-md-9 column">
-          <div style="background-color: white;border-radius: 1px;margin: 0px 45px 0px 20px;">
+        <div class="col-md-9 column" style="padding-left: 0px">
+          <div style="background-color: white;border-radius: 1px;margin: 0px 36px 0px 20px;">
             <div style="padding: 15px 20px;">
               <label style="font-size: 16px;">修改信息</label>
             </div>

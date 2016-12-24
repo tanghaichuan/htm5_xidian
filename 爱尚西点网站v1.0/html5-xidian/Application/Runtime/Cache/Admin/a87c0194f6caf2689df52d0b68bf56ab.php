@@ -175,8 +175,41 @@
 				<!--预览层-->
 				<div class="dialog">
 					<div class="dialogMessage">
-						<img src="" alt="" class="diaImg" width="300px" height="350px">
-						<button class="cancle">取消</button>
+						<!--成品图-->
+						<div class="col-sm-4 foodImg">
+							<img src="" alt="" class="diaImg" width="300px" height="350px">
+						</div>
+						<div class="col-sm-7 foodContent">
+							<!--名称-->
+							<div class="col-sm-12">
+								<span id="foodName"></span>
+							</div>
+							<!--标签-->
+							<div class="col-sm-12 badge-favor">
+								<a href="javascript:void(0)" class="favor">加入收藏</a>
+							</div>
+							<div class="col-sm-2 introTiele">
+					            <span>美食介绍:</span>
+							</div>
+							<div class="col-md-10 introContent">
+				              	<p></p>
+				            </div>
+				           	<div class="col-sm-12"></div>
+				            <div class="col-sm-2 ingreTitle">
+					            <span>相关食材:</span>
+							</div>
+							<div class="col-md-10 ingreContent">
+				              	<p></p>
+				            </div>
+						</div>
+						<!--步骤-->
+						<div class="col-sm-12 steps">
+							<div class="foodStep"></div>
+						</div>
+						<div class="col-sm-12 diaBottom">
+							<button class="btn cancle">取消</button>
+							<button class="btn diaPublic">发布</button>
+						</div>
 					</div>
 				</div>
 				<!--userList-->
@@ -189,7 +222,7 @@
 						<form class="form-horizontal" role="form" action="<?php echo U('Admin/food/store');?>" method="post" enctype="multipart/form-data">
 							<div class="form-group">
 								<label for="inputFoodClassify" class="col-xs-3 col-md-3 control-label" style="width: 120px;">选择商品类型：</label>
-								<div class="col-xs-9 col-md-9">
+								<div class="col-xs-9 col-md-9 classify">
 									<label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="法式菜肴" name="classify" />法式菜肴</label>
 									<label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="意式菜肴" name="classify" />意式菜肴</label>
 									<label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="美式菜肴" name="classify" />美式菜肴</label>
@@ -230,7 +263,7 @@
 								</div>
 							</div>
 							<div class="form-group">
-								 <label for="inputFoodMeta" class="col-xs-2 col-sm-2 control-label">食材：</label>
+								 <label for="inputFoodMeta" class="col-xs-2 col-sm-2 control-label">相关食材：</label>
 								<div class="col-xs-7 col-md-7">
 									<textarea class="form-control" id="inputFoodMeta" rows="3" name="ingredients"></textarea>
 								</div>
@@ -259,7 +292,7 @@
 									 <button type="submit" id="submit" class="btn">发布</button>
 								</div>
 								<div class="col-xs-7 col-sm-7 preview">
-									 <a href="javascript:void(0)">预览</a>
+									 <a href="javascript:void(0)" id="preview">预览</a>
 								</div>
 							</div>
 						</form>

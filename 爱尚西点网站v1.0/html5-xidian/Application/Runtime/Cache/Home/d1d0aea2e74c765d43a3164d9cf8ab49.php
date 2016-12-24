@@ -10,8 +10,9 @@
   <link rel="stylesheet" media="screen and (min-width:1025px)" href="/html5-xidian/Public/home/css/large.css" type="text/css" />
   <link rel="stylesheet" type="text/css" href="/html5-xidian/Public/home/css/heartStyle.css">
   <link rel="stylesheet" href="/html5-xidian/Public/home/css/food_templet.css"/ >
+ 
+  <link rel="stylesheet" href="/html5-xidian/Public/home/css/awesomplete.css" type="text/css" /> 
   <link rel="stylesheet" href="/html5-xidian/Public/home/css/food.css"/>
-     <link rel="stylesheet" href="/html5-xidian/Public/home/css/awesomplete.css" type="text/css" />
   <script src="/html5-xidian/Public/home/js/jquery.js"></script>    
   <script src="/html5-xidian/Public/home/js/bootstrap.min.js"></script>
   <script src="/html5-xidian/Public/home/js/amazeui.min.js"></script>
@@ -155,22 +156,23 @@
       </div>
 
           <div class="row">
-            <div class="col-md-1 col-sm-1 col-xs-1">
-            <!-- 文字实现竖排 -->
-              <div class="font-a">法式餐点</div>
-            </div>
-        <div class="col-md-11 col-sm-11 col-xs-11">
-          <div class="row" style="height: 70px;">
+          
+              <div class="font-a">&nbsp;&nbsp;法式餐点</div>
+          <br/>
+          <div class="col-md-12 col-sm-12 col-xs-12">
             <p>
               <div class="font-b">法国菜以其口感之细腻、酱料之美味、餐桌布置之华美，使饮食成为了一种艺术。并且因为各地所产原料和当地人口味不同，发展出多种多样的独特烹调方法，从而产生了变换无穷的美味。</div>
             </p>
           </div>
+          <br/><br/>
+          
           <!-- 下方为图片列表内容   -->
     
           <div class="row-a">
-            <?php if(is_array($food)): $i = 0; $__LIST__ = $food;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><div class="col-md-3 col-sm-4 col-xs-5" style="height: 300px;">
+            <?php if(is_array($food)): $i = 0; $__LIST__ = $food;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><div class="col-md-3 col-sm-4 col-xs-5" style="height: 300px;" id="margin">
                 <div class="thumbnail" id="thumbnail">
                   <figure class="templet ">
+
                       <img src="/html5-xidian/Public/<?php echo ($n["img"]); ?>" id="food-thumb"  />
                       <figcaption>
                           <h3><?php echo ($n["name"]); ?></h3>
@@ -181,9 +183,10 @@
                   </figure>
                   <br/> <br/> <br/>
                   <p>&nbsp;&nbsp;<?php echo ($n["name"]); ?></p>
-                  <br/>
+               
+                  <p>&nbsp;[材料]&nbsp;[材料]</p>
                   <div class="user-info">
-                    <img src="/html5-xidian/Public/home/images/avater.jpeg" alt="" class="col-sm-3 img-circle" />
+                    <img src="/html5-xidian/Public/home/images/avater.jpeg" alt="" class="col-sm-3 " />
                     <p>by&nbsp;&nbsp;<?php echo ($n["publish_name"]); ?></p>
                     <span class="col-sm-7">&nbsp;&nbsp;&nbsp;发布于&nbsp;&nbsp;<?php echo ($n["food_public_time"]); ?></span>
                   </div> 

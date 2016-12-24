@@ -6,9 +6,11 @@
 	<title>首页</title>
 	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/bootstrap.css">
 	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/bootstrap-theme.css">
+	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/jquery-ui.css">
 	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/adminStyle.css">
 	<link rel="stylesheet" href="/html5-xidian/Public/admin/css/jq22.css">
 	<script src="/html5-xidian/Public/admin/js/jquery.js"></script>
+	<script src="/html5-xidian/Public/admin/js/jquery-ui.js"></script>
 	<script src="/html5-xidian/Public/admin/js/bootstrap.js"></script>
 	<script src="/html5-xidian/Public/admin/js/adminEditor.js"></script>		
 	<script src="/html5-xidian/Public/admin/js/adminAjax.js"></script>
@@ -170,6 +172,47 @@
 						</li>
 					</ul>
 				</div>
+				<!--预览层-->
+				<div class="dialog">
+					<div class="dialogMessage">
+						<!--成品图-->
+						<div class="col-sm-4 foodImg">
+							<img src="" alt="" class="diaImg" width="300px" height="350px">
+						</div>
+						<div class="col-sm-7 foodContent">
+							<!--名称-->
+							<div class="col-sm-12">
+								<span id="foodName"></span>
+							</div>
+							<!--标签-->
+							<div class="col-sm-12 badge-favor">
+								<a href="javascript:void(0)" class="favor">加入收藏</a>
+							</div>
+							<div class="col-sm-2 introTiele">
+					            <span>美食介绍:</span>
+							</div>
+							<div class="col-md-10 introContent">
+				              	<p></p>
+				            </div>
+				           	<div class="col-sm-12"></div>
+				            <div class="col-sm-2 ingreTitle">
+					            <span>相关食材:</span>
+							</div>
+							<div class="col-md-10 ingreContent">
+				              	<p></p>
+				            </div>
+						</div>
+						<!--步骤-->
+						<div class="col-sm-12 steps">
+							<div class="foodStep"></div>
+						</div>
+						
+						<div class="col-sm-12 diaBottom">
+							<button class="btn cancle">取消</button>
+							<button class="btn diaPublic">修改</button>
+						</div>
+					</div>
+				</div>
 				<!--userList-->
 				<div class="col-md-12 userList">
 					<div class="col-md-12">
@@ -177,10 +220,10 @@
 					</div>
 					<!--shop-->
 					<div class="col-md-12">
-						<form class="form-horizontal" role="form" action="/html5-xidian/index.php/Admin/Food/edit/id/<?php echo ($data["id"]); ?>" method="post" enctype="multipart/form-data">
+						<form class="form-horizontal" role="form" action="<?php echo U('Admin/food/edit');?>" method="post" enctype="multipart/form-data">
 							<div class="form-group">
 								<label for="inputFoodClassify" class="col-xs-3 col-md-3 control-label" style="width: 120px;">选择商品类型：</label>
-								<div class="col-xs-9 col-md-9">
+								<div class="col-xs-9 col-md-9 classify">
 									<label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="法式菜肴" name="classify" />法式菜肴</label>
 									<label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="意式菜肴" name="classify" />意式菜肴</label>
 									<label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="美式菜肴" name="classify" />美式菜肴</label>
@@ -188,41 +231,64 @@
 									<label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="俄式菜肴" name="classify" />俄式菜肴</label>
 								</div>
 							</div>
-							
 							<div class="form-group">
-								 <label for="inputFoodName" class="col-xs-2 col-sm-2 control-label">名称：</label>
-								<div class="col-xs-5 col-md-5">
-									<input type="text" class="form-control" id="inputFoodName" name="name" value="<?php echo ($data["name"]); ?>" />
+								 <label for="inputFoodTag" class="col-xs-2 col-md-2 control-label">标签：</label>
+								<div class="col-xs-7 col-md-7">
+									<input type="text" name="tags" id="postTag" style="display: none;">
+									<!--标签-->
+									<div id="mycard-plus">
+										<div class="default-tag tagbtn">
+											<div class="clearfix">
+												<?php if(is_array($tagData)): $i = 0; $__LIST__ = $tagData;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><a value="-1" title="选择一个标签" href="javascript:void(0);" class="addTag" rel="none"><span><?php echo ($n["tagname"]); ?></span><em></em></a><?php endforeach; endif; else: echo "" ;endif; ?>
+											</div>
+										</div><!--mycard-plus end-->
+									</div>	
 								</div>
 							</div>
 							<div class="form-group">
-								 <label for="inputFoodMeta" class="col-xs-2 col-sm-2 control-label">材料：</label>
-								<div class="col-xs-5 col-md-5">
-									<textarea class="form-control" id="inputFoodMeta" rows="3" name="ingredients"><?php echo ($data["ingredients"]); ?></textarea>
+								 <label for="inputFoodName" class="col-xs-2 col-sm-2 control-label">美食名称：</label>
+								<div class="col-xs-7 col-md-7">
+									<input type="text" class="form-control" id="inputFoodName" name="name" />
 								</div>
 							</div>
 							<div class="form-group">
-								 <label for="inputFoodStep" class="col-xs-2 col-sm-2 control-label">步骤：</label>
-								<div class="col-xs-5 col-md-5">
-									<textarea class="form-control" id="inputFoodStep" rows="3" name="practice"><?php echo ($data["practice"]); ?></textarea>
-								</div>
-							</div>
-							<img src="/html5-xidian/Public/<?php echo ($data["img"]); ?>" alt="" width="70" height="38px">
-							<div class="form-group">
-								 <label for="inputFoodImg" class="col-xs-2 col-sm-2 control-label">美食图片：</label>
-								<div class="col-xs-5 col-md-5">
+								 <label for="inputFoodName" class="col-xs-2 col-sm-2 control-label">成品图片：</label>
+								<div class="col-xs-7 col-md-7">
 									<input type="file" id="inputFoodImg" class="form-control" name="img">
+								</div>								
+							</div>
+							<div class="form-group">
+								 <label for="inputFoodStep" class="col-xs-2 col-sm-2 control-label">美食心得：</label>
+								<div class="col-xs-7 col-md-7">
+									<textarea class="form-control" id="inputFoodContent" rows="3" name="content"></textarea>
 								</div>
 							</div>
 							<div class="form-group">
-								<div class="col-xs-3 col-sm-3">
+								 <label for="inputFoodMeta" class="col-xs-2 col-sm-2 control-label">相关食材：</label>
+								<div class="col-xs-7 col-md-7">
+									<textarea class="form-control" id="inputFoodMeta" rows="3" name="ingredients"></textarea>
+								</div>
+							</div>
+							
+
+							<div class="form-group">
+								<div class="col-xs-2 col-sm-2 col-md-2">
 									 <button type="submit" id="submit" class="btn">修改</button>
+								</div>
+								<div class="col-xs-7 col-sm-7 preview">
+									 <a href="javascript:void(0)" id="preview">预览</a>
 								</div>
 							</div>
 						</form>
 					</div>
 				</div>
-			
+			<script>
+				//修改美食信息时变更步骤
+				$(".step").each(function(){
+					var num=$(this).prevAll(".step").length;
+					$("label span",this).html(parseInt(num)+1);
+				});
+			</script>
 			</div>
 		</div>
 	</div>

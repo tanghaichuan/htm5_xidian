@@ -159,22 +159,17 @@
 
             <div id="collect_list">
               <div class="row clearfix">
-				<div class="col-md-5 column">
-					<div style="border-bottom: 1px solid #C0C0C0">
-						<img src="__PUBLIC__/home/images/food-I-2.png">
-						<h5 style="display: inline;">名称</h5>
-						<p style="display: inline;">by&nbsp;作者</p>
-						<a href="">取消收藏</a>
-					</div>
-				</div>
-				<div class="col-md-5 column">
-					<div style="border-bottom: 1px solid #C0C0C0">
-						<img src="__PUBLIC__/home/images/food-I-2.png">
-						<h5 style="display: inline;">名称</h5>
-						<p style="display: inline;">by&nbsp;作者</p>
-						<a href="">取消收藏</a>
-					</div>
-				</div>
+
+                <volist name="foodList" id="n">
+                  <div class="col-md-5 column">
+                    <div style="border-bottom: 1px solid #C0C0C0">
+                      <img src="__PUBLIC__/{$n.img}">
+                      <h5 style="display: inline;">{$n.name}</h5>
+                      <p style="display: inline;">by&nbsp;{$n.publish_name}</p>
+                      <a href="">取消收藏</a>
+                    </div>
+                  </div>
+                </volist>     
 			  </div>
             </div>
             </br>

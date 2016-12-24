@@ -96,15 +96,9 @@
            <li class="dropdown">
                <a href="__MODULE__/shop/index.html" class="dropdown-toggle">食材商城</a>
             </li>
-            <li class="dropdown">
-               <a href="__MODULE__/users/collect.html" class="dropdown-toggle">个人中心</a>
+          <li class="dropdown">
+               <a href="__MODULE__/users/index.html" class="dropdown-toggle">个人中心</a>
               <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
-                <li>
-                   <a href="__MODULE__/users/collect.html">我的收藏</a>
-                </li>
-                <li>
-                   <a href="__MODULE__/users/publish.html">我的发布</a>
-                </li>
                 <li>
                    <a href="__MODULE__/users/reset_information.html">修改信息</a>
                 </li>
@@ -130,16 +124,15 @@
           </ul>
         </div>
       </nav>
-    </div>
-    <div class="container-fluid">
+    </div>        <div class="container-fluid">
       
       <div class="row">
         <div class="col-md-12">
-          <img alt="俄式餐点" src="__PUBLIC__/home/images/food-R-0.png" class=""/>
+          <img alt="法式餐点" src="__PUBLIC__/home/images/food-F-0.png" />
         </div>
       </div>
       <br / >
-<div class="row">
+      <div class="row">
         <div class="col-md-12">
           <div class="row">
             <div class="col-md-12">
@@ -151,7 +144,7 @@
                   <a href="__MODULE__/french/french_cate.html">美食鉴赏</a> 
                 </li>
                 <li class="active">
-                  英式餐点
+                  俄式餐点
                 </li>
               </ul>
             </div>
@@ -159,23 +152,25 @@
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-md-1 col-sm-1 col-xs-1">
-          <!-- 文字实现竖排 -->
-          <div class="font-a">俄式餐点</div>
-        </div>
-        <div class="col-md-11">
-          <div class="row" style="height: 70px;">
+          <div class="row">
+          
+              <div class="font-a">&nbsp;&nbsp;俄式餐点</div>
+          <br/>
+          <div class="col-md-12 col-sm-12 col-xs-12">
             <p>
               <div class="font-b">俄罗斯人比较讲究饮食，菜肴的品种丰富多彩，"俄式大餐"在世界很有名气，珍贵的鱼子酱，正宗的罗宋汤，还有传统小煎饼，都是非常有民族特色的。</div>
             </p>
-          </div><!-- 下方为图片列表内容   -->
-            <!-- 第一行图片 -->
+          </div>
+          <br/><br/>
+          
+          <!-- 下方为图片列表内容   -->
+    
           <div class="row-a">
             <volist name="food" id="n">
-              <div class="col-md-3 col-sm-4 col-xs-5" style="height: 300px;">
+              <div class="col-md-3 col-sm-4 col-xs-5" style="height: 300px;" id="margin">
                 <div class="thumbnail" id="thumbnail">
                   <figure class="templet ">
+
                       <img src="__PUBLIC__/{$n.img}" id="food-thumb"  />
                       <figcaption>
                           <h3>{$n.name}</h3>
@@ -186,9 +181,10 @@
                   </figure>
                   <br/> <br/> <br/>
                   <p>&nbsp;&nbsp;{$n.name}</p>
-                  <br/>
+               
+                  <p>&nbsp;[材料]&nbsp;[材料]</p>
                   <div class="user-info">
-                    <img src="__PUBLIC__/home/images/avater.jpeg" alt="" class="col-sm-3 img-circle" />
+                    <img src="__PUBLIC__/home/images/avater.jpeg" alt="" class="col-sm-3 " />
                     <p>by&nbsp;&nbsp;{$n.publish_name}</p>
                     <span class="col-sm-7">&nbsp;&nbsp;&nbsp;发布于&nbsp;&nbsp;{$n.food_public_time}</span>
                   </div> 
@@ -197,10 +193,14 @@
                   <div class="heart" id="like1" rel="like" title="收藏" name="{$n.id}" value="{$username}"></div>
                 </div>
               </div>
-            </volist>  
-          </div> 
+            </volist> 
+          </div>  
         </div>
-      </div>        
+      </div>
+
+             
+
+
       <br/><br/>
       <div class="row">
         <div class="col-md-8">

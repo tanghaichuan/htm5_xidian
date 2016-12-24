@@ -13,6 +13,13 @@
 						</li>
 					</ul>
 				</div>
+				<!--预览层-->
+				<div class="dialog" style="display: none">
+					<div class="dialogMessage">
+						<img src="" alt="" class="diaImg" width="300px" height="350px">
+						<button class="cancle">取消</button>
+					</div>
+				</div>
 				<!--userList-->
 				<div class="col-md-12 userList">
 					<div class="col-md-12">
@@ -20,7 +27,7 @@
 					</div>
 					<!--shop-->
 					<div class="col-md-12">
-						<form class="form-horizontal" role="form" action="__URL__/edit/id/{$data.id}" method="post" enctype="multipart/form-data">
+						<form class="form-horizontal" role="form" action="{:U('Admin/food/edit')}" method="post" enctype="multipart/form-data">
 							<div class="form-group">
 								<label for="inputFoodClassify" class="col-xs-3 col-md-3 control-label" style="width: 120px;">选择商品类型：</label>
 								<div class="col-xs-9 col-md-9">
@@ -31,38 +38,64 @@
 									<label for="" class="shopRadio"><input type="radio" id="inputFoodClassify" value="俄式菜肴" name="classify" />俄式菜肴</label>
 								</div>
 							</div>
-							
 							<div class="form-group">
-								 <label for="inputFoodName" class="col-xs-2 col-sm-2 control-label">名称：</label>
-								<div class="col-xs-5 col-md-5">
-									<input type="text" class="form-control" id="inputFoodName" name="name" value="{$data.name}" />
+								 <label for="inputFoodTag" class="col-xs-2 col-md-2 control-label">标签：</label>
+								<div class="col-xs-7 col-md-7">
+									<input type="text" name="tags" id="postTag" style="display: none;">
+									<!--标签-->
+									<div id="mycard-plus">
+										<div class="default-tag tagbtn">
+											<div class="clearfix">
+												<volist name="tagData" id="n">
+													<a value="-1" title="选择一个标签" href="javascript:void(0);" class="addTag" rel="none"><span>{$n.tagname}</span><em></em></a>
+												</volist>
+											</div>
+										</div><!--mycard-plus end-->
+									</div>	
 								</div>
 							</div>
 							<div class="form-group">
-								 <label for="inputFoodMeta" class="col-xs-2 col-sm-2 control-label">材料：</label>
-								<div class="col-xs-5 col-md-5">
+								 <label for="inputFoodName" class="col-xs-2 col-sm-2 control-label">美食名称：</label>
+								<div class="col-xs-7 col-md-7">
+									<input type="text" class="form-control" id="inputFoodName" name="name" value="{$data.name}" />
+									<input type="text" class="form-control" id="inputFoodName" name="id" style="display: none" value="{$data.id}" />
+								</div>
+							</div>
+							<div class="form-group">
+								 <label for="inputFoodName" class="col-xs-2 col-sm-2 control-label">成品图片：</label>
+								<div class="col-xs-7 col-md-7">
+									<input type="file" id="inputFoodImg" class="form-control" name="img">
+								</div>								
+							</div>
+							<div class="form-group">
+								 <label for="inputFoodStep" class="col-xs-2 col-sm-2 control-label">美食心得：</label>
+								<div class="col-xs-7 col-md-7">
+									<textarea class="form-control" id="inputFoodContent" rows="3" name="content">{$data.content}</textarea>
+								</div>
+							</div>
+							<div class="form-group">
+								 <label for="inputFoodMeta" class="col-xs-2 col-sm-2 control-label">食材：</label>
+								<div class="col-xs-7 col-md-7">
 									<textarea class="form-control" id="inputFoodMeta" rows="3" name="ingredients">{$data.ingredients}</textarea>
 								</div>
 							</div>
+							<textarea name="step" id="postStep" cols="30" rows="10" style="display: none;"></textarea>
+							
 							<div class="form-group">
-								 <label for="inputFoodStep" class="col-xs-2 col-sm-2 control-label">步骤：</label>
-								<div class="col-xs-5 col-md-5">
-									<textarea class="form-control" id="inputFoodStep" rows="3" name="practice">{$data.practice}</textarea>
-								</div>
-							</div>
-							<img src="__PUBLIC__/{$data.img}" alt="" width="70" height="38px">
-							<div class="form-group">
-								 <label for="inputFoodImg" class="col-xs-2 col-sm-2 control-label">美食图片：</label>
-								<div class="col-xs-5 col-md-5">
-									<input type="file" id="inputFoodImg" class="form-control" name="img">
-								</div>
-							</div>
-							<div class="form-group">
-								<div class="col-xs-3 col-sm-3">
+								<div class="col-xs-2 col-sm-2 col-md-2">
 									 <button type="submit" id="submit" class="btn">修改</button>
+								</div>
+								<div class="col-xs-7 col-sm-7 preview">
+									 <a href="javascript:void(0)">预览</a>
 								</div>
 							</div>
 						</form>
 					</div>
 				</div>
-			
+			<script>
+				//修改美食信息时变更步骤
+				$(".step").each(function(){
+					var num=$(this).prevAll(".step").length;
+					$("label span",this).html(parseInt(num)+1);
+				});
+			</script>

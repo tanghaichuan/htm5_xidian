@@ -61,7 +61,6 @@ $(function(){
 		$("#postTag").val(tag);
 	});
 	//向后台传步骤
-	
 	$("#submit").click(function(){
 		var step=[""];
 		for(var i = 0;i<$(".step").length;i++){
@@ -74,4 +73,7 @@ $(function(){
 		//console.log(step);
 		$("#postStep").val(step);
 	});
+	//美食发布状态
+	
+	
 });

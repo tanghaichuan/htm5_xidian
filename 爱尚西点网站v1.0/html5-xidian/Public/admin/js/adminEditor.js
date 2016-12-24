@@ -181,7 +181,7 @@ $(function(){
 	    var postfix=file.substring(pos+1,len);
 	    console.log(typeof(file));
 	}
-	//蒙版
+	//预览蒙版
 	$(".dialog").hide();
 	$(".userList").show();
 	$(".preview a").click(function(){
@@ -201,6 +201,47 @@ $(function(){
 	    };
 	    fr.readAsDataURL(imgFile);
 	});
+	//显示内容
+
+	$('#preview').click(function(){
+		//显示美食名称
+		$('#foodName').html($('#inputFoodName').val());
+		//显示标签样式
+		var tags=[];
+		var tag="";
+		$(".addTag").each(function(){
+			if($(this).attr("rel")=="add"){
+				var tag=$("span",this).text();
+				tags.push(tag);
+			}
+		});
+		$('.favor').prevAll().remove();
+		for($i in tags){
+			$('.favor').before("<span class='badge badge-warning'>"+tags[$i]+"</span>");
+		}
+		//显示美食介绍内容
+		$('.introContent p').html($('#inputFoodContent').val());
+		//显示食材
+		$('.ingreContent p').html($('#inputFoodMeta').val());
+		//显示步骤
+		var step=[];
+		$(".step textarea").each(function(){
+			step.push($(this).val());
+		});
+	
+		//清空步骤
+		$(".foodStep:first").nextAll(".foodStep").remove();
+		for($j in step){
+			var num=parseInt($j)+1;
+			$elem="<div class='col-sm-6 foodStep'><div class='col-sm-1 stepNum'><span>"+num+"</span>·</div><div class='col-sm-10 stepContent'><p>"+step[$j]+"</p></div></div>"
+			$(".foodStep:last").after($elem);
+		}
+		//发布
+		$(".diaPublic").click(function(){
+			$("#submit").click();
+		});
+	});
+	
 
 	
 	var pracHeight=$(".step:first").height();
@@ -230,5 +271,6 @@ $(function(){
 			});
 		}
 	});
+	//修改美食信息时变更步骤
 	
 });

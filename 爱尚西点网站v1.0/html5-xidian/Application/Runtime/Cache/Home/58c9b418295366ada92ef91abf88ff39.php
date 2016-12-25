@@ -9,6 +9,11 @@
   <link rel="stylesheet" media="screen and (max-width:1024px)" href="/html5-xidian/Public/home/css/medium.css" type="text/css" />
   <link rel="stylesheet" media="screen and (min-width:1025px)" href="/html5-xidian/Public/home/css/large.css" type="text/css" />
   <link rel="stylesheet" href="/html5-xidian/Public/home/css/awesomplete.css" type="text/css" />
+  <link href="/html5-xidian/Public/home/css/font-awesome.css" rel="stylesheet">
+  <link href="/html5-xidian/Public/home/css/btnstyle.css" rel="stylesheet">
+  <script src="/html5-xidian/Public/home/js/jquery-1.11.1.js"></script>
+  <script src="/html5-xidian/Public/home/js/bootstrap.js"></script>
+  <script src="/html5-xidian/Public/home/js/jquery.slimscroll.js"></script>
   <script src="/html5-xidian/Public/home/js/jquery.js"></script>    
   <script src="/html5-xidian/Public/home/js/bootstrap.min.js"></script>
   <script src="/html5-xidian/Public/home/js/homeEdit.js"></script>
@@ -111,7 +116,7 @@
             <li>
               <form class="navbar-form navbar-left" role="search" action="<?php echo U('Home/index/content');?>" method="post">
                 <input class="awesomplete" placeholder="搜索想要的美食..." id="searchFood" name="data" style="position: relative;top: 3px;" />             
-                <button type="submit" class="btn btn-default btn-sm" style="position: relative;top: 1.5px;">搜索</button>
+                <button type="submit" class="btn btn-default btn-sm" style="position: relative;top: 1.5px;font-size: 0.8em;outline: none;">搜索</button>
                 <ul class="mylist">
                 </ul> 
               </form>
@@ -142,10 +147,10 @@
 		<div class="col-md-12 column">
 			<div class="row">
         <?php if(is_array($goods)): $i = 0; $__LIST__ = $goods;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><div class="col-md-3">
-            <div class="thumbnail">
+            <div class="thumbnail" style="border-radius: 0px">
               <a href="content/id/<?php echo ($n["id"]); ?>"><img class="shopping_pic" src="/html5-xidian/Public/<?php echo ($n["img"]); ?>" /></a>
               <div class="caption">
-                <a href="#"><p style="padding: 0px 8px" title="<?php echo ($n["name"]); ?>"><?php echo (mb_substr($n["name"],0,20,utf8)); ?>...</p></a>
+                <a href="#"><p style="padding: 0px 8px" title="<?php echo ($n["name"]); ?>"><?php echo (mb_substr($n["name"],0,13,utf8)); ?>...</p></a>
                 <div><b class="price">￥<?php echo ($n["price"]); ?></b></div>
                 <a class="btn"  style="color: #fff" id="cart" name="<?php echo ($username); ?>" value="<?php echo ($n["id"]); ?>">加入购物车</a>
                 <div class="count">

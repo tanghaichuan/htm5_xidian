@@ -9,6 +9,11 @@
     <link rel="stylesheet" media="screen and (min-width:1025px)" href="/html5-xidian/Public/home/css/large.css" type="text/css" />
     <link rel="stylesheet" href="/html5-xidian/Public/home/css/userEdit.css">
     <link rel="stylesheet" href="/html5-xidian/Public/home/css/awesomplete.css" type="text/css" />
+    <link href="/html5-xidian/Public/home/css/font-awesome.css" rel="stylesheet">
+    <link href="/html5-xidian/Public/home/css/btnstyle.css" rel="stylesheet">
+    <script src="/html5-xidian/Public/home/js/jquery-1.11.1.js"></script>
+    <script src="/html5-xidian/Public/home/js/bootstrap.js"></script>
+    <script src="/html5-xidian/Public/home/js/jquery.slimscroll.js"></script>
     <script src="/html5-xidian/Public/home/js/jquery.js"></script>    
     <script src="/html5-xidian/Public/home/js/bootstrap.min.js"></script>
     <script src="/html5-xidian/Public/home/js/homeEdit.js"></script>
@@ -117,7 +122,7 @@
             <li>
               <form class="navbar-form navbar-left" role="search" action="<?php echo U('Home/index/content');?>" method="post">
                 <input class="awesomplete" placeholder="搜索想要的美食..." id="searchFood" name="data" style="position: relative;top: 3px;" />             
-                <button type="submit" class="btn btn-default btn-sm" style="position: relative;top: 1.5px;">搜索</button>
+                <button type="submit" class="btn btn-default btn-sm" style="position: relative;top: 1.5px;font-size: 0.8em;outline: none;">搜索</button>
                 <ul class="mylist">
                 </ul> 
               </form>
@@ -126,6 +131,7 @@
         </div>
       </nav>
 
+      <div>
       <!---->
       <div style="padding: 0px 36px;">
         <img src="/html5-xidian/Public/home/images/personal_banner.jpg">
@@ -161,7 +167,7 @@
                     <div style="border-bottom: 1px solid #C0C0C0">
                       <img src="/html5-xidian/Public/<?php echo ($n["img"]); ?>">
                       <h5 style="display: inline;"><?php echo ($n["name"]); ?></h5>
-                      <p style="display: inline;">by&nbsp;<?php echo ($n["publish"]); ?></p>
+                      <p style="display: inline;">by&nbsp;<?php echo ($n["publish_name"]); ?></p>
                       <a href="">取消发布</a>
                     </div>
                   </div><?php endforeach; endif; else: echo "" ;endif; ?>
@@ -176,12 +182,8 @@
               </div>
             </div>
           </div>
-          </br>
-          
-        </br>
-        </br>
       </div>
-      </br>
+      </div>
   <!--页脚-->
     <div class="footer">
       <div class="row clearfix" id="footer_padding">

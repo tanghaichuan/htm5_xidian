@@ -4,14 +4,19 @@
 <title></title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta charset="utf-8">
+<link rel="stylesheet" href="/html5-xidian/Public/home/css/bootstrap.min.css">
 <link rel="stylesheet" media="screen and (max-width:1024px)" href="/html5-xidian/Public/home/css/medium.css" type="text/css" />
 <link rel="stylesheet" media="screen and (min-width:1025px)" href="/html5-xidian/Public/home/css/large.css" type="text/css" />
-<link rel="stylesheet" href="/html5-xidian/Public/home/css/bootstrap.min.css">
 <link rel="stylesheet" media="screen and (max-width:1024px)" href="/html5-xidian/Public/home/css/food_content_medium.css" type="text/css" />
 <link rel="stylesheet" media="screen and (min-width:1025px)" href="/html5-xidian/Public/home/css/food_content_large.css" type="text/css" />
 <link rel="stylesheet" href="/html5-xidian/Public/home/css/awesomplete.css" type="text/css" />
 <link rel="stylesheet" href="/html5-xidian/Public/home/css/amazeui.css"/>
 <link rel="stylesheet" href="/html5-xidian/Public/home/css/food_list_cartoon.css">
+<link href="/html5-xidian/Public/home/css/font-awesome.css" rel="stylesheet">
+<link href="/html5-xidian/Public/home/css/btnstyle.css" rel="stylesheet">
+<script src="/html5-xidian/Public/home/js/jquery-1.11.1.js"></script>
+<script src="/html5-xidian/Public/home/js/bootstrap.js"></script>
+<script src="/html5-xidian/Public/home/js/jquery.slimscroll.js"></script>
 <script src="/html5-xidian/Public/home/js/jquery.js"></script>    
 <script src="/html5-xidian/Public/home/js/bootstrap.min.js"></script>
 <script src="/html5-xidian/Public/home/js/amazeui.min.js"></script>
@@ -132,7 +137,7 @@
           <li>
             <form class="navbar-form navbar-left" role="search" action="<?php echo U('Home/index/content');?>" method="post">
                 <input class="awesomplete" placeholder="搜索想要的美食..." id="searchFood" name="data" style="position: relative;top: 3px;" />             
-                <button type="submit" class="btn btn-default btn-sm" style="position: relative;top: 1.5px;">搜索</button>
+                <button type="submit" class="btn btn-default btn-sm" style="position: relative;top: 1.5px;font-size: 0.8em;outline: none;">搜索</button>
                 <ul class="mylist">
                 </ul> 
               </form>
@@ -171,8 +176,8 @@
           <?php echo ($content["name"]); ?>
           </div>
           <div>
-              <?php if(is_array($tagList)): $i = 0; $__LIST__ = $tagList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><span class="badge badge-warning"><?php echo ($n["tag_name"]); ?></span><?php endforeach; endif; else: echo "" ;endif; ?>
-            <a href="javascript:void(0)" id="addFav" name="<?php echo ($content["id"]); ?>" value="<?php echo ($username); ?>" style="position: relative;top: -15px;left: 10px;">加入收藏</a>
+              <?php if(is_array($tagList)): $i = 0; $__LIST__ = $tagList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><span class="badge"><?php echo ($n["tag_name"]); ?></span>&nbsp<?php endforeach; endif; else: echo "" ;endif; ?>
+            <a href="javascript:void(0)" id="addFav" name="<?php echo ($content["id"]); ?>" value="<?php echo ($username); ?>" style="position: relative;top: -15px;left: 4px;">加入收藏</a>
           </div>
           <div class="row">
             <div class="col-md-3">
@@ -198,18 +203,6 @@
               </div>
             </div>
           </div>
-          <!-- <div class="row">
-            <div class="col-md-3">
-              <div class="font-b">
-              操作步骤：
-              </div>
-            </div>
-            <div class="col-md-9">
-              <div class="font-c">
-              <?php echo ($content["practice"]); ?>
-              </div>
-            </div>
-          </div> -->
         </div>
       </div>
       <br/> 
@@ -217,21 +210,13 @@
     <!-- 操作步骤 -->
     <div class="container-fluid">
 	    <div class="row clearfix" id="step_list">
-			<div class="col-md-6 column">
-			<div class="step_side"><h2>第一步</h2></div>
-				<p>1.口感之细腻、酱料之美味、餐桌布置之华美，使饮食成为了一种艺术。并且因为各地所产原料和当地人口味不同，发展出多种多样的独特烹调方法，从而产生了变换无穷的美味</p>
-			</div>
-			<div class="col-md-6 column">
-			<div class="step_side"><h2>第二步</h2></div>
-				<p>2.口感之细腻、酱料之美味、餐桌布置之华美，使饮食成为了一种艺术。并且因为各地所产原料和当地人口味不同，发展出多种多样的独特烹调方法，从而产生了变换无穷的美味</p>
-			</div>
-			<div class="col-md-6 column">
-			<div class="step_side"><h2>第三步</h2></div>
-				<p>3.口感之细腻、酱料之美味、餐桌布置之华美，使饮食成为了一种艺术。并且因为各地所产原料和当地人口味不同，发展出多种多样的独特烹调方法，从而产生了变换无穷的美味</p>
-			</div>
-		</div>
-	</div>
-    <br/><br/><br/> 
+        <?php if(is_array($stepList)): $i = 0; $__LIST__ = $stepList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><div class="col-md-6 column">
+            <div class="step_side"><h2>第<?php echo ($n["num"]); ?>步</h2></div>
+            <p><?php echo ($n["step"]); ?></p>
+          </div><?php endforeach; endif; else: echo "" ;endif; ?>
+		  </div>
+	  </div>
+    <br/>
 
     <div id="panda-show">
   <div class="full">
@@ -317,9 +302,9 @@ window.onresize=function() {
   
 </script>
 
-    <br/><br/><br/><br/>
+    <br/><br/>
       <div class="container">
-        <div class="row" id="pd">
+        <div class="row">
         <!--评论框-->
         <div class="col-md-12">
           
@@ -327,7 +312,7 @@ window.onresize=function() {
             <h3 id="fd_name"><?php echo ($content["name"]); ?>的评论</h3>
             <div class="form-group">
               <div class="col-md-1" id="avater-img">
-                <img src="/html5-xidian/Public/home/images/avater.jpeg" alt="" class="img-circle" width="46px" height="46px">
+                <img src="/html5-xidian/Public/home/images/avater.jpeg" alt="" class="img-circle" style="width: 48px;height: 48px">
                 <p id="commentUser"><?php echo ($username); ?></p>
               </div>
               <div class="col-md-6" id="text">
@@ -343,9 +328,9 @@ window.onresize=function() {
         </div>
         <!--评论列表-->
         <div class="col-md-11"> 
-          <ul class="am-comment-list">
+          <ul class="am-comment-list" style="padding: 0px 40px">
 
-            <?php if(is_array($commentList)): $i = 0; $__LIST__ = $commentList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><li class="am-comment" style="padding-bottom: 2px;">
+            <?php if(is_array($commentList)): $i = 0; $__LIST__ = $commentList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><li class="am-comment" style="padding-bottom: 13px;">
                 <a href="#">
                 <img src="/html5-xidian/Public/home/images/food-UK-1.png" alt="头像" class="am-comment-avatar" width="48" height="48"/>
                 </a>
@@ -356,7 +341,7 @@ window.onresize=function() {
                     评论于 <time datetime="2016-07-27T04:54:29-07:00"><?php echo ($n["com_time"]); ?></time><a href="javascript:void(0);" class="reply" name="<?php echo ($n["username"]); ?>">回复</a>
                   </div>
                   </header>
-                    <div class="am-comment-bd">
+                    <div class="am-comment-bd" style="padding: 10px 15px;background-color: white">
                     <?php echo ($n["comment"]); ?>
                   </div>
                 </div>

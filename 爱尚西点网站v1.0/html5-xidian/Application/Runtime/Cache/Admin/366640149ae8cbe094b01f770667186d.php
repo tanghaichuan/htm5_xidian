@@ -24,7 +24,7 @@
 			</div>
 			<div class="top-right">
 				<ul>
-					<li><a href="/html5-xidian/home.php/Admin/login/index.html">欢迎：<?php echo ($username); ?></a></li>
+					<li><a href="/html5-xidian/index.php/Admin/login/index.html">欢迎：<?php echo ($username); ?></a></li>
 					<li><a href="<?php echo U('Admin/adminUsers/quit');?>">退出</a></li>
 				</ul>
 			</div>
@@ -32,7 +32,7 @@
 		<!--head-->
 		<div class="head">
 			<div class="shouye">
-				<a href="/html5-xidian/home.php/Admin/index/index.html"><img src="/html5-xidian/Public/admin/images/home.png" alt="" width="22px" height="22px">首页</a>
+				<a href="/html5-xidian/index.php/Admin/index/index.html"><img src="/html5-xidian/Public/admin/images/home.png" alt="" width="22px" height="22px">首页</a>
 			</div>
 			<div class="head-title">
 				<h3>爱尚西点后台管理系统</h3>
@@ -50,16 +50,16 @@
 						</div>
 						<div id="panel-element-78753" class="panel-collapse collapse in" >
 							<div class="panel-body">
-								<a href="/html5-xidian/home.php/Admin/adminUsers/index.html">管理员管理</a>
+								<a href="/html5-xidian/index.php/Admin/adminUsers/index.html">管理员管理</a>
 							</div>
 							<div class="panel-body">
-								<a href="/html5-xidian/home.php/Admin/adminUsers/editInfo.html">修改个人信息</a>
+								<a href="/html5-xidian/index.php/Admin/adminUsers/editInfo.html">修改个人信息</a>
 							</div>
 							<div class="panel-body">
-								<a href="/html5-xidian/home.php/Admin/adminUsers/editPwd.html">修改密码</a>
+								<a href="/html5-xidian/index.php/Admin/adminUsers/editPwd.html">修改密码</a>
 							</div>
 							<div class="panel-body">
-								<a href="/html5-xidian/home.php/Admin/adminUsers/add.html">添加管理员</a>
+								<a href="/html5-xidian/index.php/Admin/adminUsers/add.html">添加管理员</a>
 							</div>
 						</div>
 					</div>
@@ -69,10 +69,10 @@
 						</div>
 						<div id="panel-element-816153" class="panel-collapse collapse">
 							<div class="panel-body">
-								<a href="/html5-xidian/home.php/Admin/user/index.html">用户管理</a>
+								<a href="/html5-xidian/index.php/Admin/user/index.html">用户管理</a>
 							</div>
 							<div class="panel-body">
-								<a href="/html5-xidian/home.php/Admin/user/edit.html">修改用户信息</a>
+								<a href="/html5-xidian/index.php/Admin/user/edit.html">修改用户信息</a>
 							</div>
 						</div>
 					</div>
@@ -82,13 +82,13 @@
 						</div>
 						<div id="panel-element-816154" class="panel-collapse collapse">
 							<div class="panel-body">
-								<a href="/html5-xidian/home.php/Admin/shop/index.html">商城管理</a>
+								<a href="/html5-xidian/index.php/Admin/shop/index.html">商城管理</a>
 							</div>
 							<div class="panel-body">
-								<a href="/html5-xidian/home.php/Admin/shop/add.html">添加商品</a>
+								<a href="/html5-xidian/index.php/Admin/shop/add.html">添加商品</a>
 							</div>
 							<div class="panel-body">
-								<a href="/html5-xidian/home.php/Admin/shop/edit.html">修改商品信息</a>
+								<a href="/html5-xidian/index.php/Admin/shop/edit.html">修改商品信息</a>
 							</div>
 						</div>
 					</div>
@@ -98,16 +98,16 @@
 						</div>
 						<div id="panel-element-816155" class="panel-collapse collapse">
 							<div class="panel-body">
-								<a href="/html5-xidian/home.php/Admin/food/index.html">美食管理</a>
+								<a href="/html5-xidian/index.php/Admin/food/index.html">美食管理</a>
 							</div>
 							<div class="panel-body">
-								<a href="/html5-xidian/home.php/Admin/food/add.html">添加美食</a>
+								<a href="/html5-xidian/index.php/Admin/food/add.html">添加美食</a>
 							</div>
 							<div class="panel-body">
-								<a href="/html5-xidian/home.php/Admin/food/edit.html">修改美食信息</a>
+								<a href="/html5-xidian/index.php/Admin/food/edit.html">修改美食信息</a>
 							</div>
 							<div class="panel-body">
-								<a href="/html5-xidian/home.php/Admin/food/comment.html">管理美食评论</a>
+								<a href="/html5-xidian/index.php/Admin/food/comment.html">管理美食评论</a>
 							</div>
 						</div>
 					</div>
@@ -117,7 +117,7 @@
 						</div>
 						<div id="panel-element-816156" class="panel-collapse collapse">
 							<div class="panel-body">
-								<a href="/html5-xidian/home.php/Admin/tag/index.html">标签管理</a>
+								<a href="/html5-xidian/index.php/Admin/tag/index.html">标签管理</a>
 							</div>
 						</div>
 					</div>
@@ -127,7 +127,7 @@
 						</div>
 						<div id="panel-element-816157" class="panel-collapse collapse">
 							<div class="panel-body">
-								<a href="/html5-xidian/home.php/Admin/favorite/index.html">收藏夹管理</a>
+								<a href="/html5-xidian/index.php/Admin/favorite/index.html">收藏夹管理</a>
 							</div>
 						</div>
 					</div>
@@ -137,7 +137,7 @@
 						</div>
 						<div id="panel-element-816158" class="panel-collapse collapse">
 							<div class="panel-body">
-								<a href="/html5-xidian/home.php/Admin/cart/index.html">购物车管理</a>
+								<a href="/html5-xidian/index.php/Admin/cart/index.html">购物车管理</a>
 							</div>
 						</div>
 					</div>
@@ -147,10 +147,10 @@
 						</div>
 						<div id="panel-element-816159" class="panel-collapse collapse">
 							<div class="panel-body">
-								<a href="/html5-xidian/home.php/Admin/public/index.html">美食推送</a>
+								<a href="/html5-xidian/index.php/Admin/public/index.html">美食推送</a>
 							</div>
 							<div class="panel-body">
-								<a href="/html5-xidian/home.php/Admin/public/add.html">添加推送</a>
+								<a href="/html5-xidian/index.php/Admin/public/add.html">添加推送</a>
 							</div>
 						</div>
 					</div>
@@ -162,10 +162,10 @@
 				<div class="col-md-12 bread">
 					<ul class="breadcrumb">
 						<li>
-							 <a href="/html5-xidian/home.php/Admin/index/index.html">首页</a>
+							 <a href="/html5-xidian/index.php/Admin/index/index.html">首页</a>
 						</li>
 						<li>
-							 <a href="/html5-xidian/home.php/Admin/food/index.html">美食管理</a>
+							 <a href="/html5-xidian/index.php/Admin/food/index.html">美食管理</a>
 						</li>
 						<li>
 							 <a href="#">美食列表</a>

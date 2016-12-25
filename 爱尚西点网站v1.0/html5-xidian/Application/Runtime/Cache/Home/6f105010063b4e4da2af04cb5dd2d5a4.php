@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <meta charset="utf-8">
     <link rel="stylesheet" href="/html5-xidian/Public/home/css/bootstrap.min.css">
+    <link href="/html5-xidian/Public/home/css/font-awesome.css" rel="stylesheet">
+    <link href="/html5-xidian/Public/home/css/btnstyle.css" rel="stylesheet">
     <link rel="stylesheet" media="screen and (max-width:1024px)" href="/html5-xidian/Public/home/css/medium.css" type="text/css" />
     <link rel="stylesheet" media="screen and (min-width:1025px)" href="/html5-xidian/Public/home/css/large.css" type="text/css" />
     <script src="/html5-xidian/Public/home/js/jquery.js"></script>    
     <script src="/html5-xidian/Public/home/js/bootstrap.min.js"></script>
     <script src="/html5-xidian/Public/home/js/homeEdit.js"></script>
+    <script src="/html5-xidian/Public/home/js/jquery-1.8.2.min.js"></script>
+    <script src="/html5-xidian/Public/home/js/jquery-1.11.1.js"></script>
+    <script src="/html5-xidian/Public/home/js/bootstrap.js"></script>
+    <script src="/html5-xidian/Public/home/js/jquery.slimscroll.js"></script>
   </head>
   <body>
   <!--页头-->
@@ -115,7 +121,7 @@
             <li>
               <form class="navbar-form navbar-left" role="search" action="<?php echo U('Home/index/content');?>" method="post">
                 <input class="awesomplete" placeholder="搜索想要的美食..." id="searchFood" name="data" style="position: relative;top: 3px;" />             
-                <button type="submit" class="btn btn-default btn-sm" style="position: relative;top: 1.5px;">搜索</button>
+                <button type="submit" class="btn btn-default btn-sm" style="position: relative;top: 1.5px;font-size: 0.8em;outline: none;">搜索</button>
                 <ul class="mylist">
                 </ul> 
               </form>
@@ -191,7 +197,7 @@
             <div class="col-md-3 column">
               <div id="sum_pos">
                 合计：￥<span id="total">0</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              </div><button type="button" class="btn btn-primary btn-lg" id="sumbtn_pos">结算</button>
+              </div><button type="button" class="btn btn-lg btn-info" id="sumbtn_pos" style="outline: none;">结算</button>
             </div>
           </div>
         </div>

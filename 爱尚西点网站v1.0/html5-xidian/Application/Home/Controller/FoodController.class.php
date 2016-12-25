@@ -79,6 +79,16 @@ class FoodController extends Controller {
       $show = $page -> show();
       $this -> assign('page',$show);
       $this -> assign('commentList',$commentList); 
+      //步骤
+      $stepModel=M("step");
+      $stepList=$stepModel->where(array('food_name'=>$content['name']))->select();
+      //步骤数
+      $stepNum=count($stepList);
+      for($i=0;$i<$stepNum;$i++){
+        $stepList[$i]['num']=$i+1;
+      }
+      $this->assign("stepList",$stepList);
+
       $this->display();
     }
 

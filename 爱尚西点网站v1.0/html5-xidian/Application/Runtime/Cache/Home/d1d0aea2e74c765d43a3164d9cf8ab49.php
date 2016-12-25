@@ -5,12 +5,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta charset="utf-8">
   <link rel="stylesheet" href="/html5-xidian/Public/home/css/bootstrap.min.css">
-  
   <link rel="stylesheet" media="screen and (max-width:1024px)" href="/html5-xidian/Public/home/css/medium.css" type="text/css" />
   <link rel="stylesheet" media="screen and (min-width:1025px)" href="/html5-xidian/Public/home/css/large.css" type="text/css" />
   <link rel="stylesheet" type="text/css" href="/html5-xidian/Public/home/css/heartStyle.css">
   <link rel="stylesheet" href="/html5-xidian/Public/home/css/food_templet.css"/ >
- 
   <link rel="stylesheet" href="/html5-xidian/Public/home/css/awesomplete.css" type="text/css" /> 
   <link rel="stylesheet" href="/html5-xidian/Public/home/css/food.css"/>
   <script src="/html5-xidian/Public/home/js/jquery.js"></script>    
@@ -100,6 +98,12 @@
           <li class="dropdown">
                <a href="/html5-xidian/home.php/Home/users/index.html" class="dropdown-toggle">个人中心</a>
               <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
+              	<li>
+                   <a href="/html5-xidian/home.php/Home/users/collect.html">我的收藏</a>
+                </li>
+                <li>
+                   <a href="/html5-xidian/home.php/Home/users/publish.html">我的发布</a>
+                </li>
                 <li>
                    <a href="/html5-xidian/home.php/Home/users/reset_information.html">修改信息</a>
                 </li>
@@ -154,20 +158,16 @@
           </div>
         </div>
       </div>
-
-          <div class="row">
-          
-              <div class="font-a">&nbsp;&nbsp;法式餐点</div>
-          <br/>
-          <div class="col-md-12 col-sm-12 col-xs-12">
-            <p>
-              <div class="font-b">法国菜以其口感之细腻、酱料之美味、餐桌布置之华美，使饮食成为了一种艺术。并且因为各地所产原料和当地人口味不同，发展出多种多样的独特烹调方法，从而产生了变换无穷的美味。</div>
-            </p>
+      <div class="row">
+          <div class="col-sm-12">
+            <div class="col-sm-3">
+              <span class="font-a" style="letter-spacing: 3px">法式餐点</span>
+            </div>
+            <div class="col-sm-9" style="padding-left: 0px">
+              <p class="font-b">法国菜以其口感之细腻、酱料之美味、餐桌布置之华美，使饮食成为了一种艺术。并且因为各地所产原料和口味不同，发展出多种多样的独特烹调方法，从而产生了变换无穷的美味。</p>
+            </div>
           </div>
-          <br/><br/>
-          
-          <!-- 下方为图片列表内容   -->
-    
+
           <div class="row-a">
             <?php if(is_array($food)): $i = 0; $__LIST__ = $food;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><div class="col-md-3 col-sm-4 col-xs-5" style="height: 300px;" id="margin">
                 <div class="thumbnail" id="thumbnail">
@@ -182,17 +182,24 @@
                       <a href="/html5-xidian/home.php/Home/food/content/id/<?php echo ($n["id"]); ?>"></a>
                   </figure>
                   <br/> <br/> <br/>
-                  <p>&nbsp;&nbsp;<?php echo ($n["name"]); ?></p>
-               
-                  <p>&nbsp;[材料]&nbsp;[材料]</p>
+                  <div  class="name">
+                    <div style="padding: 4px 0px 0px 2px;border-bottom: 1px dotted #C0C0C0;">
+                      <?php echo ($n["name"]); ?>
+                    </div>  
+                    <div class="food-info">
+                      <div class="heart" id="like1" rel="like" title="收藏" name="<?php echo ($n["id"]); ?>" value="<?php echo ($username); ?>"></div>
+                    </div>
+                  </div>
+                  <div class="stuff">
+                    <p>[<?php echo (mb_substr($n["ingredients"],0,30,'utf-8')); ?>]</p><!-- 材料 -->
+                  </div>
                   <div class="user-info">
                     <img src="/html5-xidian/Public/home/images/avater.jpeg" alt="" class="col-sm-3 " />
-                    <p>by&nbsp;&nbsp;<?php echo ($n["publish_name"]); ?></p>
-                    <span class="col-sm-7">&nbsp;&nbsp;&nbsp;发布于&nbsp;&nbsp;<?php echo ($n["food_public_time"]); ?></span>
+                    <div class="actor">
+                      <p><a href="#"><?php echo ($n["publish_name"]); ?></a></p>
+                      <span class="col-sm-7" id="time"><font>&nbsp;发布于</font><font>&nbsp;<?php echo ($n["food_public_time"]); ?></font></span>
+                    </div>
                   </div> 
-                </div>
-                <div class="food-info">
-                  <div class="heart" id="like1" rel="like" title="收藏" name="<?php echo ($n["id"]); ?>" value="<?php echo ($username); ?>"></div>
                 </div>
               </div><?php endforeach; endif; else: echo "" ;endif; ?> 
           </div>  

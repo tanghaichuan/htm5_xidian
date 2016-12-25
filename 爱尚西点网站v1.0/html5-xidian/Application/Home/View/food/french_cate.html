@@ -5,12 +5,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <meta charset="utf-8">
   <link rel="stylesheet" href="__PUBLIC__/home/css/bootstrap.min.css">
-  
   <link rel="stylesheet" media="screen and (max-width:1024px)" href="__PUBLIC__/home/css/medium.css" type="text/css" />
   <link rel="stylesheet" media="screen and (min-width:1025px)" href="__PUBLIC__/home/css/large.css" type="text/css" />
   <link rel="stylesheet" type="text/css" href="__PUBLIC__/home/css/heartStyle.css">
   <link rel="stylesheet" href="__PUBLIC__/home/css/food_templet.css"/ >
- 
   <link rel="stylesheet" href="__PUBLIC__/home/css/awesomplete.css" type="text/css" /> 
   <link rel="stylesheet" href="__PUBLIC__/home/css/food.css"/>
   <script src="__PUBLIC__/home/js/jquery.js"></script>    
@@ -102,6 +100,12 @@
           <li class="dropdown">
                <a href="__MODULE__/users/index.html" class="dropdown-toggle">个人中心</a>
               <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
+              	<li>
+                   <a href="__MODULE__/users/collect.html">我的收藏</a>
+                </li>
+                <li>
+                   <a href="__MODULE__/users/publish.html">我的发布</a>
+                </li>
                 <li>
                    <a href="__MODULE__/users/reset_information.html">修改信息</a>
                 </li>
@@ -159,9 +163,9 @@
       <div class="row">
           <div class="col-sm-12">
             <div class="col-sm-3">
-              <span class="font-a">法式餐点</span>
+              <span class="font-a" style="letter-spacing: 3px">法式餐点</span>
             </div>
-            <div class="col-sm-9">
+            <div class="col-sm-9" style="padding-left: 0px">
               <p class="font-b">法国菜以其口感之细腻、酱料之美味、餐桌布置之华美，使饮食成为了一种艺术。并且因为各地所产原料和口味不同，发展出多种多样的独特烹调方法，从而产生了变换无穷的美味。</p>
             </div>
           </div>
@@ -182,28 +186,24 @@
                   </figure>
                   <br/> <br/> <br/>
                   <div  class="name">
-                    <div >
-                      &nbsp;&nbsp;{$n.name}
+                    <div style="padding: 4px 0px 0px 2px;border-bottom: 1px dotted #C0C0C0;">
+                      {$n.name}
                     </div>  
                     <div class="food-info">
                       <div class="heart" id="like1" rel="like" title="收藏" name="{$n.id}" value="{$username}"></div>
                     </div>
                   </div>
-                  <div class="divide">
-                    <font>______________________________</font>
-                  </div>
                   <div class="stuff">
-                    <font>[{$n.ingredients|mb_substr=0,30,'utf-8'}]</font><!-- 材料 -->
+                    <p>[{$n.ingredients|mb_substr=0,30,'utf-8'}]</p><!-- 材料 -->
                   </div>
                   <div class="user-info">
                     <img src="__PUBLIC__/home/images/avater.jpeg" alt="" class="col-sm-3 " />
                     <div class="actor">
-                      <p><a href="#">{$n.publish_name}</a><font>&nbsp;发布于</font></p>
-                      <span class="col-sm-7" id="time"><font>&nbsp;{$n.food_public_time}</font></span>
+                      <p><a href="#">{$n.publish_name}</a></p>
+                      <span class="col-sm-7" id="time"><font>&nbsp;发布于</font><font>&nbsp;{$n.food_public_time}</font></span>
                     </div>
                   </div> 
                 </div>
-                
               </div>
             </volist> 
           </div>  

@@ -16,6 +16,8 @@
 }
 .row-a{
 	margin-left: 25px;
+	margin-top:80px;
+
 }
 .font-a{
 	font-size:3.2em;
@@ -28,14 +30,16 @@
  	font-family:"微软雅黑";
  	color: #969292;
  	width:710px;
- 	height:45px;
+ 
  	margin-top:12px;
+ 	margin-left:10px;
 }
 
 }
 @media screen and (min-width: 1025px){
 .row-a{
 	margin-left: 90px;
+	margin-top:85px;
 	
 }
 .heart{
@@ -61,14 +65,16 @@
  	font-family:微软雅黑;
  	margin-left: 80px;
  	font-size:3.2em;
+
 }
 .font-b{
  	font-size:1.2em;
  	font-family:"微软雅黑";
  	color: #969292;
- 	width:890px;
+ 	width:1000px;
  	height:46px;
  	margin-top:12px;
+ 	margin-left:-20px;
 }
 }
 body{

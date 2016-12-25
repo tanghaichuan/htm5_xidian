@@ -29,7 +29,7 @@
  	font-size:1.2em;
  	font-family:"微软雅黑";
  	color: #969292;
- 	width:710px;
+ 	width:690px;
  
  	margin-top:12px;
  	margin-left:10px;
@@ -39,7 +39,7 @@
 @media screen and (min-width: 1025px){
 .row-a{
 	margin-left: 90px;
-	margin-top:85px;
+	margin-top:80px;
 	
 }
 .heart{
@@ -71,7 +71,7 @@
  	font-size:1.2em;
  	font-family:"微软雅黑";
  	color: #969292;
- 	width:1000px;
+ 	width:900px;
  	height:46px;
  	margin-top:12px;
  	margin-left:-20px;

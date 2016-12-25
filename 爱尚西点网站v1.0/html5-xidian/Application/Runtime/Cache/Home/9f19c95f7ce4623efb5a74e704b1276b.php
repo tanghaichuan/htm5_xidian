@@ -98,6 +98,12 @@
                <a href="/html5-xidian/home.php/Home/users/index.html" class="dropdown-toggle">个人中心</a>
               <ul class="dropdown-menu" style="text-align: center;min-width: 86px;">
                 <li>
+                   <a href="/html5-xidian/home.php/Home/users/collect.html">我的收藏</a>
+                </li>
+                <li>
+                   <a href="/html5-xidian/home.php/Home/users/publish.html">我的发布</a>
+                </li>
+                <li>
                    <a href="/html5-xidian/home.php/Home/users/reset_information.html">修改信息</a>
                 </li>
                 <li>
@@ -123,15 +129,15 @@
         </div>
       </nav>
     </div>
-    <div class="container-fluid">
-    	
-    	<div class="row">
+ <div class="container-fluid">
+      
+      <div class="row">
         <div class="col-md-12">
-          <img alt="英式餐点" src="/html5-xidian/Public/home/images/food-UK-0.png" class=""/>
+          <img alt="英式餐点" src="/html5-xidian/Public/home/images/food-UK-0.png" />
         </div>
       </div>
-    	<br / >
-<div class="row">
+      <br / >
+      <div class="row">
         <div class="col-md-12">
           <div class="row">
             <div class="col-md-12">
@@ -150,23 +156,20 @@
           </div>
         </div>
       </div>
-
-    	<div class="row">
-    		<div class="col-md-1 col-sm-1 col-xs-1">
-    			<!-- 文字实现竖排 -->
-    			<div class="font-a">英式餐点</div>
-    		</div>
-    		<div class="col-md-11">
-    			<div class="row" style="height: 70px;">
-  					<p>
-  						<div class="font-b">不同于欧陆早餐面包加咖啡的简单搭配，英式早餐以菜点丰富著名。需要说明的是标准英式早餐中这么多种类的食品不是供客人选用其中几样，而是全都放在大餐盘里让客人大朵快颐。</div>
-  					</p>
-    			</div><!-- 下方为图片列表内容   -->
-    				<!-- 第一行图片 -->
+      <div class="row">
+          <div class="col-sm-12">
+            <div class="col-sm-3">
+              <span class="font-a">英式餐点</span>
+            </div>
+            <div class="col-sm-9">
+              <p class="font-b">不同于欧陆早餐面包加咖啡的简单搭配，英式早餐以菜点丰富著名。需要说明的是标准英式早餐中这么多种类的食品不是供客人选用其中几样，而是全都放在大餐盘里让客人大朵快颐。</p>
+            </div>
+          </div>
           <div class="row-a">
-            <?php if(is_array($food)): $i = 0; $__LIST__ = $food;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><div class="col-md-3 col-sm-4 col-xs-5" style="height: 300px;">
+            <?php if(is_array($food)): $i = 0; $__LIST__ = $food;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$n): $mod = ($i % 2 );++$i;?><div class="col-md-3 col-sm-4 col-xs-5" style="height: 300px;" id="margin">
                 <div class="thumbnail" id="thumbnail">
                   <figure class="templet ">
+
                       <img src="/html5-xidian/Public/<?php echo ($n["img"]); ?>" id="food-thumb"  />
                       <figcaption>
                           <h3><?php echo ($n["name"]); ?></h3>
@@ -176,21 +179,30 @@
                       <a href="/html5-xidian/home.php/Home/food/content/id/<?php echo ($n["id"]); ?>"></a>
                   </figure>
                   <br/> <br/> <br/>
-                  <p>&nbsp;&nbsp;<?php echo ($n["name"]); ?></p>
-                  <br/>
+                  <div  class="name">
+                    <div style="padding: 4px 0px 0px 2px;border-bottom: 1px dotted #C0C0C0;">
+                      <?php echo ($n["name"]); ?>
+                    </div>  
+                    <div class="food-info">
+                      <div class="heart" id="like1" rel="like" title="收藏" name="<?php echo ($n["id"]); ?>" value="<?php echo ($username); ?>"></div>
+                    </div>
+                  </div>
+                  <div class="stuff">
+                    <p>[<?php echo (mb_substr($n["ingredients"],0,30,'utf-8')); ?>]</p><!-- 材料 -->
+                  </div>
                   <div class="user-info">
-                    <img src="/html5-xidian/Public/home/images/avater.jpeg" alt="" class="col-sm-3 img-circle" />
-                    <p>by&nbsp;&nbsp;<?php echo ($n["publish_name"]); ?></p>
-                    <span class="col-sm-7">&nbsp;&nbsp;&nbsp;发布于&nbsp;&nbsp;<?php echo ($n["food_public_time"]); ?></span>
+                    <img src="/html5-xidian/Public/home/images/avater.jpeg" alt="" class="col-sm-3 " />
+                    <div class="actor">
+                      <p><a href="#"><?php echo ($n["publish_name"]); ?></a></p>
+                      <span class="col-sm-7" id="time"><font>&nbsp;发布于</font><font>&nbsp;<?php echo ($n["food_public_time"]); ?></font></span>
+                    </div>
                   </div> 
                 </div>
-                <div class="food-info">
-                  <div class="heart" id="like1" rel="like" title="收藏" name="<?php echo ($n["id"]); ?>" value="<?php echo ($username); ?>"></div>
-                </div>
               </div><?php endforeach; endif; else: echo "" ;endif; ?>  
-          </div> 
-    		</div>
-    	</div>				
+          </div>  
+        </div>
+      </div>  
+    
     	<br/><br/>
     	<div class="row">
     		<div class="col-md-8">

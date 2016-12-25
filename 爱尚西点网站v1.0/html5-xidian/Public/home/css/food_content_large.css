@@ -46,6 +46,7 @@ ul li{
 	position: relative;
 	top: -15px;
 	left: 2px;
+	background-color: #f37b1d
 }
 .label{
 	position: relative;
@@ -68,7 +69,7 @@ ul li{
 	margin: 0px 97px;
 }
 #step_list .step_side{
-	background-color: #317400;
+	background-color: #dd514c;
 	float: left;
 	height: 120px;
 	width: 22.5px;
@@ -83,7 +84,7 @@ ul li{
 	position: relative;
 	top: -10px;
 	margin-left: 35px;
-	color:#317400;
+	color:#dd514c;
 	font:18px/30px Georgia, 微软雅黑, Times, serif;
 }
 #step_list .col-md-6{

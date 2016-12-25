@@ -201,7 +201,7 @@ a{
 	height: 178px;
 }
 .caption{
-	height: 120px;
+	height: 105px;
 }
 .caption div{
   position: relative;
@@ -376,4 +376,15 @@ a{
 .reply{
   position: absolute;
   left: 850px
+}
+
+.form-group .btn{
+  background-color: #428bca;
+  position: relative;
+  left: 90px;
+}
+#preview{
+  padding-left: 10px;
+  position: relative;
+  top: 3px
 }

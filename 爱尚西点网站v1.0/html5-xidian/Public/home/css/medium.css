@@ -212,7 +212,7 @@ img{
 	height: 149px;
 }
 .caption{
-	height: 120px;
+	height: 123px;
 }
 .caption div{
   position: relative;
@@ -390,4 +390,15 @@ img{
 .reply{
   position: absolute;
   left: 670px
+}
+
+.form-group .btn{
+  background-color: #428bca;
+  position: relative;
+  left: 90px;
+}
+#preview{
+  padding-left: 45px;
+  position: relative;
+  top: 3px
 }

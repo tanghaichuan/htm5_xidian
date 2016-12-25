@@ -91,9 +91,6 @@ img{
   border-radius: 1px;
   margin: 0px 35px 0px 20px;
 }
-#collect_plate .thumbnail .caption{
-  padding: 9px 2px;
-}
 #collect_list{
 	padding-top: 5px;
 }
@@ -139,7 +136,7 @@ img{
   margin: 0px 35px 0px 20px;
 }
 #publish_list{
-	padding-top: 5px;
+  padding-top: 5px;
 }
 #publish_list .col-md-5{
   margin: 0px 30px;
@@ -159,7 +156,7 @@ img{
   position: absolute;
   left: 120px;
   top: 50px;
-  color: 808080
+  color: #808080
 }
 #publish_list a{
   font-size: 0.8em;

@@ -127,8 +127,7 @@ a{
   margin: 0px 35px 0px 20px;
 }
 #publish_list{
-	position: relative;
-	left: 80px;
+  padding-top: 5px;
 }
 #publish_list .col-md-5{
   margin: 0px 40px;
@@ -156,9 +155,9 @@ a{
   top: 50px;
 }
 #publish_list img{
-  width: 100%;
-  height: 100px;
-}
+  height: 70px;
+  width: 100px
+}publish
 #publish_page{
   position: relative;
   left: -60px;

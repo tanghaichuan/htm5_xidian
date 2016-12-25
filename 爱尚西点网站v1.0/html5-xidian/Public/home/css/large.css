@@ -80,13 +80,16 @@ a{
 #collect_plate{
   background-color: white;
   border-radius: 1px;
-  margin: 0px 32px 0px 20px;
+  margin: 0px 35px 0px 20px;
 }
 #collect_list{
   padding-top: 5px;
 }
 #collect_list .col-md-5{
   margin: 0px 40px;
+}
+#collect_list .col-md-5 div{
+  margin-bottom: 15px
 }
 #collect_list h5{
   font-size: 1.2em;
@@ -96,15 +99,16 @@ a{
 }
 #collect_list p{
   font-size: 0.9em;
-  position: relative;
-  left: -33px;
-  top: 20px;
+  position: absolute;
+  left: 120px;
+  top: 50px;
+  color: #808080
 }
 #collect_list a{
   font-size: 0.8em;
-  position: relative;
-  left: 132px;
-  top: 23px;
+  position: absolute;
+  left: 340px;
+  top: 50px;
 }
 #collect_list img{
   height: 70px;
@@ -120,8 +124,7 @@ a{
 #publish_plate{
   background-color: white;
   border-radius: 1px;
-  margin: 0px 45px 0px 20px;
-  height: 305px;
+  margin: 0px 35px 0px 20px;
 }
 #publish_list{
 	position: relative;
@@ -129,6 +132,9 @@ a{
 }
 #publish_list .col-md-5{
   margin: 0px 40px;
+}
+#publish_list .col-md-5 div{
+  margin-bottom: 15px
 }
 #publish_list h5{
   font-size: 1.2em;
@@ -138,15 +144,16 @@ a{
 }
 #publish_list p{
   font-size: 0.9em;
-  position: relative;
-  left: -33px;
-  top: 20px;
+  position: absolute;
+  left: 120px;
+  top: 50px;
+  color: #808080
 }
 #publish_list a{
   font-size: 0.8em;
-  position: relative;
-  left: 132px;
-  top: 23px;
+  position: absolute;
+  left: 340px;
+  top: 50px;
 }
 #publish_list img{
   width: 100%;
@@ -359,16 +366,15 @@ a{
   width: 90%;
 }
 
-#pd{
-  border: 1px solid #C0C0C0;
-  border-radius: 1px;
-  margin: 0px 23px;
-}
 #fd_name{
   position: relative;
-  left: -55px;
-  padding-top: 5px;
+  left: -40px;
+  padding-top: 7px;
 }
 #shopping_content{
   padding:80px 120px 0px 120px;
+}
+.reply{
+  position: absolute;
+  left: 850px
 }

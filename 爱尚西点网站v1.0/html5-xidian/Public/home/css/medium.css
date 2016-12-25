@@ -89,7 +89,7 @@ img{
 #collect_plate{
   background-color: white;
   border-radius: 1px;
-  margin: 0px 36px 0px 20px;
+  margin: 0px 35px 0px 20px;
 }
 #collect_plate .thumbnail .caption{
   padding: 9px 2px;
@@ -101,6 +101,9 @@ img{
   margin: 0px 30px;
   padding: 0px 10px;
 }
+#collect_list .col-md-5 div{
+  margin-bottom: 15px
+}
 #collect_list h5{
   font-size: 1.2em;
   position: relative;
@@ -109,15 +112,16 @@ img{
 }
 #collect_list p{
   font-size: 0.9em;
-  position: relative;
-  left: -33px;
-  top: 20px;
+  position: absolute;
+  left: 120px;
+  top: 50px;
+  color: #808080
 }
 #collect_list a{
   font-size: 0.8em;
-  position: relative;
-  left: 45px;
-  top: 23px;
+  position: absolute;
+  left: 247px;
+  top: 50px;
 }
 #collect_list img{
   height: 70px;
@@ -132,7 +136,7 @@ img{
 #publish_plate{
   background-color: white;
   border-radius: 1px;
-  margin: 0px 45px 0px 20px;
+  margin: 0px 35px 0px 20px;
 }
 #publish_list{
 	padding-top: 5px;
@@ -140,6 +144,9 @@ img{
 #publish_list .col-md-5{
   margin: 0px 30px;
   padding: 0px 10px;
+}
+#publish_list .col-md-5 div{
+  margin-bottom: 15px
 }
 #publish_list h5{
   font-size: 1.2em;
@@ -149,15 +156,16 @@ img{
 }
 #publish_list p{
   font-size: 0.9em;
-  position: relative;
-  left: -33px;
-  top: 20px;
+  position: absolute;
+  left: 120px;
+  top: 50px;
+  color: 808080
 }
 #publish_list a{
   font-size: 0.8em;
-  position: relative;
-  left: 45px;
-  top: 23px;
+  position: absolute;
+  left: 247px;
+  top: 50px;
 }
 #publish_list img{
   height: 70px;
@@ -367,14 +375,10 @@ img{
   width: 24.2%;
 }
 
-#pd{
-  border: 1px solid #C0C0C0;
-  border-radius: 1px;
-}
 #fd_name{
   position: relative;
-  left: -55px;
-  padding-top: 5px;
+  left: -71px;
+  padding-top: 7px;
 }
 #commentUser{
   font-size: 0.7em;
@@ -385,4 +389,8 @@ img{
 }
 #shopping_content{
   padding:80px 30px 0px 30px;
+}
+.reply{
+  position: absolute;
+  left: 670px
 }

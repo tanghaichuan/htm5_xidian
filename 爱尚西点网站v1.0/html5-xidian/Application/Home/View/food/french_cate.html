@@ -157,7 +157,7 @@
         </div>
       </div>
 
-          <div class="row">
+          <!--<div class="row">
           
               <div class="font-a">&nbsp;&nbsp;法式餐点</div>
           <br/>
@@ -165,8 +165,16 @@
             <p>
               <div class="font-b">法国菜以其口感之细腻、酱料之美味、餐桌布置之华美，使饮食成为了一种艺术。并且因为各地所产原料和当地人口味不同，发展出多种多样的独特烹调方法，从而产生了变换无穷的美味。</div>
             </p>
+          </div>-->
+          <div class="col-sm-12">
+            <div class="col-sm-3">
+              <span class="font-a">法式餐点</span>
+            </div>
+            <div class="col-sm-8">
+              <p class="font-b">法国菜以其口感之细腻、酱料之美味、餐桌布置之华美，使饮食成为了一种艺术。并且因为各地所产原料和当地人口味不同，发展出多种多样的独特烹调方法，从而产生了变换无穷的美味。</p>
+            </div>
           </div>
-          <br/><br/>
+          
           
           <!-- 下方为图片列表内容   -->
     
@@ -187,7 +195,7 @@
                   <br/> <br/> <br/>
                   <p>&nbsp;&nbsp;{$n.name}</p>
                
-                  <p>&nbsp;[材料]&nbsp;[材料]</p>
+                  <p>&nbsp;[{$n.ingredients|mb_substr=0,30,'utf-8'}]</p>
                   <div class="user-info">
                     <img src="__PUBLIC__/home/images/avater.jpeg" alt="" class="col-sm-3 " />
                     <p>by&nbsp;&nbsp;{$n.publish_name}</p>

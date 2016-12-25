@@ -520,9 +520,6 @@ form input[type=radio]{
 	text-align: center;
 }
 .diaPublic{
-	width: 53px;
-    height: 27px;
-    padding: 0px;
     background-color: #20bdf0;
     font-family: "微软雅黑";
     font-size: 12px;

@@ -156,28 +156,15 @@
           </div>
         </div>
       </div>
-
-          <!--<div class="row">
-          
-              <div class="font-a">&nbsp;&nbsp;法式餐点</div>
-          <br/>
-          <div class="col-md-12 col-sm-12 col-xs-12">
-            <p>
-              <div class="font-b">法国菜以其口感之细腻、酱料之美味、餐桌布置之华美，使饮食成为了一种艺术。并且因为各地所产原料和当地人口味不同，发展出多种多样的独特烹调方法，从而产生了变换无穷的美味。</div>
-            </p>
-          </div>-->
+      <div class="row">
           <div class="col-sm-12">
             <div class="col-sm-3">
               <span class="font-a">法式餐点</span>
             </div>
-            <div class="col-sm-8">
+            <div class="col-sm-9">
               <p class="font-b">法国菜以其口感之细腻、酱料之美味、餐桌布置之华美，使饮食成为了一种艺术。并且因为各地所产原料和当地人口味不同，发展出多种多样的独特烹调方法，从而产生了变换无穷的美味。</p>
             </div>
           </div>
-          
-          
-          <!-- 下方为图片列表内容   -->
-    
           <div class="row-a">
             <volist name="food" id="n">
               <div class="col-md-3 col-sm-4 col-xs-5" style="height: 300px;" id="margin">
@@ -193,18 +180,29 @@
                       <a href="__MODULE__/food/content/id/{$n.id}"></a>
                   </figure>
                   <br/> <br/> <br/>
-                  <p>&nbsp;&nbsp;{$n.name}</p>
-               
-                  <p>&nbsp;[{$n.ingredients|mb_substr=0,30,'utf-8'}]</p>
+                  <div  class="name">
+                    <div >
+                      &nbsp;&nbsp;{$n.name}
+                    </div>  
+                    <div class="food-info">
+                      <div class="heart" id="like1" rel="like" title="收藏" name="{$n.id}" value="{$username}"></div>
+                    </div>
+                  </div>
+                  <div class="divide">
+                    <font>______________________________</font>
+                  </div>
+                  <div class="stuff">
+                    <font>[{$n.ingredients|mb_substr=0,30,'utf-8'}]</font><!-- 材料 -->
+                  </div>
                   <div class="user-info">
                     <img src="__PUBLIC__/home/images/avater.jpeg" alt="" class="col-sm-3 " />
-                    <p>by&nbsp;&nbsp;{$n.publish_name}</p>
-                    <span class="col-sm-7">&nbsp;&nbsp;&nbsp;发布于&nbsp;&nbsp;{$n.food_public_time}</span>
+                    <div class="actor">
+                      <p><a href="#">{$n.publish_name}</a><font>&nbsp;发布于</font></p>
+                      <span class="col-sm-7" id="time"><font>&nbsp;{$n.food_public_time}</font></span>
+                    </div>
                   </div> 
                 </div>
-                <div class="food-info">
-                  <div class="heart" id="like1" rel="like" title="收藏" name="{$n.id}" value="{$username}"></div>
-                </div>
+                
               </div>
             </volist> 
           </div>  

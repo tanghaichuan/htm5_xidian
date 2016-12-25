@@ -126,11 +126,12 @@
         </div>
       </nav>
     </div>
-        <div class="container-fluid">
+
+    <div class="container-fluid">
       
       <div class="row">
         <div class="col-md-12">
-          <img alt="法式餐点" src="__PUBLIC__/home/images/food-F-0.png" />
+          <img alt="意式餐点" src="__PUBLIC__/home/images/food-I-0.png" />
         </div>
       </div>
       <br / >
@@ -153,20 +154,15 @@
           </div>
         </div>
       </div>
-
-          <div class="row">
-          
-              <div class="font-a">&nbsp;&nbsp;意式餐点</div>
-          <br/>
-          <div class="col-md-12 col-sm-12 col-xs-12">
-            <p>
-              <div class="font-b">意大利民族是一个美食家的民族，他们在饮食方面有着悠久的历史，他们总是喜欢精心制作。意大利美食典雅高贵，且浓重朴实，讲究原汁原味。</div>
-            </p>
+      <div class="row">
+          <div class="col-sm-12">
+            <div class="col-sm-3">
+              <span class="font-a">意式餐点</span>
+            </div>
+            <div class="col-sm-9">
+              <p class="font-b">  意大利民族是一个美食家的民族，他们在饮食方面有着悠久的历史，他们总是喜欢精心制作。意大利美食典雅高贵，且浓重朴实，讲究原汁原味。</p>
+            </div>
           </div>
-          <br/><br/>
-          
-          <!-- 下方为图片列表内容   -->
-    
           <div class="row-a">
             <volist name="food" id="n">
               <div class="col-md-3 col-sm-4 col-xs-5" style="height: 300px;" id="margin">
@@ -182,23 +178,34 @@
                       <a href="__MODULE__/food/content/id/{$n.id}"></a>
                   </figure>
                   <br/> <br/> <br/>
-                  <p>&nbsp;&nbsp;{$n.name}</p>
-               
-                  <p>&nbsp;[材料]&nbsp;[材料]</p>
+                  <div  class="name">
+                    <div >
+                      &nbsp;&nbsp;{$n.name}
+                    </div>  
+                    <div class="food-info">
+                      <div class="heart" id="like1" rel="like" title="收藏" name="{$n.id}" value="{$username}"></div>
+                    </div>
+                  </div>
+                  <div class="divide">
+                    <font>______________________________</font>
+                  </div>
+                  <div class="stuff">
+                    <font>[{$n.ingredients|mb_substr=0,30,'utf-8'}]</font><!-- 材料 -->
+                  </div>
                   <div class="user-info">
                     <img src="__PUBLIC__/home/images/avater.jpeg" alt="" class="col-sm-3 " />
-                    <p>by&nbsp;&nbsp;{$n.publish_name}</p>
-                    <span class="col-sm-7">&nbsp;&nbsp;&nbsp;发布于&nbsp;&nbsp;{$n.food_public_time}</span>
+                    <div class="actor">
+                      <p><a href="#">{$n.publish_name}</a><font>&nbsp;发布于</font></p>
+                      <span class="col-sm-7" id="time"><font>&nbsp;{$n.food_public_time}</font></span>
+                    </div>
                   </div> 
                 </div>
-                <div class="food-info">
-                  <div class="heart" id="like1" rel="like" title="收藏" name="{$n.id}" value="{$username}"></div>
-                </div>
+                
               </div>
             </volist> 
           </div>  
         </div>
-      </div> 		
+      </div>  
     	<br/><br/>
     	<div class="row">
     		<div class="col-md-8">

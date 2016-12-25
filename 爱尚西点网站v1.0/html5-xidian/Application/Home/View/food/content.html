@@ -4,9 +4,9 @@
 <title></title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta charset="utf-8">
+<link rel="stylesheet" href="__PUBLIC__/home/css/bootstrap.min.css">
 <link rel="stylesheet" media="screen and (max-width:1024px)" href="__PUBLIC__/home/css/medium.css" type="text/css" />
 <link rel="stylesheet" media="screen and (min-width:1025px)" href="__PUBLIC__/home/css/large.css" type="text/css" />
-<link rel="stylesheet" href="__PUBLIC__/home/css/bootstrap.min.css">
 <link rel="stylesheet" media="screen and (max-width:1024px)" href="__PUBLIC__/home/css/food_content_medium.css" type="text/css" />
 <link rel="stylesheet" media="screen and (min-width:1025px)" href="__PUBLIC__/home/css/food_content_large.css" type="text/css" />
 <link rel="stylesheet" href="__PUBLIC__/home/css/awesomplete.css" type="text/css" />
@@ -325,7 +325,7 @@ window.onresize=function() {
 
     <br/><br/><br/><br/>
       <div class="container">
-        <div class="row" id="pd">
+        <div class="row">
         <!--评论框-->
         <div class="col-md-12">
           
@@ -333,7 +333,7 @@ window.onresize=function() {
             <h3 id="fd_name">{$content.name}的评论</h3>
             <div class="form-group">
               <div class="col-md-1" id="avater-img">
-                <img src="__PUBLIC__/home/images/avater.jpeg" alt="" class="img-circle" width="46px" height="46px">
+                <img src="__PUBLIC__/home/images/avater.jpeg" alt="" class="img-circle" style="width: 48px;height: 48px">
                 <p id="commentUser">{$username}</p>
               </div>
               <div class="col-md-6" id="text">
@@ -349,10 +349,10 @@ window.onresize=function() {
         </div>
         <!--评论列表-->
         <div class="col-md-11"> 
-          <ul class="am-comment-list">
+          <ul class="am-comment-list" style="padding: 0px 40px">
 
             <volist name="commentList" id="n">
-              <li class="am-comment" style="padding-bottom: 2px;">
+              <li class="am-comment" style="padding-bottom: 13px;">
                 <a href="#">
                 <img src="__PUBLIC__/home/images/food-UK-1.png" alt="头像" class="am-comment-avatar" width="48" height="48"/>
                 </a>
@@ -363,7 +363,7 @@ window.onresize=function() {
                     评论于 <time datetime="2016-07-27T04:54:29-07:00">{$n.com_time}</time><a href="javascript:void(0);" class="reply" name="{$n.username}">回复</a>
                   </div>
                   </header>
-                    <div class="am-comment-bd">
+                    <div class="am-comment-bd" style="padding: 10px 15px;background-color: white">
                     {$n.comment}
                   </div>
                 </div>
